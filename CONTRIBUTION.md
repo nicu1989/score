@@ -1,4 +1,4 @@
-# Eclipse Safe Open Vehicle Core (SCORE) 
+# Eclipse Safe Open Vehicle Core (SCORE)
 The [Eclipse Safe Open Vehicle Core](https://projects.eclipse.org/projects/automotive.score) project aims to develop an open-source core stack for Software Defined Vehicles (SDVs), specifically targeting embedded high-performance Electronic Control Units (ECUs).
 Please check the [documentation](https://eclipse-score.github.io) for more information.
 The source code is hosted at [GitHub](https://github.com/eclipse-score).
