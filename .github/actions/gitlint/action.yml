@@ -32,3 +32,14 @@ runs:
       git fetch origin +refs/heads/main:refs/remotes/origin/main && \
       git fetch origin +refs/pull/${{ inputs.pr-number }}/head && \
       gitlint --commits origin/main..HEAD
+  continue-on-error: true
+
+- name: "Provide git intructions on warning"
+  if: steps.lint_commits.outcome == 'failure'
+  run: |
+    echo "WARNING: Your commit message doesn't follow the required format."
+    echo "To fix your commit message, run:"
+    echo " git commit --amend"
+    echo "Then update your commit (e.g., <prefix>: Commit message...). Finally, force-push:"
+    echo " git push --force-with-lease"
+    exit 1
