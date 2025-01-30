@@ -78,7 +78,7 @@ runs:
           else
             echo "  { \"version\": \"$version\", \"url\": \"/$version/\" }," >> "$JSON_FILE"
           fi
-        done < "${{ inputs.versions_file }}"
+        done < "deploy_root/${{ inputs.versions_file }}"
 
         sed -i '$ s/,$//' "$JSON_FILE"
         # End JSON
