@@ -82,6 +82,7 @@ html_css_files = [
 ]
 
 html_theme_options = {
+    "flyout_display": "attached",
     "navbar_align": "content",
     "header_links_before_dropdown": 5,
     "icon_links": [
