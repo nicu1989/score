@@ -65,6 +65,25 @@ runs:
           echo "${{ steps.calc.outputs.target_folder }}" >> "${{ inputs.versions_file }}"
         fi
         mv "${{ inputs.versions_file }}" deploy_root/
+
+        # Create a JSON file for the PyData Sphinx Theme version switcher
+        JSON_FILE="deploy_root/versions.json"
+        echo "[" > "$JSON_FILE"
+
+        # Convert each line in the versions file into a JSON object
+        while IFS= read -r version; do
+          # Handle root '/' properly by renaming it "stable" and using the correct URL
+          if [ "$version" = "/" ]; then
+            echo "  { \"version\": \"stable\", \"url\": \"/\" }," >> "$JSON_FILE"
+          else
+            echo "  { \"version\": \"$version\", \"url\": \"/$version/\" }," >> "$JSON_FILE"
+          fi
+        done < "${{ inputs.versions_file }}"
+
+        sed -i '$ s/,$//' "$JSON_FILE"
+        # End JSON
+        echo "]" >> "$JSON_FILE"
+
         ls -al .
         ls -al deploy_root
     - name: Deploy 🚀
