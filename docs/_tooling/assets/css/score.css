@@ -56,10 +56,10 @@ html .pst-navbar-icon:hover {
     color: var(--pst-color-primary) !important;
   }
 
-/* Add scrollbar to the version switcher dropdown */
-#pst-version-switcher-button-2 {
-    max-height: 300px;  /* Adjust height as needed */
-    overflow-y: auto;   /* Enable vertical scrollbar */
+/* Ensure the version switcher dropdown is scrollable if it exceeds the max height */
+.version-switcher__container {
+    max-height: 200px; /* Adjust this value as needed */
+    overflow-y: auto;
 }
 
 .bd-header ul.navbar-nav > li.nav-item.current > .nav-link {
