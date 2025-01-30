@@ -62,6 +62,11 @@ html .pst-navbar-icon:hover {
     overflow-y: auto;
 }
 
+/* Test the demo from the documentation */
+.version-switcher__container a[data-version-name*="stable"] {
+   background-color: green;
+}
+
 .bd-header ul.navbar-nav > li.nav-item.current > .nav-link {
     color: var(--pst-color-text-muted) !important;
     font-weight: 900 !important;
