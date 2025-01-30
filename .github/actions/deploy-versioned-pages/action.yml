@@ -66,6 +66,9 @@ runs:
         fi
         mv "${{ inputs.versions_file }}" deploy_root/
 
+        REPO_NAME=$(basename ${{ github.repository }})
+        USER_NAME=$(echo ${{ github.repository }} | cut -d'/' -f1)
+        GITHUB_PAGES_URL="https://${USER_NAME}.github.io/${REPO_NAME}"
         # Create a JSON file for the PyData Sphinx Theme version switcher
         JSON_FILE="deploy_root/versions.json"
         echo "[" > "$JSON_FILE"
@@ -74,9 +77,9 @@ runs:
         while IFS= read -r version; do
           # Handle root '/' properly by renaming it "stable" and using the correct URL
           if [ "$version" = "/" ]; then
-            echo "  { \"version\": \"stable\", \"url\": \"./score/\" }," >> "$JSON_FILE"
+            echo "  { \"version\": \"stable\", \"url\": \"$GITHUB_PAGES_URL/\" }," >> "$JSON_FILE"
           else
-            echo "  { \"version\": \"$version\", \"url\": \"./score/$version/\" }," >> "$JSON_FILE"
+            echo "  { \"version\": \"$version\", \"url\": \"$GITHUB_PAGES_URL/$version/\" }," >> "$JSON_FILE"
           fi
         done < "deploy_root/${{ inputs.versions_file }}"
 
