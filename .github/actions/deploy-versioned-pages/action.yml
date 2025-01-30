@@ -74,9 +74,9 @@ runs:
         while IFS= read -r version; do
           # Handle root '/' properly by renaming it "stable" and using the correct URL
           if [ "$version" = "/" ]; then
-            echo "  { \"version\": \"stable\", \"url\": \"score/\" }," >> "$JSON_FILE"
+            echo "  { \"version\": \"stable\", \"url\": \"./score/\" }," >> "$JSON_FILE"
           else
-            echo "  { \"version\": \"$version\", \"url\": \"score/$version/\" }," >> "$JSON_FILE"
+            echo "  { \"version\": \"$version\", \"url\": \"./score/$version/\" }," >> "$JSON_FILE"
           fi
         done < "deploy_root/${{ inputs.versions_file }}"
 
