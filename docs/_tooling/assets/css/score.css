@@ -56,6 +56,12 @@ html .pst-navbar-icon:hover {
     color: var(--pst-color-primary) !important;
   }
 
+/* Add scrollbar only to the version switcher dropdown */
+.bd-sphinx-override .navbar-nav .dropdown-menu {
+    max-height: 300px;  /* Adjust height as needed */
+    overflow-y: auto;   /* Enable vertical scrollbar */
+}
+
 .bd-header ul.navbar-nav > li.nav-item.current > .nav-link {
     color: var(--pst-color-text-muted) !important;
     font-weight: 900 !important;
