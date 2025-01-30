@@ -100,7 +100,7 @@ html_theme_options = {
     },
     # Enable version switcher
     "switcher": {
-        "json_url": "versions.json",  # URL to JSON file
+        "json_url": "./versions.json",  # URL to JSON file
         "version_match": release,  # The current version of the docs
     },
     "navbar_end": ["version-switcher", "navbar-icon-links"],
