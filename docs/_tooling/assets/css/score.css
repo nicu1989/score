@@ -57,7 +57,7 @@ html .pst-navbar-icon:hover {
   }
 
 /* Ensure the version switcher dropdown is scrollable if it exceeds the max height */
-.version-switcher__container {
+.version-switcher__menu {
     max-height: 200px; /* Adjust this value as needed */
     overflow-y: auto;
 }
