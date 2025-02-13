@@ -21,7 +21,9 @@ from sphinx_needs import logging
 from sphinx_needs.data import NeedsInfoType, SphinxNeedsData
 
 from .log import CheckLogger
-from docs._tooling.sphinx_extensions.sphinx_extensions.check_options import set_production_needs_types
+from docs._tooling.sphinx_extensions.sphinx_extensions.check_options import (
+    set_production_needs_types,
+)
 
 logger = logging.get_logger(__name__)
 
@@ -141,11 +143,13 @@ def setup(app: Sphinx):
     # Convert "links" dict -> list of {"option", "incoming", "outgoing"}
     needs_extra_links_list = []
     for link_option, link_data in links_dict.items():
-        needs_extra_links_list.append({
-            "option": link_option,
-            "incoming": link_data.get("incoming", ""),
-            "outgoing": link_data.get("outgoing", ""),
-        })
+        needs_extra_links_list.append(
+            {
+                "option": link_option,
+                "incoming": link_data.get("incoming", ""),
+                "outgoing": link_data.get("outgoing", ""),
+            }
+        )
 
     # Compute needs_extra_options from all mandatory + optional options
     all_options = set()

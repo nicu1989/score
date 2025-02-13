@@ -22,9 +22,11 @@ from docs._tooling.sphinx_extensions.sphinx_extensions.utils.util import (
 # This will be set (injected) from score_metamodel/__init__.py after needs_types is built.
 _production_needs_types: Optional[List[Dict]] = None
 
+
 def set_production_needs_types(types: List[Dict]) -> None:
     global _production_needs_types
     _production_needs_types = types
+
 
 def get_need_type(directive: str, needs_types: Optional[List[Dict]] = None) -> Dict:
     if needs_types is None:
