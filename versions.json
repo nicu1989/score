@@ -142,5 +142,9 @@
   {
     "version": "main",
     "url": "https://eclipse-score.github.io/score/main/"
+  },
+  {
+    "version": "nicu1989_metamodel_yaml_sandbox",
+    "url": "https://nicu1989.github.io/score/nicu1989_metamodel_yaml_sandbox/"
   }
 ]
