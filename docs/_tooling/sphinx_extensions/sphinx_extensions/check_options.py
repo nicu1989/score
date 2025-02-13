@@ -11,19 +11,24 @@
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
 import re
+from typing import Optional, List, Dict
 
 from sphinx.util.logging import SphinxLoggerAdapter
 from sphinx_needs.data import NeedsInfoType
-
-from docs._tooling.extensions.score_metamodel.metamodel import (
-    needs_types as production_needs_types,
-)
 from docs._tooling.sphinx_extensions.sphinx_extensions.utils.util import (
     log_custom_warning,
 )
 
+# This will be set (injected) from score_metamodel/__init__.py after needs_types is built.
+_production_needs_types: Optional[List[Dict]] = None
 
-def get_need_type(needs_types: list[dict], directive: str):
+def set_production_needs_types(types: List[Dict]) -> None:
+    global _production_needs_types
+    _production_needs_types = types
+
+def get_need_type(directive: str, needs_types: Optional[List[Dict]] = None) -> Dict:
+    if needs_types is None:
+        needs_types = _production_needs_types
     for need_type in needs_types:
         assert isinstance(need_type, dict), need_type
         if need_type["directive"] == directive:
@@ -35,7 +40,7 @@ def get_need_type(needs_types: list[dict], directive: str):
 def check_options(
     need: NeedsInfoType,
     log: SphinxLoggerAdapter,
-    needs_types=production_needs_types,
+    needs_types: Optional[List[Dict]] = None,
 ) -> bool:
     """
     Checking if all described and wanted attributes are present and their values follow the described pattern.
@@ -43,7 +48,7 @@ def check_options(
     Returns 'True' if an option is not present or a value violates its pattern
     """
 
-    need_options = get_need_type(needs_types, need["type"])
+    need_options = get_need_type(need["type"], needs_types)
     required_options: list[tuple[str, str]] = need_options.get("req_opt", [])
     optional_options: list[tuple[str, str]] = need_options.get("opt_opt", [])
 
@@ -101,7 +106,7 @@ def check_options(
 def check_extra_options(
     need: NeedsInfoType,
     log: SphinxLoggerAdapter,
-    needs_types=production_needs_types,
+    needs_types: Optional[List[Dict]] = None,
 ) -> bool:
     """
     This function checks if the user specified attributes in the need which are not defined for this element in the metamodel or by default system attributes.
@@ -109,7 +114,7 @@ def check_extra_options(
     Returns 'True' if one of more extra option exist
     """
 
-    need_options = get_need_type(needs_types, need["type"])
+    need_options = get_need_type(need["type"], needs_types)
     required_options: list[tuple[str, str]] = need_options.get("req_opt", [])
     optional_options: list[tuple[str, str]] = need_options.get("opt_opt", [])
 
