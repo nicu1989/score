@@ -159,10 +159,8 @@ def setup(app: Sphinx):
     # Dynamically discover checks
     discover_checks()
 
-    # Connect the check runner at the end of build
     app.connect("build-finished", _run_checks)
 
-    # Return extension metadata
     return {
         "version": "0.1",
         "parallel_read_safe": True,
