@@ -10,14 +10,12 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
-
 import importlib
 import os
 import pkgutil
 from typing import Callable
 
 from ruamel.yaml import YAML
-
 from sphinx.application import Sphinx
 from sphinx_needs import logging
 from sphinx_needs.data import NeedsInfoType, SphinxNeedsData
@@ -32,10 +30,11 @@ graph_checks: list[Callable[[dict[str, NeedsInfoType], CheckLogger], None]] = []
 
 def discover_checks():
     """
-    Dynamically import all checks from ./checks/*.py
+    Dynamically import all checks.
     They will self-register with the decorators below.
     """
-    package_name = ".checks"
+    
+    package_name = ".checks" # load ./checks/*.py
     package = importlib.import_module(package_name, __package__)
     for _, module_name, _ in pkgutil.iter_modules(package.__path__):
         logger.debug(f"Importing check module: {module_name}")
@@ -67,28 +66,28 @@ def _run_checks(app: Sphinx, exception: Exception | None) -> None:
 
     log = CheckLogger(logger)
 
-    # Need-Local checks
+    # Need-Local checks: checks which can be checked file-local, without a
+    # graph of other needs.
     for need in needs_all_needs.values():
         for check in local_checks:
             check(need, log)
 
-    # Graph-Based checks
+    # Graph-Based checks: These warnings require a graph of all other needs to
+    # be checked.
+    needs = needs_all_needs.values()
     for check in graph_checks:
-        check(needs_all_needs, log)
+        check(needs, log)
 
     if log.has_warnings:
         log.warning("Some needs have issues. See the log for more information.")
-        # TODO: optionally raise exception or set a failing exit code.
+        # TODO: exit code
 
 
 def setup(app: Sphinx):
-    # Set some Sphinx-Needs config flags
     app.config.needs_id_required = True
     app.config.needs_id_regex = r"^[A-Za-z0-9_-]{6,}"
 
-    # --------------------------------------------------------------------------
-    # Load metamodel.yaml via ruamel.yaml
-    # --------------------------------------------------------------------------
+    # load metamodel.yaml via ruamel.yaml
     here = os.path.abspath(os.path.dirname(__file__))
     yaml_path = os.path.join(here, "metamodel.yaml")
 
@@ -96,7 +95,6 @@ def setup(app: Sphinx):
     with open(yaml_path, "r", encoding="utf-8") as f:
         data = yaml.load(f)
 
-    # data should have top-level "types" and "links" keys
     types_dict = data.get("types", {})
     links_dict = data.get("links", {})
 
@@ -109,7 +107,7 @@ def setup(app: Sphinx):
             "title": directive_data.get("title", ""),
             "prefix": directive_data.get("prefix", ""),
         }
-        # color/style if present
+
         if "color" in directive_data:
             one_type["color"] = directive_data["color"]
         if "style" in directive_data:
