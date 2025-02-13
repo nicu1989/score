@@ -156,7 +156,6 @@ def setup(app: Sphinx):
     app.config.needs_extra_links = needs_extra_links_list
     app.config.needs_extra_options = needs_extra_options
 
-    # Dynamically discover checks
     discover_checks()
 
     app.connect("build-finished", _run_checks)
