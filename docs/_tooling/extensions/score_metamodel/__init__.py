@@ -21,6 +21,7 @@ from sphinx_needs import logging
 from sphinx_needs.data import NeedsInfoType, SphinxNeedsData
 
 from .log import CheckLogger
+from docs._tooling.sphinx_extensions.sphinx_extensions.check_options import set_production_needs_types
 
 logger = logging.get_logger(__name__)
 
@@ -134,6 +135,8 @@ def setup(app: Sphinx):
             one_type["opt_link"] = [(k, v) for k, v in opt_links_yaml.items()]
 
         needs_types_list.append(one_type)
+
+    set_production_needs_types(needs_types_list)
 
     # Convert "links" dict -> list of {"option", "incoming", "outgoing"}
     needs_extra_links_list = []
