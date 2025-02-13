@@ -23,10 +23,6 @@ from docs._tooling.sphinx_extensions.sphinx_extensions.utils.util import (
 _production_needs_types: Optional[List[Dict]] = None
 
 def set_production_needs_types(types: List[Dict]) -> None:
-    """
-    Setter for the production needs_types list.
-    Call this from score_metamodel/__init__.py after your needs_types list has been fully populated.
-    """
     global _production_needs_types
     _production_needs_types = types
 
@@ -105,6 +101,7 @@ def check_options(
                     result = True
 
     return result
+
 
 def check_extra_options(
     need: NeedsInfoType,
