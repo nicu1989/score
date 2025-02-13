@@ -85,7 +85,7 @@ def _run_checks(app: Sphinx, exception: Exception | None) -> None:
 
 def setup(app: Sphinx):
     app.config.needs_id_required = True
-    app.config.needs_id_regex = r"^[A-Za-z0-9_-]{6,}"
+    app.config.needs_id_regex = "^[A-Za-z0-9_-]{6,}"
 
     # load metamodel.yaml via ruamel.yaml
     here = os.path.abspath(os.path.dirname(__file__))
