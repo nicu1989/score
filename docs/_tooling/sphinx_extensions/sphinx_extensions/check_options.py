@@ -51,6 +51,7 @@ def check_options(
     ---
     Returns 'True' if an option is not present or a value violates its pattern
     """
+
     need_options = get_need_type(need["type"], needs_types)
     required_options: list[tuple[str, str]] = need_options.get("req_opt", [])
     optional_options: list[tuple[str, str]] = need_options.get("opt_opt", [])
@@ -115,6 +116,7 @@ def check_extra_options(
     ---
     Returns 'True' if one of more extra option exist
     """
+
     need_options = get_need_type(need["type"], needs_types)
     required_options: list[tuple[str, str]] = need_options.get("req_opt", [])
     optional_options: list[tuple[str, str]] = need_options.get("opt_opt", [])
