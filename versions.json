@@ -146,5 +146,9 @@
   {
     "version": "nicu1989_metamodel_yaml_sandbox",
     "url": "https://nicu1989.github.io/score/nicu1989_metamodel_yaml_sandbox/"
+  },
+  {
+    "version": "pr-8",
+    "url": "https://nicu1989.github.io/score/pr-8/"
   }
 ]
