@@ -18,8 +18,8 @@ from score_metamodel import (
     CheckLogger,
     local_check,
 )
-from score_metamodel.metamodel import (
-    needs_types as production_needs_types,
+from score_metamodel import (
+    needs_types_list as production_needs_types,
 )
 
 
@@ -94,6 +94,25 @@ def check_options(
                 if not regex.match(value):
                     msg = f"does not follow pattern `{pattern}`."
                     log.warning_for_option(need, option, msg)
+
+    required_links: list[tuple[str, str]] = need_options.get("req_link", [])
+    if required_links:
+        for link, pattern in required_links:
+            values = need.get(link, None)
+            if values is None or values in [[], ""]:
+                msg = f"is missing required link: `{link}`."
+                log.warning_for_need(need, msg)
+                continue
+
+            if not isinstance(values, list):
+                values = [values]
+
+            for value in values:
+                assert isinstance(value, str)
+                regex = re.compile(pattern)
+                if not regex.match(value):
+                    msg = f"does not follow pattern `{pattern}`."
+                    log.warning_for_option(need, link, msg)
 
 
 @local_check

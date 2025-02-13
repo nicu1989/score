@@ -11,15 +11,17 @@
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
 import importlib
+from pathlib import Path
 import pkgutil
 from typing import Callable
 
+from ruamel.yaml import YAML
 from sphinx.application import Sphinx
 from sphinx_needs import logging
 from sphinx_needs.data import NeedsInfoType, SphinxNeedsData
 
-from . import metamodel
 from .log import CheckLogger
+
 
 logger = logging.get_logger(__name__)
 
@@ -82,12 +84,95 @@ def _run_checks(app: Sphinx, exception: Exception | None) -> None:
         # TODO: exit code
 
 
+needs_types_list = []
+
+
+def load_metamodel_data():
+    """
+    Load and process metamodel.yaml.
+
+    Returns:
+        dict: A dictionary with keys:
+            - 'needs_types': A list of processed need types.
+            - 'needs_extra_links': A list of extra link definitions.
+            - 'needs_extra_options': A sorted list of all option keys.
+    """
+    yaml_path = Path(__file__).resolve().parent / "metamodel.yaml"
+
+    yaml = YAML()
+    with open(yaml_path, "r", encoding="utf-8") as f:
+        data = yaml.load(f)
+
+    types_dict = data.get("needs_types", {})
+    links_dict = data.get("needs_extra_links", {})
+
+    # Convert "types" from {directive_name: {...}, ...} to a list of dicts
+    needs_types_list = []
+    for directive_name, directive_data in types_dict.items():
+        # Build up a single "needs_types" item
+        one_type = {
+            "directive": directive_name,
+            "title": directive_data.get("title", ""),
+            "prefix": directive_data.get("prefix", ""),
+        }
+
+        if "color" in directive_data:
+            one_type["color"] = directive_data["color"]
+        if "style" in directive_data:
+            one_type["style"] = directive_data["style"]
+
+        # Store mandatory_options and optional_options directly as a dict
+        one_type["req_opt"] = directive_data.get("mandatory_options", {})
+        one_type["opt_opt"] = directive_data.get("optional_options", {})
+
+        # mandatory_links => "req_link"
+        mand_links_yaml = directive_data.get("mandatory_links", {})
+        if mand_links_yaml:
+            one_type["req_link"] = [(k, v) for k, v in mand_links_yaml.items()]
+
+        # optional_links => "opt_link"
+        opt_links_yaml = directive_data.get("optional_links", {})
+        if opt_links_yaml:
+            one_type["opt_link"] = [(k, v) for k, v in opt_links_yaml.items()]
+
+        needs_types_list.append(one_type)
+
+    # Convert "links" dict -> list of {"option", "incoming", "outgoing"}
+    needs_extra_links_list = []
+    for link_option, link_data in links_dict.items():
+        needs_extra_links_list.append(
+            {
+                "option": link_option,
+                "incoming": link_data.get("incoming", ""),
+                "outgoing": link_data.get("outgoing", ""),
+            }
+        )
+
+    # Compute needs_extra_options from all mandatory + optional options
+    all_options = set()
+    for directive_data in types_dict.values():
+        all_options.update(directive_data.get("mandatory_options", {}).keys())
+        all_options.update(directive_data.get("optional_options", {}).keys())
+    needs_extra_options = sorted(all_options)
+
+    return {
+        "needs_types": needs_types_list,
+        "needs_extra_links": needs_extra_links_list,
+        "needs_extra_options": needs_extra_options,
+    }
+
+
 def setup(app: Sphinx):
     app.config.needs_id_required = True
     app.config.needs_id_regex = "^[A-Za-z0-9_-]{6,}"
-    app.config.needs_types = metamodel.needs_types
-    app.config.needs_extra_links = metamodel.needs_extra_links
-    app.config.needs_extra_options = metamodel.needs_extra_options
+
+    # load metamodel.yaml via ruamel.yaml
+    metamodel = load_metamodel_data()
+
+    # Assign everything to Sphinx config
+    app.config.needs_types = metamodel["needs_types"]
+    app.config.needs_extra_links = metamodel["needs_extra_links"]
+    app.config.needs_extra_options = metamodel["needs_extra_options"]
 
     discover_checks()
 

@@ -62,6 +62,8 @@ sphinx_docs(
         # Include the docs tooling itself
         # Note: we don't use py_library here to make it as close as possible to docs:incremental.
         "**/*.py",
+        "**/*.yaml",
+        "**/*.json",
     ]),
     config = ":conf.py",
     extra_opts = [
