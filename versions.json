@@ -150,5 +150,9 @@
   {
     "version": "pr-8",
     "url": "https://nicu1989.github.io/score/pr-8/"
+  },
+  {
+    "version": "nicu1989_metamodel_yaml_update",
+    "url": "https://nicu1989.github.io/score/nicu1989_metamodel_yaml_update/"
   }
 ]
