@@ -96,8 +96,8 @@ def setup(app: Sphinx):
     with open(yaml_path, "r", encoding="utf-8") as f:
         data = yaml.load(f)
 
-    types_dict = data.get("types", {})
-    links_dict = data.get("links", {})
+    types_dict = data.get("needs_types", {})
+    links_dict = data.get("needs_extra_links", {})
 
     # Convert "types" from {directive_name: {...}, ...} to a list of dicts
     needs_types_list = []
