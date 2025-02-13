@@ -264,7 +264,7 @@ needs_types:
       security: "^(YES|NO)$"
       safety: "^(QM|ASIL_B|ASIL_D)$"
       opt_status: "^(valid|invalid)$"
-    # no mandatory_links in the old code (commented out lines omitted)
+      # no mandatory_links in the old code (commented out lines omitted)
 
   mod_arc_sta:
     title: "Module Architecture Static View"
