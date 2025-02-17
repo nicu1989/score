@@ -49,25 +49,6 @@ jobs:
           repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
       - name: Setup Bazel
         uses: bazel-contrib/setup-bazel@0.9.1
-      - name: Build documentation
-        run: |
-          bazel build //docs:github-pages && cp bazel-bin/docs/github-pages.tar .
-        # ------------------------------------------------------------------------------
-        # Generate a unique artifact name to ensure proper tracking in all scenarios
-        # ------------------------------------------------------------------------------
-        # | Condition                                     | Event Type             | Artifact Name Value                          |
-        # |-----------------------------------------------|------------------------|----------------------------------------------|
-        # | github.event.pull_request.head.sha            | pull_request           | PR commit SHA (ensures uniqueness per PR)    |
-        # | github.event.pull_request.head.sha            | pull_request_target    | PR commit SHA (ensures uniqueness per PR)    |
-        # | github.sha                                    | push, merge_group      | Current commit SHA (used for main branch)    |
-        # ------------------------------------------------------------------------------
-      - name: Upload artifact for job analysis
-        uses: actions/upload-artifact@v4.4.0
-        with:
-          name: github-pages-${{ github.event.pull_request.head.sha || github.sha }}
-          path: github-pages.tar
-          retention-days: 1
-          if-no-files-found: error
 
   docs-deploy:
     name: Deploy documentation to GitHub Pages
@@ -79,30 +60,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: docs-build
     steps:
-      # ------------------------------------------------------------------------------
-      # Always checks out the BASE repository since pull_request_target is used.
-      # This ensures that the workflow runs with trusted code from the base repo,
-      # even when triggered by a pull request from a fork.
-      # ------------------------------------------------------------------------------
-      - name: Checkout repository
-        uses: actions/checkout@v4.2.2
-
-      - name: Download documentation artifact
-        uses: actions/download-artifact@v4.1.8
-        # ------------------------------------------------------------------------------
-        # Generate a unique artifact name to ensure proper tracking in all scenarios
-        # ------------------------------------------------------------------------------
-        # | Condition                                     | Event Type             | Artifact Name Value                          |
-        # |-----------------------------------------------|------------------------|----------------------------------------------|
-        # | github.event.pull_request.head.sha            | pull_request           | PR commit SHA (ensures uniqueness per PR)    |
-        # | github.event.pull_request.head.sha            | pull_request_target    | PR commit SHA (ensures uniqueness per PR)    |
-        # | github.sha                                    | push, merge_group      | Current commit SHA (used for main branch)    |
-        # ------------------------------------------------------------------------------
-        with:
-          name: github-pages-${{ github.event.pull_request.head.sha || github.sha }}
-
-      - name: Untar documentation artifact
-        run: mkdir -p extracted_docs && tar -xf github-pages.tar -C extracted_docs
 
       - name: Deploy 🚀
         id: pages-deployment
