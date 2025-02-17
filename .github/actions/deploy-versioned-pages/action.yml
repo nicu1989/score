@@ -107,7 +107,7 @@ runs:
       with:
         folder: version_root
         clean: false
-
+       
 
     - name: Comment on PR with docs URL
       if: ${{ github.event_name == 'pull_request_target' && inputs.create_comment == 'true' }}
@@ -117,3 +117,10 @@ runs:
         body: |
           The created documentation from the pull request is available at: [docu-html](https://eclipse-score.github.io/score/${{steps.calc.outputs.target_folder}})
         reactions: rocket
+        
+    - name: Output
+      shell: bash
+      run: |
+        echo "my_output=ndi" >> $GITHUB_OUTPUT
+
+
