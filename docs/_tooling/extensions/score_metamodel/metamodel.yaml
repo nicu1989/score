@@ -11,22 +11,22 @@ needs_types:
     title: "Standard Requirement"
     prefix: "std_req__"
     mandatory_options:
-      opt_id: "^(std_req_iso26262|std_req_iso21434|std_req_isopas8926|std_(g|b)p_aspice_40)__[0-9a-z_]*$"
-      opt_status: "^(valid)$"
+      id: "^(std_req_iso26262|std_req_iso21434|std_req_isopas8926|std_(g|b)p_aspice_40)__[0-9a-z_]*$"
+      status: "^(valid)$"
 
   std_wp:
     title: "Standard Work Product"
     prefix: "std_wp__"
     mandatory_options:
-      opt_id: "^(std_wp_iso26262|std_wp_iso21434|std_wp_isopas8926|std_(g|b)p_aspice_40)__[0-9a-z_]*$"
-      opt_status: "^(valid)$"
+      id: "^(std_wp_iso26262|std_wp_iso21434|std_wp_isopas8926|std_(g|b)p_aspice_40)__[0-9a-z_]*$"
+      status: "^(valid)$"
   # Workflow
   workflow:
     title: "Workflow"
     prefix: "wf__"
     mandatory_options:
-      opt_id: "^wf__[0-9a-z_]*$"
-      opt_status: "^(valid|draft)$"
+      id: "^wf__[0-9a-z_]*$"
+      status: "^(valid|draft)$"
     mandatory_links:
       input: "^wp__.*$"
       output: "^wp__.*$"
@@ -41,8 +41,8 @@ needs_types:
     title: "Process Requirements"
     prefix: "gd_req__"
     mandatory_options:
-      opt_id: "^gd_req__[0-9a-z_]*$"
-      opt_status: "^(valid|draft)$"
+      id: "^gd_req__[0-9a-z_]*$"
+      status: "^(valid|draft)$"
     mandatory_links:
       complies: "^(std_req_iso26262|std_req_iso21434|std_req_isopas8926|std_(g|b)p_aspice_40)__.*$"
 
@@ -50,8 +50,8 @@ needs_types:
     title: "Process Template"
     prefix: "gd_temp__"
     mandatory_options:
-      opt_id: "^gd_temp__[0-9a-z_]*$"
-      opt_status: "^(valid|draft)$"
+      id: "^gd_temp__[0-9a-z_]*$"
+      status: "^(valid|draft)$"
     mandatory_links:
       complies: "^(std_req_iso26262|std_req_iso21434|std_req_isopas8926|std_(g|b)p_aspice_40)__.*$"
 
@@ -59,8 +59,8 @@ needs_types:
     title: "Process Checklist"
     prefix: "gd_chklst__"
     mandatory_options:
-      opt_id: "^gd_chklst__[0-9a-z_]*$"
-      opt_status: "^(valid|draft)$"
+      id: "^gd_chklst__[0-9a-z_]*$"
+      status: "^(valid|draft)$"
     mandatory_links:
       complies: "^(std_req_iso26262|std_req_iso21434|std_req_isopas8926|std_(g|b)p_aspice_40)__.*$"
 
@@ -68,8 +68,8 @@ needs_types:
     title: "Process Guideline"
     prefix: "gd_guidl__"
     mandatory_options:
-      opt_id: "^gd_guidl__[0-9a-z_]*$"
-      opt_status: "^(valid|draft)$"
+      id: "^gd_guidl__[0-9a-z_]*$"
+      status: "^(valid|draft)$"
     mandatory_links:
       complies: "^(std_req_iso26262|std_req_iso21434|std_req_isopas8926|std_(g|b)p_aspice_40)__.*$"
 
@@ -77,8 +77,8 @@ needs_types:
     title: "Process Method"
     prefix: "gd_meth__"
     mandatory_options:
-      opt_id: "^gd_meth__[0-9a-z_]*$"
-      opt_status: "^(valid|draft)$"
+      id: "^gd_meth__[0-9a-z_]*$"
+      status: "^(valid|draft)$"
     mandatory_links:
       complies: "^(std_req_iso26262|std_req_iso21434|std_req_isopas8926|std_(g|b)p_aspice_40)__.*$"
   # Score Workproduct
@@ -86,8 +86,8 @@ needs_types:
     title: "Workproduct"
     prefix: "wp__"
     mandatory_options:
-      opt_id: "^wp__[0-9a-z_]*$"
-      opt_status: "^(valid|draft)$"
+      id: "^wp__[0-9a-z_]*$"
+      status: "^(valid|draft)$"
     mandatory_links:
       complies: "^(std_wp_iso26262|std_wp_iso21434|std_wp_isopas8926|std_iic_aspice_40)__.*$"
   # Role
@@ -95,7 +95,7 @@ needs_types:
     title: "Role"
     prefix: "rl__"
     mandatory_options:
-      opt_id: "^rl__[0-9a-z_]*$"
+      id: "^rl__[0-9a-z_]*$"
     optional_links:
       contains: "^rl__.*$"
   # Documents
@@ -103,15 +103,15 @@ needs_types:
     title: "Concept Definition"
     prefix: "doc_concept__"
     mandatory_options:
-      opt_id: "^doc_concept__[0-9a-z_]*$"
-      opt_status: "^(valid|draft)$"
+      id: "^doc_concept__[0-9a-z_]*$"
+      status: "^(valid|draft)$"
 
   doc_getstrt:
     title: "Getting Startet"
     prefix: "doc_getstrt__"
     mandatory_options:
-      opt_id: "^doc_getstrt__[0-9a-z_]*$"
-      opt_status: "^(valid|draft)$"
+      id: "^doc_getstrt__[0-9a-z_]*$"
+      status: "^(valid|draft)$"
 
   ##############################################################################
   # Score Metamodel
@@ -121,19 +121,19 @@ needs_types:
     title: "Generic Document"
     prefix: "doc__"
     mandatory_options:
-      opt_id: "^doc__[0-9a-z_]*$"
+      id: "^doc__[0-9a-z_]*$"
       safety: "^(QM|ASIL_B|ASIL_D)$"
-      opt_status: "^(valid|invalid)$"
+      status: "^(valid|invalid)$"
   # Requirements
   stkh_req:
     title: "Stakeholder Requirement"
     prefix: "stkh_req__"
     mandatory_options:
-      opt_id: "^stkh_req__[0-9a-z_]*$"
+      id: "^stkh_req__[0-9a-z_]*$"
       reqtype: "^(Functional|Interface|Process|Legal|Non-Functional)$"
       security: "^(YES|NO)$"
       safety: "^(QM|ASIL_B|ASIL_D)$"
-      opt_status: "^(valid|invalid)$"
+      status: "^(valid|invalid)$"
       rationale: "^.+$"
     optional_options:
       codelink: "^.*$"
@@ -147,11 +147,11 @@ needs_types:
     prefix: "feat_req__"
     style: "node"
     mandatory_options:
-      opt_id: "^feat_req__[0-9a-z_]*$"
+      id: "^feat_req__[0-9a-z_]*$"
       reqtype: "^(Functional|Interface|Process|Legal|Non-Functional)$"
       security: "^(YES|NO)$"
       safety: "^(QM|ASIL_B|ASIL_D)$"
-      opt_status: "^(valid|invalid)$"
+      status: "^(valid|invalid)$"
     mandatory_links:
       satisfies: "^stkh_req__.*$"
     optional_options:
@@ -165,11 +165,11 @@ needs_types:
     title: "Component Requirement"
     prefix: "comp_req__"
     mandatory_options:
-      opt_id: "^comp_req__[0-9a-z_]*$"
+      id: "^comp_req__[0-9a-z_]*$"
       reqtype: "^(Functional|Interface|Process|Legal|Non-Functional)$"
       security: "^(YES|NO)$"
       safety: "^(QM|ASIL_B|ASIL_D)$"
-      opt_status: "^(valid|invalid)$"
+      status: "^(valid|invalid)$"
     mandatory_links:
       satisfies: "^feat_req__.*$"
     optional_options:
@@ -183,11 +183,11 @@ needs_types:
     title: "Tool Requirement"
     prefix: "tool_req__"
     mandatory_options:
-      opt_id: "^tool_req__[0-9a-z_]*$"
+      id: "^tool_req__[0-9a-z_]*$"
       reqtype: "^(Functional|Interface|Process|Legal|Non-Functional)$"
       security: "^(YES|NO)$"
       safety: "^(QM|ASIL_B|ASIL_D)$"
-      opt_status: "^(valid|invalid)$"
+      status: "^(valid|invalid)$"
     mandatory_links:
       satisfies: "^gd_.*$"
     optional_options:
@@ -201,11 +201,11 @@ needs_types:
     title: "Assumption of Use"
     prefix: "aou_req__"
     mandatory_options:
-      opt_id: "^aou_req__[0-9a-z_]*$"
+      id: "^aou_req__[0-9a-z_]*$"
       reqtype: "^(Functional|Interface|Process|Legal|Non-Functional)$"
       security: "^(YES|NO)$"
       safety: "^(QM|ASIL_B|ASIL_D)$"
-      opt_status: "^(valid|invalid)$"
+      status: "^(valid|invalid)$"
     optional_options:
       codelink: "^.*$"
       testlink: "^.*$"
@@ -219,10 +219,10 @@ needs_types:
     color: "#FEDCD2"
     style: "card"
     mandatory_options:
-      opt_id: "^feat_arc_sta__[0-9a-z_]*$"
+      id: "^feat_arc_sta__[0-9a-z_]*$"
       security: "^(YES|NO)$"
       safety: "^(QM|ASIL_B|ASIL_D)$"
-      opt_status: "^(valid|invalid)$"
+      status: "^(valid|invalid)$"
     mandatory_links:
       satisfies: "^feat_req__.*$"
 
@@ -232,10 +232,10 @@ needs_types:
     color: "#FEDCD2"
     style: "card"
     mandatory_options:
-      opt_id: "^feat_arc_dyn__[0-9a-z_]*$"
+      id: "^feat_arc_dyn__[0-9a-z_]*$"
       security: "^(YES|NO)$"
       safety: "^(QM|ASIL_B|ASIL_D)$"
-      opt_status: "^(valid|invalid)$"
+      status: "^(valid|invalid)$"
     mandatory_links:
       satisfies: "^feat_req__.*$"
 
@@ -245,10 +245,10 @@ needs_types:
     color: "#FEDCD2"
     style: "card"
     mandatory_options:
-      opt_id: "^feat_arc_int__[0-9a-z_]*$"
+      id: "^feat_arc_int__[0-9a-z_]*$"
       security: "^(YES|NO)$"
       safety: "^(QM|ASIL_B|ASIL_D)$"
-      opt_status: "^(valid|invalid)$"
+      status: "^(valid|invalid)$"
     mandatory_links:
       satisfies: "^feat_req__.*$"
 
@@ -260,10 +260,10 @@ needs_types:
     mandatory_options:
       # Original code uses ^FEAT_ARC_INT_OP__, but actually typed ^COMP_ARC_INT__ in comp_arc_int_op.
       # This might be an original mismatch, but we'll keep it consistent with the Python code:
-      opt_id: "^feat_arc_int_op__[0-9a-z_]*$"
+      id: "^feat_arc_int_op__[0-9a-z_]*$"
       security: "^(YES|NO)$"
       safety: "^(QM|ASIL_B|ASIL_D)$"
-      opt_status: "^(valid|invalid)$"
+      status: "^(valid|invalid)$"
       # no mandatory_links in the old code (commented out lines omitted)
 
   mod_arc_sta:
@@ -272,10 +272,10 @@ needs_types:
     color: "#FEDCD2"
     style: "card"
     mandatory_options:
-      opt_id: "^mod_arc_sta__[0-9a-z_]*$"
+      id: "^mod_arc_sta__[0-9a-z_]*$"
       security: "^(YES|NO)$"
       safety: "^(QM|ASIL_B|ASIL_D)$"
-      opt_status: "^(valid|invalid)$"
+      status: "^(valid|invalid)$"
 
   comp_arc_sta:
     title: "Component Architecture Static View"
@@ -283,10 +283,10 @@ needs_types:
     color: "#FEDCD2"
     style: "card"
     mandatory_options:
-      opt_id: "^comp_arc_sta__[0-9a-z_]*$"
+      id: "^comp_arc_sta__[0-9a-z_]*$"
       security: "^(YES|NO)$"
       safety: "^(QM|ASIL_B|ASIL_D)$"
-      opt_status: "^(valid|invalid)$"
+      status: "^(valid|invalid)$"
     mandatory_links:
       satisfies: "^comp_req__.*$"
 
@@ -296,10 +296,10 @@ needs_types:
     color: "#FEDCD2"
     style: "card"
     mandatory_options:
-      opt_id: "^comp_arc_dyn__[0-9a-z_]*$"
+      id: "^comp_arc_dyn__[0-9a-z_]*$"
       security: "^(YES|NO)$"
       safety: "^(QM|ASIL_B|ASIL_D)$"
-      opt_status: "^(valid|invalid)$"
+      status: "^(valid|invalid)$"
     mandatory_links:
       satisfies: "^comp_req__.*$"
 
@@ -309,10 +309,10 @@ needs_types:
     color: "#FEDCD2"
     style: "card"
     mandatory_options:
-      opt_id: "^comp_arc_int__[0-9a-z_]*$"
+      id: "^comp_arc_int__[0-9a-z_]*$"
       security: "^(YES|NO)$"
       safety: "^(QM|ASIL_B|ASIL_D)$"
-      opt_status: "^(valid|invalid)$"
+      status: "^(valid|invalid)$"
     mandatory_links:
       satisfies: "^comp_req__.*$"
 
@@ -322,11 +322,11 @@ needs_types:
     color: "#FEDCD2"
     style: "card"
     mandatory_options:
-      # Original code says opt_id: "^COMP_ARC_INT__[0-9a-z_]*$", so we keep it as is:
-      opt_id: "^comp_arc_int__[0-9a-z_]*$"
+      # Original code says id: "^COMP_ARC_INT__[0-9a-z_]*$", so we keep it as is:
+      id: "^comp_arc_int__[0-9a-z_]*$"
       security: "^(YES|NO)$"
       safety: "^(QM|ASIL_B|ASIL_D)$"
-      opt_status: "^(valid|invalid)$"
+      status: "^(valid|invalid)$"
     mandatory_links:
       satisfies: "^comp_req__.*$"
 

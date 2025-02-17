@@ -122,8 +122,16 @@ def load_metamodel_data():
             one_type["style"] = directive_data["style"]
 
         # Store mandatory_options and optional_options directly as a dict
-        one_type["req_opt"] = directive_data.get("mandatory_options", {})
+        mandatory_options = directive_data.get("mandatory_options", {})
         one_type["opt_opt"] = directive_data.get("optional_options", {})
+
+        # Rename "id" to "opt_id" and "status" to "opt_status"
+        if "id" in mandatory_options:
+            mandatory_options["opt_id"] = mandatory_options.pop("id")
+        if "status" in mandatory_options:
+            mandatory_options["opt_status"] = mandatory_options.pop("status")
+
+        one_type["mandatory_options"] = mandatory_options
 
         # mandatory_links => "req_link"
         mand_links_yaml = directive_data.get("mandatory_links", {})
