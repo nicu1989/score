@@ -125,3 +125,10 @@ runs:
         body: |
           The created documentation from the pull request is available at: [docu-html](https://eclipse-score.github.io/score/${{steps.calc.outputs.target_folder}})
         reactions: rocket
+        
+    - name: Output
+      shell: bash
+      run: |
+        echo "my_output=ndi" >> $GITHUB_OUTPUT
+
+

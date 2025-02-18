@@ -101,7 +101,7 @@ jobs:
         with:
           name: github-pages-${{ github.event.pull_request.head.sha || github.sha }}
 
-      - name: Untar documentation artifact
+      - name: Untarx documentation artifact
         run: mkdir -p extracted_docs && tar -xf github-pages.tar -C extracted_docs
 
       - name: Deploy 🚀
