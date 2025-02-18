@@ -17,24 +17,7 @@ from sphinx_needs.data import NeedsInfoType
 from score_metamodel import CheckLogger, local_check
 
 
-# req-Id: TOOL_REQ__toolchain_sphinx_needs_build__requirement_attributes_uid
-@local_check
-def check_id_format(need: NeedsInfoType, log: CheckLogger):
-    """
-    Checking if the title, directory and feature are included in the requirement id or not.
-    ---
-    """
-    # Split the string by underscores
-    parts = need["id"].split("__")
 
-    if need["type"].startswith(("gd_", "wf_", "wp_")):
-        if len(parts) != 2 and len(parts) != 3:
-            msg = "expected to consisting of one of these 2 formats:`<Req Type>__<Abbreviations>` or `<Req Type>__<Abbreviations>__<Architectural Element>`."
-            log.warning_for_option(need, "id", msg)
-    else:
-        if len(parts) != 3:
-            msg = "expected to consisting of this format: `<Req Type>__<Abbreviations>__<Architectural Element>`."
-            log.warning_for_option(need, "id", msg)
 
 
 @local_check
