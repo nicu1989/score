@@ -115,7 +115,7 @@ runs:
       with:
         issue-number: ${{ github.event.pull_request.number }}
         comment-author: 'github-actions[bot]'
-        body-includes: The created documentation
+        body-includes: The created documentation from the pull request
           
     - name: Comment on PR with docs URL
       if: ${{ github.event_name == 'pull_request_target' && inputs.create_comment == 'true' && steps.fc.outputs.comment-id == '' }}
