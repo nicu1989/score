@@ -72,7 +72,10 @@ numfig = True
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = "pydata_sphinx_theme"  # "alabaster"
-html_static_path = ["_tooling/assets", "_assets"]
+html_static_path = ["_tooling/assets", "_assets", "_static"]
+html_js_files = [
+    'readthedocs-doc-diff.js',
+]
 html_css_files = [
     "css/score.css",
     "css/score_needs.css",

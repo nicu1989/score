@@ -35,7 +35,7 @@ Documentation
       </div>
    </div>
 
-Welcome & Overview
+Welcomessse & Overview
 ------------------
 
 **Welcome to the Software documentation of the SCORE project.**
