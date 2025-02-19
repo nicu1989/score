@@ -62,7 +62,7 @@ exclude_patterns = [
     "_tooling/sphinx_extensions/test",
 ]
 
-templates_path = ["_templates"]
+templates_path = ["_tooling/templates"]
 
 # Enable numref
 numfig = True
