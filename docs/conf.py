@@ -81,7 +81,6 @@ html_css_files = [
     "css/score_needs.css",
     "css/score_design.css",
     "css/doc-diff.css",
-    "css/docdiff.document.css",
 ]
 
 html_context = {
