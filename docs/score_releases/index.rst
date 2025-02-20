@@ -14,7 +14,7 @@
 
 .. _releases:
 
-SCORE Releases Overview
+SCORssE Releases Overview
 =======================
 
 Roadmap
