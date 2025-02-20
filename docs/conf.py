@@ -74,7 +74,7 @@ numfig = True
 html_theme = "pydata_sphinx_theme"  # "alabaster"
 html_static_path = ["_tooling/assets", "_assets", "_static"]
 html_js_files = [
-    'readthedocs-doc-diff.js',
+    'docdiff.js',
 ]
 html_css_files = [
     "css/score.css",
