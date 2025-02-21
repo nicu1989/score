@@ -85,7 +85,7 @@ html_css_files = [
 
 html_context = {
     # "github_url": "https://github.com", # or your GitHub Enterprise site
-    "github_user": "eclipse-score",
+    "github_user": "nicu1989",
     "github_repo": "score",
     "github_version": "main",
     "doc_path": "docs",
