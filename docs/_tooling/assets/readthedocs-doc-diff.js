@@ -104,18 +104,6 @@ document.addEventListener("keydown", function(event) {
                                     e.inject_styles && (document.adoptedStyleSheets = [i.Z]);
                                     var l = (0,
                                     r.visualDomDiff)(f, s, o);
-// Get the original element from the new document.
-var originalNavbar = s.querySelector('.navbar-header-items__end');
-if (originalNavbar) {
-    // Remove it from its current location so we can move it.
-    originalNavbar.parentNode.removeChild(originalNavbar);
-    // Find the corresponding element in the diff result.
-    var diffNavbar = l.firstElementChild.querySelector('.navbar-header-items__end');
-    if (diffNavbar) {
-        // Replace the diffed version with the original element.
-        diffNavbar.replaceWith(originalNavbar);
-    }
-}
                                     s.replaceWith(l.firstElementChild),
                                     t(!0)
                                 }
