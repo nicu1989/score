@@ -23,38 +23,38 @@ todo: need to add guidance and standard links
 
 
 .. workflow:: Analyse Feature Architecture
-   :id: WF_ANALYSE_FeatArch
+   :id: wf__analyse_featarch
    :status: draft
    :tags: safety_analysis
-   :responsible: RL_committer
-   :approved_by: RL_safety_manager
-   :supported_by: RL_technical_lead, RL_security_manager
-   :input: WP_FEATURE_REQ, WP_FEATURE_ARCHITECTURE, WP_ISSUE_TRACK_SYSTEM
-   :output: WP_FEATURE_SAFETY_ANALYSES, WP_FEATURE_DFA
+   :responsible: rl__committer
+   :approved_by: rl__safety_manager
+   :supported_by: rl__technical_lead, rl__security_manager
+   :input: wp__feature_req, wp__feature_architecture, wp__issue_track_system
+   :output: wp__feature_safety_analyses, wp__feature_dfa
 
    | The safety analysis and DFA for the feature is executed.
 
 .. workflow:: Analyse Component Architecture
-   :id: WF_ANALYSE_CompArch
+   :id: wf__analyse_comparch
    :status: draft
    :tags: safety_analysis
-   :responsible: RL_committer
-   :approved_by: RL_safety_manager
-   :supported_by: RL_module_lead, RL_security_manager
-   :input:  WP_SW_COMPONENT_REQ, WP_SW_COMPONENT_ARCHITECTURE, WP_ISSUE_TRACK_SYSTEM
-   :output: WP_SW_COMPONENT_SAFETY_ANALYSES, WP_SW_COMPONENT_DFA
+   :responsible: rl__committer
+   :approved_by: rl__safety_manager
+   :supported_by: rl__module_lead, rl__security_manager
+   :input:  wp__sw_component_req, wp__sw_component_architecture, wp__issue_track_system
+   :output: wp__sw_component_safety_analyses, wp__sw_component_dfa
 
    | The safety analysis and DFA for the component is executed.
 
 .. workflow:: Monitor/Verify Safety Analyses and DFA
-   :id: WF_MR_VY_SAF_ANALYSES_DFA
+   :id: wf__mr_vy_saf_analyses_dfa
    :status: draft
    :tags: safety_analysis
-   :responsible: RL_committer
-   :approved_by: RL_safety_manager
-   :supported_by: RL_technical_lead, RL_module_lead, RL_security_manager
-   :input: WP_FEATURE_SAFETY_ANALYSES, WP_FEATURE_DFA, WP_SW_COMPONENT_SAFETY_ANALYSES, WP_SW_COMPONENT_DFA
-   :output: WP_SW_ARCH_VERIFICATION, WP_ISSUE_TRACK_SYSTEM
+   :responsible: rl__committer
+   :approved_by: rl__safety_manager
+   :supported_by: rl__technical_lead, rl__module_lead, rl__security_manager
+   :input: wp__feature_safety_analyses, wp__feature_dfa, wp__sw_component_safety_analyses, wp__sw_component_dfa
+   :output: wp__sw_arch_verification, wp__issue_track_system
 
    | The safety analyses and DFA are monitored and verified.
    | The inspection shall be implemented as integral part of the review tool.

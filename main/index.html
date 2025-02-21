@@ -136,14 +136,8 @@
   
   
   
-    
-    
-      
-    
-    
-    <img src="_static/S-CORE_Logo_white.svg" class="logo__image only-light" alt="Score 0.1 documentation - Home"/>
-    <img src="_static/S-CORE_Logo_white.svg" class="logo__image only-dark pst-js-only" alt="Score 0.1 documentation - Home"/>
   
+    <p class="title logo__title">Eclipse S-CORE</p>
   
 </a></div>
     
@@ -479,8 +473,9 @@
 </div><div id="videowrapper">
    <div id="fullScreenDiv">
       <div id="score-title">
-            <img id="logo_center_light" class="logo" src="_static/S-CORE_Logo_RGB.svg" width="600px"/>
-            <img id="logo_center_drk" class="logo" src="_static/S-CORE_Logo_white.svg" width="600px"/>
+        Eclipse S-CORE
+            <!--<img id="logo_center_light" class="logo" src="_static/S-CORE_Logo_RGB.svg" width="600px"/>
+            <img id="logo_center_drk" class="logo" src="_static/S-CORE_Logo_white.svg" width="600px"/>-->
       </div>
    </div>
 </div><section id="welcome-overview">
@@ -488,6 +483,48 @@
 <p><strong>Welcome to the Software documentation of the SCORE project.</strong></p>
 <p>If this is the first time you get in touch with SCORE, the <a class="reference external" href="https://eclipse-score.github.io/">SCORE main page</a>
 may be a good starting point to receive first insights of the project itself.</p>
+<section id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h3>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 score-grid docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-3 sd-row-cols-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">Scope</p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">The project develops an open source core stack for Software Defined Vehicles (SDVs),
+targeting embedded high-performance Electronic Control Units (ECUs).
+Check our <a class="reference external" href="https://eclipse-score.github.io/#scope">Scope</a> for details.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">Project Status</p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Check out our roadmap to see the project’s key milestones and features we have planned.
+<a class="reference external" href="https://eclipse-score.github.io/index.html#roadmap">Click here to explore!</a></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">How to Contribute?</p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">The only way to influence Eclipse SCORE is to contribute - SCORE is open! Please check our
+<a class="reference external" href="https://eclipse-score.github.io/get_involved.html">Get Involved</a> guide for more
+information.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 <section id="software-artifacts">
 <h3>Software artifacts<a class="headerlink" href="#software-artifacts" title="Link to this heading">#</a></h3>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 score-grid docutils">
@@ -554,7 +591,7 @@ And receive tips &amp; tricks for our used tool stack by reading the
 <div class="sd-card-body docutils">
 <p class="sd-card-text">Read about our project and organization structure in the
 <a class="reference internal" href="platform_management_plan/project_management.html#project-management-plan"><span class="std std-ref">Project Handbook</span></a>.
-And learn how we deal with <a class="reference internal" href="platform_management_plan/safety_management.html#safety-management"><span class="std std-ref">Safety management</span></a> or care about <a class="reference internal" href="platform_management_plan/software_verification.html#sw-verification"><span class="std std-ref">Software Verification</span></a>.</p>
+And learn how we deal with <span class="xref std std-ref">safety_management</span> or care about <a class="reference internal" href="platform_management_plan/software_verification.html#sw-verification"><span class="std std-ref">Software Verification</span></a>.</p>
 </div>
 </div>
 </div>
@@ -653,6 +690,7 @@ And learn how we deal with <a class="reference internal" href="platform_manageme
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="process/index.html#process-model">Process Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="process/index.html#id1">Process Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="process/index.html#process-role-definition">Process Role definition</a></li>
 <li class="toctree-l3"><a class="reference internal" href="process/index.html#workproducts">Workproducts</a></li>
 <li class="toctree-l3"><a class="reference internal" href="process/index.html#workflows">Workflows</a></li>
@@ -682,10 +720,11 @@ And learn how we deal with <a class="reference internal" href="platform_manageme
 <li class="toctree-l3"><a class="reference internal" href="platform_management_plan/stakeholder_management.html#approach">Approach</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="platform_management_plan/safety_management.html">Safety management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="platform_management_plan/safety_management.html">Safety management / Platform Safety Plan</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="platform_management_plan/safety_management.html#purpose">Purpose</a></li>
-<li class="toctree-l3"><a class="reference internal" href="platform_management_plan/safety_management.html#objectives-and-scope">Objectives and scope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="platform_management_plan/safety_management.html#objectives-and-scope">Objectives and Scope</a></li>
 <li class="toctree-l3"><a class="reference internal" href="platform_management_plan/safety_management.html#approach">Approach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="platform_management_plan/safety_management.html#platform-safety-plan">Platform Safety Plan</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="platform_management_plan/risk_management.html">Risk management</a><ul>
@@ -804,6 +843,7 @@ And learn how we deal with <a class="reference internal" href="platform_manageme
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#welcome-overview">Welcome &amp; Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#software-artifacts">Software artifacts</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project-structure-and-processes">Project structure and processes</a></li>
 </ul>

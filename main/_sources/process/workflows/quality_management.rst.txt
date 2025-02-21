@@ -22,86 +22,86 @@ Workflows
 todo: need to add guidance and standard links
 
 .. workflow:: Create/Maintain Quality Plan
-   :id: WF_CR_MT_QLM_PLAN
+   :id: wf__cr_mt_qlm_plan
    :status: draft
    :tags: quality_management
-   :responsible: RL_committer
-   :approved_by: RL_quality_manager
-   :supported_by: RL_technical_lead
-   :input: WP_POLICIES, WP_ISSUE_TRACK_SYSTEM
-   :output: WP_QMS
+   :responsible: rl__committer
+   :approved_by: rl__quality_manager
+   :supported_by: rl__technical_lead
+   :input: wp__policies, wp__issue_track_system
+   :output: wp__qms
 
-   | The quality plan is created and maintained by a :need:`RL_committer`.
+   | The quality plan is created and maintained by a :need:`rl__committer`.
 
 .. workflow:: Verify/Approve Platform Release
-   :id: WF_VY_AP_PltRelease
+   :id: wf__vy_ap_pltrelease
    :status: draft
    :tags: quality_management
-   :responsible: RL_committer
-   :approved_by: RL_quality_manager
-   :supported_by: RL_technical_lead
-   :input: WP_QMS
-   :output: WP_PLATFORM_SW_RELEASE_NOTE
+   :responsible: rl__committer
+   :approved_by: rl__quality_manager
+   :supported_by: rl__technical_lead
+   :input: wp__qms
+   :output: wp__platform_sw_release_note
 
    | The project/platform release is verified and approved.
 
 .. workflow:: Execute Platform Process Audit
-   :id: WF_EXE_PltProcess_Audit
+   :id: wf__exe_pltprocess_audit
    :status: draft
    :tags: quality_management
-   :responsible: RL_quality_manager
-   :approved_by: RL_technical_lead
-   :supported_by: RL_safety_manager, RL_security_manager
-   :input: WP_QMS, WP_PROCESS_DEFINITION
-   :output: WP_PROCESS_IMPR_REPORT
+   :responsible: rl__quality_manager
+   :approved_by: rl__technical_lead
+   :supported_by: rl__safety_manager, rl__security_manager
+   :input: wp__qms, wp__process_definition
+   :output: wp__process_impr_report
 
    | The project/platform processes are audited.
 
 .. workflow:: Execute Feature Process Compliance Checks
-   :id: WF_EXE_FeatProcess_Compliance_Checks
+   :id: wf__exe_featprocess_compliance_checks
    :status: draft
    :tags: quality_management
-   :responsible: RL_committer
-   :approved_by: RL_quality_manager
-   :supported_by: RL_technical_lead
-   :input: WP_QMS, WP_FEAT_REQUEST, WP_PROCESS_DEFINITION
-   :output: WP_QMS_REPORT
+   :responsible: rl__committer
+   :approved_by: rl__quality_manager
+   :supported_by: rl__technical_lead
+   :input: wp__qms, wp__feat_request, wp__process_definition
+   :output: wp__qms_report
 
    | The compliance of the feature contribution is checked.
 
 .. workflow:: Execute Feature Work Product Reviews
-   :id: WF_EXE_FeatWP_Review
+   :id: wf__exe_featwp_review
    :status: draft
    :tags: quality_management
-   :responsible: RL_committer
-   :approved_by: RL_quality_manager
-   :supported_by: RL_technical_lead
-   :input: WP_QMS, WP_PROCESS_DEFINITION
-   :output: WP_PLATFORM_SW_VERIFICATION_REPORT
+   :responsible: rl__committer
+   :approved_by: rl__quality_manager
+   :supported_by: rl__technical_lead
+   :input: wp__qms, wp__process_definition
+   :output: wp__platform_sw_verification_report
 
    | The quality of the work products is assured.
 
 .. workflow:: Consult and Execute Quality Trainings
-   :id: WF_CONSULT_EXE_QLY_TRAINING
+   :id: wf__consult_exe_qly_training
    :status: draft
    :tags: quality_management
-   :responsible: RL_committer
-   :approved_by: RL_quality_manager
-   :supported_by: RL_technical_lead
-   :input: WP_QMS, WP_POLICIES, WP_PROCESS_DEFINITION
-   :output: WP_TRAINING_PATH
+   :responsible: rl__committer
+   :approved_by: rl__quality_manager
+   :supported_by: rl__technical_lead
+   :input: wp__qms, wp__policies, wp__process_definition
+   :output: wp__training_path
 
    | The quality manager consults all project/platform stakeholder for quality topics and executes regulary quality trainings.
 
 .. workflow:: Monitor/Improve Quality Activities
-   :id: WF_MR_IMP_QLM_PLAN_PROCESSES
+   :id: wf__mr_imp_qlm_plan_processes
    :status: draft
    :tags: quality_management
-   :responsible: RL_committer
-   :approved_by: RL_quality_manager
-   :supported_by: RL_technical_lead
-   :input: WP_QMS, WP_PLATFORM_SW_RELEASE_NOTE, WP_MODULE_SW_RELEASE_NOTE, WP_PROCESS_IMPR_REPORT, WP_QMS_REPORT, WP_PLATFORM_SW_VERIFICATION_REPORT, WP_MODULE_SW_VERIFICATION_REPORT, WP_TRAINING_PATH
-   :output: WP_ISSUE_TRACK_SYSTEM
+   :responsible: rl__committer
+   :approved_by: rl__quality_manager
+   :supported_by: rl__technical_lead
+   :input: wp__qms, wp__platform_sw_release_note, wp__module_sw_release_note, wp__process_impr_report, wp__qms_report, wp__platform_sw_verification_report, wp__module_sw_verification_report, wp__training_path
+   :output: wp__issue_track_system
 
    | The Quality Manager is responsible for the monitoring of the activities against the quality management plan.
    | The Quality Manager is responsible to adjust the plan, if deviations are detected.
