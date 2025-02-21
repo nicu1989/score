@@ -149,14 +149,8 @@
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../../_static/S-CORE_Logo_white.svg" class="logo__image only-light" alt="Score 0.1 documentation - Home"/>
-    <img src="../../../_static/S-CORE_Logo_white.svg" class="logo__image only-dark pst-js-only" alt="Score 0.1 documentation - Home"/>
   
+    <p class="title logo__title">Eclipse S-CORE</p>
   
 </a></div>
     
@@ -550,8 +544,8 @@
                   
   <section id="inter-process-communication">
 <h1>Inter-process Communication<a class="headerlink" href="#inter-process-communication" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-132e1024">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="DOC__IPC">
+<div class="need_container docutils container" id="SNCB-75903cc7">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__ipc">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
 <div class="line"><span><span class="needs_title"><span class="needs_data">Inter-process Communication</span></span></span></div>
@@ -581,7 +575,7 @@
 <tr class="content row-odd"><td class="content" colspan="6"></td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#DOC__IPC" title="DOC__IPC">DOC__IPC</a></span></span></div>
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#doc__ipc" title="doc__ipc">doc__ipc</a></span></span></div>
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
@@ -694,27 +688,27 @@ S-CORE defines in its stakeholder requirements different architectures that must
 framework.
 This leads to the three requirements:</p>
 <ol class="arabic simple" start="9">
-<li><p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__time_based_arch" title="FEAT_REQ__ipc__time_based_arch"><em class="xref need">Support for Time-based Arch... (FEAT_REQ__ipc__time_based_arch)</em></a></p></li>
-<li><p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__data_driven_arch" title="FEAT_REQ__ipc__data_driven_arch"><em class="xref need">Support for Data-driven Arc... (FEAT_REQ__ipc__data_driven_arch)</em></a></p></li>
-<li><p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__request_driven_arch" title="FEAT_REQ__ipc__request_driven_arch"><em class="xref need">Support for Request-driven ... (FEAT_REQ__ipc__request_driven_arch)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements/index.html#feat_req__ipc__time_based_arch" title="feat_req__ipc__time_based_arch"><em class="xref need">Support for Time-based Arch... (feat_req__ipc__time_based_arch)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements/index.html#feat_req__ipc__data_driven_arch" title="feat_req__ipc__data_driven_arch"><em class="xref need">Support for Data-driven Arc... (feat_req__ipc__data_driven_arch)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements/index.html#feat_req__ipc__request_driven_arch" title="feat_req__ipc__request_driven_arch"><em class="xref need">Support for Request-driven ... (feat_req__ipc__request_driven_arch)</em></a></p></li>
 </ol>
 <p>Based on this, the basic communication elements consist of:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__event_type" title="FEAT_REQ__ipc__event_type"><em class="xref need">Event Type (FEAT_REQ__ipc__event_type)</em></a></p></li>
-<li><p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__method" title="FEAT_REQ__ipc__method"><em class="xref need">Method (FEAT_REQ__ipc__method)</em></a></p></li>
-<li><p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__signal" title="FEAT_REQ__ipc__signal"><em class="xref need">Signal (FEAT_REQ__ipc__signal)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements/index.html#feat_req__ipc__event_type" title="feat_req__ipc__event_type"><em class="xref need">Event Type (feat_req__ipc__event_type)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements/index.html#feat_req__ipc__method" title="feat_req__ipc__method"><em class="xref need">Method (feat_req__ipc__method)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements/index.html#feat_req__ipc__signal" title="feat_req__ipc__signal"><em class="xref need">Signal (feat_req__ipc__signal)</em></a></p></li>
 </ul>
 <p>Since often communication regarding a specific feature consists of many of these elements, we allow grouping of them
-through communication interfaces (<a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__interfaces" title="FEAT_REQ__ipc__interfaces"><em class="xref need">Communication Interfaces (FEAT_REQ__ipc__interfaces)</em></a>).</p>
-<p>To allow more flexible scheduling of the system and as a prerequisite of <a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__time_based_arch" title="FEAT_REQ__ipc__time_based_arch"><em class="xref need">Support for Time-based Arch... (FEAT_REQ__ipc__time_based_arch)</em></a>,
-the communication framework must support caching: <a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__producer_consumer" title="FEAT_REQ__ipc__producer_consumer"><em class="xref need">Producer-Consumer Pattern (FEAT_REQ__ipc__producer_consumer)</em></a></p>
-<p>Further, we promote stateless communication <a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__stateless_communication" title="FEAT_REQ__ipc__stateless_communication"><em class="xref need">Stateless communication (FEAT_REQ__ipc__stateless_communication)</em></a> to simplify the communication
+through communication interfaces (<a class="reference internal" href="requirements/index.html#feat_req__ipc__interfaces" title="feat_req__ipc__interfaces"><em class="xref need">Communication Interfaces (feat_req__ipc__interfaces)</em></a>).</p>
+<p>To allow more flexible scheduling of the system and as a prerequisite of <a class="reference internal" href="requirements/index.html#feat_req__ipc__time_based_arch" title="feat_req__ipc__time_based_arch"><em class="xref need">Support for Time-based Arch... (feat_req__ipc__time_based_arch)</em></a>,
+the communication framework must support caching: <a class="reference internal" href="requirements/index.html#feat_req__ipc__producer_consumer" title="feat_req__ipc__producer_consumer"><em class="xref need">Producer-Consumer Pattern (feat_req__ipc__producer_consumer)</em></a></p>
+<p>Further, we promote stateless communication <a class="reference internal" href="requirements/index.html#feat_req__ipc__stateless_communication" title="feat_req__ipc__stateless_communication"><em class="xref need">Stateless communication (feat_req__ipc__stateless_communication)</em></a> to simplify the communication
 logic both in the framework as well as the user code.</p>
 <p>With the basic syntax for communication covered, we now discuss the key aspects a communication framework must fulfill.</p>
 <p>We coin the term “Service instance” to refer to an entity that offers functionality through a communication interface
-(<a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__service_instance" title="FEAT_REQ__ipc__service_instance"><em class="xref need">Service Instance (FEAT_REQ__ipc__service_instance)</em></a>).</p>
+(<a class="reference internal" href="requirements/index.html#feat_req__ipc__service_instance" title="feat_req__ipc__service_instance"><em class="xref need">Service Instance (feat_req__ipc__service_instance)</em></a>).</p>
 <p>In general, we put no restrains in how service instances are grouped in the architecture
-(<a class="reference internal" href="#Unknown need" title="FEAT_REQ__ipc__service_granularity?"><em class="xref need">FEAT_REQ__ipc__service_granularity</em></a>).</p>
+(<a class="reference internal" href="#Unknown need" title="feat_req__ipc__service_granularity?"><em class="xref need">feat_req__ipc__service_granularity</em></a>).</p>
 <section id="id3">
 <h2>High cohesion and loose coupling<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>As discussed in the motivation, versioning of communication interfaces is key for a communication framework to promote
@@ -726,31 +720,31 @@ Therefore, it does not suffice to only version communication interfaces.
 Similarly, only versioning the behavior of the functionality behind an interface is not enough.</p>
 <p>Instead, we define a single version scheme over both syntax and semantics of a service instance.
 Meaning, whenever the service instance has a syntactic or semantic change, the version must be bumped.</p>
-<p>This leads to the conclusion that the version is associated to the service instance (<a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__versioning" title="FEAT_REQ__ipc__versioning"><em class="xref need">Versioning (FEAT_REQ__ipc__versioning)</em></a>).</p>
+<p>This leads to the conclusion that the version is associated to the service instance (<a class="reference internal" href="requirements/index.html#feat_req__ipc__versioning" title="feat_req__ipc__versioning"><em class="xref need">Versioning (feat_req__ipc__versioning)</em></a>).</p>
 <p>It is impossible to define a global versioning scheme over all protocols, with their significantly differing
 capabilities in that regard. Thus, version compatibility ranges must be supplied per protocol
-(<a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__versioning" title="FEAT_REQ__ipc__versioning"><em class="xref need">Versioning (FEAT_REQ__ipc__versioning)</em></a>).</p>
+(<a class="reference internal" href="requirements/index.html#feat_req__ipc__versioning" title="feat_req__ipc__versioning"><em class="xref need">Versioning (feat_req__ipc__versioning)</em></a>).</p>
 <p>Additional to versioning, loose coupling also requires that the communication partners are unaware of where their
-counterpart resides (<a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__service_location_transparency" title="FEAT_REQ__ipc__service_location_transparency"><em class="xref need">Service location transparency (FEAT_REQ__ipc__service_location_transparency)</em></a>).
+counterpart resides (<a class="reference internal" href="requirements/index.html#feat_req__ipc__service_location_transparency" title="feat_req__ipc__service_location_transparency"><em class="xref need">Service location transparency (feat_req__ipc__service_location_transparency)</em></a>).
 This implies, that communication partners are discovered dynamically at runtime
-(<a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__service_discovery" title="FEAT_REQ__ipc__service_discovery"><em class="xref need">Service discovery (FEAT_REQ__ipc__service_discovery)</em></a>).
+(<a class="reference internal" href="requirements/index.html#feat_req__ipc__service_discovery" title="feat_req__ipc__service_discovery"><em class="xref need">Service discovery (feat_req__ipc__service_discovery)</em></a>).
 Discovery of communication partners must consider their compatibility based on the versioning concept.</p>
 <p>To retain loose coupling, the public API of the communication framework shall treat discovery implicitly without
-unneeded user involvement (<a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__service_discovery" title="FEAT_REQ__ipc__service_discovery"><em class="xref need">Service discovery (FEAT_REQ__ipc__service_discovery)</em></a>).
+unneeded user involvement (<a class="reference internal" href="requirements/index.html#feat_req__ipc__service_discovery" title="feat_req__ipc__service_discovery"><em class="xref need">Service discovery (feat_req__ipc__service_discovery)</em></a>).
 Further, service discovery is based on a naming scheme where each service instance is associated to one or more names
-(<a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__service_instance_names" title="FEAT_REQ__ipc__service_instance_names"><em class="xref need">Service Instance Names (FEAT_REQ__ipc__service_instance_names)</em></a>).</p>
+(<a class="reference internal" href="requirements/index.html#feat_req__ipc__service_instance_names" title="feat_req__ipc__service_instance_names"><em class="xref need">Service Instance Names (feat_req__ipc__service_instance_names)</em></a>).</p>
 </section>
 <section id="spec-mixed-criticality">
 <span id="id4"></span><h2>Mixed-Criticality safety systems<a class="headerlink" href="#spec-mixed-criticality" title="Link to this heading">#</a></h2>
 <p>As discussed in the motivation the communication framework shall support mixed-criticality safety systems
-<a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__safe_communication" title="FEAT_REQ__ipc__safe_communication"><em class="xref need">Safe communication over cri... (FEAT_REQ__ipc__safe_communication)</em></a>.</p>
+<a class="reference internal" href="requirements/index.html#feat_req__ipc__safe_communication" title="feat_req__ipc__safe_communication"><em class="xref need">Safe communication over cri... (feat_req__ipc__safe_communication)</em></a>.</p>
 <p>In the light of mixed-criticality safety systems and based on the failure modes for communication in the ISO26262,
 the communication framework gains four additional requirements:</p>
 <ol class="arabic simple">
-<li><p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__data_corruption" title="FEAT_REQ__ipc__data_corruption"><em class="xref need">Data Corruption (FEAT_REQ__ipc__data_corruption)</em></a></p></li>
-<li><p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__data_reordering" title="FEAT_REQ__ipc__data_reordering"><em class="xref need">Data Reordering (FEAT_REQ__ipc__data_reordering)</em></a></p></li>
-<li><p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__data_repetition" title="FEAT_REQ__ipc__data_repetition"><em class="xref need">Data Repetition (FEAT_REQ__ipc__data_repetition)</em></a></p></li>
-<li><p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__data_loss" title="FEAT_REQ__ipc__data_loss"><em class="xref need">Data Loss (FEAT_REQ__ipc__data_loss)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements/index.html#feat_req__ipc__data_corruption" title="feat_req__ipc__data_corruption"><em class="xref need">Data Corruption (feat_req__ipc__data_corruption)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements/index.html#feat_req__ipc__data_reordering" title="feat_req__ipc__data_reordering"><em class="xref need">Data Reordering (feat_req__ipc__data_reordering)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements/index.html#feat_req__ipc__data_repetition" title="feat_req__ipc__data_repetition"><em class="xref need">Data Repetition (feat_req__ipc__data_repetition)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements/index.html#feat_req__ipc__data_loss" title="feat_req__ipc__data_loss"><em class="xref need">Data Loss (feat_req__ipc__data_loss)</em></a></p></li>
 </ol>
 <p>The communication framework does not take timing related failure modes into account, since the overall stack must
 consider such failure modes on a more generic level.</p>
@@ -758,7 +752,7 @@ consider such failure modes on a more generic level.</p>
 <section id="id5">
 <h2>Performance<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
 <p>Based on the discussion in the motivation, the specific use cases can be condensed to the overall requirement to support
-zero-copy IPC (<a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__zero_copy" title="FEAT_REQ__ipc__zero_copy"><em class="xref need">Zero-Copy IPC (FEAT_REQ__ipc__zero_copy)</em></a>).</p>
+zero-copy IPC (<a class="reference internal" href="requirements/index.html#feat_req__ipc__zero_copy" title="feat_req__ipc__zero_copy"><em class="xref need">Zero-Copy IPC (feat_req__ipc__zero_copy)</em></a>).</p>
 <p>For now, there is no requirement to support zero-copy communication for other protocols.
 While this may be of interest in the future, it remains for now out of scope.</p>
 </section>
@@ -772,14 +766,14 @@ Further, a developer used to the programming language shall have no problems und
 It should feel natural to use.
 This includes error handling, which shall follow one of the error handling concepts of the programming language.</p>
 <ol class="arabic simple">
-<li><p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__lang_idioms" title="FEAT_REQ__ipc__lang_idioms"><em class="xref need">Support for programming lan... (FEAT_REQ__ipc__lang_idioms)</em></a></p></li>
-<li><p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__lang_infra" title="FEAT_REQ__ipc__lang_infra"><em class="xref need">Use programming language in... (FEAT_REQ__ipc__lang_infra)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements/index.html#feat_req__ipc__lang_idioms" title="feat_req__ipc__lang_idioms"><em class="xref need">Support for programming lan... (feat_req__ipc__lang_idioms)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements/index.html#feat_req__ipc__lang_infra" title="feat_req__ipc__lang_infra"><em class="xref need">Use programming language in... (feat_req__ipc__lang_infra)</em></a></p></li>
 </ol>
-<p>Since S-CORE supports multiple programming languages (see <a class="reference internal" href="../../../requirements/stakeholder/index.html#STKH_REQ__260" title="STKH_REQ__260"><em class="xref need">Programming languages for a... (STKH_REQ__260)</em></a>), this leads to multiple APIs that might
+<p>Since S-CORE supports multiple programming languages (see <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__260" title="stkh_req__260"><em class="xref need">Programming languages for a... (stkh_req__260)</em></a>), this leads to multiple APIs that might
 diverge significantly from each other, but provide the same feature set to the user.
 To support something like this, without reimplementing the full communication stack in both languages, an abstraction
 layer within the communication framework is unavoidable.</p>
-<p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__multi_lang" title="FEAT_REQ__ipc__multi_lang"><em class="xref need">Support for multiple progra... (FEAT_REQ__ipc__multi_lang)</em></a></p>
+<p><a class="reference internal" href="requirements/index.html#feat_req__ipc__multi_lang" title="feat_req__ipc__multi_lang"><em class="xref need">Support for multiple progra... (feat_req__ipc__multi_lang)</em></a></p>
 </section>
 <section id="full-testability-for-the-user-facing-api">
 <h2>Full testability for the user facing API<a class="headerlink" href="#full-testability-for-the-user-facing-api" title="Link to this heading">#</a></h2>
@@ -791,13 +785,13 @@ This forces the users to introduce an additional abstraction layer over the comm
 doubles.
 This is additional work for the user, and abstraction layers come with a certain cost in runtime and maintenance.
 Our goal is to provide an API that requires no additional abstraction layer over the communication framework.</p>
-<p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__testability_mock_api" title="FEAT_REQ__ipc__testability_mock_api"><em class="xref need">Fully mockable public API (FEAT_REQ__ipc__testability_mock_api)</em></a></p>
+<p><a class="reference internal" href="requirements/index.html#feat_req__ipc__testability_mock_api" title="feat_req__ipc__testability_mock_api"><em class="xref need">Fully mockable public API (feat_req__ipc__testability_mock_api)</em></a></p>
 <p>In some test scenarios users must fake communication.
 Instead of mocking the fine-granular behavior of the framework, users shall be able to simulate communication simply by
 providing an implementation of the communication partner in the test environment. For IPC this does not require big
 architectural decisions. In the light of a robust API that also supports communication between multiple hosts,
 this can be achieved through multi-binding support.</p>
-<p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__testability_fake_binding" title="FEAT_REQ__ipc__testability_fake_binding"><em class="xref need">Fake binding (FEAT_REQ__ipc__testability_fake_binding)</em></a></p>
+<p><a class="reference internal" href="requirements/index.html#feat_req__ipc__testability_fake_binding" title="feat_req__ipc__testability_fake_binding"><em class="xref need">Fake binding (feat_req__ipc__testability_fake_binding)</em></a></p>
 </section>
 <section id="multi-binding-support">
 <span id="id6"></span><h2>Multi-binding support<a class="headerlink" href="#multi-binding-support" title="Link to this heading">#</a></h2>
@@ -810,18 +804,18 @@ A binding is responsible of translating requests from the user to the respective
 It may do so by directly performing the communication into the chosen protocol without intermediate protocols inbetween.
 But it can also use a gateway approach where it forwards the communication using a different protocol (e.g. IPC) to a
 gateway which then performs the translation between protocols.</p>
-<p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__multi_binding_support" title="FEAT_REQ__ipc__multi_binding_support"><em class="xref need">Multi-binding support (FEAT_REQ__ipc__multi_binding_support)</em></a></p>
+<p><a class="reference internal" href="requirements/index.html#feat_req__ipc__multi_binding_support" title="feat_req__ipc__multi_binding_support"><em class="xref need">Multi-binding support (feat_req__ipc__multi_binding_support)</em></a></p>
 <p>To enable service location transparency, the public API is designed to be binding-agnostic.
 If the binding is exchanged, the public API remains syntactically and semantically unchanged.</p>
-<p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__binding_agnostic_api" title="FEAT_REQ__ipc__binding_agnostic_api"><em class="xref need">Binding-agnostic public API (FEAT_REQ__ipc__binding_agnostic_api)</em></a></p>
+<p><a class="reference internal" href="requirements/index.html#feat_req__ipc__binding_agnostic_api" title="feat_req__ipc__binding_agnostic_api"><em class="xref need">Binding-agnostic public API (feat_req__ipc__binding_agnostic_api)</em></a></p>
 <p>The framework forwards requests from the public API to the appropriate binding of the service instance.
 Bindings are specified in the deployment configuration.</p>
-<p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__multi_binding_depl" title="FEAT_REQ__ipc__multi_binding_depl"><em class="xref need">Multi-binding deployment co... (FEAT_REQ__ipc__multi_binding_depl)</em></a></p>
+<p><a class="reference internal" href="requirements/index.html#feat_req__ipc__multi_binding_depl" title="feat_req__ipc__multi_binding_depl"><em class="xref need">Multi-binding deployment co... (feat_req__ipc__multi_binding_depl)</em></a></p>
 <p>Some possible bindings are:</p>
 <ul class="simple">
-<li><p>IPC  (see <a class="reference internal" href="../../../requirements/stakeholder/index.html#STKH_REQ__2" title="STKH_REQ__2"><em class="xref need">Inter-process Communication (STKH_REQ__2)</em></a>)</p></li>
-<li><p>SOME/IP (see <a class="reference internal" href="../../../requirements/stakeholder/index.html#STKH_REQ__160" title="STKH_REQ__160"><em class="xref need">Supported network protocols (STKH_REQ__160)</em></a>)</p></li>
-<li><p>DDS (see <a class="reference internal" href="../../../requirements/stakeholder/index.html#STKH_REQ__160" title="STKH_REQ__160"><em class="xref need">Supported network protocols (STKH_REQ__160)</em></a>)</p></li>
+<li><p>IPC  (see <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__2" title="stkh_req__2"><em class="xref need">Inter-process Communication (stkh_req__2)</em></a>)</p></li>
+<li><p>SOME/IP (see <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__160" title="stkh_req__160"><em class="xref need">Supported network protocols (stkh_req__160)</em></a>)</p></li>
+<li><p>DDS (see <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__160" title="stkh_req__160"><em class="xref need">Supported network protocols (stkh_req__160)</em></a>)</p></li>
 <li><p>fake binding (for testing)</p></li>
 </ul>
 </section>
@@ -833,14 +827,14 @@ For this reason, most implementations prefer a limited <cite>Service discovery</
 in advance.
 We too provide partial deployment information through configuration files read at runtime.
 This information is enriched through a runtime <cite>Service discovery</cite>.</p>
-<p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__depl_config_runtime" title="FEAT_REQ__ipc__depl_config_runtime"><em class="xref need">Deployment configuration at... (FEAT_REQ__ipc__depl_config_runtime)</em></a></p>
+<p><a class="reference internal" href="requirements/index.html#feat_req__ipc__depl_config_runtime" title="feat_req__ipc__depl_config_runtime"><em class="xref need">Deployment configuration at... (feat_req__ipc__depl_config_runtime)</em></a></p>
 </section>
 <section id="tracing">
 <h2>Tracing<a class="headerlink" href="#tracing" title="Link to this heading">#</a></h2>
-<p>Based on <a class="reference internal" href="../../../requirements/stakeholder/index.html#STKH_REQ__242" title="STKH_REQ__242"><em class="xref need">Tracing of communication (STKH_REQ__242)</em></a> the communication framework must support tracing of communication events.
+<p>Based on <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__242" title="stkh_req__242"><em class="xref need">Tracing of communication (stkh_req__242)</em></a> the communication framework must support tracing of communication events.
 In a framework with multiple bindings, this requires a zero-copy binding-agnostic tracing solution in the abstraction
 layer.</p>
-<p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__tracing" title="FEAT_REQ__ipc__tracing"><em class="xref need">Support for Tracing (FEAT_REQ__ipc__tracing)</em></a></p>
+<p><a class="reference internal" href="requirements/index.html#feat_req__ipc__tracing" title="feat_req__ipc__tracing"><em class="xref need">Support for Tracing (feat_req__ipc__tracing)</em></a></p>
 </section>
 </section>
 <section id="backwards-compatibility">
@@ -859,28 +853,28 @@ binding must map at least to an Access Control List (ACL) concept, but may have 
 options.</p>
 <p>The ACL of each service instance is defined in the deployment configuration of producer and consumer.</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__acl_placement" title="FEAT_REQ__ipc__acl_placement"><em class="xref need">Access Control List Placement (FEAT_REQ__ipc__acl_placement)</em></a></p></li>
-<li><p><a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__acl_per_service_instance" title="FEAT_REQ__ipc__acl_per_service_instance"><em class="xref need">Access Control List per ser... (FEAT_REQ__ipc__acl_per_service_instance)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements/index.html#feat_req__ipc__acl_placement" title="feat_req__ipc__acl_placement"><em class="xref need">Access Control List Placement (feat_req__ipc__acl_placement)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements/index.html#feat_req__ipc__acl_per_service_instance" title="feat_req__ipc__acl_per_service_instance"><em class="xref need">Access Control List per ser... (feat_req__ipc__acl_per_service_instance)</em></a></p></li>
 </ul>
 <p>Entries in the ACL of:</p>
 <ul class="simple">
-<li><p>the producer list the allowed consumers (<a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__acl_for_producer" title="FEAT_REQ__ipc__acl_for_producer"><em class="xref need">Access Control List for pro... (FEAT_REQ__ipc__acl_for_producer)</em></a>)</p></li>
-<li><p>the consumer list the allowed producers (<a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__acl_for_consumer" title="FEAT_REQ__ipc__acl_for_consumer"><em class="xref need">Access Control List for con... (FEAT_REQ__ipc__acl_for_consumer)</em></a>)</p></li>
+<li><p>the producer list the allowed consumers (<a class="reference internal" href="requirements/index.html#feat_req__ipc__acl_for_producer" title="feat_req__ipc__acl_for_producer"><em class="xref need">Access Control List for pro... (feat_req__ipc__acl_for_producer)</em></a>)</p></li>
+<li><p>the consumer list the allowed producers (<a class="reference internal" href="requirements/index.html#feat_req__ipc__acl_for_consumer" title="feat_req__ipc__acl_for_consumer"><em class="xref need">Access Control List for con... (feat_req__ipc__acl_for_consumer)</em></a>)</p></li>
 </ul>
 <section id="ipc-security-goals">
 <h2>IPC Security Goals<a class="headerlink" href="#ipc-security-goals" title="Link to this heading">#</a></h2>
 <p>The security approach of the IPC binding achieves the security goals:</p>
 <ul class="simple">
-<li><p>confidentiality (<a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__confidentiality" title="FEAT_REQ__ipc__confidentiality"><em class="xref need">IPC Confidentiality (FEAT_REQ__ipc__confidentiality)</em></a>)</p></li>
-<li><p>integrity (<a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__integrity" title="FEAT_REQ__ipc__integrity"><em class="xref need">IPC Integrity (FEAT_REQ__ipc__integrity)</em></a>)</p></li>
-<li><p>availability (per criticality-level) (<a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__acl_placement" title="FEAT_REQ__ipc__acl_placement"><em class="xref need">Access Control List Placement (FEAT_REQ__ipc__acl_placement)</em></a>)</p></li>
+<li><p>confidentiality (<a class="reference internal" href="requirements/index.html#feat_req__ipc__confidentiality" title="feat_req__ipc__confidentiality"><em class="xref need">IPC Confidentiality (feat_req__ipc__confidentiality)</em></a>)</p></li>
+<li><p>integrity (<a class="reference internal" href="requirements/index.html#feat_req__ipc__integrity" title="feat_req__ipc__integrity"><em class="xref need">IPC Integrity (feat_req__ipc__integrity)</em></a>)</p></li>
+<li><p>availability (per criticality-level) (<a class="reference internal" href="requirements/index.html#feat_req__ipc__acl_placement" title="feat_req__ipc__acl_placement"><em class="xref need">Access Control List Placement (feat_req__ipc__acl_placement)</em></a>)</p></li>
 </ul>
 </section>
 </section>
 <section id="safety-impact">
 <h1>Safety Impact<a class="headerlink" href="#safety-impact" title="Link to this heading">#</a></h1>
 <p>The safety impact was already exhaustively covered in <a class="reference internal" href="#mot-mixed-criticality"><span class="std std-ref">Mixed-Criticality safety systems</span></a> and <a class="reference internal" href="#spec-mixed-criticality"><span class="std std-ref">Mixed-Criticality safety systems</span></a>.</p>
-<p>Overall, the communication framework supports use cases up to ASIL-B (<a class="reference internal" href="requirements/index.html#FEAT_REQ__ipc__asil" title="FEAT_REQ__ipc__asil"><em class="xref need">IPC ASIL level (FEAT_REQ__ipc__asil)</em></a>).
+<p>Overall, the communication framework supports use cases up to ASIL-B (<a class="reference internal" href="requirements/index.html#feat_req__ipc__asil" title="feat_req__ipc__asil"><em class="xref need">IPC ASIL level (feat_req__ipc__asil)</em></a>).
 Future extension to ASIL-D use cases is feasible but not in scope for now.</p>
 </section>
 <section id="license-impact">
