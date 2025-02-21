@@ -19,60 +19,90 @@ SCORE Management Roles
 ----------------------
 
 .. role:: Project Lead
-   :id: RL_project_lead
+   :id: rl__project_lead
    :status: valid
-   :security: yes
-   :safety: yes
-   :tags: project_management
 
    The Project Leads decide about strategy, addition of modules and election of all other roles.
 
+   Required skills
+
+   * Degree: Master's degree in electrical engineering/computer science/mathematics, or similar degree, or comparable work experience
+   * Solid understanding of project management
+   * Technical know-how of embedded systems
+   * Preferred training: Basic and Management specific safety and security trainings
+
+   Experience
+
+   * 3 years of experience in project or line management
+
+   Responsibility
+
+   * Decisions about strategical topics
+   * Filling the Project Lead role according to the `Eclipse Foundation Project Handbook <https://www.eclipse.org/projects/handbook>`_
+   * Election of all roles in the S-CORE project, including the :need:`Safety Manager <rl__safety_manager>` on SW platform and module level
+
+   Authority
+
+   * Ultimate decisions on escalated topics
+   * Election and replacement of all role's personnel
+   * Decide on addition/removal of modules repositories or split-off of projects
+
 .. role:: Technical Lead
-   :id: RL_technical_lead
+   :id: rl__technical_lead
    :status: valid
-   :security: yes
-   :safety: yes
-   :tags: project_management
-   :contains: RL_committer
 
-   The Technical Leads approve feature requests and perform the project management on SCORE platform level.
+   The Technical Leads approve feature requests and perform the project management of the SCORE platform.
 
-.. role:: Safety Manager
-   :id: RL_safety_manager
-   :status: valid
-   :security: no
-   :safety: yes
-   :tags: safety_management
-   :contains: RL_committer
+   Required skills
 
-   The safety managers support the planning, development and coordination of the safety activities, i.e. the safety management.
+   * Degree: Master's degree in electrical engineering/computer science/mathematics, or similar degree, or comparable work experience
+   * Know-How of project management
+   * Technical know-how of embedded systems
+   * Preferred training: Basic and Management specific safety and security trainings
+
+   Experience
+
+   * 2 years of experience in project management or similar position
+
+   Responsibility
+
+   * Review and approval of contributions, e.g. Feature Requests, which add or modify SCORE platform features
+   * Project management of the platform development - i.e. filling the project management role as defined by ISO26262
+   * High-level project control and coordination between multiple software modules
+   * Escalation instance for software module project leads (external to S-CORE), safety managers and committers
+   * Planning the releases of the S-CORE SW platform and modules
+
+   Authority
+
+   * Decisions in the technical lead circle
+   * Approving the releases of the S-CORE SW platform and modules
 
 .. role:: Quality Manager
-   :id: RL_quality_manager
+   :id: rl__quality_manager
    :status: valid
    :security: no
    :safety: no
    :tags: quality_management
-   :contains: RL_committer
+   :contains: rl__committer
 
    The quality managers shall be responsible for the planning and coordination of the quality activities, i.e. the quality management.
 
 .. role:: Security Manager
-   :id: RL_security_manager
+   :id: rl__security_manager
    :security: yes
    :status: draft
    :tags: quality_management
-   :contains: RL_committer
+   :contains: rl__committer
 
    The security managers shall be responsible for the planning and coordination of the security activities.
 
 .. role:: Module Project Lead
-   :id: RL_module_lead
+   :id: rl__module_lead
    :security: yes
    :safety: yes
    :status: valid
    :tags: project_management
-   :contains: RL_committer
+   :contains: rl__committer
 
    The module Project Leads perform the project management on module level. If a module is developed in a sub-project of SCORE they have the eclipse project lead role for this.
 
@@ -80,12 +110,12 @@ SCORE process roles
 -------------------
 
 .. role:: Process Community Member
-   :id: RL_process_community
+   :id: rl__process_community
    :status: valid
    :security: yes
    :safety: yes
    :tags: process_management
-   :contains: RL_committer
+   :contains: rl__committer
 
    The process community members are responsible for the definition of the process architecture of the project integrated management system and how they processes interact.
    The approval and release of the process is done by the safety, quality and security managers and the technical leads (for the parts which affect them).
@@ -94,27 +124,27 @@ SCORE development roles
 -----------------------
 
 .. role:: Infrastructure Tooling Community Member
-   :id: RL_infrastructure_tooling_community
+   :id: rl__infrastructure_tooling_community
    :status: valid
    :security: yes
    :safety: yes
    :tags: development
-   :contains: RL_committer
+   :contains: rl__committer
 
    The infrastructure and tooling community members are responsible for the infrastructure and tooling setup for development namely github, bazel, sphinx-needs, but also the rest of the tool chain.
 
 .. role:: Contributor
-   :id: RL_contributor
+   :id: rl__contributor
    :status: valid
 
    (Eclipse) Open Source Role, person(s) who provide(s) possible contribution(s) as pull request(s) to the main line.
    Any contributor which contributes code, tests or documentation to SCORE.
 
    .. note::
-      Follows the processes defined by the :need:`RL_process_community`
+      Follows the processes defined by the :need:`rl__process_community`
 
 .. role:: Committer
-   :id: RL_committer
+   :id: rl__committer
    :status: valid
    :security: yes
    :safety: yes
@@ -129,34 +159,22 @@ SCORE cross functional teams
 ----------------------------
 
 .. role:: Platform Team
-   :id: RL__platform_team
+   :id: rl__platform_team
    :status: valid
    :security: yes
    :safety: yes
    :tags: cross_functional
-   :contains: RL_technical_lead, RL_safety_manager, RL_quality_manager, RL_security_manager, RL_contributor, RL_committer, RL_infrastructure_tooling_community, RL_process_community
+   :contains: rl__technical_lead, rl__safety_manager, rl__quality_manager, rl__security_manager, rl__contributor, rl__committer, rl__infrastructure_tooling_community, rl__process_community
 
    The platform team is responsible for all artefacts within the platform SEooC. Additionally it is also responsible for the overall process including its support by tooling.
 
 .. role:: Module Team
-   :id: RL__module_team
+   :id: rl__module_team
    :status: valid
    :security: yes
    :safety: yes
    :tags: cross_functional
-   :contains: RL_module_lead, RL_safety_manager, RL_quality_manager, RL_security_manager, RL_contributor, RL_committer
+   :contains: rl__module_lead, rl__safety_manager, rl__quality_manager, rl__security_manager, rl__contributor, rl__committer
 
    The module team is responsible for all artefacts within the module SEooCs. Each module has only one responsible team but a team may also be responsible for several (small) modules.
-
-SCORE external roles
---------------------
-
-.. role:: External Assessor
-   :id: RL_external_assessor
-   :status: valid
-   :security: no
-   :safety: yes
-   :tags: safety_management
-
-   The external assessor performs safety confirmation measures like safety audit, assessment and confirmation reviews.
 

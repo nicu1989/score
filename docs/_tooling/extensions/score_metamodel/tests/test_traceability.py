@@ -39,12 +39,12 @@ class TestTraceability:
             id="TOOL_REQ__1",
             status="valid",
             satisfies=[
-                "FEAT_REQ__2",
+                "feat_req__2",
             ],
         )
 
         need_2 = tests.need(
-            id="FEAT_REQ__2",
+            id="feat_req__2",
             status="valid",
             satisfies=[
                 "TOOL_REQ__1",
@@ -62,7 +62,7 @@ class TestTraceability:
             id="TOOL_REQ__1",
             status="valid",
             satisfies=[
-                "FEAT_REQ__2",
+                "feat_req__2",
             ],
         )
 
@@ -83,21 +83,21 @@ class TestTraceability:
             status="valid",
             safety="QM",
             satisfies=[
-                "FEAT_REQ__2",
+                "feat_req__2",
             ],
         )
 
         need_2 = tests.need(
-            id="FEAT_REQ__2",
+            id="feat_req__2",
             status="valid",
             safety="QM",
             satisfies=[
-                "STKH_REQ__3",
+                "stkh_req__3",
             ],
         )
 
         need_3 = tests.need(
-            id="STKH_REQ__3",
+            id="stkh_req__3",
             status="valid",
             safety="QM",
         )
@@ -111,15 +111,15 @@ class TestTraceability:
         logger = tests.fake_check_logger()
 
         need_1 = tests.need(
-            id="FEAT_REQ__1",
+            id="feat_req__1",
             safety="ASIL_D",
             satisfies=[
-                "STKH_REQ__2",
+                "stkh_req__2",
             ],
         )
 
         need_2 = tests.need(
-            id="STKH_REQ__2",
+            id="stkh_req__2",
             status="valid",
             safety="ASIL_B",
         )
@@ -138,15 +138,15 @@ class TestTraceability:
         logger = tests.fake_check_logger()
 
         need_1 = tests.need(
-            id="FEAT_REQ__1",
+            id="feat_req__1",
             safety="ASIL_B",
             satisfies=[
-                "STKH_REQ__2",
+                "stkh_req__2",
             ],
         )
 
         need_2 = tests.need(
-            id="STKH_REQ__2",
+            id="stkh_req__2",
             safety="QM",
         )
         needs = [need_1, need_2]
@@ -166,12 +166,12 @@ class TestTraceability:
             id="TOOL_REQ__1",
             status="valid",
             satisfies=[
-                "FEAT_REQ__2",
+                "feat_req__2",
             ],
         )
 
         need_2 = tests.need(
-            id="FEAT_REQ__2",
+            id="feat_req__2",
             status="valid",
         )
         needs = [need_1, need_2]
@@ -187,27 +187,27 @@ class TestTraceability:
         need_1 = tests.need(
             id="TOOL_REQ__001",
             status="valid",
-            satisfies=["FEAT_REQ__2"],
+            satisfies=["feat_req__2"],
         )
 
         need_2 = tests.need(
-            id="FEAT_REQ__2",
+            id="feat_req__2",
             status="valid",
             satisfies=[
-                "FEAT_REQ__3",
+                "feat_req__3",
             ],
         )
         need_3 = tests.need(
-            id="FEAT_REQ__3",
+            id="feat_req__3",
             status="invalid",
             satisfies=[
-                "FEAT_REQ__4",
+                "feat_req__4",
             ],
         )
         needs = [need_1, need_2, need_3]
         check_linkage_status(needs, logger)
 
         logger.assert_warning(
-            "has a valid status but one of its parents: `FEAT_REQ__3` has an invalid status.",
+            "has a valid status but one of its parents: `feat_req__3` has an invalid status.",
             expect_location=False,
         )

@@ -43,6 +43,7 @@ extensions = [
     "sphinxcontrib.plantuml",
     "score_plantuml",
     "score_metamodel",
+    "score_draw_uml_funcs",
 ]
 
 exclude_patterns = [
@@ -91,7 +92,7 @@ html_context = {
     "doc_path": "docs",
 }
 
-html_logo = "_assets/S-CORE_Logo_white.svg"
+# html_logo = "_assets/S-CORE_Logo_white.svg"
 
 html_theme_options = {
     "navbar_align": "content",
@@ -113,6 +114,9 @@ html_theme_options = {
         "version_match": release,
     },
     "navbar_end": ["theme-switcher", "navbar-icon-links", "version-switcher"],
+    "logo": {
+        "text": "Eclipse S-CORE",
+    },
 }
 
 html_context = {

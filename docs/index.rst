@@ -29,8 +29,9 @@ Documentation
    <div id="videowrapper">
       <div id="fullScreenDiv">
          <div id="score-title">
-               <img id="logo_center_light" class="logo" src="_static/S-CORE_Logo_RGB.svg" width="600px"/>
-               <img id="logo_center_drk" class="logo" src="_static/S-CORE_Logo_white.svg" width="600px"/>
+           Eclipse S-CORE
+               <!--<img id="logo_center_light" class="logo" src="_static/S-CORE_Logo_RGB.svg" width="600px"/>
+               <img id="logo_center_drk" class="logo" src="_static/S-CORE_Logo_white.svg" width="600px"/>-->
          </div>
       </div>
    </div>
@@ -42,6 +43,36 @@ Welcome & Overview
 
 If this is the first time you get in touch with SCORE, the `SCORE main page <https://eclipse-score.github.io/>`__
 may be a good starting point to receive first insights of the project itself.
+
+Introduction
+~~~~~~~~~~~~
+
+.. grid:: 1 1 3 3
+   :class-container: score-grid
+
+   .. grid-item-card::
+
+      Scope
+      ^^^
+      The project develops an open source core stack for Software Defined Vehicles (SDVs),
+      targeting embedded high-performance Electronic Control Units (ECUs).
+      Check our `Scope <https://eclipse-score.github.io/#scope>`_ for details.
+
+   .. grid-item-card::
+
+      Project Status
+      ^^^
+      Check out our roadmap to see the project's key milestones and features we have planned.
+      `Click here to explore! <https://eclipse-score.github.io/index.html#roadmap>`_
+
+   .. grid-item-card::
+
+      How to Contribute?
+      ^^^
+      The only way to influence Eclipse SCORE is to contribute - SCORE is open! Please check our
+      `Get Involved <https://eclipse-score.github.io/get_involved.html>`_ guide for more
+      information.
+
 
 Software artifacts
 ~~~~~~~~~~~~~~~~~~
