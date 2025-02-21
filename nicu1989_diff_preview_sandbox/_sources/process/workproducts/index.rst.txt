@@ -1,6 +1,6 @@
 ..
    # *******************************************************************************
-   # Copyright (c) 2024 Contributors to the Eclipse Foundation
+   # Copyright (c) 2025 Contributors to the Eclipse Foundation
    #
    # See the NOTICE file(s) distributed with this work for additional
    # information regarding copyright ownership.
@@ -18,7 +18,7 @@ Workproducts
 
 .. _wp_traceability_model:
 
-.. figure:: _assets/wp_traceability_model.drawio.svg
+.. figure:: _assets/wp__traceability_model.drawio.svg
   :width: 100%
   :align: center
   :alt: Project work product traceability model
@@ -33,28 +33,28 @@ General
 ^^^^^^^
 
 .. workproduct:: Policies
-   :id: WP_POLICIES
+   :id: wp__policies
    :status: draft
    :tags: requirements_management
 
    Organization-specific rules and processes for functional safety and cybersecurity.
 
 .. workproduct:: Training path
-   :id: WP_TRAINING_PATH
+   :id: wp__training_path
    :status: draft
    :tags: safety
 
    Evidence of competence management.
 
 .. workproduct:: Quality management system
-   :id: WP_QMS
+   :id: wp__qms
    :status: draft
    :tags: safety
 
    Evidence of quality management.
 
 .. workproduct:: Quality report
-   :id: WP_QMS_REPORT
+   :id: wp__qms_report
    :status: draft
    :tags: safety
 
@@ -66,7 +66,7 @@ General
    | * Identifies any associated measurements using the information
 
 .. workproduct:: Issue tracking system
-   :id: WP_ISSUE_TRACK_SYSTEM
+   :id: wp__issue_track_system
    :status: draft
    :tags: requirements_management, safety_management
 
@@ -80,7 +80,7 @@ General
    | The documentation of a change shall contain the list of changed work products, the details of the change and the planned date of deployment of the change.
 
 .. workproduct:: Feature Request
-   :id: WP_FEAT_REQUEST
+   :id: wp__feat_request
    :status: draft
    :tags: contribution_management, safety_management
 
@@ -88,7 +88,7 @@ General
    | - Change request
 
 .. workproduct:: Platform Management Plan
-   :id: WP_PLATFORM_MGMT
+   :id: wp__platform_mgmt
    :status: draft
    :tags: safety_management
 
@@ -100,7 +100,7 @@ General
    Documentation guideline requirements must be defined for each WP. Each work product or document must include a title, author and approver, unique revision identification, change history, and status.
 
 .. workproduct:: Software Development Plan
-   :id: WP_SW_DEV_PLAN
+   :id: wp__sw_dev_plan
    :status: draft
    :tags: process
 
@@ -120,79 +120,25 @@ Process
 ^^^^^^^
 
 .. workproduct:: Process Definition
-   :id: WP_PROCESS_DEFINITION
+   :id: wp__process_definition
    :status: draft
    :tags: process
 
    Process definitions.
 
 .. workproduct:: Process Improvement Report
-   :id: WP_PROCESS_IMPR_REPORT
+   :id: wp__process_impr_report
    :status: draft
    :tags: process
 
    Process improvement report.
 
 .. workproduct:: Process Management Strategy
-   :id: WP_PROCESS_PLAN
+   :id: wp__process_plan
    :status: draft
    :tags: process
 
    Plan to manage and guide execution of the process management activities.
-
-Safety
-^^^^^^
-
-.. workproduct:: Platform Safety Plan
-   :id: WP_PLATFORM_SAFETY_PLAN
-   :status: draft
-   :tags: safety_management
-
-   Plan to manage and guide the execution of the safety activities of a project including dates, milestones, tasks, deliverables, responsibilities (including the Safety Manager appointment)  and resources.
-   Guidelines on how an impact analysis shall be concluded on each item or element involved together with it's connected items or elements.
-   This is on following level:
-   - Project/Platform (contains definitions how safety planning is performed generally in the project)
-
-.. workproduct:: Module Safety Plan
-   :id: WP_MODULE_SAFETY_PLAN
-   :status: draft
-   :tags: safety_management
-
-   Plan to manage and guide the execution of the safety activities of a project including dates, milestones, tasks, deliverables, responsibilities (including the Safety Manager appointment) and resources.
-   Guidelines on how an impact analysis shall be concluded on each item or element involved together with it's connected items or elements.
-   This is on following level:
-   - Project/Platform (contains definitions how safety planning is performed generally in the project)
-   - Module (contains activities planning based on a Contribution Request)
-
-.. workproduct:: Platform Safety Case
-   :id: WP_PLATFORM_SAFETY_CASE
-   :status: draft
-   :tags: safety_management
-
-   Argument that functional safety is achieved for items, or elements, and satisfied by evidence compiled from work products of activities during development. For Platform SEooC.
-
-.. workproduct:: Module Safety Case
-   :id: WP_MODULE_SAFETY_CASE
-   :status: draft
-   :tags: safety_management
-
-   Argument that functional safety is achieved for items, or elements, and satisfied by evidence compiled from work products of activities during development. For Module SEooC.
-
-
-.. workproduct:: Confirmation Review Reports
-   :id: WP_CMR_REPORTS
-   :status: draft
-   :tags: safety
-
-   Confirmation that a work product provides sufficient and convincing evidence of their contribution to the achievement of functional safety considering the corresponding objectives and requirements of ISO 26262.
-   Will contain confirmation review report for Safety Plan, Safety Case, Safety Analyses and Dependent Failure Analyses (DFA)
-
-.. workproduct:: Functional Safety Assessment Report
-   :id: WP_ASSESSMENT_REPORT
-   :status: draft
-   :tags: safety
-
-   Examination of whether a characteristic of a component achieves the ISO 26262 objectives and examination of an implemented process with regard to the process objectives.
 
 
 Product development
@@ -202,49 +148,35 @@ Platform development
 ^^^^^^^^^^^^^^^^^^^^
 
 .. workproduct:: Stakeholder Requirements
-   :id: WP_STAKEHOLDER_REQ
+   :id: wp__stakeholder_req
    :status: draft
    :tags: requirements_management
 
    Technical requirements from a stakeholder viewpoint and Assumptions of use based on the integration as SW platform SEooC in an assumed context.
 
 .. workproduct:: Tool Requirements
-   :id: WP_TOOL_REQ
+   :id: wp__tool_req
    :status: draft
    :tags: requirements_management
 
    SW Requirements for tools to ensure automatic enforcement of rules and as input for software tool qualification.
 
 .. workproduct:: Feature Requirements
-   :id: WP_FEATURE_REQ
+   :id: wp__feature_req
    :status: draft
    :tags: requirements_management
 
    SW Requirements describing in a more detailed way the functionality which will fulfill a set of stakeholder requirements. A "feature" consists of a set of requirements. These feature requirements shall also be the basis for integration testing on platform level.
 
 .. workproduct:: Feature Assumptions of Use
-   :id: WP_FEATURE_AOU
+   :id: wp__feature_aou
    :status: draft
    :tags: safety
 
    SW Safety Requirements for the user of the feature, exportable requirements for the user to integrate in their req mgt system.
 
-.. workproduct:: Platform Safety Manual
-   :id: WP_PLATFORM_SW_SAFETY_MANUAL
-   :status: draft
-   :tags: safety
-
-   The safety manual exists for every SEooC/qualified component. It describes:
-   - The Assumed Platform Requirements (Safety related);
-   - the safety concept of the SEooC (i.e. which faults are taken care of);
-   - the Assumptions of Use (of the features);
-   - a link to the user manual;
-   - the reactions of the implemented functions under anomalous operating conditions; and
-   - a description of known anomalies with corresponding workaround measures.
-   This is on platform level.
-
 .. workproduct:: Feature Architecture
-   :id: WP_FEATURE_ARCHITECTURE
+   :id: wp__feature_architecture
    :status: draft
    :tags: safety
 
@@ -255,7 +187,7 @@ Platform development
    Technical concept on platform level.
 
 .. workproduct:: Feature Safety Analyses
-   :id: WP_FEATURE_SAFETY_ANALYSES
+   :id: wp__feature_safety_analyses
    :status: draft
    :tags: safety
 
@@ -263,7 +195,7 @@ Platform development
    - Detection and prevention mitigations linked to Software Feature Requirements or Assumptions of Use
 
 .. workproduct:: Feature DFA
-   :id: WP_FEATURE_DFA
+   :id: wp__feature_dfa
    :status: draft
    :tags: safety
 
@@ -272,7 +204,7 @@ Platform development
    Perform analysis on interactions between safety related and non-safety related modules or modules with different ASIL of one feature. Including potential influences from the rest of the SW platform.
 
 .. workproduct:: Platform Build Configuration
-   :id: WP_PLATFORM_SW_BUILD_CONFIG
+   :id: wp__platform_sw_build_config
    :status: draft
    :tags: safety
 
@@ -280,7 +212,7 @@ Platform development
    Note: Embedded software in the sense of the Iso (i.e. deployed on the production HW) is not part of our delivery.
 
 .. workproduct:: Feature Integration test
-   :id: WP_FEATURE_INTEGRATION_TEST
+   :id: wp__feature_integration_test
    :status: draft
    :tags: safety
 
@@ -291,14 +223,14 @@ Platform development
    on reference HW
 
 .. workproduct:: Platform test
-   :id: WP_PLATFORM_TEST
+   :id: wp__platform_test
    :status: draft
    :tags: safety
 
    Platform Testing verfies Stakeholder Requirements performed on reference HW
 
 .. workproduct:: Platform Verification Report
-   :id: WP_PLATFORM_SW_VERIFICATION_REPORT
+   :id: wp__platform_sw_verification_report
    :status: draft
    :tags: safety
 
@@ -309,7 +241,7 @@ Platform development
    - Formal evidence about the performed Safety Analyses
 
 .. workproduct:: Platform Release Notes
-   :id: WP_PLATFORM_SW_RELEASE_NOTE
+   :id: wp__platform_sw_release_note
    :status: draft
    :tags: safety_management
 
@@ -320,35 +252,21 @@ Component development
 ^^^^^^^^^^^^^^^^^^^^^
 
 .. workproduct:: Component Requirements
-   :id: WP_SW_COMPONENT_REQ
+   :id: wp__sw_component_req
    :status: draft
    :tags: requirements_management
 
    | SW Requirements for own and OSS qualified components/libraries. QM and ASIL requirements are distinguished by attributes/tags.
 
 .. workproduct:: Component Assumptions of Use
-   :id: WP_SW_COMPONENT_AOU
+   :id: wp__sw_component_aou
    :status: draft
    :tags: safety
 
    SW Safety Requirements for the user of the component, exportable requirements for the user to integrate in their req mgt system.
 
-.. workproduct:: Module Safety Manual
-   :id: WP_MODULE_SW_SAFETY_MANUAL
-   :status: draft
-   :tags: safety
-
-   The safety manual exists for every SEooC/qualified component. It describes:
-   - The Assumed Platform Requirements (Safety related);
-   - the safety concept of the SEooC (i.e. which faults are taken care of);
-   - the Assumptions of Use (of the modules's components);
-   - a link to the user manual;
-   - the reactions of the implemented functions under anomalous operating conditions; and
-   - a description of known anomalies with corresponding workaround measures.
-   This is on module level.
-
 .. workproduct:: Hardware-software interface (HSI) specification
-   :id: WP_HSI
+   :id: wp__hsi
    :status: draft
    :tags: safety
 
@@ -356,7 +274,7 @@ Component development
    | The HSI specification shall include the component's hardware parts that are controlled by software and hardware resources that support the execution of the software.
 
 .. workproduct:: Requirements Inspection
-   :id: WP_SW_REQ_INSPECT
+   :id: wp__sw_req_inspect
    :status: draft
    :tags: safety
 
@@ -366,7 +284,7 @@ Component development
    | Compare also `Gitub documentationt <https://docs.github.com/en>`_
 
 .. workproduct:: Component Architecture
-   :id: WP_SW_COMPONENT_ARCHITECTURE
+   :id: wp__sw_component_architecture
    :status: draft
    :tags: safety
 
@@ -376,7 +294,7 @@ Component development
    Note: In case no sub-components exist, this can be covered by Detailed Design (in "Implementation" workproduct)
 
 .. workproduct:: Component Safety Analyses
-   :id: WP_SW_COMPONENT_SAFETY_ANALYSES
+   :id: wp__sw_component_safety_analyses
    :status: draft
    :tags: safety
 
@@ -384,7 +302,7 @@ Component development
    - Detection and prevention mitigations linked to Software Component Requirements or Assumptions of Use
 
 .. workproduct:: Component DFA
-   :id: WP_SW_COMPONENT_DFA
+   :id: wp__sw_component_dfa
    :status: draft
    :tags: safety
 
@@ -394,7 +312,7 @@ Component development
    Perform analysis on interactions between safety related and non-safety related sub-components or sub-components with different ASIL of one component. Including potential influences from the other components in the component's module.
 
 .. workproduct:: Architecture Verification
-   :id: WP_SW_ARCH_VERIFICATION
+   :id: wp__sw_arch_verification
    :status: draft
    :tags: safety
 
@@ -402,7 +320,7 @@ Component development
    May include several methods like inspection, modelling ... Which are selected in SW Development Plan.
 
 .. workproduct:: Implementation
-   :id: WP_SW_IMPLEMENTATION
+   :id: wp__sw_implementation
    :status: draft
    :tags: safety
 
@@ -410,21 +328,21 @@ Component development
    The "how to" is described in the SW Development Plan guidelines
 
 .. workproduct:: Unit test
-   :id: WP_SW_UNIT_TEST
+   :id: wp__sw_unit_test
    :status: draft
    :tags: safety
 
    Unit testing verifies component requirements and detailed design (traced to). Tooling defined in SW Development Plan and integrated in CI/Build.
 
 .. workproduct:: Code Inspection
-   :id: WP_SW_CODE_INSPECT
+   :id: wp__sw_code_inspect
    :status: draft
    :tags: safety
 
    github review with integrated inspection checklist (includes manual checking of coding guidelines)
 
 .. workproduct:: Module Verification Report
-   :id: WP_MODULE_SW_VERIFICATION_REPORT
+   :id: wp__module_sw_verification_report
    :status: draft
    :tags: safety
 
@@ -438,7 +356,7 @@ Component development
    - Software component qualification verification report
 
 .. workproduct:: Component Integration test
-   :id: WP_SW_COMPONENT_INTEGRATION_TEST
+   :id: wp__sw_component_integration_test
    :status: draft
    :tags: safety
 
@@ -448,7 +366,7 @@ Component development
    performance: i.e. RAM and processor usage on reference HW
 
 .. workproduct:: Module Build Configuration
-   :id: WP_MODULE_SW_BUILD_CONFIG
+   :id: wp__module_sw_build_config
    :status: draft
    :tags: safety
 
@@ -456,7 +374,7 @@ Component development
    Note: Embedded software in the sense of the Iso (i.e. deployed on the production HW) is not part of our delivery.
 
 .. workproduct:: Module Release Notes
-   :id: WP_MODULE_SW_RELEASE_NOTE
+   :id: wp__module_sw_release_note
    :status: draft
    :tags: safety_management
 
@@ -464,37 +382,25 @@ Component development
 
 
 .. workproduct:: Component test
-   :id: WP_SW_COMPONENT_TEST
+   :id: wp__sw_component_test
    :status: draft
    :tags: safety
 
    Component Testing verifies Component Requirements
-
-.. workproduct:: Software component classification
-   :id: WP_SW_COMPONENT_CLASS
-   :status: draft
-   :tags: process, safety
-
-   The classification shall include:
-   - the unique identification of the pre-developed software component;
-   - the maximum ASIL of the safety requirements allocated to it;
-   - a development processes analysis; and
-   - a complexity analysis of the pre-developed SW component; and
-   - finally a SW component classification as input for the safety planning (which is to cover the determined gaps, if any, by additional verification measures).
 
 
 Supporting activities
 ---------------------
 
 .. workproduct:: Verification Plan
-   :id: WP_VERIFICATION_PLAN
+   :id: wp__verification_plan
    :status: draft
    :tags: process, safety
 
    Verification planning for each phase of the safety lifecycle must detail the work products, objectives, methods, criteria, environments, equipment, resources, actions for anomalies, and regression strategies, considering method adequacy, complexity, prior experiences, and technology maturity or risks.
 
 .. workproduct:: Verification Specification
-   :id: WP_VERIFICATION_SPEC
+   :id: wp__verification_spec
    :status: draft
    :tags: process, safety
 
@@ -502,25 +408,11 @@ Supporting activities
    Test cases, test data, and test objects are part of the respective test WPs.
 
 .. workproduct:: Software tool criteria evaluation report
-   :id: WP_TOOL_EVAL
+   :id: wp__tool_eval
    :status: draft
    :tags: process, safety
 
    According to the tool evaluation process, each tool's confidence level (TCL) must be determined. Based on TCL the appropriate qualification methods shall be applied.
 
-
-Tailoring
----------
-
-.. workproduct:: Tailoring Documents
-   :id: WP_TAILORING
-   :status: draft
-   :tags: process
-
-   This workproduct argues why some workproducts are not needed in the project.
-   It may have several levels:
-   - Project/Platform
-   - Feature/Component
-   It belongs to the Safety Plan.
 
 Note: All the work products are set to status "draft", as the linkage to standard requirements is missing currently on purpose, namely to those of ISO 26262.
