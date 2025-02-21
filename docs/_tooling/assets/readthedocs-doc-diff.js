@@ -94,6 +94,15 @@ document.addEventListener("keydown", function(event) {
                                 if (location.hostname === "localhost") {
                                     localPath = window.location.pathname.replace(/\/index\.html?$/, "/");
                                 }
+                                else{
+                                    localPath = window.location.pathname
+                                                .replace(/\/index\.html?$/, "/")
+
+                                                // 3) Remove "/score/<anything up to the next slash>"
+                                                //    ^\/score\/ = must start with slash, then "score", then slash
+                                                //    [^/]+      = one or more non-slash characters
+                                                .replace(/^\/score\/[^/]+/, "");
+                                }
 
                                 const remoteUrl  = remoteBase + localPath;
                                 fetch(remoteUrl)
