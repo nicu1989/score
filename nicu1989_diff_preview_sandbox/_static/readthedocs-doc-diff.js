@@ -88,10 +88,14 @@ document.addEventListener("keydown", function(event) {
                         return function(e) {
                             return new Promise((function(t, n) {
                                 // begin-ndi: Dynamically build a remoteUrl based on current path:
-                                const localPath = window.location.pathname.replace(/\/index\.html?$/, "/");
                                 const remoteBase = e.base_url.replace(/\/$/, "");
-                                const remoteUrl  = remoteBase + localPath;
 
+                                let localPath = "";
+                                if (location.hostname === "localhost") {
+                                    localPath = window.location.pathname.replace(/\/index\.html?$/, "/");
+                                }
+
+                                const remoteUrl  = remoteBase + localPath;
                                 fetch(remoteUrl)
                                 // end-ndi
                                 .then((function(e) {
