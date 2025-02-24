@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Requirement Guidance &#8212; Score 0.1 documentation</title>
+    <title>Requirements Engineering &#8212; Score 0.1 documentation</title>
   
   
   
@@ -62,7 +62,7 @@
     <script src="../../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
     <script src="../../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
     <script src="../../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'process/guidance/requirements/index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'process/process_areas/requirements_engineering/index';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://eclipse-score.github.io/score/versions.json';
@@ -72,8 +72,8 @@
         </script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Requirement Templates" href="requirement_template.html" />
-    <link rel="prev" title="Contribution Templates" href="../contribution_request/templates/index.html" />
+    <link rel="next" title="Getting Started" href="requirements_getstrt.html" />
+    <link rel="prev" title="Introduction" href="../../introduction/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -447,8 +447,19 @@
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
 </ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../process_areas/safety_management/index.html">Safety Management</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Requirements Engineering</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="requirements_getstrt.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements_concept.html">Concept Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guidance/requirements_guideline.html">Guideline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guidance/requirements_inspection_checklist.html">Requirement Inspection Checklist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guidance/requirements_templates.html">Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guidance/requirements_process_reqs.html">Process Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements_workflow.html">Workflow Requirements Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements_workproducts.html">Workproducts Requirements Engineering</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../safety_management/index.html">Safety Management</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../roles/index.html">Roles</a></li>
@@ -459,19 +470,8 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../workflows/index.html">Workflows</a></li>
 </ul>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Guidance</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../git/index.html">Git Guidelines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../branch/index.html">Branches</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../feature_flags/index.html">Feature Flags</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../general/index.html">General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../contribution_request/index.html">Contribution Request Guideline</a></li>
-<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Requirement Guidance</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="requirement_template.html">Requirement Templates</a></li>
-</ul>
-</details></li>
-</ul>
-</details></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../guidance/index.html">Guidance</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../standards/index.html">Standards</a></li>
@@ -518,10 +518,7 @@
     
     <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Process</a></li>
     
-    
-    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Guidance</a></li>
-    
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Requirement Guidance</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Requirements Engineering</span></li>
   </ul>
 </nav>
 </div>
@@ -538,13 +535,66 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="requirement-guidance">
-<span id="id1"></span><h1>Requirement Guidance<a class="headerlink" href="#requirement-guidance" title="Link to this heading">#</a></h1>
+  <section id="requirements-engineering">
+<span id="id1"></span><h1>Requirements Engineering<a class="headerlink" href="#requirements-engineering" title="Link to this heading">#</a></h1>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="requirement_template.html">Requirement Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements_getstrt.html">Getting Started</a></li>
 </ul>
 </div>
+</section>
+<section id="concept">
+<h2>Concept<a class="headerlink" href="#concept" title="Link to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="requirements_concept.html">Concept Description</a></li>
+</ul>
+</div>
+</section>
+<section id="guidances">
+<h2>Guidances<a class="headerlink" href="#guidances" title="Link to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="guidance/requirements_guideline.html">Guideline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guidance/requirements_inspection_checklist.html">Requirement Inspection Checklist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guidance/requirements_templates.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guidance/requirements_process_reqs.html">Process Requirements</a></li>
+</ul>
+</div>
+</section>
+<section id="roles">
+<h2>Roles<a class="headerlink" href="#roles" title="Link to this heading">#</a></h2>
+<p>For requirements engineering no additional roles need to be defined.</p>
+<p>Contributing Roles:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../../roles/index.html#rl__contributor" title="rl__contributor"><em class="xref need">Contributor (rl__contributor)</em></a></p></li>
+<li><p><a class="reference internal" href="../../roles/index.html#rl__committer" title="rl__committer"><em class="xref need">Committer (rl__committer)</em></a></p></li>
+<li><p><a class="reference internal" href="../safety_management/roles.html#rl__safety_manager" title="rl__safety_manager"><em class="xref need">Safety Manager (rl__safety_manager)</em></a></p></li>
+<li><p><a class="reference internal" href="../../roles/index.html#rl__security_manager" title="rl__security_manager"><em class="xref need">Security Manager (rl__security_manager)</em></a></p></li>
+</ul>
+</div></blockquote>
+<p>A detailed overview of the responsibility for the steps of the requirement process is listed here:</p>
+<p><a class="reference internal" href="guidance/requirements_guideline.html#workflow-requirements"><span class="std std-ref">Workflow for Creating a Requirement</span></a></p>
+</section>
+<section id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Link to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="requirements_workflow.html">Workflow Requirements Engineering</a></li>
+</ul>
+</div>
+</section>
+<section id="workproducts">
+<h2>Workproducts<a class="headerlink" href="#workproducts" title="Link to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="requirements_workproducts.html">Workproducts Requirements Engineering</a></li>
+</ul>
+</div>
+</section>
 </section>
 
 
@@ -558,20 +608,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../contribution_request/templates/index.html"
+       href="../../introduction/index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Contribution Templates</p>
+        <p class="prev-next-title">Introduction</p>
       </div>
     </a>
     <a class="right-next"
-       href="requirement_template.html"
+       href="requirements_getstrt.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Requirement Templates</p>
+        <p class="prev-next-title">Getting Started</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -587,10 +637,27 @@
 
 
   <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concept">Concept</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guidances">Guidances</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roles">Roles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">Workflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workproducts">Workproducts</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
 
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/eclipse-score/score/edit/main/docs/process/guidance/requirements/index.rst">
+    <a href="https://github.com/eclipse-score/score/edit/main/docs/process/process_areas/requirements_engineering/index.rst">
       <i class="fa-solid fa-pencil"></i>
       
       
@@ -606,7 +673,7 @@
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../../../_sources/process/guidance/requirements/index.rst.txt"
+      <li><a href="../../../_sources/process/process_areas/requirements_engineering/index.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div></div>
