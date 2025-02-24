@@ -1,4 +1,16 @@
 {% extends "!layout.html" %}
+
+{% block extrahead %} {{ super() }}
+  <!-- Doc Diff Configuration, compare only <main> -->
+  <script id="doc-diff-config" type="application/json">
+  {
+      "base_url": "https://eclipse-score.github.io/score/main/",
+      "root_selector": "main",
+      "inject_styles": true
+  }
+  </script>
+{% endblock %}
+
   {% block footer %} {{ super() }}
 
   <style>
