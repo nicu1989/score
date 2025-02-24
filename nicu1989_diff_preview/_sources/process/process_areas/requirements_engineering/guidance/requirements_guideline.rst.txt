@@ -101,7 +101,7 @@ This section describes in detail which steps need to be performed to create a re
    * - :ref:`1. <create_parent_requirement>`
      - Create parent requirement
      - :need:`[[title]] <rl__contributor>`
-   * - :ref:`2. <review parent requirement>`
+   * - :ref:`2. <review_parent_requirement>`
      - Review parent requirement
      - :need:`[[title]] <rl__committer>`
    * - 3.

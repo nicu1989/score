@@ -22,7 +22,7 @@ Safety Management Process Requirements
 
    Safety plans shall contain documents references where the status is derived automatically.
 
-   Note: This can be done by defining the document as a sphinx-need and using :ndf:`copy('status', need_id='<need_id>')`
+   Note: This can be done by defining the document as a sphinx-need and using sphinx mechanisms.
 
 .. gd_req:: Safety Management Process Requirement 2
    :id: gd_req__sm_wp_status
