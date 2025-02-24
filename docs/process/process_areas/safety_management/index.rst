@@ -21,7 +21,7 @@ Concept
 -------
 
 .. doc_concept:: Safety Management Concept
-   :id: doc_concept__safety_management
+   :id: doc_concept__safety_management__process
    :status: valid
 
 In this section a concept for the safety management will be discussed. Inputs for this concepts are mainly the requirements of ISO26262 "Part 2: Management of functional safety"
@@ -64,7 +64,7 @@ Safety Plans
 
 This SW platform project defines two levels of planning: platform and module. There will be one safety plan on platform level and several safety plans on module level (one for each module).
 This is how we organize our development teams and repositories. Each of these safety plan "creates" one SEooC.
-The :ref:`Platform Safety Plan <safety_management>` exists only once and is part of the :ref:`Platform Management Plan <pmp>` of S-CORE.
+The :need:`Platform Safety Plan <doc__platform_safety_plan>` exists only once and is part of the :ref:`Platform Management Plan <pmp>` of S-CORE.
 
 Safety Management Work Products
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -88,14 +88,14 @@ Getting started
 ---------------
 
 .. doc_getstrt:: Safety Management Get Started
-   :id: doc_getstrt__safety_management
+   :id: doc_getstrt__safety_management__process
    :status: valid
 
 
 In case you are appointed as a :need:`Safety Manager <rl__safety_manager>` by the :need:`rl__project_lead` in the S-CORE project:
 
-* Contact the :need:`Technical Lead <RL__technical_lead>` for your SEooC to establish planning and reporting (the TL should already have established a Github project for planning)
-* Create your safety plan according to :need:`WF__cr_mt_safety_plan`
+* Contact the :need:`Technical Lead <rl__technical_lead>` for your SEooC to establish planning and reporting (the TL should already have established a Github project for planning)
+* Create your safety plan according to :need:`wf__cr_mt_safety_plan`
 * Make familiar with your role description and the other workflows of safety management (see below)
 * Make familiar with the development and supporting process descriptions in :ref:`process_description` plus the relevant sections of the :ref:`Platform Management Plan <pmp>`
 

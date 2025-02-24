@@ -27,7 +27,7 @@ todo: need to add guidance and standard links
    :tags: process
    :responsible: rl__process_community
    :approved_by: rl__project_lead
-   :supported_by: rl__external_assessor
+   :supported_by: rl__external_auditor
    :input: wp__policies, wp__issue_track_system
    :output: wp__process_plan
 
@@ -35,24 +35,24 @@ todo: need to add guidance and standard links
    Process metamodel see :ref:`processes_introduction`.
 
 .. workflow:: Define/Approve Process
-   :id: wf__def_app_process_defintion
+   :id: wf__def_app_process_definition
    :status: draft
    :tags: process
    :responsible: rl__process_community
    :approved_by: rl__technical_lead
-   :supported_by: rl__external_assessor
+   :supported_by: rl__external_auditor
    :input: wp__process_plan, wp__issue_track_system
    :output: wp__process_definition
 
    Process is defined and approved.
 
 .. workflow:: Monitor/Control Process
-   :id: wf__mon_ctrl_process_defintion
+   :id: wf__mon_ctrl_process_definition
    :status: draft
    :tags: process
    :responsible: rl__process_community
    :approved_by: rl__technical_lead
-   :supported_by: rl__external_assessor
+   :supported_by: rl__external_auditor
    :input: wp__process_definition
    :output: wp__process_impr_report
 
