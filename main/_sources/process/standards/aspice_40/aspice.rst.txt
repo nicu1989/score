@@ -282,7 +282,7 @@ Generic practices
 ~~~~~~~~~~~~~~~~~
 
 .. std_req:: GP3.1.1: Establish and maintain the standard process.
-   :id: R_ASPICE-40_GP-311
+   :id: std_req__aspice_40__gp-311
    :status: valid
    :links: std_req__aspice_40__iic-06-51,std_req__aspice_40__iic-10-00,std_req__aspice_40__iic-10-50,std_req__aspice_40__iic-10-51
 
@@ -309,7 +309,7 @@ Generic practices
       For guidance on how to perform process improvements see the Process Improvement process (PIM.3).
 
 .. std_req:: GP3.1.2: Determine the required competencies.
-   :id: R_ASPICE-40_GP-312
+   :id: std_req__aspice_40__gp-312
    :status: valid
    :links: std_req__aspice_40__iic-10-50,std_req__aspice_40__iic-10-51
 
@@ -325,7 +325,7 @@ Generic practices
       Preparation includes e.g., identification or definition of trainings, mentoring concepts, self-learning material.
 
 .. std_req:: GP3.1.3: Determine the required resources.
-   :id: R_ASPICE-40_GP-313
+   :id: std_req__aspice_40__gp-313
    :status: valid
    :links: std_req__aspice_40__iic-10-52
 
@@ -336,7 +336,7 @@ Generic practices
       This may include e.g., facilities, tools, licenses, networks, services, and samples supporting the establishment of the required work environment.
 
 .. std_req:: GP3.1.4: Determine suitable methods to monitor the standard process.
-   :id: R_ASPICE-40_GP-314
+   :id: std_req__aspice_40__gp-314
    :status: valid
    :links: std_req__aspice_40__iic-08-63
 
@@ -373,7 +373,7 @@ Generic practices
 ~~~~~~~~~~~~~~~~~
 
 .. std_req:: GP3.2.1: Deploy a defined process that satisfies the context specific requirements of the use of the standard process.
-   :id: R_ASPICE-40_GP-321
+   :id: std_req__aspice_40__gp-321
    :status: valid
    :links: std_req__aspice_40__iic-10-00,std_req__aspice_40__iic-15-54
 
@@ -386,7 +386,7 @@ Generic practices
       Changes in the standard process may require updates of the defined process.
 
 .. std_req:: GP3.2.2: Ensure required competencies for the defined roles.
-   :id: R_ASPICE-40_GP-322
+   :id: std_req__aspice_40__gp-322
    :status: valid
    :links: std_req__aspice_40__iic-14-53
 
@@ -396,7 +396,7 @@ Generic practices
    Availability and usage of the project staff are measured and monitored.
 
 .. std_req:: GP3.2.3: Ensure required resources to support the performance of the defined process.
-   :id: R_ASPICE-40_GP-323
+   :id: std_req__aspice_40__gp-323
    :status: valid
    :links: std_req__aspice_40__iic-13-55
 
@@ -405,7 +405,7 @@ Generic practices
    Availability and usage of resources are measured and monitored.
 
 .. std_req:: GP3.2.4: Monitor the performance of the defined process.
-   :id: R_ASPICE-40_GP-324
+   :id: std_req__aspice_40__gp-324
    :status: valid
    :links: std_req__aspice_40__iic-03-06
 
@@ -425,4 +425,4 @@ Appendix
 .. needtable:: General Practices
    :style: datatables
    :columns: id;title;status;content
-   :filter: id.startswith("R_ASPICE-40_GP")
+   :filter: id.startswith("std_req__aspice_40__gp")

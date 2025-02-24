@@ -21,4 +21,4 @@ Standards
 
    iso26262/iso26262
    isopas8926/isopas8926
-   aspice/index
+   aspice_40/index

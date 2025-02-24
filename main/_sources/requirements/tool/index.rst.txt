@@ -23,7 +23,7 @@ Integration tools
 
 
 .. tool_req:: Bazel for unified build, test and integration
-   :id: tool_req__bazel__unified_build_test_integration
+   :id: tool_req__tool__bazel_build
    :reqtype: Non-Functional
    :security: NO
    :safety: QM
@@ -38,7 +38,7 @@ Process tools
 
 
 .. tool_req:: Sphinx-needs for process modelling
-   :id: tool_req__sphinx-needs__process_modelling
+   :id: tool_req__tool__sphinx_needs_process
    :reqtype: Non-Functional
    :security: NO
    :safety: QM

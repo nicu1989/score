@@ -17,13 +17,13 @@
 
 .. std_req:: 04-02 Domain architecture
    :id: std_req__aspice_40__iic-04-02
-   :status: draft
+   :status: valid
 
    Definition not available yet in PAM4.0 document.
 
 .. std_req:: 04-04 Software Architecture
    :id: std_req__aspice_40__iic-04-04
-   :status: draft
+   :status: valid
 
    Software Architecture may have the following characteristics:
 
@@ -56,7 +56,7 @@
 
 .. std_req:: 04-05 Software detailed design
    :id: std_req__aspice_40__iic-04-05
-   :status: draft
+   :status: valid
 
    Software detailed design may have the following characteristics:
 

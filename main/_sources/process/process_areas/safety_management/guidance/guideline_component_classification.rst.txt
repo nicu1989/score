@@ -63,7 +63,7 @@ The classification is based on two criterias:
 
 Figure 1: Overview of the workflow component classification
 
-.. image:: _assets/wf__component_classification.svg
+.. image:: _assets/wf_component_classification.svg
   :width: 800
   :alt: Overview of the workflow component classification
 
@@ -233,7 +233,7 @@ Select CLAS_OUT depending on the determined values of (C) and (P)
 Step 4: Document all results and rationale for choosing (P) and (C) and (CLAS_OUT)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For this the template :need:`GD_TEMP__component_classification` shall be used.
+For this the template :need:`gd_temp__component_classification` shall be used.
 
 Step 5: Based on (CLAS_OUT) select the activities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -244,16 +244,16 @@ As soon as the contribution request containing this is in status "Accepted", the
 
 This is namely (for ASIL B) to provide the following work products according to the SW platform process:
 
-* :need:`wp__SW_COMPONENT_REQ` including their inspection
-* :need:`wp__SW_COMPONENT_AOU` derived from the OSS components user manual and interface description, includes specification of the component's configuration
-* :need:`wp__SW_COMPONENT_TEST` to test requirement and AoU implementation
+* :need:`wp__sw_component_req` including their inspection
+* :need:`wp__sw_component_aou` derived from the OSS components user manual and interface description, includes specification of the component's configuration
+* :need:`wp__sw_component_test` to test requirement and AoU implementation
 
 Integration of the OSS component is performed via the modules's SW build config and checked by feature integration tests (component integration if the OSS element is considered as a sub-component).
 
 **If CLAS_OUT=QR : Follow the process for pre-existing software architectural elements**
 
 * Based on the gaps detected in this classification which lead to a QR instead of a Q, add additional work products or improve the existing work products with the goal to get a better P or C rating ("1").
-* In case of too high complexity based on the Ids 1 and 4, a :need:`wp__SW_COMPONENT_ARCHITECTURE` shall be derived from the OSS component source code and a classification done on the sub-components in this architecture. This could be repeated again and again until sufficiently low complex sub-components were broken down.
+* In case of too high complexity based on the Ids 1 and 4, a :need:`wp__sw_component_architecture` shall be derived from the OSS component source code and a classification done on the sub-components in this architecture. This could be repeated again and again until sufficiently low complex sub-components were broken down.
 * If the classification of the (sub-)component is Q after the above, do as in section "Q:"
 
 **If CLAS_OUT=NQ : Do no use this element in safety context**

@@ -461,6 +461,7 @@
 <li class="toctree-l2"><a class="reference internal" href="template_safety_manual.html">Safety Manual Template</a></li>
 <li class="toctree-l2"><a class="reference internal" href="checklist_safety_plan_cmr.html">Safety Plan Confirmation Review Checklist</a></li>
 <li class="toctree-l2"><a class="reference internal" href="checklist_safety_case_cmr.html">Safety Case Confirmation Review Checklist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process_req.html">Safety Management Process Requirements</a></li>
 </ul>
 </details></li>
 </ul>
@@ -543,7 +544,7 @@
                   
   <section id="component-classification-guideline">
 <h1>Component Classification Guideline<a class="headerlink" href="#component-classification-guideline" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-28c3c405">
+<div class="need_container docutils container" id="SNCB-7cd74b14">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_guidl table" id="gd_guidl__component_classification">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -631,7 +632,7 @@
 </div>
 </div>
 <p>Figure 1: Overview of the workflow component classification</p>
-<a class="reference internal image-reference" href="process/process_areas/safety_management/guidance/_assets/wf__component_classification.svg"><img alt="Overview of the workflow component classification" src="process/process_areas/safety_management/guidance/_assets/wf__component_classification.svg" style="width: 800px;" />
+<a class="reference internal image-reference" href="../../../../_images/wf_component_classification.svg"><img alt="Overview of the workflow component classification" src="../../../../_images/wf_component_classification.svg" style="width: 800px;" />
 </a>
 <section id="step-1-determination-of-p">
 <h3>Step 1: Determination of (P)<a class="headerlink" href="#step-1-determination-of-p" title="Link to this heading">#</a></h3>
@@ -840,7 +841,7 @@
 </section>
 <section id="step-4-document-all-results-and-rationale-for-choosing-p-and-c-and-clas-out">
 <h3>Step 4: Document all results and rationale for choosing (P) and (C) and (CLAS_OUT)<a class="headerlink" href="#step-4-document-all-results-and-rationale-for-choosing-p-and-c-and-clas-out" title="Link to this heading">#</a></h3>
-<p>For this the template <a class="reference internal" href="#Unknown need" title="GD_TEMP__component_classification?"><em class="xref need">GD_TEMP__component_classification</em></a> shall be used.</p>
+<p>For this the template <a class="reference internal" href="template_component_classification.html#gd_temp__component_classification" title="gd_temp__component_classification"><em class="xref need">Component Classification Te... (gd_temp__component_classification)</em></a> shall be used.</p>
 </section>
 <section id="step-5-based-on-clas-out-select-the-activities">
 <h3>Step 5: Based on (CLAS_OUT) select the activities<a class="headerlink" href="#step-5-based-on-clas-out-select-the-activities" title="Link to this heading">#</a></h3>
@@ -848,15 +849,15 @@
 <p><strong>If CLAS_OUT=Q : Follow the processes for qualification of software components in a safety context</strong></p>
 <p>This is namely (for ASIL B) to provide the following work products according to the SW platform process:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#Unknown need" title="wp__SW_COMPONENT_REQ?"><em class="xref need">wp__SW_COMPONENT_REQ</em></a> including their inspection</p></li>
-<li><p><a class="reference internal" href="#Unknown need" title="wp__SW_COMPONENT_AOU?"><em class="xref need">wp__SW_COMPONENT_AOU</em></a> derived from the OSS components user manual and interface description, includes specification of the component’s configuration</p></li>
-<li><p><a class="reference internal" href="#Unknown need" title="wp__SW_COMPONENT_TEST?"><em class="xref need">wp__SW_COMPONENT_TEST</em></a> to test requirement and AoU implementation</p></li>
+<li><p><a class="reference internal" href="../../../workproducts/index.html#wp__sw_component_req" title="wp__sw_component_req"><em class="xref need">Component Requirements (wp__sw_component_req)</em></a> including their inspection</p></li>
+<li><p><a class="reference internal" href="../../../workproducts/index.html#wp__sw_component_aou" title="wp__sw_component_aou"><em class="xref need">Component Assumptions of Use (wp__sw_component_aou)</em></a> derived from the OSS components user manual and interface description, includes specification of the component’s configuration</p></li>
+<li><p><a class="reference internal" href="../../../workproducts/index.html#wp__sw_component_test" title="wp__sw_component_test"><em class="xref need">Component test (wp__sw_component_test)</em></a> to test requirement and AoU implementation</p></li>
 </ul>
 <p>Integration of the OSS component is performed via the modules’s SW build config and checked by feature integration tests (component integration if the OSS element is considered as a sub-component).</p>
 <p><strong>If CLAS_OUT=QR : Follow the process for pre-existing software architectural elements</strong></p>
 <ul class="simple">
 <li><p>Based on the gaps detected in this classification which lead to a QR instead of a Q, add additional work products or improve the existing work products with the goal to get a better P or C rating (“1”).</p></li>
-<li><p>In case of too high complexity based on the Ids 1 and 4, a <a class="reference internal" href="#Unknown need" title="wp__SW_COMPONENT_ARCHITECTURE?"><em class="xref need">wp__SW_COMPONENT_ARCHITECTURE</em></a> shall be derived from the OSS component source code and a classification done on the sub-components in this architecture. This could be repeated again and again until sufficiently low complex sub-components were broken down.</p></li>
+<li><p>In case of too high complexity based on the Ids 1 and 4, a <a class="reference internal" href="../../../workproducts/index.html#wp__sw_component_architecture" title="wp__sw_component_architecture"><em class="xref need">Component Architecture (wp__sw_component_architecture)</em></a> shall be derived from the OSS component source code and a classification done on the sub-components in this architecture. This could be repeated again and again until sufficiently low complex sub-components were broken down.</p></li>
 <li><p>If the classification of the (sub-)component is Q after the above, do as in section “Q:”</p></li>
 </ul>
 <p><strong>If CLAS_OUT=NQ : Do no use this element in safety context</strong></p>

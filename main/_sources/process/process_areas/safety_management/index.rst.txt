@@ -125,3 +125,4 @@ Guidance
    guidance/template_safety_manual.rst
    guidance/checklist_safety_plan_cmr.rst
    guidance/checklist_safety_case_cmr.rst
+   guidance/process_req.rst

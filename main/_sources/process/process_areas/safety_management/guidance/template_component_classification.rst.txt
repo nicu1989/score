@@ -122,7 +122,8 @@ Step 2: Determine (C): the uncertainity of finding systematic faults based on th
       - <Number>
 
     * - 3
-      - Test exists / Coverage (Function, Line) |br| (maybe better: testability, but how to measure?)
+      - | Test exists / Coverage (Function, Line)
+        | (maybe better: testability, but how to measure?)
       - Existing Tests Coverage
       - <NH|HM|NM>
       - <Number>

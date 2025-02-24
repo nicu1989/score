@@ -28,14 +28,14 @@ todo: need to add guidance and standard links
    :responsible: rl__contributor
    :approved_by: rl__committer
    :supported_by: rl__safety_manager, rl__security_manager
-   :input: wp__feature_req, wp__issue_track_system
+   :input: wp__requirements__feat, wp__issue_track_system
    :output: wp__feature_architecture
 
    | The feature architectures are created and maintained.
 
 .. workflow:: Create/Maintain Components architecture
    :id: wf__cr_mt_comparch
-   :status: invalid
+   :status: valid
    :tags: architecture_design
    :responsible: rl__contributor
    :approved_by: rl__committer

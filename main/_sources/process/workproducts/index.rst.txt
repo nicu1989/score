@@ -16,12 +16,11 @@ Workproducts
 ============
 
 
-.. _wp_traceability_model:
-
-.. figure:: _assets/wp__traceability_model.drawio.svg
+.. figure:: _assets/wp_traceability_model.drawio.svg
   :width: 100%
   :align: center
   :alt: Project work product traceability model
+  :name: wp_traceability_model
 
   Project development work product traceability model
 
