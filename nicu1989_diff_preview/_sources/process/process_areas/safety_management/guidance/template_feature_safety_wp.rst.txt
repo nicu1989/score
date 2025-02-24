@@ -21,68 +21,68 @@ Feature Safety Work Products Template
    :complies: std_req__iso26262__management_35, std_req__iso26262__management_36, std_req__iso26262__management_37, std_req__iso26262__management_38, std_req__iso26262__management_39
 
 
- .. list-table:: Feature <feature> Workproducts
-        :header-rows: 1
+.. list-table:: Feature <feature> Workproducts
+    :header-rows: 1
 
-        * - Workproduct Id
-          - Link to process
-          - Process status
-          - Link to issue
-          - Link to WP
-          - WP status
+    * - Workproduct Id
+      - Link to process
+      - Process status
+      - Link to issue
+      - Link to WP
+      - WP status
 
-        * - :need:`wp__FEAT_REQUEST`
-          - :ref:`feature_request_template`
-          - <automated>
-          - <link to issue>
-          - <link to WP>
-          - <automated>
+    * - :need:`wp__feat_request`
+      - :ref:`feature_request_template`
+      - <automated>
+      - <link to issue>
+      - <link to WP>
+      - <automated>
 
-        * - :need:`wp__FEATURE_REQ`
-          - <link to process>
-          - <automated>
-          - <link to issue>
-          - <Link to WP>
-          - <automated>
+    * - :need:`wp__requirements__feat`
+      - <link to process>
+      - <automated>
+      - <link to issue>
+      - <Link to WP>
+      - <automated>
 
-        * - :need:`wp__FEATURE_AOU`
-          - <link to process>
-          - <automated>
-          - <link to issue>
-          - <link to WP>
-          - <automated>
+    * - :need:`wp__requirements__feat_aou`
+      - <link to process>
+      - <automated>
+      - <link to issue>
+      - <link to WP>
+      - <automated>
 
-        * - :need:`wp__FEATURE_ARCHITECTURE`
-          - <link to process>
-          - <automated>
-          - <link to issue>
-          - <Link to WP>
-          - <automated>
+    * - :need:`wp__feature_architecture`
+      - <link to process>
+      - <automated>
+      - <link to issue>
+      - <Link to WP>
+      - <automated>
 
-        * - :need:`wp__FEATURE_SAFETY_ANALYSES`
-          - <link to process>
-          - <automated>
-          - <link to issue>
-          - <Link to WP>
-          - <automated>
+    * - :need:`wp__feature_safety_analyses`
+      - <link to process>
+      - <automated>
+      - <link to issue>
+      - <Link to WP>
+      - <automated>
 
-        * - :need:`wp__SW_REQ_INSPECT`
-          - <link to process>
-          - <automated>
-          - <link to issue>
-          - Checklist used in Pull Request Review
-          - <automated>
+    * - :need:`wp__sw_req_inspect`
+      - <link to process>
+      - <automated>
+      - <link to issue>
+      - Checklist used in Pull Request Review
+      - <automated>
 
-        * - :need:`wp__SW_ARCH_VERIFICATION`
-          - <link to process>
-          - <automated>
-          - <link to issue>
-          - <Link to WP>
-          - <automated>
+    * - :need:`wp__sw_arch_verification`
+      - <link to process>
+      - <automated>
+      - <link to issue>
+      - <Link to WP>
+      - <automated>
 
-        * - :need:`wp__FEATURE_INTEGRATION_TEST`
-          - <link to process>
-          - <automated>
-          - <link to issue>
-          - <Link to WP>
-          - <automated>
+    * - :need:`wp__feature_integration_test`
+      - <link to process>
+      - <automated>
+      - <link to issue>
+      - <Link to WP>
+      - <automated>

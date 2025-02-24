@@ -769,7 +769,7 @@ Quality
 -------
 
 .. stkh_req:: Document assumptions and design decisions
-   :id: stkh_req__qly_document_assumptions_and_design_decisions
+   :id: stkh_req__qly_assumptions_and_dd
    :reqtype: Non-Functional
    :security: NO
    :safety: QM

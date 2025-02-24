@@ -20,7 +20,7 @@ Workflows
    :status: valid
    :responsible: rl__safety_manager
    :approved_by: rl__technical_lead
-   :input: wp__PLATFORM_MGMT, wp__ISSUE_TRACK_SYSTEM, wp__sw_component_class
+   :input: wp__platform_mgmt, wp__issue_track_system, wp__sw_component_class
    :output: wp__module_safety_plan, wp__platform_safety_plan
    :contains: gd_guidl__saf_plan_definitions, gd_temp__feature_safety_wp, gd_temp__module_safety_plan
    :has: doc_concept__safety_management
@@ -34,7 +34,7 @@ Workflows
    :status: valid
    :responsible: rl__committer
    :approved_by: rl__safety_manager
-   :input: wp__PLATFORM_MGMT, wp__ISSUE_TRACK_SYSTEM
+   :input: wp__platform_mgmt, wp__issue_track_system
    :output: wp__sw_component_class
    :contains: gd_guidl__component_classification, gd_temp__component_classification
    :has: doc_concept__safety_management
@@ -46,7 +46,7 @@ Workflows
    :status: valid
    :responsible: rl__safety_manager
    :approved_by: rl__technical_lead
-   :input: wp__module_safety_plan, wp__platform_safety_plan, wp__ISSUE_TRACK_SYSTEM
+   :input: wp__module_safety_plan, wp__platform_safety_plan, wp__issue_track_system
    :output: wp__module_safety_case, wp__platform_safety_case
    :contains: gd_guidl__saf_case, gd_temp__feature_safety_wp, gd_temp__module_safety_plan
    :has: doc_concept__safety_management
@@ -91,7 +91,7 @@ Workflows
    :status: valid
    :responsible: rl__safety_manager
    :approved_by: rl__technical_lead
-   :input: wp__FEATURE_AOU, wp__FEATURE_REQ, wp__FEATURE_ARCHITECTURE, wp__FEATURE_SAFETY_ANALYSES, wp__FEATURE_DFA, wp__SW_COMPONENT_AOU, wp__SW_COMPONENT_REQ, wp__SW_COMPONENT_ARCHITECTURE, wp__SW_COMPONENT_SAFETY_ANALYSES, wp__SW_COMPONENT_DFA
+   :input: wp__requirements__feat_aou, wp__requirements__feat, wp__feature_architecture, wp__feature_safety_analyses, wp__feature_dfa, wp__sw_component_aou, wp__sw_component_req, wp__sw_component_architecture, wp__sw_component_safety_analyses, wp__sw_component_dfa
    :output: wp__platform_safety_manual, wp__module_safety_manual
    :contains: gd_guidl__saf_man, gd_temp__safety_manual
    :has: doc_concept__safety_management
@@ -106,7 +106,7 @@ Workflows
    :responsible: rl__safety_manager
    :approved_by: rl__technical_lead
    :input: wp__module_safety_plan, wp__platform_safety_plan, wp__module_safety_case, wp__platform_safety_case, wp__audit_report, wp__cmr_reports
-   :output: wp__ISSUE_TRACK_SYSTEM, wp__MODULE_SW_RELEASE_NOTE, wp__PLATFORM_SW_RELEASE_NOTE
+   :output: wp__issue_track_system, wp__module_sw_release_note, wp__platform_sw_release_note
    :contains: gd_guidl__saf_plan_definitions
    :has: doc_concept__safety_management
 

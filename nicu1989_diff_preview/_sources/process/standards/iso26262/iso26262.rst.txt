@@ -1204,6 +1204,7 @@ Part 8: Supporting processes
 
     .. std_req:: support_49
        :id: std_req__iso26262__support_49
+       :status: valid
 
 
     .. std_req:: support_50

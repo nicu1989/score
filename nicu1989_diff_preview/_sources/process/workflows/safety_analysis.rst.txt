@@ -29,7 +29,7 @@ todo: need to add guidance and standard links
    :responsible: rl__committer
    :approved_by: rl__safety_manager
    :supported_by: rl__technical_lead, rl__security_manager
-   :input: wp__feature_req, wp__feature_architecture, wp__issue_track_system
+   :input: wp__requirements__feat, wp__feature_architecture, wp__issue_track_system
    :output: wp__feature_safety_analyses, wp__feature_dfa
 
    | The safety analysis and DFA for the feature is executed.

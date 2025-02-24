@@ -147,7 +147,7 @@ Following roles should be included in the review:
 
 * :need:`[[title]] <rl__safety_manager>`
 * :need:`[[title]] <rl__security_manager>`
-* :need:`[[title]] <rl__tester>`
+* :need:`[[title]] <rl__committer>`
 
 .. _derive_child_requirement:
 
@@ -188,7 +188,7 @@ Following roles should be included in the review:
 
 * :need:`[[title]] <rl__safety_manager>`
 * :need:`[[title]] <rl__security_manager>`
-* :need:`[[title]] <rl__tester>`
+* :need:`[[title]] <rl__committer>`
 
 
 Workflow for Creating and Linking Assumption of Use (AoU)
