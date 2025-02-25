@@ -16,6 +16,8 @@ on:
   pull_request_target:
     types: [opened, reopened, synchronize] # Handles forked PRs
   push:
+    branches:
+      - main # docs are built only on push to main branch, for feature branches there are PR builds
   merge_group:
     types: [checks_requested]
 
