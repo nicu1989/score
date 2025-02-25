@@ -66,7 +66,7 @@ Workflow Requirements Engineering
    :responsible: rl__committer
    :approved_by: rl__committer
    :supported_by: rl__safety_manager
-   :input: wp__requirements__stkh, wp__requirements__feat, wp__requirements__comp, wp__requirements__feat_aou, wp__requirements__comp_aou, wp__platform_sw_safety_manual, wp__module_sw_safety_manual
+   :input: wp__requirements__stkh, wp__requirements__feat, wp__requirements__comp, wp__requirements__feat_aou, wp__requirements__comp_aou, wp__platform_safety_manual, wp__module_safety_manual
    :output: wp__issue_track_system, wp__sw_req_inspect
    :contains: gd_chklst__req__inspection
 

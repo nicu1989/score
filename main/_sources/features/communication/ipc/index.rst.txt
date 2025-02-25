@@ -174,7 +174,7 @@ We coin the term "Service instance" to refer to an entity that offers functional
 (:need:`feat_req__ipc__service_instance`).
 
 In general, we put no restrains in how service instances are grouped in the architecture
-(:need:`feat_req__ipc__service_granularity`).
+(:need:`feat_req__ipc__service_instance_granularity`).
 
 High cohesion and loose coupling
 --------------------------------

@@ -300,11 +300,11 @@ Functional Safety Management SW Platform Work Products
       - :ndf:`copy('status', need_id='wf__cr_mt_platform_mngmt_plan')`
       - <Link to issue>
       - :doc:`quality_management`
-      - :ndf:`copy('status', need_id='doc__project_quality_plan')`
+      - not started
 
     * - :need:`wp__issue_track_system`
       - :doc:`index`
-      - :ndf:`copy('status', need_id='doc__platform_management_plan')`
+      - :ndf:`copy('status', need_id='doc__platform_mgt_plan')`
       - n/a
       - `Project issues <https://github.com/eclipse-score/score/issues>`_
       - established
@@ -314,7 +314,7 @@ Functional Safety Management SW Platform Work Products
       - :ndf:`copy('status', need_id='wf__cr_mt_platform_mngmt_plan')`
       - <Link to issue>
       - :doc:`index`
-      - :ndf:`copy('status', need_id='doc__platform_management_plan')`
+      - :ndf:`copy('status', need_id='doc__platform_mgt_plan')`
 
     * - :need:`wp__process_definition`
       - :need:`wf__def_app_process_definition`
@@ -380,15 +380,15 @@ Functional Safety Management SW Platform Work Products
       - <WP status (manual)>
 
     * - :need:`wp__feature_dfa`
-      - :need:`gd_temp__dfa`
-      - :ndf:`copy('status', need_id='gd_temp__dfa')`
+      - <Link to process>
+      - <Process status>
       - <Link to issue>
       - <Link to WP>
       - <automated>
 
     * - :need:`wp__platform_sw_build_config`
       - :doc:`software_development`
-      - :ndf:`copy('status', need_id='doc__sw_development_plan')`
+      - not started
       - <Link to issue>
       - <Link to WP>
       - <automated>
@@ -402,49 +402,42 @@ Functional Safety Management SW Platform Work Products
 
     * - :need:`wp__platform_sw_release_note`
       - :doc:`release_management`
-      - :ndf:`copy('status', need_id='doc__release_management_plan')`
+      - not started
       - <Link to issue>
       - <Link to WP>
       - <automated>
 
     * - :need:`wp__platform_sw_verification_report`
-      - :need:`gd_temp__platform_verification_report_template`
-      - :ndf:`copy('status', need_id='gd_temp__platform_verification_report_template')`
+      - <Link to process>
+      - <Process status>
       - <Link to issue>
       - <Link to WP>
       - <automated>
 
-    * - :need:`wp__stakeholder_req`
+    * - :need:`wp__requirements__stkh`
       - :need:`gd_temp__req__stkh_req`
       - :ndf:`copy('status', need_id='gd_temp__req__stkh_req')`
       - n/a (done already)
       - :ref:`stakeholder_requirements`
-      - See below status charts
-
-    * - :need:`wp__tool_req`
-      - :need:`gd_temp__req__process_req`
-      - :ndf:`copy('status', need_id='gd_temp__req__process_req')`
-      - <Link to issue>
-      - :ref:`tool_requirements`
-      - See below status charts
+      - <automated>
 
     * - :need:`wp__sw_dev_plan`
       - :need:`wf__cr_mt_platform_mngmt_plan`
       - :ndf:`copy('status', need_id='wf__cr_mt_platform_mngmt_plan')`
       - <Link to issue>
       - :doc:`software_development`
-      - :ndf:`copy('status', need_id='doc__sw_development_plan')`
+      - not started
 
     * - :need:`wp__verification_plan`
       - :need:`wf__cr_mt_platform_mngmt_plan`
       - :ndf:`copy('status', need_id='wf__cr_mt_platform_mngmt_plan')`
       - <Link to issue>
       - :doc:`software_verification`
-      - :ndf:`copy('status', need_id='doc__sw_verification_plan')`
+      - not started
 
     * - :need:`wp__tool_eval`
       - :doc:`tool_management`
-      - :ndf:`copy('status', need_id='doc__tool_management_plan')`
+      - not started
       - <Link to issue>
       - <Link to WP>
       - <automated>
@@ -465,18 +458,6 @@ See feature tree documents (created by using :need:`gd_temp__feature_safety_wp`)
 
 Functional Safety Work Products Status Charts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. needpie:: Stakeholder Requirements
-  valid, invalid
-
-  type == 'stkh_req' and status == 'valid'
-  type == 'stkh_req' and status != 'valid'
-
-.. needpie:: Toolchain Requirements
-  valid, invalid
-
-  type == 'tool_req' and status == 'valid'
-  type == 'tool_req' and status != 'valid'
 
 .. needtable::
    :style: table

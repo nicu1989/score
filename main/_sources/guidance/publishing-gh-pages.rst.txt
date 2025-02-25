@@ -41,7 +41,7 @@ Implementing Security Measures
 To safely allow a workflow to push to GitHub Pages, the following measures should be taken:
 
 Require Maintainer Approval Before Running Workflows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To prevent unauthorized code execution, an environment with required approvals is being used.
 This ensures that workflows triggered by ``pull_request_target`` do not automatically execute until
