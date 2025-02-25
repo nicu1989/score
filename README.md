@@ -1,4 +1,4 @@
-# Score Platform
+# Score Platfor
 
 ## Building
 
