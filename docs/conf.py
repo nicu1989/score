@@ -63,7 +63,7 @@ exclude_patterns = [
     "_tooling/sphinx_extensions/test",
 ]
 
-templates_path = ["_templates"]
+templates_path = ["_tooling/templates"]
 
 # Enable numref
 numfig = True
@@ -74,15 +74,19 @@ numfig = True
 
 html_theme = "pydata_sphinx_theme"  # "alabaster"
 html_static_path = ["_tooling/assets", "_assets"]
+html_js_files = [
+    'readthedocs-doc-diff.js',
+]
 html_css_files = [
     "css/score.css",
     "css/score_needs.css",
     "css/score_design.css",
+    "css/doc-diff.css",
 ]
 
 html_context = {
     # "github_url": "https://github.com", # or your GitHub Enterprise site
-    "github_user": "eclipse-score",
+    "github_user": "nicu1989",
     "github_repo": "score",
     "github_version": "main",
     "doc_path": "docs",
