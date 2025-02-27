@@ -35,11 +35,11 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/modern.css?v=803738c0" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/score.css?v=940e959b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/score_needs.css?v=e97392eb" />
@@ -532,7 +532,7 @@
                   
   <section id="inter-process-communication">
 <h1>Inter-process Communication<a class="headerlink" href="#inter-process-communication" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-85d366fe">
+<div class="need_container docutils container" id="SNCB-1ade8a7c">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__ipc">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -540,9 +540,9 @@
 </div>
 </td>
 <td class="head_center" colspan="2"><div class="needs_head line-block">
-<div class="line"><span>status: </span><strong><span><span class="needs_status"><span class="needs_data">valid</span></span></span></strong></div>
-<div class="line"><span>security: </span><strong><span></span></strong></div>
-<div class="line"><span>safety: </span><strong><span><span class="needs_safety"><span class="needs_data">ASIL_B</span></span></span></strong></div>
+<div class="line"><span><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></span></div>
+<div class="line"><span></span></div>
+<div class="line"><span><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></span></div>
 </div>
 </td>
 <td class="head_right" colspan="2"><div class="needs_head_right line-block">
@@ -757,7 +757,7 @@ This includes error handling, which shall follow one of the error handling conce
 <li><p><a class="reference internal" href="requirements/index.html#feat_req__ipc__lang_idioms" title="feat_req__ipc__lang_idioms"><em class="xref need">Support for programming lan... (feat_req__ipc__lang_idioms)</em></a></p></li>
 <li><p><a class="reference internal" href="requirements/index.html#feat_req__ipc__lang_infra" title="feat_req__ipc__lang_infra"><em class="xref need">Use programming language in... (feat_req__ipc__lang_infra)</em></a></p></li>
 </ol>
-<p>Since S-CORE supports multiple programming languages (see <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__260" title="stkh_req__260"><em class="xref need">Programming languages for a... (stkh_req__260)</em></a>), this leads to multiple APIs that might
+<p>Since S-CORE supports multiple programming languages (see <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__dev_experience__prog_languages" title="stkh_req__dev_experience__prog_languages"><em class="xref need">Programming languages for a... (stkh_req__dev_experience__prog_languages)</em></a>), this leads to multiple APIs that might
 diverge significantly from each other, but provide the same feature set to the user.
 To support something like this, without reimplementing the full communication stack in both languages, an abstraction
 layer within the communication framework is unavoidable.</p>
@@ -801,9 +801,9 @@ Bindings are specified in the deployment configuration.</p>
 <p><a class="reference internal" href="requirements/index.html#feat_req__ipc__multi_binding_depl" title="feat_req__ipc__multi_binding_depl"><em class="xref need">Multi-binding deployment co... (feat_req__ipc__multi_binding_depl)</em></a></p>
 <p>Some possible bindings are:</p>
 <ul class="simple">
-<li><p>IPC  (see <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__2" title="stkh_req__2"><em class="xref need">Inter-process Communication (stkh_req__2)</em></a>)</p></li>
-<li><p>SOME/IP (see <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__160" title="stkh_req__160"><em class="xref need">Supported network protocols (stkh_req__160)</em></a>)</p></li>
-<li><p>DDS (see <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__160" title="stkh_req__160"><em class="xref need">Supported network protocols (stkh_req__160)</em></a>)</p></li>
+<li><p>IPC  (see <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__communication__inter_process" title="stkh_req__communication__inter_process"><em class="xref need">Inter-process Communication (stkh_req__communication__inter_process)</em></a>)</p></li>
+<li><p>SOME/IP (see <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__communication__supported_net" title="stkh_req__communication__supported_net"><em class="xref need">Supported network protocols (stkh_req__communication__supported_net)</em></a>)</p></li>
+<li><p>DDS (see <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__communication__supported_net" title="stkh_req__communication__supported_net"><em class="xref need">Supported network protocols (stkh_req__communication__supported_net)</em></a>)</p></li>
 <li><p>fake binding (for testing)</p></li>
 </ul>
 </section>
@@ -819,7 +819,7 @@ This information is enriched through a runtime <cite>Service discovery</cite>.</
 </section>
 <section id="tracing">
 <h2>Tracing<a class="headerlink" href="#tracing" title="Link to this heading">#</a></h2>
-<p>Based on <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__242" title="stkh_req__242"><em class="xref need">Tracing of communication (stkh_req__242)</em></a> the communication framework must support tracing of communication events.
+<p>Based on <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__dev_experience__tracing_of_comm" title="stkh_req__dev_experience__tracing_of_comm"><em class="xref need">Tracing of communication (stkh_req__dev_experience__tracing_of_comm)</em></a> the communication framework must support tracing of communication events.
 In a framework with multiple bindings, this requires a zero-copy binding-agnostic tracing solution in the abstraction
 layer.</p>
 <p><a class="reference internal" href="requirements/index.html#feat_req__ipc__tracing" title="feat_req__ipc__tracing"><em class="xref need">Support for Tracing (feat_req__ipc__tracing)</em></a></p>
