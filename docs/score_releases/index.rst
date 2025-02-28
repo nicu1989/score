@@ -14,7 +14,7 @@
 
 .. _releases:
 
-SCORE Releases Overview
+SCORE Release Ovarview and More
 =======================
 
 Roadmap
