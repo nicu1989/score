@@ -70,12 +70,12 @@ def scripts_directory_hash():
 
 
 #       ╭──────────────────────────────────────────────────────────────────────────────╮
-#       │                           Actual drawing functions                          │
+#       │                           Actual drawing functions                           │
 #       ╰──────────────────────────────────────────────────────────────────────────────╯
 
 
 def draw_component(
-    need: dict, all_needs: dict, processed_operations: set[str] = None
+    need: dict, all_needs: dict, processed_operations: set[str] | None = None
 ) -> tuple[str, str, set[str]]:
     """
     Drawing and parsing function of a component.
@@ -110,10 +110,17 @@ def draw_component(
             C1 --> CI3: uses
 
             # Part 3 Processed Operations
-            {'real_operation_1', 'real_operation_6', 'real_operation_2', 'real_operation_5', 'logical_interface_1'}
+            {
+             'real_operation_1',
+             'real_operation_6',
+             'real_operation_2',
+             'real_operation_5',
+             'logical_interface_1'
+            }
 
 
-            Note: part 1 and 2 are returned as one text item seperated by '\n'. They are interpreated and names are shortend here to aid readability.
+            Note: part 1 and 2 are returned as one text item separated by '\n'.
+            They are interpreted and names are shortened here to aid readability.
 
 
     Args:
@@ -184,11 +191,8 @@ def draw_component(
     return structure_text, linkage_text, processed_operations
 
 
-#
-
-
 def draw_component_interface(
-    need: dict, all_needs: dict, processed_operations: set[str] = None
+    need: dict, all_needs: dict, processed_operations: set[str] | None = None
 ) -> tuple[str, str, set[str]]:
     """
     Parsing and drawing of a component interface.

@@ -98,6 +98,8 @@ class ParamFileAction(argparse.Action):  # pylint: disable=too-few-public-method
     """
 
     def __call__(self, parser, namespace, values, option_string=None):
+        if values is None:
+            values = []
         paramfile = next((v[1:] for v in values if v.startswith("@")), None)
         if paramfile:
             with open(paramfile, encoding="utf-8") as handle:
@@ -248,9 +250,11 @@ def load_text_from_file_with_mmap(path, header_length, encoding, offset):
         return ""
 
     LOGGER.debug("Memory mapping first %d bytes from file: %s", header_length, path)
-    with open(path, encoding=encoding) as handle:
-        with mmap.mmap(handle.fileno(), length=length, access=mmap.ACCESS_READ) as fmap:
-            return fmap[:header_length].decode(encoding)
+    with (
+        open(path, encoding=encoding) as handle,
+        mmap.mmap(handle.fileno(), length=length, access=mmap.ACCESS_READ) as fmap,
+    ):
+        return fmap[:header_length].decode(encoding)
 
 
 def has_copyright(path, copyright_text, use_mmap, encoding, offset, config):
@@ -306,13 +310,16 @@ def get_files_from_dir(directory, exts=None):
     collected_files = []
     LOGGER.debug("Getting files from directory: %s", directory)
     for path in directory.rglob("*"):
-        if path.is_file() and path.stat().st_size != 0:
-            if (
+        if (
+            path.is_file()
+            and path.stat().st_size != 0
+            and (
                 exts is None
                 or path.suffix[1:] in exts
                 or (path.name == "BUILD" and "BUILD" in exts)
-            ):
-                collected_files.append(path)
+            )
+        ):
+            collected_files.append(path)
     return collected_files
 
 
@@ -367,10 +374,12 @@ def create_temp_file(path, encoding):
     Returns:
         str: The path to the temporary file created.
     """
-    with tempfile.NamedTemporaryFile(mode="w", encoding=encoding, delete=False) as temp:
-        with open(path, "r", encoding=encoding) as handle:
-            for chunk in iter(lambda: handle.read(4096), ""):
-                temp.write(chunk)
+    with (
+        tempfile.NamedTemporaryFile(mode="w", encoding=encoding, delete=False) as temp,
+        open(path, encoding=encoding) as handle,
+    ):
+        for chunk in iter(lambda: handle.read(4096), ""):
+            temp.write(chunk)
     return temp.name
 
 
@@ -388,7 +397,7 @@ def remove_old_header(file_path, encoding, num_of_chars):
         IOError: If there is an issue reading or writing the file.
         ValueError: If `num_of_chars` is negative.
     """
-    with open(file_path, "r", encoding=encoding) as file:
+    with open(file_path, encoding=encoding) as file:
         file.seek(num_of_chars)
         with tempfile.NamedTemporaryFile(
             "w", delete=False, encoding=encoding
@@ -470,7 +479,7 @@ def process_files(
     for item in files:
         name = Path(item).name
         key = name if name == "BUILD" else Path(item).suffix[1:]
-        if key not in templates.keys():
+        if key not in templates:
             logging.debug(
                 "Skipped (no configuration for selected file extension): %s", item
             )
@@ -565,7 +574,8 @@ def parse_arguments(argv):
         dest="offset",
         type=int,
         default=0,
-        help="Additional length offset to account for characters like a shebang (default is 0)",
+        help="Additional length offset to account for characters \
+             like a shebang (default is 0)",
     )
 
     parser.add_argument(
@@ -610,13 +620,13 @@ def main(argv=None):
 
     try:
         templates = load_templates(args.template_file)
-    except IOError as err:
+    except OSError as err:
         LOGGER.error("Failed to load copyright text: %s", err)
         return err.errno
 
     try:
         files = collect_inputs(args.inputs, args.extensions)
-    except IOError as err:
+    except OSError as err:
         LOGGER.error("Failed to process file %s with error", err.filename)
         return err.errno
 
