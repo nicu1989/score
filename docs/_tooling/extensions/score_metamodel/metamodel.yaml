@@ -130,6 +130,8 @@ needs_types:
       id: "^doc__[0-9a-z_]*$"
       safety: "^(QM|ASIL_B|ASIL_D)$"
       status: "^(valid|draft|invalid)$"
+    optional_options:
+      realizes: "^wp__.+$"
   # Requirements
   stkh_req:
     title: "Stakeholder Requirement"

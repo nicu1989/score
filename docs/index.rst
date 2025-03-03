@@ -125,7 +125,7 @@ Project structure and processes
       Platform Management Plan (PMP)
       ^^^
       Read about our project and organization structure in the
-      :ref:`Project Handbook <project_management_plan>`.
+      :need:`Project Handbook <doc__project_mgt_plan>`.
       And learn how we deal with :ref:`process_safety_management` or care about :ref:`sw_verification`.
 
 .. dropdown:: Click to see the complete sitemap

@@ -16,12 +16,11 @@
    :id: doc__platform_safety_plan
    :status: draft
    :safety: ASIL_B
+   :realizes: wp__platform_safety_plan
    :tags: platform_management
 
 Safety management / Platform Safety Plan
 ----------------------------------------
-
-This document implements :need:`wp__platform_safety_plan`.
 
 Purpose
 +++++++
