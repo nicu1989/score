@@ -88,7 +88,7 @@ def add_source_link(app: Sphinx, env) -> None:
             for id, link in gh_json.items():
                 id = id.strip()
                 try:
-                    # NOTE: Removing & ading the need is important to make sure
+                    # NOTE: Removing & adding the need is important to make sure
                     # the needs gets 're-evaluated'.
                     need = needs_copy[id]  # NeedsInfoType
                     Needs_Data.remove_need(need["id"])
@@ -107,7 +107,7 @@ def add_source_link(app: Sphinx, env) -> None:
                     )
         except Exception as e:
             LOGGER.warning(
-                f"An unexpected error occured while adding source_code_links to needs."
+                f"An unexpected error occurred while adding source_code_links to needs."
                 f"Error: {e}",
                 type="score_source_code_linker",
             )

@@ -230,11 +230,12 @@ def draw_component_interface(
         (Structure Text, Linkage Text, Processed Operations)
 
     """
+    processed_operations = processed_operations or set()
+
     # Skip if not an interface
     if "interface" not in need["id"]:
         return "", "", processed_operations
 
-    processed_operations = processed_operations or set()
     alias = gen_alias(need["title"])
     interface_text = f'interface "{need["title"]}" as {alias} {{\n'
 

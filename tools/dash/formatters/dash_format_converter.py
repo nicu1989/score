@@ -65,7 +65,7 @@ class ColoredFormatter(logging.Formatter):
         return super().format(record)
 
 
-def configure_logging(log_file_path: Path = None, verbose: bool = False) -> None:
+def configure_logging(log_file_path: Path | None = None, verbose: bool = False) -> None:
     """
     Configures the logging settings for the application.
 
