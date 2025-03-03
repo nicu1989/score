@@ -39,7 +39,7 @@ Safety Management Guideline
    | So the module safety managers shall consult the :need:`doc__platform_safety_plan` and perform accordingly in their module project.
    |
    | Communication:
-   | Development teams are interdisciplinary, so the regular (sprint) planning and review meetings enable communication (as defined in :ref:`project_management_plan`). Another main communication means are the Pull Request reviews.
+   | Development teams are interdisciplinary, so the regular (sprint) planning and review meetings enable communication (as defined in :need:`doc__project_mgt_plan`). Another main communication means are the Pull Request reviews.
    | Also the standard Eclipse Foundation communication strategies are used (e.g. mailing lists)
    |
    | Safety anomalies:
@@ -56,7 +56,7 @@ Safety Management Guideline
    |
    | **Planning safety activities:**
    | In the safety plan the nomination of the safety manager and the project manager is documented.
-   | The planning of safety activities is done using issues in the :need:`wp__issue_track_system` as specified in the :ref:`project_management_plan`
+   | The planning of safety activities is done using issues in the :need:`wp__issue_track_system` as specified in the :need:`doc__project_mgt_plan`
    | It contains for each issue
    | * objective - as part of the issue description
    | * dependencies on other activities or information - by links to the respective issues
