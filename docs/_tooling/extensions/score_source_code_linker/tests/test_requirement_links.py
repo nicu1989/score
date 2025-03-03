@@ -97,7 +97,7 @@ def test_extract_requirements(create_tmp_files):
     expected_dict3 = defaultdict(list)
 
     # if there is no git-hash returned from command.
-    # This happens if the file is new and not commited yet.
+    # This happens if the file is new and not committed yet.
     results_dict4 = extract_requirements(
         root_dir / "testfile2.txt", dummy_git_hash_func("")
     )

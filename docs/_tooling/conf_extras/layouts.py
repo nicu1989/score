@@ -28,7 +28,7 @@ needs_layouts = {
                     '<<collapse_button("meta", '
                     'collapsed="icon:arrow-down-circle", '
                     'visible="icon:arrow-right-circle", '
-                    "initial=False)>> "
+                    "initial=False)>> ",
                 )
             ],
             "meta_left": [
