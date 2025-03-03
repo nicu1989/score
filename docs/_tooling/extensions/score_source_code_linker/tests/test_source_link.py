@@ -10,12 +10,13 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
-import pytest
 import json
 from pathlib import Path
-from sphinx_needs.data import SphinxNeedsData
-from sphinx.testing.util import SphinxTestApp
+
+import pytest  # type: ignore
 from score_source_code_linker.parse_source_files import GITHUB_BASE_URL
+from sphinx.testing.util import SphinxTestApp  # type: ignore
+from sphinx_needs.data import SphinxNeedsData  # type: ignore
 
 
 @pytest.fixture(scope="session")
@@ -33,7 +34,7 @@ def sphinx_app_setup(sphinx_base_dir):
         (src_dir / "index.rst").write_text(rst_content)
         (src_dir / "requierments.txt").write_text(json.dumps(requierments_text))
 
-        app = SphinxTestApp(
+        return SphinxTestApp(
             freshenv=True,
             srcdir=Path(src_dir),
             confdir=Path(src_dir),
@@ -44,8 +45,6 @@ def sphinx_app_setup(sphinx_base_dir):
                 "source_code_linker_file": str(src_dir / "requierments.txt")
             },
         )
-
-        return app
 
     return _create_app
 
@@ -58,10 +57,16 @@ extensions = [
     "score_source_code_linker",
 ]
 needs_types = [
-    dict(directive="test_req", title="Testing Requirement", prefix="TREQ_", color="#BFD8D2", style="node"),
+    dict(
+        directive="test_req",
+        title="Testing Requirement",
+        prefix="TREQ_",
+        color="#BFD8D2",
+        style="node",
+    ),
 ]
 needs_extra_options = ["source_code_link"]
-needs_string_links = { 
+needs_string_links = {
     "source_code_linker": {
         "regex": r"(?P<value>[^,]+)",
         "link_url": "{{value}}",
@@ -75,7 +80,7 @@ needs_string_links = {
 @pytest.fixture(scope="session")
 def basic_needs():
     return """
-TESTING SOURCE LINK 
+TESTING SOURCE LINK
 ===================
 
 .. test_req:: TestReq1
@@ -150,8 +155,8 @@ def test_source_link_integration_non_existent_id(
         app.build()
         warnings = app._warning.getvalue()
         assert (
-            "WARNING: Could not find TREQ_ID_200 in the needs id's. Found in file(s): ['tools/sources/bad_implementation.py#L17']"
-            in warnings
+            "WARNING: Could not find TREQ_ID_200 in the needs id's. Found in "
+            "file(s): ['tools/sources/bad_implementation.py#L17']" in warnings
         )
     finally:
         app.cleanup()

@@ -27,11 +27,11 @@ In addition it sets common PlantUML options, like output to svg_obj.
 import sys
 from pathlib import Path
 
-from sphinx.application import Sphinx
-from sphinx.util import logging
+from sphinx.application import Sphinx  # type: ignore
+from sphinx.util import logging  # type: ignore
 
 try:
-    from python.runfiles import Runfiles
+    from python.runfiles import Runfiles  # type: ignore
 except ImportError:
     sys.exit(
         "ERROR: This script must be run from within the virtual environment "

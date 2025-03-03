@@ -24,7 +24,10 @@ needs_layouts = {
                 '<<meta("safety",prefix="safety: ")>>',
             ],
             "head_right": [
-                '<<collapse_button("meta",collapsed="icon:arrow-down-circle", visible="icon:arrow-right-circle", initial=False)>> '
+                '<<collapse_button("meta",'
+                'collapsed="icon:arrow-down-circle",'
+                'visible="icon:arrow-right-circle",'
+                "initial=False)>>",
             ],
             "meta_left": [
                 '<<meta_all(no_links=True, exclude=["layout","style"])>>',

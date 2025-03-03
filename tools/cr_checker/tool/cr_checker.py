@@ -13,13 +13,13 @@
 """The tool for checking if artifacts have proper copyright."""
 
 import argparse
-import os
+import json
 import logging
+import mmap
+import os
+import shutil
 import sys
 import tempfile
-import mmap
-import json
-import shutil
 from datetime import datetime
 from pathlib import Path
 
@@ -45,7 +45,8 @@ LOGGER_COLORS = {
 
 class ColoredFormatter(logging.Formatter):
     """
-    A custom logging formatter to add color to log level names based on the logging level.
+    A custom logging formatter to add color to log level names
+    based on the logging level.
 
     The `ColoredFormatter` class extends `logging.Formatter` and overrides the `format`
     method to add color codes to the log level name (e.g., `INFO`, `WARNING`, `ERROR`)
@@ -53,14 +54,14 @@ class ColoredFormatter(logging.Formatter):
     visually distinguishing log messages by severity.
 
     Attributes:
-        LOGGER_COLORS (dict): A dictionary mapping log level names (e.g., "INFO", "ERROR")
-                              to their respective color codes.
-        COLORS (dict): A dictionary of terminal color codes, including an "ENDC" key to reset
-                       colors after the level name.
+        LOGGER_COLORS (dict): A dictionary mapping log level names
+                              (e.g., "INFO", "ERROR") to their respective color codes.
+        COLORS (dict): A dictionary of terminal color codes,
+                       including an "ENDC" key to reset colors after the level name.
 
     Methods:
-        format(record): Adds color to the `levelname` attribute of the log record and then
-                        formats the record as per the superclass `Formatter`.
+        format(record): Adds color to the `levelname` attribute of the log record
+                        and then formats the record as per the superclass `Formatter`.
     """
 
     def format(self, record):
@@ -71,30 +72,37 @@ class ColoredFormatter(logging.Formatter):
 
 class ParamFileAction(argparse.Action):  # pylint: disable=too-few-public-methods
     """
-    A custom argparse action to support exclusive parameter files for command-line arguments.
+    A custom argparse action to support exclusive parameter files for
+    command-line arguments.
 
-    The `ParamFileAction` class allows users to specify a parameter file (prefixed with '@')
-    containing file paths or other inputs, which will override any additional inputs provided
-    in the command line. If a parameter file is found, its contents are used exclusively,
-    and all other inputs are ignored. If no parameter file is provided, standard inputs are used.
+    The `ParamFileAction` class allows users to specify a parameter
+    file (prefixed with '@') containing file paths or other inputs,
+    which will override any additional inputs provided in the command line.
+    If a parameter file is found, its contents are used exclusively,
+    and all other inputs are ignored.
+    If no parameter file is provided, standard inputs are used.
 
     Attributes:
         parser (argparse.ArgumentParser): The argument parser instance.
         namespace (argparse.Namespace): The namespace where arguments are stored.
         values (list): The list of argument values passed from the command line.
-        option_string (str, optional): The option string that triggered this action, if any.
+        option_string (str, optional): The option string that triggered this action,
+                                       if any.
 
     Methods:
-        __call__(parser, namespace, values, option_string=None): Processes the arguments.
-            - If any value starts with '@', it reads the parameter file and sets `file_paths`
-              in `namespace`.
-            - If no parameter file is detected, it directly assigns `values` to `namespace`.
+        __call__(parser, namespace, values, option_string=None): Processes the arguments
+            - If any value starts with '@', it reads the parameter file and
+              sets `file_paths` in `namespace`.
+            - If no parameter file is detected, it directly assigns `values`
+              to `namespace`.
     """
 
     def __call__(self, parser, namespace, values, option_string=None):
+        if values is None:
+            values = []
         paramfile = next((v[1:] for v in values if v.startswith("@")), None)
         if paramfile:
-            with open(paramfile, "r", encoding="utf-8") as handle:
+            with open(paramfile, encoding="utf-8") as handle:
                 file_paths = [line.strip() for line in handle if line.strip()]
             setattr(namespace, self.dest, file_paths)
         else:
@@ -130,7 +138,7 @@ def load_templates(path):
     templates = {}
     current_extensions = []
 
-    with open(path, "r", encoding="utf-8") as file:
+    with open(path, encoding="utf-8") as file:
         lines = file.readlines()
         templates_for_extensions = ""
 
@@ -170,7 +178,8 @@ def configure_logging(log_file_path=None, verbose=False):
 
     Args:
         log_file_path (str, optional): Path to the log file.
-        verbose (bool, optional): If True, sets log level to DEBUG. Otherwise, sets it to INFO.
+        verbose (bool, optional): If True, sets log level to DEBUG.
+                                  Otherwise, sets it to INFO.
     """
     log_level = logging.DEBUG if verbose else logging.INFO
     LOGGER.setLevel(log_level)
@@ -209,7 +218,7 @@ def load_text_from_file(path, header_length, encoding, offset):
     LOGGER.debug(
         "Reading first %d characters from file: %s [%s]", total_length, path, encoding
     )
-    with open(path, "r", encoding=encoding) as handle:
+    with open(path, encoding=encoding) as handle:
         return handle.read(total_length)
 
 
@@ -241,9 +250,11 @@ def load_text_from_file_with_mmap(path, header_length, encoding, offset):
         return ""
 
     LOGGER.debug("Memory mapping first %d bytes from file: %s", header_length, path)
-    with open(path, "r", encoding=encoding) as handle:
-        with mmap.mmap(handle.fileno(), length=length, access=mmap.ACCESS_READ) as fmap:
-            return fmap[:header_length].decode(encoding)
+    with (
+        open(path, encoding=encoding) as handle,
+        mmap.mmap(handle.fileno(), length=length, access=mmap.ACCESS_READ) as fmap,
+    ):
+        return fmap[:header_length].decode(encoding)
 
 
 def has_copyright(path, copyright_text, use_mmap, encoding, offset, config):
@@ -299,13 +310,16 @@ def get_files_from_dir(directory, exts=None):
     collected_files = []
     LOGGER.debug("Getting files from directory: %s", directory)
     for path in directory.rglob("*"):
-        if path.is_file() and path.stat().st_size != 0:
-            if (
+        if (
+            path.is_file()
+            and path.stat().st_size != 0
+            and (
                 exts is None
                 or path.suffix[1:] in exts
                 or (path.name == "BUILD" and "BUILD" in exts)
-            ):
-                collected_files.append(path)
+            )
+        ):
+            collected_files.append(path)
     return collected_files
 
 
@@ -314,14 +328,17 @@ def collect_inputs(inputs, exts=None):
     Collects files from a list of input paths, optionally filtering by file extensions.
 
     Args:
-        inputs (list): A list of paths to files or directories.
-                       If a directory is provided, all files within it are added to the output.
-        exts (list, optional): A list of file extensions to filter by (e.g., ['.py', '.txt']).
-                               Only files with these extensions will be included if specified.
+        inputs (list): A list of paths to files or directories. If a directory
+                       is provided, all files within it are added to the output.
+        exts (list, optional): A list of file extensions to filter by
+                               (e.g., ['.py', '.txt']).Only files with these extensions
+                               will be included if specified.
 
     Returns:
-        list: A list of file paths collected from the input paths, filtered by the given extensions.
-              If an input is neither a file nor a directory, it is skipped with a warning.
+        list: A list of file paths collected from the input paths,
+              filtered by the given extensions.
+              If an input is neither a file nor a directory,
+              it is skipped with a warning.
 
     Logs:
         Logs messages at the DEBUG level, detailing processing of directories and files,
@@ -357,10 +374,12 @@ def create_temp_file(path, encoding):
     Returns:
         str: The path to the temporary file created.
     """
-    with tempfile.NamedTemporaryFile(mode="w", encoding=encoding, delete=False) as temp:
-        with open(path, "r", encoding=encoding) as handle:
-            for chunk in iter(lambda: handle.read(4096), ""):
-                temp.write(chunk)
+    with (
+        tempfile.NamedTemporaryFile(mode="w", encoding=encoding, delete=False) as temp,
+        open(path, encoding=encoding) as handle,
+    ):
+        for chunk in iter(lambda: handle.read(4096), ""):
+            temp.write(chunk)
     return temp.name
 
 
@@ -371,13 +390,14 @@ def remove_old_header(file_path, encoding, num_of_chars):
     Args:
         file_path (str): Path to the file to be modified.
         encoding (str): Encoding used to read and write the file.
-        num_of_chars (int): Number of characters to remove from the beginning of the file.
+        num_of_chars (int): Number of characters to remove
+                            from the beginning of the file.
 
     Raises:
         IOError: If there is an issue reading or writing the file.
         ValueError: If `num_of_chars` is negative.
     """
-    with open(file_path, "r", encoding=encoding) as file:
+    with open(file_path, encoding=encoding) as file:
         file.seek(num_of_chars)
         with tempfile.NamedTemporaryFile(
             "w", delete=False, encoding=encoding
@@ -403,7 +423,7 @@ def fix_copyright(path, copyright_text, encoding, offset):
 
     temporary_file = create_temp_file(path, encoding)
 
-    with open(temporary_file, "r", encoding=encoding) as temp:
+    with open(temporary_file, encoding=encoding) as temp:
         # Read the first bytes of first line to check if it is equal to the offset
         first_line = temp.readline()
         byte_array = len(first_line.encode(encoding))
@@ -459,7 +479,7 @@ def process_files(
     for item in files:
         name = Path(item).name
         key = name if name == "BUILD" else Path(item).suffix[1:]
-        if key not in templates.keys():
+        if key not in templates:
             logging.debug(
                 "Skipped (no configuration for selected file extension): %s", item
             )
@@ -534,7 +554,7 @@ def parse_arguments(argv):
     parser.add_argument(
         "--use_memory_map",
         action="store_true",
-        help="Use memory map for reading conent of files \
+        help="Use memory map for reading content of files \
               (should be used reading gigabyte ranged files).",
     )
 
@@ -554,7 +574,8 @@ def parse_arguments(argv):
         dest="offset",
         type=int,
         default=0,
-        help="Additional length offset to account for characters like a shebang (default is 0)",
+        help="Additional length offset to account for characters \
+             like a shebang (default is 0)",
     )
 
     parser.add_argument(
@@ -562,7 +583,7 @@ def parse_arguments(argv):
         dest="remove_offset",
         type=int,
         default=0,
-        help="Offset to remove old header from begining of the file \
+        help="Offset to remove old header from beginning of the file \
              (supported only with --fix mode)",
     )
 
@@ -578,10 +599,12 @@ def parse_arguments(argv):
 
 def main(argv=None):
     """
-    Entry point for processing files to check for the presence of required copyright text.
+    Entry point for processing files to check for the presence
+    of required copyright text.
 
-    This function parses command-line arguments, configures logging, loads copyright templates,
-    collects input files based on provided criteria, and checks each file for the required
+    This function parses command-line arguments, configures logging,
+    loads copyright templates, collects input files based on provided criteria,
+    and checks each file for the required
     copyright text.
 
     Args:
@@ -589,22 +612,22 @@ def main(argv=None):
                                If `None`, defaults to `sys.argv[1:]`.
 
     Returns:
-        int: Error code if an IOError occurs during loading templates or collecting input files;
-        otherwise, returns 0 as success.
+        int: Error code if an IOError occurs during loading templates
+        or collecting input files; otherwise, returns 0 as success.
     """
     args = parse_arguments(argv if argv is not None else sys.argv[1:])
     configure_logging(args.log_file, args.verbose)
 
     try:
         templates = load_templates(args.template_file)
-    except IOError as err:
+    except OSError as err:
         LOGGER.error("Failed to load copyright text: %s", err)
         return err.errno
 
     try:
         files = collect_inputs(args.inputs, args.extensions)
-    except IOError as err:
-        LOGGER.error("Failed to prcess file %s with error", err.filename)
+    except OSError as err:
+        LOGGER.error("Failed to process file %s with error", err.filename)
         return err.errno
 
     LOGGER.debug("Running check on files: %s", files)

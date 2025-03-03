@@ -24,7 +24,6 @@ import sys
 sys.path.insert(0, ".")
 
 from _tooling.conf_extras import layouts
-from sphinx.application import Sphinx
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -54,8 +53,8 @@ exclude_patterns = [
     "docs/architecture",
     # The following entries are not required when building the documentation
     # via 'bazel build //docs:docs', as that command runs in a sandboxed environment.
-    # However, when building the documentation via 'sphinx-build' or esbonio, these entries
-    # are required to prevent the build from failing.
+    # However, when building the documentation via 'sphinx-build' or esbonio,
+    # these entries are required to prevent the build from failing.
     "bazel-*",
     ".venv_docs",
     "modules/cb2needs",
@@ -107,7 +106,10 @@ html_theme_options = {
     "collapse_navigation": True,
     # Enable version switcher
     "switcher": {
-        "json_url": f"https://{html_context['github_user']}.github.io/{html_context['github_repo']}/versions.json",  # URL to JSON file, hardcoded for now
+        "json_url": (
+            f"https://{html_context['github_user']}.github.io/"
+            f"{html_context['github_repo']}/versions.json"
+        ),  # URL to JSON file, hardcoded for now
         "version_match": release,
     },
     "navbar_end": ["theme-switcher", "navbar-icon-links", "version-switcher"],

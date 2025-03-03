@@ -10,19 +10,20 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
-import pytest
 from collections import defaultdict
+
+import pytest  # type: ignore
 from score_source_code_linker.parse_source_files import (
-    get_git_hash,
-    extract_requirements,
     GITHUB_BASE_URL,
+    extract_requirements,
+    get_git_hash,
 )
 
 
 @pytest.fixture(scope="session")
 def create_tmp_files(tmp_path_factory):
     root_dir = tmp_path_factory.mktemp("test_root")
-    test_file_contents = """ 
+    test_file_contents = """
 
 
 def implementation_1():
@@ -34,12 +35,12 @@ def implementation_tagged():
 
 # req-traceability: TEST_REQ__LINKED_TRACE
 def implementation_tagged_2():
-    pass 
+    pass
 """
     with open(root_dir / "testfile.txt", "w") as f:
         f.write(test_file_contents)
 
-    test_file_contents2 = """ 
+    test_file_contents2 = """
 
 # req-Id: TEST_REQ__LINKED_DIFFERENT_FILE
 def implementation_separate():
@@ -47,7 +48,7 @@ def implementation_separate():
 """
     with open(root_dir / "testfile2.txt", "w") as f:
         f.write(test_file_contents2)
-    test_file_contents3 = """ 
+    test_file_contents3 = """
 
 def implementation_14():
     pass
@@ -95,7 +96,8 @@ def test_extract_requirements(create_tmp_files):
     results_dict3 = extract_requirements(root_dir / "testfile3.txt")
     expected_dict3 = defaultdict(list)
 
-    # if there is no git-hash returned from command. This happens if the file is new and not commited yet.
+    # if there is no git-hash returned from command.
+    # This happens if the file is new and not committed yet.
     results_dict4 = extract_requirements(
         root_dir / "testfile2.txt", dummy_git_hash_func("")
     )
