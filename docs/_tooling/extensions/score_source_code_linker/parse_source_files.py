@@ -10,15 +10,15 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
-import subprocess
-import os
 import argparse
 import collections
-import functools
 import json
-from typing import Optional
-from pathlib import Path
+import os
+import subprocess
 
+# Importing from collections.abc as typing.Callable is deprecated since Python 3.9
+from collections.abc import Callable
+from pathlib import Path
 
 TAGS = [
     "# req-traceability:",
@@ -30,7 +30,7 @@ GITHUB_BASE_URL = "https://github.com/eclipse-score/score/blob/"
 
 def get_git_hash(file_path: str) -> str:
     """
-    Grabs the latest git hash found for perticular file
+    Grabs the latest git hash found for particular file
 
     Args:
         file_path (str): Filepath of for which the githash should be retrieved.
@@ -41,6 +41,7 @@ def get_git_hash(file_path: str) -> str:
         Example:
                 3b3397ebc2777f47b1ae5258afc4d738095adb83
     """
+    abs_path = None
     try:
         abs_path = Path(file_path).resolve()
         if not os.path.isfile(abs_path):
@@ -62,14 +63,18 @@ def get_git_hash(file_path: str) -> str:
 
 
 def extract_requirements(
-    source_file: str, git_hash_func: Optional[callable] = get_git_hash
+    source_file: str,
+    git_hash_func: Callable | None = get_git_hash,
 ) -> dict[str, list]:
     """
-    This extracts the file-path, lineNr as well as the git hash of the file where a tag was found.
+    This extracts the file-path, lineNr as well as the git hash of the file
+    where a tag was found.
 
     Args:
         source_file (str): path to source file that should be parsed.
-        git_hash_func (Optional[callable]): Optional parameter only supplied during testing. If left empty func 'get_git_hash' is used.
+        git_hash_func (Optional[callable]): Optional parameter
+                                            only supplied during testing.
+                                            If left empty func 'get_git_hash' is used.
 
     Returns:
         # TODO: change these links
@@ -85,8 +90,12 @@ def extract_requirements(
             ]
         }
     """
+    # force None to get_git_hash
+    if git_hash_func is None:
+        git_hash_func = get_git_hash
+
     requirement_mapping = collections.defaultdict(list)
-    with open(source_file, "r") as f:
+    with open(source_file) as f:
         for line_number, line in enumerate(f):
             line_number = line_number + 1
             line = line.strip()
@@ -111,7 +120,7 @@ if __name__ == "__main__":
     args, _ = parser.parse_known_args()
     requirement_mappings = collections.defaultdict(list)
     for input in args.inputs:
-        with open(input, "r") as f:
+        with open(input) as f:
             for source_file in f:
                 rm = extract_requirements(source_file.strip())
                 for k, v in rm.items():

@@ -12,12 +12,11 @@
 # *******************************************************************************
 """The tool for converting requirements.txt into dash checker format"""
 
-import re
-import sys
 import argparse
 import logging
+import re
+import sys
 from pathlib import Path
-from typing import Optional
 
 LOGGER = logging.getLogger()
 
@@ -41,7 +40,8 @@ LOGGER_COLORS = {
 
 class ColoredFormatter(logging.Formatter):
     """
-    A custom logging formatter to add color to log level names based on the logging level.
+    A custom logging formatter to add color to log level names
+    based on the logging level.
 
     The `ColoredFormatter` class extends `logging.Formatter` and overrides the `format`
     method to add color codes to the log level name (e.g., `INFO`, `WARNING`, `ERROR`)
@@ -49,14 +49,14 @@ class ColoredFormatter(logging.Formatter):
     visually distinguishing log messages by severity.
 
     Attributes:
-        LOGGER_COLORS (dict): A dictionary mapping log level names (e.g., "INFO", "ERROR")
-                              to their respective color codes.
-        COLORS (dict): A dictionary of terminal color codes, including an "ENDC" key to reset
-                       colors after the level name.
+        LOGGER_COLORS (dict): A dictionary mapping log level names
+                              (e.g., "INFO", "ERROR") to their respective color codes.
+        COLORS (dict): A dictionary of terminal color codes, including an "ENDC" key
+                       to reset colors after the level name.
 
     Methods:
-        format(record): Adds color to the `levelname` attribute of the log record and then
-                        formats the record as per the superclass `Formatter`.
+        format(record): Adds color to the `levelname` attribute of the log record and
+                        then formats the record as per the superclass `Formatter`.
     """
 
     def format(self, record):
@@ -65,7 +65,7 @@ class ColoredFormatter(logging.Formatter):
         return super().format(record)
 
 
-def configure_logging(log_file_path: Path = None, verbose: bool = False) -> None:
+def configure_logging(log_file_path: Path | None = None, verbose: bool = False) -> None:
     """
     Configures the logging settings for the application.
 
@@ -80,10 +80,12 @@ def configure_logging(log_file_path: Path = None, verbose: bool = False) -> None
         None: This function does not return any value, it only configures logging.
 
     Notes:
-        - If `log_file_path` is provided, the log messages will be saved to the specified file.
-        - If `verbose` is `True`, detailed logs (DEBUG level) will be captured; otherwise,
-          less detailed logs (INFO level) will be captured.
-        - The default logging format is `%(asctime)s - %(name)s - %(levelname)s - %(message)s`.
+        - If `log_file_path` is provided, the log messages will be saved
+          to the specified file.
+        - If `verbose` is `True`, detailed logs (DEBUG level) will be captured;
+          otherwise, less detailed logs (INFO level) will be captured.
+        - The default logging format is:
+          `%(asctime)s - %(name)s - %(levelname)s - %(message)s`.
     """
     log_level = logging.DEBUG if verbose else logging.INFO
     LOGGER.setLevel(log_level)
@@ -103,21 +105,22 @@ def configure_logging(log_file_path: Path = None, verbose: bool = False) -> None
 
 def format_line(
     line: str, regex: str = r"([a-zA-Z0-9_-]+)==([a-zA-Z0-9.\-_]+)"
-) -> Optional[str]:
+) -> str | None:
     """
-    Formats a line of text by matching a specified regex pattern and extracting components.
+    Formats a line of text by matching a specified regex pattern and
+    extracting components.
 
     Args:
         line (str): The input string to be processed.
         regex (str, optional): A regular expression pattern to match the input line.
 
     Returns:
-        Optional[str]: A formatted string based on the regex match if the pattern is found,
-        or None if no match is found.
+        Optional[str]: A formatted string based on the regex match
+        if the pattern is found, or None if no match is found.
 
     Notes:
-        - The function uses the provided regex to capture two components from the input line:
-          the package name and its version.
+        - The function uses the provided regex to capture two components
+          from the input line: the package name and its version.
         - The formatted string follows the pattern "pypi/pypi/-/{package}/{version}".
         - If the regex does not match, None is returned.
     """
@@ -132,27 +135,29 @@ def format_line(
     return ret
 
 
-def convert_to_dash_format(input_file: Path, output_file: Path) -> int:
+def convert_to_dash_format(input_file: Path, output_file: Path):
     """
     Converts the content of an input to a "dash format" and writes output file.
 
-    The exact transformation applied to the content is assumed to replace specific patterns or
-    structures with a dash-separated format, although the details depend on the implementation.
+    The exact transformation applied to the content is assumed to replace specific
+    patterns or structures with a dash-separated format, although the details depend
+    on the implementation.
 
     Args:
         input_file (Path): Path to the input file containing the original content.
-        output_file (Path): Path to the output file where the converted content will be written.
+        output_file (Path): Path to the output file where the converted content
+                            will be written.
 
-    Returns:
-        int: Error thrown by system over exceptions.
     """
     encoding = "utf-8"
-    with open(input_file, "r", encoding=encoding) as infile:
-        with open(output_file, "w", encoding=encoding) as outfile:
-            for line in infile:
-                formatted_line = format_line(line.strip())
-                if formatted_line:
-                    outfile.write(formatted_line + "\n")
+    with (
+        open(input_file, encoding=encoding) as infile,
+        open(output_file, "w", encoding=encoding) as outfile,
+    ):
+        for line in infile:
+            formatted_line = format_line(line.strip())
+            if formatted_line:
+                outfile.write(formatted_line + "\n")
 
 
 def parse_arguments(argv: list[str]) -> argparse.Namespace:
@@ -167,7 +172,8 @@ def parse_arguments(argv: list[str]) -> argparse.Namespace:
 
     Notes:
         - This function expects an `argparse.ArgumentParser` to be configured with
-          the required arguments. If `argv` is not provided, it defaults to an empty list.
+          the required arguments.
+          If `argv` is not provided, it defaults to an empty list.
         - Use the `argparse.Namespace` object to access parsed arguments by their names.
     """
 
@@ -210,7 +216,7 @@ def parse_arguments(argv: list[str]) -> argparse.Namespace:
     return parser.parse_args(argv)
 
 
-def main(argv: list[str] = None) -> int:
+def main(argv: list[str] | None) -> int:
     """
     The main entry point of the script.
 

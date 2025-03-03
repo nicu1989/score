@@ -10,11 +10,9 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
-
 import os
-import sys
 
-from sphinx_autobuild.__main__ import main as sphinx_autobuild_main
+from sphinx_autobuild.__main__ import main as sphinx_autobuild_main  # type: ignore
 
 # sphinx will print relative paths to the current directory.
 # Change to the workspace root so that the paths are readable and clickable.

@@ -12,10 +12,12 @@
 # *******************************************************************************
 import json
 from copy import deepcopy
+
+from sphinx.application import Sphinx  # type: ignore
+from sphinx_needs.data import SphinxNeedsData  # type: ignore
+from sphinx_needs.logging import get_logger  # type: ignore
+
 from score_source_code_linker.parse_source_files import GITHUB_BASE_URL
-from sphinx.application import Sphinx
-from sphinx_needs.data import SphinxNeedsData
-from sphinx_needs.logging import get_logger
 
 LOGGER = get_logger(__name__)
 
@@ -49,13 +51,15 @@ def setup(app: Sphinx) -> dict:
 def find_dir_paths(app: Sphinx) -> list[str]:
     """
     Reading 'requirement_links' config value and returning it as list
-    The 'requirement_links' config value contains all source links found that need to be parsed.
+    The 'requirement_links' config value contains all source links found
+    that need to be parsed.
     Args:
         app: Sphinx app of the current running application
 
     Returns:
         (list[str]):
-                List of filenames as strings captured from the 'requirement_links' configuration value.
+                List of filenames as strings captured from the 'requirement_links'
+                configuration value.
 
         Example:
             [file-1, file-2]
@@ -65,8 +69,10 @@ def find_dir_paths(app: Sphinx) -> list[str]:
 
 def add_source_link(app: Sphinx, env) -> None:
     """
-    'Main' function that facilitates the running of all other functions in correct order.
-    This function is also 'connected' to the message Sphinx emits, therefore the one that's called directly.
+    'Main' function that facilitates the running of all other functions
+    in correct order.
+    This function is also 'connected' to the message Sphinx emits,
+    therefore the one that's called directly.
     Args:
         env: Buildenvironment, this is filled automatically
         app: Sphinx app application, this is filled automatically
@@ -82,20 +88,27 @@ def add_source_link(app: Sphinx, env) -> None:
             for id, link in gh_json.items():
                 id = id.strip()
                 try:
-                    # NOTE: Removing & ading the need is important to make sure the needs gets 're-evaluated'.
+                    # NOTE: Removing & adding the need is important to make sure
+                    # the needs gets 're-evaluated'.
                     need = needs_copy[id]  # NeedsInfoType
                     Needs_Data.remove_need(need["id"])
                     need["source_code_link"] = ",".join(link)
                     Needs_Data.add_need(need)
                 except KeyError:
-                    # NOTE: manipulating link to remove git-hash, making the output file location more readable
+                    # NOTE: manipulating link to remove git-hash,
+                    # making the output file location more readable
+                    files = [
+                        x.replace(GITHUB_BASE_URL, "").split("/", 1)[-1] for x in link
+                    ]
                     LOGGER.warning(
-                        f"Could not find {id} in the needs id's. Found in file(s): {[x.replace(GITHUB_BASE_URL, "").split("/",1)[-1] for x in link]}",
+                        f"Could not find {id} in the needs id's."
+                        f"Found in file(s): {files}",
                         type="score_source_code_linker",
                     )
         except Exception as e:
             LOGGER.warning(
-                f"An unexpected error occured while adding source_code_links to needs. Error: {e}",
+                f"An unexpected error occurred while adding source_code_links to needs."
+                f"Error: {e}",
                 type="score_source_code_linker",
             )
             LOGGER.warning(

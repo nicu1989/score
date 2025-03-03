@@ -11,7 +11,7 @@
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
 """
-This 'sphinx-extension' is responsible to allow for functional drawings of UML diagramms of
+This 'sphinx-extension' is responsible to allow for functional drawings of UML diagrams
 
     - Features
     - Logical Interfaces
@@ -21,21 +21,21 @@ This 'sphinx-extension' is responsible to allow for functional drawings of UML d
 
 and all applicable linkages between them.
 
-It provieds this functionality by adding classes to `needs_render_context`, which then can be invoked inside
-'needarch' and 'needuml' blocks in rst files.
+It provides this functionality by adding classes to `needs_render_context`,
+which then can be invoked inside 'needarch' and 'needuml' blocks in rst files.
 """
 
 import hashlib
 import time
-
 from functools import cache
 from pathlib import Path
-from sphinx.application import Sphinx
-from sphinx_needs.logging import get_logger
+
+from sphinx.application import Sphinx  # type: ignore
+from sphinx_needs.logging import get_logger  # type: ignore
+
 from score_draw_uml_funcs.helpers import (
-    gen_link_text,
-    gen_alias,
     find_interfaces_of_operations,
+    gen_alias,
 )
 
 logger = get_logger(__file__)
@@ -69,13 +69,13 @@ def scripts_directory_hash():
     return directory_hash
 
 
-#                    ╭──────────────────────────────────────────────────────────────────────────────╮
-#                    │                           Actuall drawing functions                          │
-#                    ╰──────────────────────────────────────────────────────────────────────────────╯
+#       ╭──────────────────────────────────────────────────────────────────────────────╮
+#       │                           Actual drawing functions                           │
+#       ╰──────────────────────────────────────────────────────────────────────────────╯
 
 
 def draw_component(
-    need: dict, all_needs: dict, processed_operations: set[str] = None
+    need: dict, all_needs: dict, processed_operations: set[str] | None = None
 ) -> tuple[str, str, set[str]]:
     """
     Drawing and parsing function of a component.
@@ -110,10 +110,17 @@ def draw_component(
             C1 --> CI3: uses
 
             # Part 3 Processed Operations
-            {'real_operation_1', 'real_operation_6', 'real_operation_2', 'real_operation_5', 'logical_interface_1'}
+            {
+             'real_operation_1',
+             'real_operation_6',
+             'real_operation_2',
+             'real_operation_5',
+             'logical_interface_1'
+            }
 
 
-            Note: part 1 and 2 are returned as one text item seperated by '\n'. They are interpreated and names are shortend here to aid readability.
+            Note: part 1 and 2 are returned as one text item separated by '\n'.
+            They are interpreted and names are shortened here to aid readability.
 
 
     Args:
@@ -184,14 +191,12 @@ def draw_component(
     return structure_text, linkage_text, processed_operations
 
 
-#
-
-
 def draw_component_interface(
-    need: dict, all_needs: dict, processed_operations: set[str] = None
+    need: dict, all_needs: dict, processed_operations: set[str] | None = None
 ) -> tuple[str, str, set[str]]:
     """
-    Parsing and drawing of a component interface. If needed it also will follow and draw any linked interfaces
+    Parsing and drawing of a component interface.
+    If needed it also will follow and draw any linked interfaces
 
     Example:
         input:
@@ -212,7 +217,8 @@ def draw_component_interface(
             # Part 3 Processed Operations
             (real_operation_5, real_operation_6)
 
-            Note: part 1 and 2 are returned as one text item seperated by '\n'. They are interpreated and names are shortend here to aid readability.
+            Note: part 1 and 2 are returned as one text item separated by '\n'.
+            They are interpreted and names are shortened here to aid readability.
 
     Args:
         need: need that should be parsed / drawn
@@ -224,11 +230,12 @@ def draw_component_interface(
         (Structure Text, Linkage Text, Processed Operations)
 
     """
+    processed_operations = processed_operations or set()
+
     # Skip if not an interface
     if "interface" not in need["id"]:
         return "", "", processed_operations
 
-    processed_operations = processed_operations or set()
     alias = gen_alias(need["title"])
     interface_text = f'interface "{need["title"]}" as {alias} {{\n'
 
@@ -251,7 +258,8 @@ def draw_component_interface(
         upper_alias = gen_alias(all_needs[upper_id]["title"])
         linkage_text += f"{alias} --> {upper_alias}: implements\n"
 
-    # Generate text for upper interfaces (like the logical interfaces from the logic ops we are linking to)
+    # Generate text for upper interfaces
+    # (like the logical interfaces from the logic ops we are linking to)
     upper_interface_text = "".join(
         gen_interface_text(all_needs[iface_id], all_needs)
         for iface_id in upper_interfaces
@@ -276,9 +284,9 @@ def gen_interface_text(need: dict, all_needs: dict) -> str:
     return text
 
 
-#                    ╭──────────────────────────────────────────────────────────────────────────────╮
-#                    │                    Classes with hashing to enable caching                    │
-#                    ╰──────────────────────────────────────────────────────────────────────────────╯
+#       ╭──────────────────────────────────────────────────────────────────────────────╮
+#       │                    Classes with hashing to enable caching                    │
+#       ╰──────────────────────────────────────────────────────────────────────────────╯
 
 
 class draw_full_feature:

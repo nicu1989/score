@@ -11,9 +11,9 @@
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
 import sys
-import pytest
 
+import pytest
 
 if __name__ == "__main__":
     args = sys.argv[1:]
-    sys.exit(pytest.main(args))
+    sys.exit(pytest.main(args))  # type: ignore[attr-defined]
