@@ -22,3 +22,4 @@ General
    git
    folder
    feature_flags
+   contribution_attribution
