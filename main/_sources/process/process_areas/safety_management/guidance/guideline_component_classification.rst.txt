@@ -63,7 +63,7 @@ The classification is based on two criterias:
 
 Figure 1: Overview of the workflow component classification
 
-.. image:: _assets/wf_component_classification.svg
+.. image:: _assets/wf_component_classification.drawio.svg
   :width: 800
   :alt: Overview of the workflow component classification
 

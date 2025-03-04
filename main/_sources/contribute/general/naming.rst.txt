@@ -22,6 +22,8 @@ Naming Conventions of Files
 
 The overall naming convention is to use snake case for all files and folders (all files are named lowercase and spaces are replaced by underscores).
 
+For drawio pictures use the extension .drawio.svg - this enables the tooling to recognize a picture as modifiable by drawio.
+
 .. _naming_convention_needs:
 
 Naming Convention for UIDs

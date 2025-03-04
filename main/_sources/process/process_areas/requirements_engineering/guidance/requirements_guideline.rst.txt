@@ -207,7 +207,7 @@ AoUs can be of different class and shall be handled by tracing those
 * or by containing those in Platform Safety Manual, if AoU cannot be fulfilled by platform but need to be satisfied by the user of the platform
 
 
-.. figure:: ../_assets/aou_traceability.svg
+.. figure:: ../_assets/aou_traceability.drawio.svg
    :align: center
    :width: 100%
    :name: aou_traceability

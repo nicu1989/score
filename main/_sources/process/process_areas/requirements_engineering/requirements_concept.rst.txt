@@ -239,7 +239,7 @@ If a requirement is linked to a top level requirement also the hash of the targe
 
 As this check is included in the sphinx build as a warning it can be guaranteed that a change of a parent requirement can only be merged if the `linkhashes` in the requirements are also updated in a `Depends-On` PR.
 
-.. figure:: _assets/requirements_versioning.svg
+.. figure:: _assets/requirements_versioning.drawio.svg
    :alt: Requirements Versioning
    :align: center
    :width: 50%

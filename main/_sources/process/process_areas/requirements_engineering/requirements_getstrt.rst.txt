@@ -34,7 +34,7 @@ Linking Requirements
 General Workflow
 ****************
 
-.. figure:: _assets/requirements_workflow.svg
+.. figure:: _assets/requirements_workflow.drawio.svg
    :align: center
    :width: 80%
    :name: requirements_workflow_fig
