@@ -74,10 +74,21 @@ jobs:
           echo "output<<EOF" >> $GITHUB_ENV
           echo "$OUTPUT" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
+
+      - name: Find Comment
+        if: github.event.pull_request
+        uses: peter-evans/find-comment@v3
+        id: fc
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: License Check Results
+
       - name: Comment on PR with License Check Results
         if: github.event.pull_request
         uses: peter-evans/create-or-update-comment@v4
         with:
+          comment-id: ${{ steps.fc.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
           body: |
             ### License Check Results
@@ -94,3 +105,4 @@ jobs:
 
             </details>
           reactions: eyes
+          edit-mode: replace
