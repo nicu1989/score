@@ -456,9 +456,9 @@
 
 </ul>
 </details></li>
+</ul>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../process_areas/index.html">Process Areas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../process_areas/requirements_engineering/index.html">Requirements Engineering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../process_areas/safety_management/index.html">Safety Management</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../roles/index.html">Roles</a></li>
@@ -538,16 +538,40 @@
 <span id="general-concepts-building-blocks"></span><h1>Building blocks concept<a class="headerlink" href="#building-blocks-concept" title="Link to this heading">#</a></h1>
 <section id="building-blocks-meta-model">
 <h2>Building blocks meta model<a class="headerlink" href="#building-blocks-meta-model" title="Link to this heading">#</a></h2>
-<p>The following figure gives an overview about the building blocks of the <strong>S-CORE</strong> platform.
-The objectives of the <strong>S-CORE</strong> integration platform are expressed as stakeholder requirements.
-These objectives are further detailed and structured in features. Features are described
-as a set of feature requirements with a corresponding feature architecture. The feature
-requirements satisfies the stakeholder requirements. The technical implementation of a feature
-is based on components, which are built-up by units, the lowest element in our model.
-Components are described by component requirements, a component architecture and a detailed
-design.
-Software modules are used to encapsulate a set of components. Software modules are more or less
-container for a component or a set of components realizing a feature.</p>
+<p>The following figure gives an overview about the building blocks of the <strong>S-CORE</strong> <strong>Platform</strong>
+(blue box, top, 2nd column). The objectives of the platform of the <strong>S-CORE</strong> platform include
+enabling of feature integration for different use cases and domains. This includes safety-critical
+applications. Thus the intention is, that the platform can be developed as a Safety
+Element out of Context (<strong>SEooC</strong>) (green box, top, 1 column). The objectives of the platform are
+expressed as concrete <strong>Stakeholder Requirements</strong> (blue box, top, 2nd column), which can be tested
+by provided <strong>Platform Tests</strong> (blue box, top, 5nd column) for reference hardware platforms. The
+platform consists of <strong>Features</strong> (yellow box, middle, 2nd column).</p>
+<p>Further <strong>S-CORE</strong> provides <strong>Software Modules</strong> (red box, middle, 1st column), which can also be
+developed as a SEooC. A Software Module is defined as a <strong>Component</strong> (green box, middle, 2nd column)
+or a set of components realizing a Feature of the platform. In this sense a Software Module is the
+highest level component in our model. A Software Module represents e.g. executable code or a library.</p>
+<p>Components are the major building blocks of the platform. Components consists of <strong>Units</strong>
+(grey box, bottom, 2nd column), the lowest level in our model. The represent the source code,
+which implements the Unit. Units has a <strong>Detailed Design</strong> (grey box, middle, 3nd column), which is
+also implemented by the <strong>Source Code</strong> (grey box, bottom, 3nd column). The Detailed Design is
+verified by <strong>Unit Tests</strong> (grey box, middle, 5nd column).</p>
+<p>Components are defined by <strong>Component Requirements</strong> (green box, middle, 3nd column) and the
+<strong>Component Architecture</strong> (green box, middle, 4nd column). A <strong>Component Safety Analysis</strong>
+(green box, middle, 6nd column) is required to verify the Component Architecture. Potential faults
+may mitigated by updating the Component Requirements or by the <strong>Component Assumptions of Use</strong>
+(green box, middle, 8nd column). The latter one must be considered by the user of the Component.
+<strong>Component Tests</strong> (green box, middle, 5nd column) verify the Component requirements, and
+<strong>Component Integration Tests</strong> (green box, middle, 7nd column) verify the Component Architecture
+as well as the Integration of multiple Units to a Component.</p>
+<p>As mentioned above a Software Module is defined as a Component or a set of components realizing a
+Feature of the platform. Features consists of Components and are defined by <strong>Feature Requirements</strong>
+(yellow box, middle, 3nd column) and the <strong>Feature Architecture</strong> (yellow box, middle, 4nd column).
+A <strong>Feature Safety Analysis</strong> (yellow box, middle, 6nd column) is required to verify the Feature
+Architecture. Potential faults may mitigated by updating the Feature Requirements or by the
+<strong>Feature Assumptions of Use</strong> (yellow box, middle, 8nd column). The latter one must be considered
+by the user of the Feature. <strong>Feature Integration Tests</strong> (yellow box, middle, 5nd column) verify
+the Feature Requirements and the Feature Architecture as well as the Integration of multiple Units
+to a Component.</p>
 <figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../../_images/score_building_blocks_meta_model.drawio.svg"><img alt="Building blocks overview for **S-CORE** platform" src="../../_images/score_building_blocks_meta_model.drawio.svg" style="width: 100%;" />
 </a>
