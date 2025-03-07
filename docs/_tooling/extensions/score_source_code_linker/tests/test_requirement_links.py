@@ -12,7 +12,7 @@
 # *******************************************************************************
 from collections import defaultdict
 
-import pytest  # type: ignore
+import pytest
 from score_source_code_linker.parse_source_files import (
     GITHUB_BASE_URL,
     extract_requirements,

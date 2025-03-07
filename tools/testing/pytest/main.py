@@ -16,4 +16,4 @@ import pytest
 
 if __name__ == "__main__":
     args = sys.argv[1:]
-    sys.exit(pytest.main(args))  # type: ignore[attr-defined]
+    sys.exit(pytest.main(args))

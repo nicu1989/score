@@ -13,10 +13,10 @@
 import json
 from pathlib import Path
 
-import pytest  # type: ignore
+import pytest
 from score_source_code_linker.parse_source_files import GITHUB_BASE_URL
-from sphinx.testing.util import SphinxTestApp  # type: ignore
-from sphinx_needs.data import SphinxNeedsData  # type: ignore
+from sphinx.testing.util import SphinxTestApp
+from sphinx_needs.data import SphinxNeedsData
 
 
 @pytest.fixture(scope="session")

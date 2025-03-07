@@ -12,7 +12,7 @@
 # *******************************************************************************
 import os
 
-from sphinx_autobuild.__main__ import main as sphinx_autobuild_main  # type: ignore
+from sphinx_autobuild.__main__ import main as sphinx_autobuild_main
 
 # sphinx will print relative paths to the current directory.
 # Change to the workspace root so that the paths are readable and clickable.

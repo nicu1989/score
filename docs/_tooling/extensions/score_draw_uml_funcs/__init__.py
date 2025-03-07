@@ -30,8 +30,8 @@ import time
 from functools import cache
 from pathlib import Path
 
-from sphinx.application import Sphinx  # type: ignore
-from sphinx_needs.logging import get_logger  # type: ignore
+from sphinx.application import Sphinx
+from sphinx_needs.logging import get_logger
 
 from score_draw_uml_funcs.helpers import (
     find_interfaces_of_operations,
