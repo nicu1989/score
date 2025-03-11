@@ -31,7 +31,10 @@
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score.css?v=940e959b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score_needs.css?v=e97392eb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score_design.css?v=7199c97b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
@@ -41,9 +44,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/modern.css?v=803738c0" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score.css?v=940e959b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score_needs.css?v=e97392eb" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score_design.css?v=7199c97b" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -558,9 +558,9 @@ examples/                                       -&gt; examples how a C++, Rust, 
 features/                                       -&gt; All features of the platform.
     &lt;feature_name&gt;/                             -&gt; Folder containing all sub-folders corresponding to one feature and the contribution request [wp__cont_request]
         docs/                                   -&gt; Documentation of the feature consisting of ...
-            architecture/                       -&gt; ... Feature architecture [WP_FEATURE_ARCHITECTURE].
+            architecture/                       -&gt; ... Feature architecture [wp__feature_architecture].
             requirements/                       -&gt; ... Feature requirements [wp__requirements__feat].
-            safety_analysis/                    -&gt; ... Safety analysis on feature level [WP_FEATURE_SAFETY_ANALYSES]
+            safety_analysis/                    -&gt; ... Safety analysis on feature level [wp__feature_safety_analysis]
             safety_planning/                    -&gt; ... the feature specific safety workproducts planning
             verification/                       -&gt; ... Feature verification report (reporting all feature verifications) [wp__platform_sw_verification_report]
         tests/                                  -&gt; Feature tests, consisting of ...
@@ -579,7 +579,7 @@ modules/                                        -&gt; Modules of the SW platform
         components/                             -&gt; Components of the module.
             &lt;component_name&gt;/                   -&gt; Folder containing all artifacts corresponding to one component.
                 docs/                           -&gt; Documentation of the component consisting of ...
-                    architecture/               -&gt; ... Component architecture (only if sub-components exist) [wp__sw_component_architecture].
+                    architecture/               -&gt; ... Component architecture (only if sub-components exist) [wp__cr_mt_comparch].
                     requirements/               -&gt; ... Component requirements [wp__sw_component_req] and HSI (if relevant) [wp__hsi].
                     safety_analysis/            -&gt; ... Safety analysis on component level [wp__sw_component_safety_analyses]
                     verification/               -&gt; ... Architecture review [wp__sw_arch_verification], code inspection [wp__sw_code_inspect]

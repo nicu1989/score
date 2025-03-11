@@ -23,5 +23,4 @@ Workflows
    platform_management
    change_management
    quality_management
-   architecture_design
    safety_analysis

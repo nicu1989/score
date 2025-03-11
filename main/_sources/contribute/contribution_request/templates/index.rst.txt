@@ -19,5 +19,3 @@ Contribution Templates
 
 .. toctree::
    :maxdepth: 1
-
-   feature_request_template.rst

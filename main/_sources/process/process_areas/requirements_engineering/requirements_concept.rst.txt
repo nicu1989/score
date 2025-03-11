@@ -15,7 +15,7 @@
 Concept Description
 ###################
 
-.. doc_concept:: Concept Description
+.. doc_concept:: Requirements Concept
    :id: doc_concept__req__process
    :status: valid
    :tags: requirements_engineering

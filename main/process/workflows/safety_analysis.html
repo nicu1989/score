@@ -31,7 +31,10 @@
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score.css?v=940e959b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score_needs.css?v=e97392eb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score_design.css?v=7199c97b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
@@ -41,9 +44,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/modern.css?v=803738c0" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score.css?v=940e959b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score_needs.css?v=e97392eb" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score_design.css?v=7199c97b" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -73,7 +73,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Standards" href="../standards/index.html" />
-    <link rel="prev" title="Architecture Design" href="architecture_design.html" />
+    <link rel="prev" title="Quality Management" href="quality_management.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -465,7 +465,6 @@
 <li class="toctree-l2"><a class="reference internal" href="platform_management.html">Platform Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="change_management.html">Change Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quality_management.html">Quality Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="architecture_design.html">Architecture Design</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Safety Analysis</a></li>
 </ul>
 </details></li>
@@ -540,7 +539,7 @@
 <section id="workflows">
 <h2>Workflows<a class="headerlink" href="#workflows" title="Link to this heading">#</a></h2>
 <p>todo: need to add guidance and standard links</p>
-<div class="need_container docutils container" id="SNCB-25a627bf">
+<div class="need_container docutils container" id="SNCB-321be6a1">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="wf__analyse_featarch">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -562,7 +561,7 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">safety_analysis</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements__feat" title="wf__analyse_featarch">wp__requirements__feat</a>, <a class="reference internal" href="../workproducts/index.html#wp__feature_architecture" title="wf__analyse_featarch">wp__feature_architecture</a>, <a class="reference internal" href="../workproducts/index.html#wp__issue_track_system" title="wf__analyse_featarch">wp__issue_track_system</a></span></span></div>
+<div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements__feat" title="wf__analyse_featarch">wp__requirements__feat</a>, <a class="reference internal" href="../process_areas/architecture_design/architecture_workproducts.html#wp__feature_arch" title="wf__analyse_featarch">wp__feature_arch</a>, <a class="reference internal" href="../process_areas/change_management/change_management_workproducts.html#wp__issue_track_system" title="wf__analyse_featarch">wp__issue_track_system</a></span></span></div>
 <div class="line">outputs: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#wp__feature_safety_analyses" title="wf__analyse_featarch">wp__feature_safety_analyses</a>, <a class="reference internal" href="../workproducts/index.html#wp__feature_dfa" title="wf__analyse_featarch">wp__feature_dfa</a></span></span></div>
 <div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#rl__committer" title="wf__analyse_featarch">rl__committer</a></span></span></div>
 <div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../process_areas/safety_management/roles.html#rl__safety_manager" title="wf__analyse_featarch">rl__safety_manager</a></span></span></div>
@@ -591,7 +590,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-c3b0b40b">
+<div class="need_container docutils container" id="SNCB-0d7e629b">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="wf__analyse_comparch">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -613,7 +612,7 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">safety_analysis</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#wp__sw_component_req" title="wf__analyse_comparch">wp__sw_component_req</a>, <a class="reference internal" href="../workproducts/index.html#wp__sw_component_architecture" title="wf__analyse_comparch">wp__sw_component_architecture</a>, <a class="reference internal" href="../workproducts/index.html#wp__issue_track_system" title="wf__analyse_comparch">wp__issue_track_system</a></span></span></div>
+<div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements__comp" title="wf__analyse_comparch">wp__requirements__comp</a>, <a class="reference internal" href="../process_areas/architecture_design/architecture_workproducts.html#wp__component_arch" title="wf__analyse_comparch">wp__component_arch</a>, <a class="reference internal" href="../process_areas/change_management/change_management_workproducts.html#wp__issue_track_system" title="wf__analyse_comparch">wp__issue_track_system</a></span></span></div>
 <div class="line">outputs: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#wp__sw_component_safety_analyses" title="wf__analyse_comparch">wp__sw_component_safety_analyses</a>, <a class="reference internal" href="../workproducts/index.html#wp__sw_component_dfa" title="wf__analyse_comparch">wp__sw_component_dfa</a></span></span></div>
 <div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#rl__committer" title="wf__analyse_comparch">rl__committer</a></span></span></div>
 <div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../process_areas/safety_management/roles.html#rl__safety_manager" title="wf__analyse_comparch">rl__safety_manager</a></span></span></div>
@@ -642,7 +641,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-c6bcab38">
+<div class="need_container docutils container" id="SNCB-aecabc07">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="wf__mr_vy_saf_analyses_dfa">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -665,7 +664,7 @@
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">safety_analysis</span></span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#wp__feature_safety_analyses" title="wf__mr_vy_saf_analyses_dfa">wp__feature_safety_analyses</a>, <a class="reference internal" href="../workproducts/index.html#wp__feature_dfa" title="wf__mr_vy_saf_analyses_dfa">wp__feature_dfa</a>, <a class="reference internal" href="../workproducts/index.html#wp__sw_component_safety_analyses" title="wf__mr_vy_saf_analyses_dfa">wp__sw_component_safety_analyses</a>, <a class="reference internal" href="../workproducts/index.html#wp__sw_component_dfa" title="wf__mr_vy_saf_analyses_dfa">wp__sw_component_dfa</a></span></span></div>
-<div class="line">outputs: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#wp__sw_arch_verification" title="wf__mr_vy_saf_analyses_dfa">wp__sw_arch_verification</a>, <a class="reference internal" href="../workproducts/index.html#wp__issue_track_system" title="wf__mr_vy_saf_analyses_dfa">wp__issue_track_system</a></span></span></div>
+<div class="line">outputs: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#wp__sw_arch_verification" title="wf__mr_vy_saf_analyses_dfa">wp__sw_arch_verification</a>, <a class="reference internal" href="../process_areas/change_management/change_management_workproducts.html#wp__issue_track_system" title="wf__mr_vy_saf_analyses_dfa">wp__issue_track_system</a></span></span></div>
 <div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#rl__committer" title="wf__mr_vy_saf_analyses_dfa">rl__committer</a></span></span></div>
 <div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../process_areas/safety_management/roles.html#rl__safety_manager" title="wf__mr_vy_saf_analyses_dfa">rl__safety_manager</a></span></span></div>
 <div class="line">supported by: <span class="supported_by"><span><a class="reference internal" href="../roles/index.html#rl__technical_lead" title="wf__mr_vy_saf_analyses_dfa">rl__technical_lead</a>, <a class="reference internal" href="../roles/index.html#rl__module_lead" title="wf__mr_vy_saf_analyses_dfa">rl__module_lead</a>, <a class="reference internal" href="../roles/index.html#rl__security_manager" title="wf__mr_vy_saf_analyses_dfa">rl__security_manager</a></span></span></div>
@@ -708,12 +707,12 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="architecture_design.html"
+       href="quality_management.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Architecture Design</p>
+        <p class="prev-next-title">Quality Management</p>
       </div>
     </a>
     <a class="right-next"

@@ -31,7 +31,10 @@
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/score.css?v=940e959b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/score_needs.css?v=e97392eb" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/score_design.css?v=7199c97b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
@@ -41,9 +44,6 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/modern.css?v=803738c0" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/score.css?v=940e959b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/score_needs.css?v=e97392eb" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/score_design.css?v=7199c97b" />
   
   <!-- So that users can add custom icons -->
   <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -452,6 +452,9 @@
 </ul>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Process Areas</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../change_management/index.html">Change Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation_management/index.html">Documentation Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../safety_management/index.html">Safety Management</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Requirements Engineering</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="requirements_getstrt.html">Getting Started</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Concept Description</a></li>
@@ -461,8 +464,8 @@
 <li class="toctree-l3"><a class="reference internal" href="requirements_workproducts.html">Workproducts Requirements Engineering</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2"><a class="reference internal" href="../safety_management/index.html">Safety Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../documentation_management/index.html">Documentation Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture_design/index.html">Architecture Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../verification/index.html">Verification</a></li>
 </ul>
 </details></li>
 </ul>
@@ -545,11 +548,11 @@
                   
   <section id="concept-description">
 <h1>Concept Description<a class="headerlink" href="#concept-description" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-3edcd261">
+<div class="need_container docutils container" id="SNCB-67c5f528">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_doc_concept table" id="doc_concept__req__process">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
-<div class="line"><span><span class="needs_title"><span class="needs_data">Concept Description</span></span></span></div>
+<div class="line"><span><span class="needs_title"><span class="needs_data">Requirements Concept</span></span></span></div>
 </div>
 </td>
 <td class="head_center" colspan="2"><div class="needs_head line-block">
@@ -720,7 +723,7 @@
 <p>The required attributes for the requirements are defined in this subchapter. On the top level we can distinguish between attributes which need to be filled manually and attributes which are generated during the <em>docs build</em>.</p>
 <p>Following attributes need to be filled manually for each requirement:</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id5">
-<caption><span class="caption-number">Table 4 </span><span class="caption-text">Manual Attributes</span><a class="headerlink" href="#id5" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 18 </span><span class="caption-text">Manual Attributes</span><a class="headerlink" href="#id5" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 15.0%" />
 <col style="width: 85.0%" />
@@ -761,7 +764,7 @@ For any other requirement the reasoning can be deduced from the top level requir
 </table>
 </div>
 <div class="pst-scrollable-table-container"><table class="table" id="id6">
-<caption><span class="caption-number">Table 5 </span><span class="caption-text">Automated Attributes</span><a class="headerlink" href="#id6" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 19 </span><span class="caption-text">Automated Attributes</span><a class="headerlink" href="#id6" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 15.0%" />
 <col style="width: 70.0%" />
@@ -822,28 +825,67 @@ For any other requirement the reasoning can be deduced from the top level requir
 </tr>
 </thead>
 <tbody>
-<tr class="need row-even"><td class="needs_title"><p>Requirement attribute: rationale</p></td>
-<td class="needs_id"><p><a class="reference internal" href="guidance/requirements_process_reqs.html#gd_req__req__attr_rationale">gd_req__req__attr_rationale</a></p></td>
+<tr class="need row-even"><td class="needs_title"><p>Architecture attribute: fulfils</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../architecture_design/guidance/architecture_process_reqs.html#gd_req__arch__attr_fulfils">gd_req__arch__attr_fulfils</a></p></td>
 </tr>
-<tr class="need row-odd"><td class="needs_title"><p>Requirement attribute: safety</p></td>
-<td class="needs_id"><p><a class="reference internal" href="guidance/requirements_process_reqs.html#gd_req__req__attr_safety">gd_req__req__attr_safety</a></p></td>
+<tr class="need row-odd"><td class="needs_title"><p>Architecture attribute: safety</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../architecture_design/guidance/architecture_process_reqs.html#gd_req__arch__attr_safety">gd_req__arch__attr_safety</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_title"><p>Architecture attribute: status</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../architecture_design/guidance/architecture_process_reqs.html#gd_req__arch__attr_status">gd_req__arch__attr_status</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_title"><p>Architecture attribute: UID</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../architecture_design/guidance/architecture_process_reqs.html#gd_req__arch__attribute_uid">gd_req__arch__attribute_uid</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_title"><p>Architecture attribute: security</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../architecture_design/guidance/architecture_process_reqs.html#gd_req__arch_attr_security">gd_req__arch_attr_security</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_title"><p>Change Request attribute: Affected Work Products</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../change_management/guidance/change_management_reqs.html#gd_req__change__attr_affected_wp">gd_req__change__attr_affected_wp</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_title"><p>Change Request attribute: description</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../change_management/guidance/change_management_reqs.html#gd_req__change__attr_impact_description">gd_req__change__attr_impact_description</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_title"><p>Change Request attribute: safety</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../change_management/guidance/change_management_reqs.html#gd_req__change__attr_impact_safety">gd_req__change__attr_impact_safety</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_title"><p>Change Request attribute: security</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../change_management/guidance/change_management_reqs.html#gd_req__change__attr_impact_security">gd_req__change__attr_impact_security</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_title"><p>Change Request attribute: Milestone</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../change_management/guidance/change_management_reqs.html#gd_req__change__attr_milestone">gd_req__change__attr_milestone</a></p></td>
 </tr>
 <tr class="need row-even"><td class="needs_title"><p>Requirement attribute: status</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../change_management/guidance/change_management_reqs.html#gd_req__change__attr_status">gd_req__change__attr_status</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_title"><p>Change Request attribute: title</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../change_management/guidance/change_management_reqs.html#gd_req__change__attr_title">gd_req__change__attr_title</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_title"><p>Change Request attribute: UID</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../change_management/guidance/change_management_reqs.html#gd_req__change__attr_uid">gd_req__change__attr_uid</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_title"><p>Requirement attribute: rationale</p></td>
+<td class="needs_id"><p><a class="reference internal" href="guidance/requirements_process_reqs.html#gd_req__req__attr_rationale">gd_req__req__attr_rationale</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_title"><p>Requirement attribute: safety</p></td>
+<td class="needs_id"><p><a class="reference internal" href="guidance/requirements_process_reqs.html#gd_req__req__attr_safety">gd_req__req__attr_safety</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_title"><p>Requirement attribute: status</p></td>
 <td class="needs_id"><p><a class="reference internal" href="guidance/requirements_process_reqs.html#gd_req__req__attr_status">gd_req__req__attr_status</a></p></td>
 </tr>
-<tr class="need row-odd"><td class="needs_title"><p>Requirement attribute: type</p></td>
+<tr class="need row-even"><td class="needs_title"><p>Requirement attribute: type</p></td>
 <td class="needs_id"><p><a class="reference internal" href="guidance/requirements_process_reqs.html#gd_req__req__attr_type">gd_req__req__attr_type</a></p></td>
 </tr>
-<tr class="need row-even"><td class="needs_title"><p>Requirement attribute: UID</p></td>
+<tr class="need row-odd"><td class="needs_title"><p>Requirement attribute: UID</p></td>
 <td class="needs_id"><p><a class="reference internal" href="guidance/requirements_process_reqs.html#gd_req__req__attr_uid">gd_req__req__attr_uid</a></p></td>
 </tr>
-<tr class="need row-odd"><td class="needs_title"><p>Requirement attribute: description</p></td>
+<tr class="need row-even"><td class="needs_title"><p>Requirement attribute: description</p></td>
 <td class="needs_id"><p><a class="reference internal" href="guidance/requirements_process_reqs.html#gd_req__requirements_attr_description">gd_req__requirements_attr_description</a></p></td>
 </tr>
-<tr class="need row-even"><td class="needs_title"><p>Requirements attribute: security</p></td>
+<tr class="need row-odd"><td class="needs_title"><p>Requirements attribute: security</p></td>
 <td class="needs_id"><p><a class="reference internal" href="guidance/requirements_process_reqs.html#gd_req__requirements_attr_security">gd_req__requirements_attr_security</a></p></td>
 </tr>
-<tr class="need row-odd"><td class="needs_title"><p>Requirement attribute: title</p></td>
+<tr class="need row-even"><td class="needs_title"><p>Requirement attribute: title</p></td>
 <td class="needs_id"><p><a class="reference internal" href="guidance/requirements_process_reqs.html#gd_req__requirements_attr_title">gd_req__requirements_attr_title</a></p></td>
 </tr>
 </tbody>
@@ -881,7 +923,7 @@ For any other requirement the reasoning can be deduced from the top level requir
 <section id="traceability-concept-for-requirements">
 <span id="id4"></span><h2>Traceability Concept for Requirements<a class="headerlink" href="#traceability-concept-for-requirements" title="Link to this heading">#</a></h2>
 <p>The standards require that a requirement can be traced throughout the complete hierarchy levels including its implementation and verification &lt;TBD: Link&gt;. In this project it is implemented the following way:</p>
-<p>In general the traceability is visualized in main development work product traceability model (<a class="reference internal" href="../../workproducts/index.html#wp-traceability-model"><span class="std std-numref">Fig. 16</span></a>).</p>
+<p>In general the traceability is visualized in main development work product traceability model (<a class="reference internal" href="../../workproducts/index.html#wp-traceability-model"><span class="std std-numref">Fig. 21</span></a>).</p>
 </section>
 </section>
 

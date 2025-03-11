@@ -35,11 +35,7 @@ For more complex contributions, like adding a new feature:
 
 For a feature request, use the template provided below and add it to the appropriate section under docs/features.
 
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   templates/feature_request_template.rst
+:ref:`Feature Request Template <chm_feature_templates>`
 
 If possible, the reviewer should use the suggestion functionality to suggest a change that the author of the pull request can click to commit if they agree with your suggestion.
 
@@ -61,7 +57,7 @@ For a *PR* to be merged, in any case an approval of a committer is needed. If th
 
 *GitHub Issue* are categorized using various types. For categorizing of PRs using of labels, e.g. bug or improvement, is mandatory, see `Platform Management Plan <https://eclipse-score.github.io/score/platform_management_plan/project_management.html>`_.
 
-For all possibilites the project contains simple templates (provided by committers (:need:`Committer <rl__committer>`)), in particular please use :ref:`Feature Request Template <feature_request_template>` to request a new feature or changes to the existing one.
+For all possibilites the project contains simple templates (provided by committers (:need:`Committer <rl__committer>`)), in particular please use :need:`Feature Request Template <gd_temp__change__feature_request>` to request a new feature or changes to the existing one.
 
 *****************************
  What is a Pull Request (PR)?

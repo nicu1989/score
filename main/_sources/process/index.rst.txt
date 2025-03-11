@@ -37,7 +37,7 @@ Workflow activities are supported by guidances.
 General Concepts
 ~~~~~~~~~~~~~~~~
 
-General concepts as Lifecycle, Definition of Building Blocks, Traceability can be found here:
+General concepts like traceability of work products, life cycle model, buidling blocks can be found here:
 
 .. toctree::
    :maxdepth: 1

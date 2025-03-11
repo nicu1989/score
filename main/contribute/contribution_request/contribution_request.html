@@ -31,7 +31,10 @@
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score.css?v=940e959b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score_needs.css?v=e97392eb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score_design.css?v=7199c97b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
@@ -41,9 +44,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/modern.css?v=803738c0" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score.css?v=940e959b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score_needs.css?v=e97392eb" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score_design.css?v=7199c97b" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -72,7 +72,7 @@
         </script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Feature Request Template" href="templates/feature_request_template.html" />
+    <link rel="next" title="Contribution Templates" href="templates/index.html" />
     <link rel="prev" title="Contribution Request" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -448,7 +448,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../general/index.html">General</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Contribution Request</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Contribution Request Guideline</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="templates/feature_request_template.html">Feature Request Template</a></li>
 <li class="toctree-l3"><a class="reference internal" href="templates/index.html">Contribution Templates</a></li>
 </ul>
 </details></li>
@@ -522,7 +521,7 @@
                   
   <section id="contribution-request-guideline">
 <h1>Contribution Request Guideline<a class="headerlink" href="#contribution-request-guideline" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-0606a5a4">
+<div class="need_container docutils container" id="SNCB-af32ba40">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_guidl table" id="gd_guidl__contr_request_guideline">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -576,11 +575,7 @@
 <li><p>add the PR to that <em>GitHub Issue</em></p></li>
 </ul>
 <p>For a feature request, use the template provided below and add it to the appropriate section under docs/features.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="templates/feature_request_template.html">Feature Request Template</a></li>
-</ul>
-</div>
+<p><a class="reference internal" href="../../process/process_areas/change_management/guidance/change_management_feature_template.html#chm-feature-templates"><span class="std std-ref">Feature Request Template</span></a></p>
 <p>If possible, the reviewer should use the suggestion functionality to suggest a change that the author of the pull request can click to commit if they agree with your suggestion.</p>
 <p>You can also join our <a class="reference external" href="https://sdvworkinggroup.slack.com/archives/C083Z4VL90B">Slack</a> for real-time discussions.</p>
 <p>The <em>SCORE</em> project defines a Contribution Request (<strong>COR</strong>) as any defined and allowed trigger to start the active contribution to the <em>SCORE</em> project. That means obviously that a <em>PR</em> is a Contribution Request.</p>
@@ -595,10 +590,10 @@
 <p>Whenever your <em>PR</em>  gets too big or involves committs of several contributors , we strongly encourage to open and link a <em>GitHub Issue</em>, so this can get better planned.</p>
 <p>For a <em>PR</em> to be merged, in any case an approval of a committer is needed. If the committer decides, that only a <em>PR</em> is not sufficient and a <em>GitHub Issue</em> is needed, then the contributor shall also create a corresponding <em>GitHub Issue</em>.</p>
 <p><em>GitHub Issue</em> are categorized using various types. For categorizing of PRs using of labels, e.g. bug or improvement, is mandatory, see <a class="reference external" href="https://eclipse-score.github.io/score/platform_management_plan/project_management.html">Platform Management Plan</a>.</p>
-<p>For all possibilites the project contains simple templates (provided by committers (<a class="reference internal" href="../../process/roles/index.html#rl__committer" title="rl__committer"><em class="xref need">Committer (rl__committer)</em></a>)), in particular please use <a class="reference internal" href="templates/feature_request_template.html#feature-request-template"><span class="std std-ref">Feature Request Template</span></a> to request a new feature or changes to the existing one.</p>
+<p>For all possibilites the project contains simple templates (provided by committers (<a class="reference internal" href="../../process/roles/index.html#rl__committer" title="rl__committer"><em class="xref need">Committer (rl__committer)</em></a>)), in particular please use <a class="reference internal" href="../../process/process_areas/change_management/guidance/change_management_feature_template.html#gd_temp__change__feature_request" title="gd_temp__change__feature_request"><em class="xref need">Feature Request Template (gd_temp__change__feature_request)</em></a> to request a new feature or changes to the existing one.</p>
 <section id="what-is-a-pull-request-pr">
 <h2>What is a Pull Request (PR)?<a class="headerlink" href="#what-is-a-pull-request-pr" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-c0ecf62a">
+<div class="need_container docutils container" id="SNCB-a8be97cf">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_guidl table" id="gd_guidl__pull_request_guideline">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -688,7 +683,7 @@ Further the contributor (<a class="reference internal" href="../../process/roles
 </section>
 <section id="what-is-a-github-issue">
 <h3>What is a GitHub Issue?<a class="headerlink" href="#what-is-a-github-issue" title="Link to this heading">#</a></h3>
-<div class="need_container docutils container" id="SNCB-58e8841e">
+<div class="need_container docutils container" id="SNCB-1a5f1661">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_guidl table" id="gd_guidl__issue_guideline">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -775,11 +770,11 @@ Further the contributor (<a class="reference internal" href="../../process/roles
       </div>
     </a>
     <a class="right-next"
-       href="templates/feature_request_template.html"
+       href="templates/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Feature Request Template</p>
+        <p class="prev-next-title">Contribution Templates</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

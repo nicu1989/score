@@ -32,7 +32,7 @@ Feature Safety Work Products Template
       - WP status
 
     * - :need:`wp__feat_request`
-      - :ref:`feature_request_template`
+      - :ref:`Feature Request Template <chm_feature_templates>`
       - <automated>
       - <link to issue>
       - <link to WP>
@@ -52,7 +52,7 @@ Feature Safety Work Products Template
       - <link to WP>
       - <automated>
 
-    * - :need:`wp__feature_architecture`
+    * - :need:`wf__cr_mt_featarch`
       - <link to process>
       - <automated>
       - <link to issue>
@@ -66,7 +66,7 @@ Feature Safety Work Products Template
       - <Link to WP>
       - <automated>
 
-    * - :need:`wp__sw_req_inspect`
+    * - :need:`wp__requirements__inspect`
       - <link to process>
       - <automated>
       - <link to issue>
@@ -80,7 +80,7 @@ Feature Safety Work Products Template
       - <Link to WP>
       - <automated>
 
-    * - :need:`wp__feature_integration_test`
+    * - :need:`wp__verification__feat_int_test`
       - <link to process>
       - <automated>
       - <link to issue>

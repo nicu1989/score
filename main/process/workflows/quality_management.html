@@ -31,7 +31,10 @@
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score.css?v=940e959b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score_needs.css?v=e97392eb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score_design.css?v=7199c97b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
@@ -41,9 +44,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/modern.css?v=803738c0" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score.css?v=940e959b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score_needs.css?v=e97392eb" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score_design.css?v=7199c97b" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -72,7 +72,7 @@
         </script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Architecture Design" href="architecture_design.html" />
+    <link rel="next" title="Safety Analysis" href="safety_analysis.html" />
     <link rel="prev" title="Change Management" href="change_management.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -465,7 +465,6 @@
 <li class="toctree-l2"><a class="reference internal" href="platform_management.html">Platform Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="change_management.html">Change Management</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Quality Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="architecture_design.html">Architecture Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="safety_analysis.html">Safety Analysis</a></li>
 </ul>
 </details></li>
@@ -540,7 +539,7 @@
 <section id="workflows">
 <h2>Workflows<a class="headerlink" href="#workflows" title="Link to this heading">#</a></h2>
 <p>todo: need to add guidance and standard links</p>
-<div class="need_container docutils container" id="SNCB-0f1b6782">
+<div class="need_container docutils container" id="SNCB-d7e3b9ab">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="wf__cr_mt_qlm_plan">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -562,7 +561,7 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">quality_management</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#wp__policies" title="wf__cr_mt_qlm_plan">wp__policies</a>, <a class="reference internal" href="../workproducts/index.html#wp__issue_track_system" title="wf__cr_mt_qlm_plan">wp__issue_track_system</a></span></span></div>
+<div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#wp__policies" title="wf__cr_mt_qlm_plan">wp__policies</a>, <a class="reference internal" href="../process_areas/change_management/change_management_workproducts.html#wp__issue_track_system" title="wf__cr_mt_qlm_plan">wp__issue_track_system</a></span></span></div>
 <div class="line">outputs: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#wp__qms" title="wf__cr_mt_qlm_plan">wp__qms</a></span></span></div>
 <div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#rl__committer" title="wf__cr_mt_qlm_plan">rl__committer</a></span></span></div>
 <div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../roles/index.html#rl__quality_manager" title="wf__cr_mt_qlm_plan">rl__quality_manager</a></span></span></div>
@@ -591,7 +590,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-c67aab30">
+<div class="need_container docutils container" id="SNCB-5bea2426">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="wf__vy_ap_pltrelease">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -642,7 +641,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-cbf15f2d">
+<div class="need_container docutils container" id="SNCB-0bc6b755">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="wf__exe_pltprocess_audit">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -693,7 +692,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-3713bed0">
+<div class="need_container docutils container" id="SNCB-1ee77835">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="wf__exe_featprocess_compliance_checks">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -715,7 +714,7 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">quality_management</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#wp__qms" title="wf__exe_featprocess_compliance_checks">wp__qms</a>, <a class="reference internal" href="../workproducts/index.html#wp__feat_request" title="wf__exe_featprocess_compliance_checks">wp__feat_request</a>, <a class="reference internal" href="../workproducts/index.html#wp__process_definition" title="wf__exe_featprocess_compliance_checks">wp__process_definition</a></span></span></div>
+<div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#wp__qms" title="wf__exe_featprocess_compliance_checks">wp__qms</a>, <a class="reference internal" href="../process_areas/change_management/change_management_workproducts.html#wp__feat_request" title="wf__exe_featprocess_compliance_checks">wp__feat_request</a>, <a class="reference internal" href="../workproducts/index.html#wp__process_definition" title="wf__exe_featprocess_compliance_checks">wp__process_definition</a></span></span></div>
 <div class="line">outputs: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#wp__qms_report" title="wf__exe_featprocess_compliance_checks">wp__qms_report</a></span></span></div>
 <div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#rl__committer" title="wf__exe_featprocess_compliance_checks">rl__committer</a></span></span></div>
 <div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../roles/index.html#rl__quality_manager" title="wf__exe_featprocess_compliance_checks">rl__quality_manager</a></span></span></div>
@@ -744,7 +743,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-514545bd">
+<div class="need_container docutils container" id="SNCB-b20ebd50">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="wf__exe_featwp_review">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -767,7 +766,7 @@
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">quality_management</span></span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#wp__qms" title="wf__exe_featwp_review">wp__qms</a>, <a class="reference internal" href="../workproducts/index.html#wp__process_definition" title="wf__exe_featwp_review">wp__process_definition</a></span></span></div>
-<div class="line">outputs: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#wp__platform_sw_verification_report" title="wf__exe_featwp_review">wp__platform_sw_verification_report</a></span></span></div>
+<div class="line">outputs: <span class="output"><span><a class="reference internal" href="../process_areas/verification/workproducts.html#wp__verification__platform_ver_report" title="wf__exe_featwp_review">wp__verification__platform_ver_report</a></span></span></div>
 <div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#rl__committer" title="wf__exe_featwp_review">rl__committer</a></span></span></div>
 <div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../roles/index.html#rl__quality_manager" title="wf__exe_featwp_review">rl__quality_manager</a></span></span></div>
 <div class="line">supported by: <span class="supported_by"><span><a class="reference internal" href="../roles/index.html#rl__technical_lead" title="wf__exe_featwp_review">rl__technical_lead</a></span></span></div>
@@ -795,7 +794,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-33a2abf7">
+<div class="need_container docutils container" id="SNCB-e84e9115">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="wf__consult_exe_qly_training">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -846,7 +845,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-0c73c920">
+<div class="need_container docutils container" id="SNCB-e4ba57fe">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="wf__mr_imp_qlm_plan_processes">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -868,8 +867,8 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">quality_management</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#wp__qms" title="wf__mr_imp_qlm_plan_processes">wp__qms</a>, <a class="reference internal" href="../workproducts/index.html#wp__platform_sw_release_note" title="wf__mr_imp_qlm_plan_processes">wp__platform_sw_release_note</a>, <a class="reference internal" href="../workproducts/index.html#wp__module_sw_release_note" title="wf__mr_imp_qlm_plan_processes">wp__module_sw_release_note</a>, <a class="reference internal" href="../workproducts/index.html#wp__process_impr_report" title="wf__mr_imp_qlm_plan_processes">wp__process_impr_report</a>, <a class="reference internal" href="../workproducts/index.html#wp__qms_report" title="wf__mr_imp_qlm_plan_processes">wp__qms_report</a>, <a class="reference internal" href="../workproducts/index.html#wp__platform_sw_verification_report" title="wf__mr_imp_qlm_plan_processes">wp__platform_sw_verification_report</a>, <a class="reference internal" href="../workproducts/index.html#wp__module_sw_verification_report" title="wf__mr_imp_qlm_plan_processes">wp__module_sw_verification_report</a>, <a class="reference internal" href="../workproducts/index.html#wp__training_path" title="wf__mr_imp_qlm_plan_processes">wp__training_path</a></span></span></div>
-<div class="line">outputs: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#wp__issue_track_system" title="wf__mr_imp_qlm_plan_processes">wp__issue_track_system</a></span></span></div>
+<div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#wp__qms" title="wf__mr_imp_qlm_plan_processes">wp__qms</a>, <a class="reference internal" href="../workproducts/index.html#wp__platform_sw_release_note" title="wf__mr_imp_qlm_plan_processes">wp__platform_sw_release_note</a>, <a class="reference internal" href="../workproducts/index.html#wp__module_sw_release_note" title="wf__mr_imp_qlm_plan_processes">wp__module_sw_release_note</a>, <a class="reference internal" href="../workproducts/index.html#wp__process_impr_report" title="wf__mr_imp_qlm_plan_processes">wp__process_impr_report</a>, <a class="reference internal" href="../workproducts/index.html#wp__qms_report" title="wf__mr_imp_qlm_plan_processes">wp__qms_report</a>, <a class="reference internal" href="../process_areas/verification/workproducts.html#wp__verification__platform_ver_report" title="wf__mr_imp_qlm_plan_processes">wp__verification__platform_ver_report</a>, <a class="reference internal" href="../process_areas/verification/workproducts.html#wp__verification__module_ver_report" title="wf__mr_imp_qlm_plan_processes">wp__verification__module_ver_report</a>, <a class="reference internal" href="../workproducts/index.html#wp__training_path" title="wf__mr_imp_qlm_plan_processes">wp__training_path</a></span></span></div>
+<div class="line">outputs: <span class="output"><span><a class="reference internal" href="../process_areas/change_management/change_management_workproducts.html#wp__issue_track_system" title="wf__mr_imp_qlm_plan_processes">wp__issue_track_system</a></span></span></div>
 <div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#rl__committer" title="wf__mr_imp_qlm_plan_processes">rl__committer</a></span></span></div>
 <div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../roles/index.html#rl__quality_manager" title="wf__mr_imp_qlm_plan_processes">rl__quality_manager</a></span></span></div>
 <div class="line">supported by: <span class="supported_by"><span><a class="reference internal" href="../roles/index.html#rl__technical_lead" title="wf__mr_imp_qlm_plan_processes">rl__technical_lead</a></span></span></div>
@@ -921,11 +920,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="architecture_design.html"
+       href="safety_analysis.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Architecture Design</p>
+        <p class="prev-next-title">Safety Analysis</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

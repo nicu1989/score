@@ -29,7 +29,7 @@ The subsequent steps of linking requirements to code and test cases are describe
 Linking Requirements
 
 * to code: <TBD Implementation Guideline>
-* to tests: <TBD Verification Guideline>
+* to tests: :need:`gd_guidl__verification_guide`
 
 General Workflow
 ****************
@@ -79,4 +79,3 @@ Locally it can be run via
 .. code-block:: shell
 
    bazel test //:format.check
-
