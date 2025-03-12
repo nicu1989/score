@@ -102,3 +102,11 @@ http_jar(
         "https://repo.eclipse.org/content/repositories/dash-licenses/org/eclipse/dash/org.eclipse.dash.licenses/{version}/org.eclipse.dash.licenses-{version}.jar".format(version = DASH_VERSION),
     ],
 )
+
+http_file = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_file")
+
+http_file(
+    name = "starpls_prebuilt",
+    sha256 = "45692ecb9d94a19a15b1e7b240acdff5702f78cd22188dac41e1879cb8bdcdcf",
+    urls = ["https://github.com/withered-magic/starpls/releases/download/v0.1.21/starpls-linux-amd64"],
+)
