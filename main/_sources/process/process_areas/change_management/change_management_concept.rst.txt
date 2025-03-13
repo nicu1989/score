@@ -123,7 +123,7 @@ Following attributes need to be filled manually for each Change Request:
    * - Change Request Type
      - Following types are defined: [Feature, Feature Modification, Component, Component Modification]
    * - Affected work products
-     - Links to the work producs affected by the Change Request
+     - Links to the work products affected by the Change Request
    * - Milestone
      - Planned date (milestone) of deployment of the Change Request
 
@@ -135,8 +135,8 @@ Analysis of the Change Request
 
 The affected work products must be identified.
 The potential impact on functional safety and security must be addressed.
-Schedule, risks, resources for the realisation must be evaluated.
-Verifcation measures must be defined.
+Schedule, risks, resources for the realization must be evaluated.
+Verification measures must be defined.
 Use therefore the : :ref:`Impact Analysis Template <chm_impact_analysis_templates>`.
 
 

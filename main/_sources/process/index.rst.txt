@@ -34,6 +34,13 @@ Process Model
 The SCORE process model is described by workflows, executed by roles and is creating work products.
 Workflow activities are supported by guidances.
 
+.. figure:: _assets/score_process_area_overview.drawio.svg
+  :width: 100%
+  :align: center
+  :alt: Process area overview for **S-CORE** platform
+
+  Process area overview for **S-CORE** platform
+
 General Concepts
 ~~~~~~~~~~~~~~~~
 

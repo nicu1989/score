@@ -29,7 +29,7 @@ Type of Change Request
 
 [New Feature/Component, Modification of an existing Feature/Component]
 
-Dependenices on other Change Requests
+Dependencies on other Change Requests
 -------------------------------------
 
 [List all dependencies on other Change Request]
@@ -41,8 +41,8 @@ Affected Work Products
 
     .. note::
      For the identification of the affected work products use the Traceability Analysis approach.
-     Traceability analysis uses the exsiting links between different elments (requirements, architecture, implementation, etc.)
-     for the identification of the affectted work products and elements.
+     Traceability analysis uses the existing links between different elements (requirements, architecture, implementation, etc.)
+     for the identification of the affected work products and elements.
 
 Work Products to be changed
 ---------------------------
@@ -56,15 +56,15 @@ Work Products to be changed
 Stakeholder identification
 --------------------------
 
-[Describe here which stakeholder and which roles of the stakeholder are invovled to execute the Change Request]
+[Describe here which stakeholder and which roles of the stakeholder are involved to execute the Change Request]
 
 
    .. note::
       Typically the :need:`Technical Project Leads <rl__technical_lead>` or :need:`Module Leads <rl__module_lead>` are involved
       for planning and approval activities. As well as :need:`Safety Manager <rl__safety_manager>` or :need:`Security Manager <rl__security_manager>`
-      are resonsible for Change Request which has impact on functional safety or security.
+      are responsible for Change Request which has impact on functional safety or security.
 
-Schedule for realisation and verification of the Change Request
+Schedule for realization and verification of the Change Request
 ---------------------------------------------------------------
 
 [Describe here which Milestones are considered to realize the Change Request.]
@@ -72,7 +72,7 @@ Schedule for realisation and verification of the Change Request
 [Describe here the verification methods used for the changed work products]
 
     .. note::
-     A draft realization plan may support the realisation proposal.
+     A draft realization plan may support the realization proposal.
 
 Potential Impact on Security
 -----------------------------
@@ -81,12 +81,12 @@ Potential Impact on Security
 
 Which security requirements are affected or has to be changed?
 Could the new/modified feature/component enable new threat scenarios?
-Could the new/modified feature/component enable new attack pathes?
+Could the new/modified feature/component enable new attack paths?
 Could the new/modified feature/component impact functional safety?
 If applicable, which additional security measures must be implemented to mitigate the risk.
 
     .. note::
-     Use Trust Bondary, Defence in Depth Analysis and/or Security Software Critically Analysis,
+     Use Trust Boundary, Defense in Depth Analysis and/or Security Software Critically Analysis,
      Vulnerability Analysis.
      [Methods will be defined later in Process area Security Analysis]
 
@@ -109,4 +109,4 @@ For new feature/component contributions:
 [What is the expected classification of the contribution?]
 
    .. note::
-      Use the component classification method here to classfiy your component, if it shall to be used in a safety context: :need:`gd_temp__component_classification`.
+      Use the component classification method here to classify your component, if it shall to be used in a safety context: :need:`gd_temp__component_classification`.

@@ -37,8 +37,21 @@ Assumptions of Use
 Assumptions on the Environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | Generally the assumption of the SCORE platform SEooC is that it is integrated in a safe system, i.e. the POSIX OS it runs on is qualified and also the HW related failures are taken into account by the system integrator, if not otherwise stated in the module's safety concept.
-| <List here all the respective general environment AoU.>
 | <List here all the OS calls the SCORE platform expects to be safe.>
+
+List of AoUs expected from the environment the platform / module runs on:
+
+.. needtable::
+   :style: table
+   :columns: title;id;status
+   :colwidths: 25,25,25
+   :sort: title
+
+   results = []
+
+   for need in needs.filter_types(["aou_req"]):
+      if need and "environment" in need["tags"]:
+                results.append(need)
 
 Assumptions on the User
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -46,7 +59,20 @@ Assumptions on the User
 | Additionally the components of the platform may have additional specific assumptions how they are used. These are part of every module documentation: <link to add>. Assumptions from components to their users can be fulfilled in two ways:
 | 1. There are assumption which need to be fulfilled by all SW components, e.g. "every user of an IPC mechanism needs to make sure that he provides correct data (including appropriate ASIL level)" - in this case the AoU is marked as "platform".
 | 2. There are assumption which can be fulfilled by a safety mechanism realized by some other SCORE platform component and are therefore not relevant for an user who uses the whole platform. But those are relevant if you chose to use the module SEooC stand-alone - in this case the AoU is marked as "module". An example would be the "JSON read" which requires "The user shall provide a string as input which is not corrupted due to HW or QM SW errors." - which is covered when using together with safe SCORE platform persistency feature.
-| <Link here to all module AoUs.>
+
+List of AoUs on the user of the platform features or the module of this safety manual:
+
+.. needtable::
+   :style: table
+   :columns: title;id;status
+   :colwidths: 25,25,25
+   :sort: title
+
+   results = []
+
+   for need in needs.filter_types(["aou_req"]):
+      if need and "environment" not in need["tags"]:
+                results.append(need)
 
 Safety concept of the SEooC
 ---------------------------

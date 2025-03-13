@@ -62,7 +62,7 @@ Change Request Attributes
    :complies: std_req__aspice_40__SUP-10-BP2, std_req__iso26262__support_16, std_req__iso26262__support_21, std_req__iso26262__support_22, std_req__iso26262__support_23, std_req__iso26262__support_27, std_req__iso26262__support_28
 
    Exact description of the Change Request, including impact analysis on functional safety,
-   security, implementation (schedule, risks, resources) verifcation (measures defined).
+   security, implementation (schedule, risks, resources) verification (measures defined).
 
 .. gd_req:: Change Request attribute: safety
    :id: gd_req__change__attr_impact_safety
@@ -99,7 +99,7 @@ Change Request Attributes
       * Feature
       * Feature Modification
       * Component
-      * Componnent Modification
+      * Component Modification
 
    Feature/Component means new Feature/Component
 
@@ -110,7 +110,7 @@ Change Request Attributes
    :satisfies: wf__change__cr_an_change_request, wf__change__rv_ap_change_request
    :complies: std_req__aspice_40__SUP-10-BP4, std_req__iso26262__support_17, std_req__iso26262__support_21, std_req__iso26262__support_27, std_req__iso26262__support_28
 
-   Links to the work producs affected by the Change Request
+   Links to the work products affected by the Change Request
 
 .. gd_req:: Change Request attribute: Milestone
    :id: gd_req__change__attr_milestone
@@ -119,7 +119,7 @@ Change Request Attributes
    :satisfies: wf__change__cr_an_change_request, wf__change__rv_ap_change_request
    :complies: std_req__aspice_40__SUP-10-BP6, std_req__iso26262__support_18
 
-   Milestone unitl the Change Requeste must be implemented (used for prioritization)
+   Milestone until the Change Request must be implemented (used for prioritization)
 .. _chm_process_change requests_checks:
 
 

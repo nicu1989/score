@@ -59,7 +59,7 @@ Functional Safety Management Scope
 There is no deviation from the scope presented in the `S-CORE project page <https://eclipse-score.github.io/>`_ .
 The platform and its components are developed, and integrated for an assumed technical system as Safety Element out of Context (SEooC).
 The development of the platform and its components follows the defined processes.
-Responsibilites for development, implementation, integration and verification are also defined int the processes.
+Responsibilities for development, implementation, integration and verification are also defined int the processes.
 
 Regarding the platform specifics:
 
@@ -76,7 +76,7 @@ Tailoring
 Tailoring of safety activities:
 
 * The tailoring is divided into project wide and module specific rules.
-* Project wide tailoring is documented in this document - this is based on developement of a platform SEooC.
+* Project wide tailoring is documented in this document - this is based on development of a platform SEooC.
 * Module SEooC specific tailoring is documented in the module development Safety Plans - this may be based on SEooC specifics or because component qualification according to ISO 26262 part 8 clause 12 (or ISO PAS 8926) is selected.
 * In case of a change request on an existing feature (i.e. a contribution request), the subsequent safety planning will be done based on an impact analysis.
 
@@ -141,7 +141,7 @@ The project will be under the Eclipse Foundation and so the `Eclipse Foundation 
 *Eclipse Roles*
 
 * `Contributors <https://www.eclipse.org/projects/handbook/#contributing-contributors>`_ can be everyone and we will not discourage the open source community from this. As the contributor cannot merge code (or any other work product) into the project's codebase, the safety development competence of the contributor is irrelevant.
-* `Committers <https://www.eclipse.org/projects/handbook/#contributing-committers>`_ play the main development role in the project, as only these are allowed to merge, so they are the ultimate responsibles for the project's repository content.
+* `Committers <https://www.eclipse.org/projects/handbook/#contributing-committers>`_ play the main development role in the project, as only these are allowed to merge, so they are the ultimate responsible for the project's repository content.
 * The Eclipse `Project Lead(s) <https://www.eclipse.org/projects/handbook/#roles-pl>`_ has the ISO 26262 project manager role.
 
 *Project Roles*
@@ -162,7 +162,7 @@ Organization and management system has not a mature level yet.
 *Skills*
 
 The main safety related project roles are the project manager and the safety manager and these also have to have the (Eclipse) committer role.
-As defined in `Committer Training <https://www.eclipse.org/projects/training/>`_ the committers are elected in a meritrocatic manner, meaning those have to show their skills and understanding of the project processes in several previous pull requests.
+As defined in `Committer Training <https://www.eclipse.org/projects/training/>`_ the committers are elected in a meritocratic manner, meaning those have to show their skills and understanding of the project processes in several previous pull requests.
 
 As each project can adopt additional criteria for the committers election, we define the following:
 
@@ -179,8 +179,8 @@ In case of safety related "CODEOWNER" sections (e.g. a file containing feature r
 The successful checking of committers and CODEOWNERS skills is ensured by the safety manager and documented in the role assignment document.
 One important aspect to this is, that we ensure the identity of the committer by applying the GitHub digital signature mechanism.
 
-Functional Safety Ressources
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Functional Safety Resources
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A dedicated safety manager is elected by :need:`rl__project_lead` for all the S-CORE SEooCs development.
 
@@ -206,7 +206,7 @@ To exchange general information and to clarify general topics the following comm
 
 * Regular (online) meetings, at least every two months.
 * E-Mails
-* Messager Services e.g., Slack, Microsoft Teams, Github Notifications
+* Messenger Services e.g., Slack, Microsoft Teams, Github Notifications
 * Ad hoc safety related meetings are set up for clarification topics.
 
 *Reporting*
@@ -230,7 +230,7 @@ Functional Safety Management Life Cycle
 The safety lifecycle of the S-CORE project is initiated at the project set-up and driven and maintained by the safety manager supported by the :need:`rl__process_community`.
 Note that the Eclipse Foundation also defines `project phases <https://www.eclipse.org/projects/handbook/#starting-project-phases>`_.
 Eclipse definition is more about the process maturity for the whole project, if we are in Mature Phase, we latest will have the project lifecycle as defined in our process description.
-Nevertheless, Safety Development and even Safety Case release is independent from Mature and Incubation Phase as the completeness and appropriateness of the platform process and artefacts
+Nevertheless, Safety Development and even Safety Case release is independent from Mature and Incubation Phase as the completeness and appropriateness of the platform process and artifacts
 is determined by Safety Audit and not be Eclipse project reviews.
 
 Functional Safety Requirements

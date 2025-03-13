@@ -32,7 +32,7 @@ Key documents to get an understanding about verification activities are:
 * **Concept Document:** :need:`doc_concept__verification__process` provides a high-level overview of the verification concept.
 * **Verification Guideline:** :need:`gd_guidl__verification_guide` details test case development, execution, and reporting procedures.
 * **Verification Plan:** :need:`wp__verification__plan` implementation outlines the overall verification strategy and objectives.
-  (Note that the implemnation of the verification plan can be found in the platform management plan.)
+  (Note that the implementation of the verification plan can be found in the platform management plan.)
 
 
 General Workflow
@@ -41,7 +41,7 @@ General Workflow
 The workflows can be split into 4 major parts:
 
 * Test planning filling the template :need:`gd_temp__verification__plan`.
-* Test specification and implementation for the respecitve testing level
+* Test specification and implementation for the respective testing level
 * Test execution by the CI.
   (Manual test cases are treated as automated test with user interaction and timeouts.)
 * Test reports are created when all verification artifacts on a module and platform level are

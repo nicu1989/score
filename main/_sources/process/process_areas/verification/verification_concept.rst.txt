@@ -43,7 +43,7 @@ Stakeholder
 
    * Set the scope of platform and testing
    * Status reporting of verification activities
-   * Defining releae content
+   * Defining release content
    * Judge the releasable software state in case of failing test cases.
 
      This may need involvement of :need:`rl__project_lead`,
@@ -68,7 +68,7 @@ Stakeholder
 
    * Set the scope of platform and testing
    * Status reporting of verification activities
-   * Defining releae content
+   * Defining release content
 
 #. :need:`Infrastructure/Tooling Developer <rl__infrastructure_tooling_community>`
 
@@ -83,12 +83,12 @@ Stakeholder
 
 #. :need:`External Auditor <rl__external_auditor>`
 
-   * Understand activities, planning, processes definition, and execution reports for verifcation activities
+   * Understand activities, planning, processes definition, and execution reports for verification activities
 
 #. "Distributor" (external role)
 
-   * Reexecution of test cases
-   * Tesing OSS parts on product hardware
+   * Re-execution of test cases
+   * Testing OSS parts on product hardware
    * Integrate the test cases in their product (distribution)
    * Create issue reports and provide improvements
 
@@ -123,7 +123,7 @@ The derivation of test cases can also be based on certain methods.
 
 Usually the defined methods are not applied on each verification level between unit and platform level.
 Also their execution may differ whether it is a QM or ASIL rated test case.
-The rigor is described in the implemenetation of :need:`wp__verification__plan`.
+The rigor is described in the implementation of :need:`wp__verification__plan`.
 
 
 Automated test cases should contain further information about which methods have been applied.

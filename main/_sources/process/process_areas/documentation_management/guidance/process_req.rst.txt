@@ -24,7 +24,7 @@ Document Management Process Requirements
    of the content shall put his name.
 
    Note: In the future this may also be automated based on an analysis of content during the
-   documentation build for every commmit of the file containing the document.
+   documentation build for every commit of the file containing the document.
 
 .. gd_req:: Document Approver
    :id: gd_req__doc_approver

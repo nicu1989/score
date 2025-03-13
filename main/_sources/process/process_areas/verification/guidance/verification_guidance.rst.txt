@@ -72,11 +72,11 @@ Simplified in a nutshell:
 #. Confirm requirement test coverage by creating linkage document
 #. Set requirement attribute [testcovered=YES] during Sphinx build
 
-More information on the concept of requirements verifaction can be found in :ref:`requirement_verification_workflow`
+More information on the concept of requirements verification can be found in :ref:`requirement_verification_workflow`
 
 A more detailed description of how to link code to requirements is available here: :need:`gd_req__link_tests`
 
-Traceability matrix and consistancy checks will be automatically established with tool support.
+Traceability matrix and consistency checks will be automatically established with tool support.
 
 Two properties exists; one to show partial and one to show full coverage of a requirement.
 For multiple test cases having a "partial coverage" a review has to be conducted to confirm
@@ -124,9 +124,9 @@ implementation of the software code.
 
 Additionally needed test cases should be added as standalone parts. They are developed as any
 other test case as part of the platform. If upstreaming of the newly created tests is judged as
-useful, this shall be planned and added to the proejct milestone plan.
+useful, this shall be planned and added to the project milestone plan.
 
-Verifiation types and methods
------------------------------
+Verification types and methods
+------------------------------
 
 Verification types and methods are described in the :need:`doc_concept__verification__process`.

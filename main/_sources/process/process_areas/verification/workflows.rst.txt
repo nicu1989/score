@@ -36,7 +36,7 @@ Workflow Verification
    Any contributor can create a component test and create a PR for it.
    During the review process the test cases will be approved by a committer.
    Committer and contributor need to differ.
-   The actual :need:`rl__committer` of the implementation can also be the creater of the unit tests.
+   The actual :need:`rl__committer` of the implementation can also be the creator of the unit tests.
    Independence is achieved by different approver at PRs and by the :need:`wp__verification__module_ver_report`.
 
 .. workflow:: Create/Maintain Component Test
@@ -149,11 +149,11 @@ Workflow Verification
    :has: doc_concept__verification__process, doc_getstrt__verification__process
 
    The verification plan is maintained by :need:`rl__committer`. The plan should be dynamic and updated
-   as needed throughout the project lifecycle, as verifcation activities may be impacted, by new
+   as needed throughout the project lifecycle, as verification activities may be impacted, by new
    requirements, architectural decisions, introduction of tools.
 
    Note that during the initial creation of the verification plan in :need:`wf__verification__plan`
-   not every input down to compontent level may be available.
+   not every input down to component level may be available.
 
 .. workflow:: Create Module Verification Report
    :id: wf__verification__mod_ver_report

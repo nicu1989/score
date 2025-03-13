@@ -49,7 +49,7 @@ Work Products Change Management
    |
    | Change Request for a new platform component or a modification of an existing platform component,
    | which changes the scope of the component.
-   | Software Modules are also Components (top-level coponent).
+   | Software Modules are also Components (top-level component).
 
 .. needextend:: "docs/process/change_management" in docname
    :+tags: change_management

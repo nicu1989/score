@@ -25,7 +25,7 @@ This document describes the general guidances for Change Management based on the
 General Hints
 =============
 
-The detailed implementation of the Change Management for **S-CORE** is desribed in the :need:`[[title]]<doc__platform_change_management_plan>`.
+The detailed implementation of the Change Management for **S-CORE** is described in the :need:`[[title]]<doc__platform_change_management_plan>`.
 
 Templates
 ---------
@@ -83,8 +83,8 @@ This section describes in detail which steps need to be performed for a Change R
    * - :ref:`1. <chm_create_change_request>`
      - Create change request
      - :need:`[[title]] <rl__contributor>`
-   * - :ref:`2. <chm_analyse_change_request>`
-     - Analyse Change Request
+   * - :ref:`2. <chm_analyze_change_request>`
+     - Analyze Change Request
      - :need:`[[title]] <rl__contributor>`
    * - :ref:`3. <chm_approve_change_request>`
      - Approve Change Request
@@ -105,17 +105,17 @@ Create Change Request
 System linked to the created Feature or Component Request work products based on the provided templates.
 It is expected, that the UID will be provided by the Issue Tracking System.
 
-The title of the Change Request should reflect the tpye (new feature/component request or
+The title of the Change Request should reflect the type (new feature/component request or
 feature/component modification).
 
-The desription should reflect the detailed changes. In case of a new feature/component request,
+The description should reflect the detailed changes. In case of a new feature/component request,
 fill-out the template sections properly. For modifications touch only the concerned sections.
 
 Set the status of the Change Request to "draft", indicating that is not ready for review.
 
-.. _chm_analyse_change_request:
+.. _chm_analyze_change_request:
 
-Analyse Change Request
+Analyze Change Request
 ----------------------
 
 To enable the **S-CORE** :need:`[[title]] <rl__committer>` to take a decision for approval of the
@@ -125,7 +125,7 @@ the following topics in the created Change Request:
 1. List of all affected work products
 2. Provide potential implementation schedule including targeted Milestone
 3. Identify risks for implementation, required **S-CORE** resources
-4. Identify impact on existing work producst and on functional safety, security
+4. Identify impact on existing work products and on functional safety, security
 5. Define verification measures used to confirm the implementation
 
 Set the status of the Change Request to "draft", indicating that is not ready for review.

@@ -73,6 +73,20 @@ Basically following steps need to be performed:
       cd ..
       rm -rf bazel
 
+
+
+Graphviz/Dot Installation
+-------------------------
+
+Graphviz/Dot is mandatory for local development (outside the `devcointainer`).
+To install it on a Linux system using apt, execute the following command:
+
+.. code-block:: shell
+
+   sudo apt update && sudo apt install graphviz
+
+This ensures that all necessary dependencies for generating diagrams are available during development.
+
 IDE Support
 ===========
 Currently as a goal for this project the IDE shall provide support for most of the languages which are used in this project. For this Project *VS Code* is selected as the primary IDE. This means that only *VS code* will be checked in case of breaking changes!

@@ -50,17 +50,17 @@ Safety Plan Confirmation Review Checklist
           - <Rationale for result>
 
         * - 4
-          - Does the safety plan define all needed activites for System and SW develpoment, integration and verification?
+          - Does the safety plan define all needed activities for System and SW development, integration and verification?
           - [YES | NO ]
           - <Rationale for result>
 
         * - 5
-          - Does the safety plan define all needed activites for safety analysis and DFA?
+          - Does the safety plan define all needed activities for safety analysis and DFA?
           - [YES | NO ]
           - <Rationale for result>
 
         * - 6
-          - Does the safety plan define all needed activites for supporting processes (incl. tool mgt)?
+          - Does the safety plan define all needed activities for supporting processes (incl. tool mgt)?
           - [YES | NO ]
           - <Rationale for result>
 
@@ -88,4 +88,3 @@ Safety Plan Confirmation Review Checklist
           - Is safety plan updated iteratively to show the progress?
           - [YES | NO ]
           - <Rationale for result>
-

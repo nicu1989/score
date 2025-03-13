@@ -37,10 +37,10 @@ The classification shall have three outcomes:
 Approach
 --------
 
-The classification is based on two criterias:
+The classification is based on two criteria:
 
-* The uncertaintiy of the Processes (P) applied for the development of the existing element
-* The uncertainity of finding systematic faults based on the Complexity (C) of the existing element
+* The uncertainty of the Processes (P) applied for the development of the existing element
+* The uncertainty of finding systematic faults based on the Complexity (C) of the existing element
 
 | Assumption is that the context for the usage of the existing element is always the operation environment and context of the *Score* platform.
 | (P) shall be natural values out of the set[1,2,3]
@@ -51,8 +51,8 @@ The classification is based on two criterias:
 | The outcome of the classification (CLAS_OUT) shall be a function of (P) and (C).
 | (CLAS_OUT) shall be values out of the set[Q, QR, NQ]
 |
-| Step 1: Determine (P): the uncertainity of the Processes applied
-| Step 2: Determine (C): the uncertainity of finding systematic faults based on the Complexity
+| Step 1: Determine (P): the uncertainty of the Processes applied
+| Step 2: Determine (C): the uncertainty of finding systematic faults based on the Complexity
 | Step 3: Determine (CLAS_OUT): the classification outcome
 | Step 4: Document all results and rationale for choosing (P) and (C) and (CLAS_OUT)
 | Step 5: Based on (CLAS_OUT) select the following activities:
@@ -147,7 +147,7 @@ Step 2: Determination of (C)
 | The result of a complexity measure shall have as outcome [NH, HM, NM]
 | - NH: Not High
 | - HM: High but Manageable within *Score*
-| - NM: high and Not Manageabe within *Score*
+| - NM: high and Not Manageable within *Score*
 
 **Complexity measure for programming language: RUST**
 
@@ -193,7 +193,7 @@ Step 2: Determination of (C)
       - ~ 5
       - higher as 5
     * - 6
-      - Cyclometric complexity or others (t.b.d.)
+      - Cyclomatic complexity or others (t.b.d.)
       - rust-code-analysis (mozilla)  (?)
       - t.b.d
       - t.b.d

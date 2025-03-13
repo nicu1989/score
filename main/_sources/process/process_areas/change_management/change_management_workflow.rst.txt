@@ -16,7 +16,7 @@
 Workflow Change Management
 ##########################
 
-.. workflow:: Create/Analyse Change Request
+.. workflow:: Create/Analyze Change Request
    :id: wf__change__cr_an_change_request
    :status: valid
    :tags: change_management
@@ -28,13 +28,13 @@ Workflow Change Management
    :contains: gd_guidl__change__change_request, gd_temp__change__feature_request, gd_temp__change__component_request, gd_temp__change__impact_analysis, gd_temp__component_classification, gd_req__change__attr_uid, gd_req__change__attr_status, gd_req__change__attr_title, gd_req__change__attr_impact_description, gd_req__change__attr_impact_safety, gd_req__change__attr_impact_security, gd_req__change__types, gd_req__change__attr_affected_wp, gd_req__change__attr_milestone, gd_req__change_tool_impact_analysis
    :has: doc_concept__change__process, doc_getstrt__change__process
 
-   The Change Request is created and analysed.
+   The Change Request is created and analyzed.
 
    The Change Request must be filled out based on existing templates, including affected work
    products, impact on functional safety and security, schedule, risk resources and verification
    measures.
 
-   All affeted work products are traced.
+   All affected work products are traced.
 
    Until the template is not filled out properly, the Change Request may be kept in “draft” from
    the [Committer (rl__committer)]. The possible outcome is either a Change Request with status

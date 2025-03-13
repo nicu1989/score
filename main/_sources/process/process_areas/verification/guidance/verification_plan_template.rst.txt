@@ -172,7 +172,7 @@ Verification Plan Template
 
          This section defines the roles and responsibilities of individuals involved in the
          verification process. It can refer and should be based on the definition in the
-         verifcation process :ref:`verification_roles`.
+         verification process :ref:`verification_roles`.
 
          Tools
          -----

@@ -14,8 +14,8 @@
 
 .. _arch_design_guideline:
 
-Guideline
-#########
+Architecture Guideline
+######################
 
 .. gd_guidl:: Architectural Design
    :id: gd_guidl__arch__design
@@ -118,14 +118,14 @@ Based on the concept description a model of the feature architecture should be d
 
 .. list-table:: Architectural Elements of the Feature Architecture
    :header-rows: 1
-   :widths: 10,60,30
+   :widths: 10,30,30
 
    * - Element
      - Sphinx directive
      - VS Code Template
    * - Feature Architecture
-     - feat_arc_sta
-     - feat_arc_sta_t
+     - feat_arc_sta, feat_arc_dyn
+     - feat_arc_sta_t, feat_arc_dyn_t
    * - Logical Interface
      - feat_arc_int
      - feat_arc_int_t
@@ -133,7 +133,7 @@ Based on the concept description a model of the feature architecture should be d
      - feat_arc_int_op
      - feat_arc_int_op_t
 
-The relations of those elements are described in :numref:`metamodel_architectural_design`.
+The relations of the static elements are described in :numref:`metamodel_architectural_design`.
 
 .. note::
    For the modeling of the architecture a sphinx extension is available: :ref:`arch_gen_sphinx`
@@ -156,7 +156,8 @@ Those links shall be established from architectural elements to feature requirem
 Review architectural design
 ---------------------------
 
-As soon as the design is in a mature state it can be reviewed according to <TBD> and merged into the main branch of the score repository.
+As soon as the design is in a mature state it can be reviewed according to :need:`doc_concept__wp_inspections`
+and merged into the main branch of the score repository.
 
 For the review process a checklist template is available: :need:`[[title]] <gd_chklst__arch__inspection_checklist>`
 
@@ -196,14 +197,14 @@ According to the architecture design description the model for the component arc
 
 .. list-table:: Architectural Elements of the Component Architecture
    :header-rows: 1
-   :widths: 10,60,30
+   :widths: 10,30,30
 
    * - Element
      - Sphinx directive
      - VS Code Template
    * - Component Architecture
-     - comp_arc_sta
-     - comp_arc_sta_t
+     - comp_arc_sta, comp_arc_dyn
+     - comp_arc_sta_t, comp_arc_dyn_t
    * - (Real) Interface
      - comp_arc_int
      - comp_arc_int_t
@@ -211,7 +212,7 @@ According to the architecture design description the model for the component arc
      - comp_arc_int_op
      - comp_arc_int_op_t
 
-The relations of those elements are described in :numref:`metamodel_architectural_design`
+The relations of the static elements are described in :numref:`metamodel_architectural_design`
 
 .. _review_component_architecture:
 
@@ -229,3 +230,29 @@ Following roles should be included in the review:
 For the review process a checklist template is available:
 
 :need:`[[title]] <gd_chklst__arch__inspection_checklist>`
+
+UML diagram selection
+=====================
+
+Static architecture
+-------------------
+As can be seen from the examples presented in :need:`feat_arc_sta__feature_1` and :need:`comp_arc_sta__archdes_component_2`
+for the static architecture a UML component diagram is expected (and supported by the tooling).
+
+Dynamic architecture
+--------------------
+The :need:`doc_concept__arch__process` shows the usage of UML sequence diagrams to describe dynamic
+behaviour. This is also the expected default diagram. Alternatively also state machine diagrams can be used
+to describe stateful behaviour. Other types like the activity diagram are not encouraged to use,
+if an activity diagram is used instead of a sequence diagram, this has to be argued as part of the
+architecture description.
+
+Generally dynamic views are expected in the feature view and the component view based on the following considerations:
+
+- Do not use dynamic views, if the fulfillment of the requirements by the architecture is already understandable with the static view.
+- Simple caller/callee relation is not expected to be modelled (this would mean that the examples would be too simple for modelling).
+- It should be more than two components involved.
+- In case of safety related calls/communication also the error cases shall be displayed (see the "alt" boxes in the examples).
+- If there would be only small difference between the feature and the component view, one can be omitted, preferrably the feature view.
+- If the described feature or components support multiple use cases (e.g. in different life cycle phases).
+  these should be described also in multiple dynamic views.

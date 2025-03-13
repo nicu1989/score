@@ -27,7 +27,7 @@ Safety Management Guideline
    | Safety culture is planned to grow in the SW platform. This shall be fostered by doing a lessons learned after each feature development completion, using the ISO 26262-2 Table B.1 as a questionnaire.
    | This lessons learned is the main input for process improvement managed by :need:`wp__process_impr_report`
    | As starting point for safety culture we define a Committer selection process to already have professionals with safety experience in the teams.
-   | Additionally the SW platform's processes are defined with experience of several companies alrady performing successful safe SW development. This also improves independence of reviews for the process definitions.
+   | Additionally the SW platform's processes are defined with experience of several companies already performing successful safe SW development. This also improves independence of reviews for the process definitions.
    |
    | Quality Management:
    | ASPICE standard is selected for quality management. Processes will always link to the :ref:`standard_iso26262` standard and to the ASPICE (todo, add link) standard.
@@ -71,7 +71,7 @@ Safety Management Guideline
    | A template exists to guide this: :need:`gd_temp__module_safety_plan`.
    |
    | **Planning supporting processes:**
-   | Supporting processes (Requirements Management, Configuration Managment, Change Management, Documentation Management, Tool Management) are planned within the :need:`wp__platform_mgmt`
+   | Supporting processes (Requirements Management, Configuration Management, Change Management, Documentation Management, Tool Management) are planned within the :need:`wp__platform_mgmt`
    |
    | **Planning integration and verification:**
    | Integration on the target hardware is not done in the scope of the SW platform project, but SW/SW integration up to the feature level is performed and its test results are part of the :need:`wp__verification__platform_ver_report`.

@@ -560,7 +560,7 @@
                   
   <section id="safety-manual-template">
 <h1>Safety Manual Template<a class="headerlink" href="#safety-manual-template" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-a738b2a4">
+<div class="need_container docutils container" id="SNCB-9e2c897b">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_temp table" id="gd_temp__safety_manual">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -624,9 +624,10 @@
 <h3>Assumptions on the Environment<a class="headerlink" href="#assumptions-on-the-environment" title="Link to this heading">#</a></h3>
 <div class="line-block">
 <div class="line">Generally the assumption of the SCORE platform SEooC is that it is integrated in a safe system, i.e. the POSIX OS it runs on is qualified and also the HW related failures are taken into account by the system integrator, if not otherwise stated in the module’s safety concept.</div>
-<div class="line">&lt;List here all the respective general environment AoU.&gt;</div>
 <div class="line">&lt;List here all the OS calls the SCORE platform expects to be safe.&gt;</div>
 </div>
+<p>List of AoUs expected from the environment the platform / module runs on:</p>
+<p class="needs_filter_warning" id="needtable-process/process_areas/safety_management/guidance/template_safety_manual-0">No needs passed the filters</p>
 </section>
 <section id="assumptions-on-the-user">
 <h3>Assumptions on the User<a class="headerlink" href="#assumptions-on-the-user" title="Link to this heading">#</a></h3>
@@ -635,8 +636,9 @@
 <div class="line">Additionally the components of the platform may have additional specific assumptions how they are used. These are part of every module documentation: &lt;link to add&gt;. Assumptions from components to their users can be fulfilled in two ways:</div>
 <div class="line">1. There are assumption which need to be fulfilled by all SW components, e.g. “every user of an IPC mechanism needs to make sure that he provides correct data (including appropriate ASIL level)” - in this case the AoU is marked as “platform”.</div>
 <div class="line">2. There are assumption which can be fulfilled by a safety mechanism realized by some other SCORE platform component and are therefore not relevant for an user who uses the whole platform. But those are relevant if you chose to use the module SEooC stand-alone - in this case the AoU is marked as “module”. An example would be the “JSON read” which requires “The user shall provide a string as input which is not corrupted due to HW or QM SW errors.” - which is covered when using together with safe SCORE platform persistency feature.</div>
-<div class="line">&lt;Link here to all module AoUs.&gt;</div>
 </div>
+<p>List of AoUs on the user of the platform features or the module of this safety manual:</p>
+<p class="needs_filter_warning" id="needtable-process/process_areas/safety_management/guidance/template_safety_manual-1">No needs passed the filters</p>
 </section>
 </section>
 <section id="safety-concept-of-the-seooc">

@@ -58,7 +58,7 @@ Checklists
         -
 
       * - 6
-        - Does the Change Request has a impact anaylsis as specified?
+        - Does the Change Request has a impact analysis as specified?
         -
 
       * - 7

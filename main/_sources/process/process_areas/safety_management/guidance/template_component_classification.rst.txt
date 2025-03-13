@@ -85,14 +85,14 @@ Step 1: Determine (P): the uncertainty of the Processes applied
 <component name> is determined as P=<1|2|3>
 
 
-Step 2: Determine (C): the uncertainity of finding systematic faults based on the Complexity
---------------------------------------------------------------------------------------------
+Step 2: Determine (C): the uncertainty of finding systematic faults based on the Complexity
+-------------------------------------------------------------------------------------------
 
 | Apply the complexity measures to determine (C).
 | The result of a complexity measure shall have as outcome [NH, HM, NM]
 | - NH: Not High
 | - HM: High but Manageable
-| - NM: high and Not Manageabe
+| - NM: high and Not Manageable
 |
 | **Complexity measure for programming language: <C++ or RUST>**
 
@@ -143,7 +143,7 @@ Step 2: Determine (C): the uncertainity of finding systematic faults based on th
 
 | (C=1) shall be selected when none of the determined complexity measures indicate HM or NM.
 | (C=2) shall be selected when at least one of the determined complexity measures indicate HM or NM, but the gaps evaluated are acceptable, means
-|       the risk of systematic faults due to these gaps is sufficiently low in the context of DEPENDIX or manageable by mitigating the gaps.
+|       the risk of systematic faults due to these gaps is sufficiently low in the context of S-Core or manageable by mitigating the gaps.
 | (C=3) in all other cases.
 |
 

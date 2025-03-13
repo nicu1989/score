@@ -559,7 +559,7 @@
                   
   <section id="guidelines">
 <h1>Guidelines<a class="headerlink" href="#guidelines" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-88faaa8c">
+<div class="need_container docutils container" id="SNCB-631132f3">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_guidl table" id="gd_guidl__change__change_request">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -607,13 +607,13 @@
 <p>This document describes the general guidances for Change Management based on the concept which is defined <a class="reference internal" href="../change_management_concept.html#doc_concept__change__process" title="doc_concept__change__process"><em class="xref need">Concept Description</em></a>.</p>
 <section id="general-hints">
 <h2>General Hints<a class="headerlink" href="#general-hints" title="Link to this heading">#</a></h2>
-<p>The detailed implementation of the Change Management for <strong>S-CORE</strong> is desribed in the <a class="reference internal" href="../../../../platform_management_plan/change_management.html#doc__platform_change_management_plan" title="doc__platform_change_management_plan"><em class="xref need">Change Management Plan</em></a>.</p>
+<p>The detailed implementation of the Change Management for <strong>S-CORE</strong> is described in the <a class="reference internal" href="../../../../platform_management_plan/change_management.html#doc__platform_change_management_plan" title="doc__platform_change_management_plan"><em class="xref need">Change Management Plan</em></a>.</p>
 <section id="templates">
 <h3>Templates<a class="headerlink" href="#templates" title="Link to this heading">#</a></h3>
 <p><em>Need</em> templates displaying the correct syntax and attribute definition are provided for each
 Change Request type.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id1">
-<caption><span class="caption-number">Table 5 </span><span class="caption-text">Overview</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 6 </span><span class="caption-text">Overview</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -685,7 +685,7 @@ be found here: <a class="reference internal" href="../change_management_concept.
 <span id="workflow-chm-requirements"></span><h2>Workflow for Change Requests<a class="headerlink" href="#workflow-for-change-requests" title="Link to this heading">#</a></h2>
 <p>This section describes in detail which steps need to be performed for a Change Request.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id2">
-<caption><span class="caption-number">Table 6 </span><span class="caption-text">Workflow for Change Request</span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 7 </span><span class="caption-text">Workflow for Change Request</span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 10.0%" />
 <col style="width: 60.0%" />
@@ -702,8 +702,8 @@ be found here: <a class="reference internal" href="../change_management_concept.
 <td><p>Create change request</p></td>
 <td><p><a class="reference internal" href="../../../roles/index.html#rl__contributor" title="rl__contributor"><em class="xref need">Contributor</em></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#chm-analyse-change-request"><span class="std std-ref">2.</span></a></p></td>
-<td><p>Analyse Change Request</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#chm-analyze-change-request"><span class="std std-ref">2.</span></a></p></td>
+<td><p>Analyze Change Request</p></td>
 <td><p><a class="reference internal" href="../../../roles/index.html#rl__contributor" title="rl__contributor"><em class="xref need">Contributor</em></a></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#chm-approve-change-request"><span class="std std-ref">3.</span></a></p></td>
@@ -726,14 +726,14 @@ be found here: <a class="reference internal" href="../change_management_concept.
 <p><a class="reference internal" href="../../../roles/index.html#rl__contributor" title="rl__contributor"><em class="xref need">Contributor</em></a> creates the Change Request in the defined Issue Tracking
 System linked to the created Feature or Component Request work products based on the provided templates.
 It is expected, that the UID will be provided by the Issue Tracking System.</p>
-<p>The title of the Change Request should reflect the tpye (new feature/component request or
+<p>The title of the Change Request should reflect the type (new feature/component request or
 feature/component modification).</p>
-<p>The desription should reflect the detailed changes. In case of a new feature/component request,
+<p>The description should reflect the detailed changes. In case of a new feature/component request,
 fill-out the template sections properly. For modifications touch only the concerned sections.</p>
 <p>Set the status of the Change Request to “draft”, indicating that is not ready for review.</p>
 </section>
-<section id="analyse-change-request">
-<span id="chm-analyse-change-request"></span><h3>Analyse Change Request<a class="headerlink" href="#analyse-change-request" title="Link to this heading">#</a></h3>
+<section id="analyze-change-request">
+<span id="chm-analyze-change-request"></span><h3>Analyze Change Request<a class="headerlink" href="#analyze-change-request" title="Link to this heading">#</a></h3>
 <p>To enable the <strong>S-CORE</strong> <a class="reference internal" href="../../../roles/index.html#rl__committer" title="rl__committer"><em class="xref need">Committer</em></a> to take a decision for approval of the
 Change Request, <a class="reference internal" href="../../../roles/index.html#rl__contributor" title="rl__contributor"><em class="xref need">Contributor</em></a> analyses and documents the request concerning
 the following topics in the created Change Request:</p>
@@ -741,7 +741,7 @@ the following topics in the created Change Request:</p>
 <li><p>List of all affected work products</p></li>
 <li><p>Provide potential implementation schedule including targeted Milestone</p></li>
 <li><p>Identify risks for implementation, required <strong>S-CORE</strong> resources</p></li>
-<li><p>Identify impact on existing work producst and on functional safety, security</p></li>
+<li><p>Identify impact on existing work products and on functional safety, security</p></li>
 <li><p>Define verification measures used to confirm the implementation</p></li>
 </ol>
 <p>Set the status of the Change Request to “draft”, indicating that is not ready for review.
@@ -832,7 +832,7 @@ Change Request can be confirmed.</p>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-for-change-requests">Workflow for Change Requests</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-change-request">Create Change Request</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-change-request">Analyse Change Request</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyze-change-request">Analyze Change Request</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approve-change-request">Approve Change Request</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implement-change-request">Implement Change Request</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-change-request">Verify Change Request</a></li>

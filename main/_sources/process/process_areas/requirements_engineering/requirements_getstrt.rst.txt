@@ -56,7 +56,7 @@ For linking requirements to source code a tool is available:
 Linking Requirements to Tests
 =============================
 
-For linking Requirements to tests metatags shall be used <TBD link Verification Guidline>
+For linking Requirements to tests metatags shall be used <TBD link Verification Guideline>
 
 
 Developer Experience

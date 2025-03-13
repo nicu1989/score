@@ -36,7 +36,7 @@ Platform
    :status: valid
    :complies: std_wp__iso26262__support_12
 
-   Platform Testing verfies Stakeholder Requirements performed on reference HW
+   Platform Testing verifies Stakeholder Requirements performed on reference HW
 
 .. workproduct:: Platform Verification Report
    :id: wp__verification__platform_ver_report
@@ -103,7 +103,7 @@ Component
    :status: valid
    :complies: std_wp__iso26262__software_13, std_wp__iso26262__support_12
 
-   Compontent Integration Testing verifies the detailed design and component architecture:
+   Component Integration Testing verifies the detailed design and component architecture:
 
    - all interfaces from Static view and
    - all flows from Dynamic View
