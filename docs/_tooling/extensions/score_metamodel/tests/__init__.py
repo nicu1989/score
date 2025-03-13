@@ -27,8 +27,8 @@ def fake_check_logger():
         def __init__(self):
             self._mock_logger = MagicMock(spec=SphinxLoggerAdapter)
             self._mock_logger.warning = MagicMock()
-            app = MagicMock(spec=Sphinx)
-            super().__init__(self._mock_logger, app)
+            app_path = MagicMock()
+            super().__init__(self._mock_logger, app_path)
 
         def assert_no_warnings(self):
             if self.has_warnings:
