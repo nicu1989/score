@@ -64,7 +64,7 @@ def _run_checks(app: Sphinx, exception: Exception | None) -> None:
 
     logger.debug(f"Running checks for {len(needs_all_needs)} needs")
 
-    log = CheckLogger(logger)
+    log = CheckLogger(logger, app)
 
     # Need-Local checks: checks which can be checked file-local, without a
     # graph of other needs.
