@@ -12,8 +12,8 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-Guidelines
-##########
+Guideline
+#########
 
 .. gd_guidl:: Change Request Guideline
    :id: gd_guidl__change__change_request
@@ -68,12 +68,24 @@ For all Change Requests following mandatory attributes need to be defined:
 
 .. _workflow_chm_requirements:
 
-Workflow for Change Requests
-============================
+Activities for Change Requests
+==============================
 
-This section describes in detail which steps need to be performed for a Change Request.
+This section describes in detail which steps need to be performed for a Change Request. They may
+be combined in on Change Request or split to multiple Change Requests, if necessary.
 
-.. list-table:: Workflow for Change Request
+Split may required, if
+
+| 1. Implementation is to complex and has dependencies, thus separate the activities for analyzing and
+|    approving and the multiple implementation and verification activities in different Change Requests,
+|    and link them according their dependencies.
+
+| 2. Affected work products are in different locations.
+
+Refer to the :need:`Change Management Plan <doc__platform_change_management_plan>` for examples
+how to create simple or more complex Change Requests.
+
+.. list-table:: Activities for Change Request
    :header-rows: 1
    :widths: 10,60,30
 
@@ -128,6 +140,9 @@ the following topics in the created Change Request:
 4. Identify impact on existing work products and on functional safety, security
 5. Define verification measures used to confirm the implementation
 
+Use therefore the : :ref:`Impact Analysis Template <chm_impact_analysis_templates>` and copy it
+into the created Change Request (Issue Tracking System).
+
 Set the status of the Change Request to "draft", indicating that is not ready for review.
 Otherwise, change the status to "in review", so that :need:`[[title]] <rl__committer>` is
 informed to start approval.
@@ -147,14 +162,13 @@ for resolving the review comments.
 
 Finally the Change Request may also "rejected", then the implementation is not wanted.
 
-
 .. _chm_implement_change_request:
 
 Implement Change Request
 ------------------------
 
 :need:`[[title]] <rl__contributor>` implements the Change Request. This is indicated by the
-Change Request status "in implementation". During implementation the responsible lead
+Change Request status "in review". During implementation the responsible lead
 :need:`[[title]] <rl__technical_lead>` or :need:`[[title]] <rl__module_lead>` reports regularly
 the status to the involved **S-CORE** teams until is completed and verified.
 
@@ -168,6 +182,6 @@ Verify Change Request
 ---------------------
 :need:`[[title]] <rl__committer>` must finally check, that implementation is complete
 and the defined verification measures are properly executed and successfully pass, before the
-Change Request can be confirmed.
+Change Request can be finally approved.
 
-The Change Request is closed by setting the status to "confirmed".
+The Change Request is closed by setting the status to "accepted".

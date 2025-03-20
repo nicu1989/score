@@ -31,7 +31,7 @@
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/score.css?v=940e959b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/score_needs.css?v=e97392eb" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/score_design.css?v=7199c97b" />
@@ -452,10 +452,6 @@
 </ul>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Process Areas</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../change_management/index.html">Change Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../documentation_management/index.html">Documentation Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../safety_management/index.html">Safety Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../requirements_engineering/index.html">Requirements Engineering</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Architecture Design</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Getting Started</a></li>
 <li class="toctree-l3"><a class="reference internal" href="architecture_concept.html">Concept Description</a></li>
@@ -466,6 +462,11 @@
 <li class="toctree-l3"><a class="reference internal" href="_assets/architecture_modeling_example.html">Example model of architectural design</a></li>
 </ul>
 </details></li>
+<li class="toctree-l2"><a class="reference internal" href="../change_management/index.html">Change Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation_management/index.html">Documentation Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../implementation/index.html">Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../requirements_engineering/index.html">Requirements Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../safety_management/index.html">Safety Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../verification/index.html">Verification</a></li>
 </ul>
 </details></li>
@@ -549,7 +550,7 @@
                   
   <section id="getting-started">
 <span id="arch-getting-started"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-802f8a34">
+<div class="need_container docutils container" id="SNCB-85ace5c9">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_doc_getstrt table" id="doc_getstrt__arch__process">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -601,10 +602,10 @@
 <a class="reference internal image-reference" href="../../../_images/architecture_workflow.drawio.svg"><img alt="../../../_images/architecture_workflow.drawio.svg" src="../../../_images/architecture_workflow.drawio.svg" style="width: 80%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Architecture Design Workflow</span><a class="headerlink" href="#architecture-workflow-fig" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Architecture Design Workflow</span><a class="headerlink" href="#architecture-workflow-fig" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p><a class="reference internal" href="#architecture-workflow-fig"><span class="std std-numref">Fig. 18</span></a> shows all steps which are required to create an architectural design. In this getting started only a short overview is given. A more detailed description of all the step is provided in the <a class="reference internal" href="guidance/architecture_guideline.html#gd_guidl__arch__design" title="gd_guidl__arch__design"><em class="xref need">guideline (gd_guidl__arch__design)</em></a></p>
+<p><a class="reference internal" href="#architecture-workflow-fig"><span class="std std-numref">Fig. 15</span></a> shows all steps which are required to create an architectural design. In this getting started only a short overview is given. A more detailed description of all the step is provided in the <a class="reference internal" href="guidance/architecture_guideline.html#gd_guidl__arch__design" title="gd_guidl__arch__design"><em class="xref need">guideline (gd_guidl__arch__design)</em></a></p>
 </section>
 <section id="tooling-support">
 <h2>Tooling support<a class="headerlink" href="#tooling-support" title="Link to this heading">#</a></h2>
@@ -621,7 +622,7 @@
 <span id="arch-gen-sphinx"></span><h3>Architecture Generation for Sphinx-Needs<a class="headerlink" href="#architecture-generation-for-sphinx-needs" title="Link to this heading">#</a></h3>
 <section id="overview">
 <h4>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h4>
-<p>The system provides utilities to generate UML diagrams from requirement specifications. It supports various architectural elements types including:</p>
+<p>The system provides utilities to generate <a class="reference external" href="https://plantuml.com/en/">PlantUML</a> diagrams from requirement specifications. It supports various architectural elements types including:</p>
 <ul class="simple">
 <li><p>Features</p></li>
 <li><p>Logical Interfaces</p></li>
@@ -640,7 +641,6 @@
    {{ draw_feature(need(), needs) }}
 </pre></div>
 </div>
-<p>You can add any layout or additional configuration you want before you call the <em>draw_xyz</em>.</p>
 <p>It’s also possible to manually extend the drawing. For an example, check out <a class="reference internal" href="#manual-addition-uml"><span class="std std-ref">Manual Addition to the UML</span></a></p>
 </section>
 <section id="available-drawing-classes">
@@ -650,58 +650,91 @@
 
 {{ draw_feature(need(), needs) }}
 
-# Draw Logical Interface
-# Renders a logical interface and its operations.
+# Draw Any Interface
+# Renders a logical interface and its operations or a component interface with its operations and implementations.
 
-{{ draw_logical_interface(need(), needs) }}
+{{ draw_interface(need(), needs) }}
 
 # Draw Component
 # Creates a complete component diagram including internal structure and linkages.
 
 {{ draw_component(need(), needs) }}
-
-# Draw Component Interface
-# Generates a component interface diagram with its operations and implementations.
-
-{{ draw_component_interface(need(), needs)}}
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Note: The above syntax is for the <em>needarch</em> directive. It is also possible to use the <em>needuml</em> directive.
-To achieve this the <em>need()</em> call needs to be replaced with the following, as <em>needuml</em> does not support <em>need()</em></p>
-</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># need() =&gt; needs.__getitem__(&#39;ID OF THE REQUIREMENT YOU ARE IN&#39;)
-
-# For example, drawing the requirement:
-`COMP_ARC_STA__component_manual_1`
-
- would then look as such
-{{ draw_component( needs.__getitem__(&#39;COMP_ARC_STA__component_manual_1&#39;), needs ) }}
-</pre></div>
-</div>
+</section>
 <section id="rendered-examples">
-<h5>Rendered Examples<a class="headerlink" href="#rendered-examples" title="Link to this heading">#</a></h5>
+<h4>Rendered Examples<a class="headerlink" href="#rendered-examples" title="Link to this heading">#</a></h4>
 <p>Here are some excerpts of UML diagrams made from the requirements of that file.</p>
-<p><strong>Component</strong></p>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">comp_arc_sta</span><span class="p">::</span> Component 1
-   <span class="nc">:id:</span> comp_arc_sta__component_getstrt
+<section id="feature-architecture">
+<h5>Feature Architecture<a class="headerlink" href="#feature-architecture" title="Link to this heading">#</a></h5>
+<div class="need_container docutils container" id="SNCB-2a751640">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_arc_sta table" id="feat_arc_sta__archdes_getstrt">
+<tbody>
+<tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
+<div class="line"><span><span class="needs_title"><span class="needs_data">Feature Getting Started</span></span></span></div>
+</div>
+</td>
+<td class="head_center" colspan="2"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></span></div>
+<div class="line"><span><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></span></div>
+<div class="line"><span><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></span></div>
+</div>
+</td>
+<td class="head_right" colspan="2"><div class="needs_head_right line-block">
+<div class="line"><span><span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span></span></div>
+</div>
+</td>
+</tr>
+<tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
+<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">architecture_design</span></span></span></div>
+<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
+<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">fulfils: <span class="fulfils"><span><a class="reference internal" href="_assets/architecture_modeling_example.html#feat_req__archdes_example_req" title="feat_arc_sta__archdes_getstrt">feat_req__archdes_example_req</a></span></span></div>
+<div class="line">includes: <span class="includes"><span><a class="reference internal" href="architecture_concept.html#feat_arc_int__archdes_logical_interface_1" title="feat_arc_sta__archdes_getstrt">feat_arc_int__archdes_logical_interface_1</a>, <a class="reference internal" href="_assets/architecture_modeling_example.html#feat_arc_int__archdes_logical_interface_2" title="feat_arc_sta__archdes_getstrt">feat_arc_int__archdes_logical_interface_2</a></span></span></div>
+</span></div>
+</div>
+</td>
+<td class="meta" colspan="3"></td>
+</tr>
+<tr class="content row-odd"><td class="content" colspan="6"><p class="plantuml" id="needarch-process/process_areas/architecture_design/architecture_getstrt-0">
+<object data="../../../_images/plantuml-e14101dbfb033abe1e155094bc1806486a480759.svg" type="image/svg+xml" style="width:482px;height:353px;background:#FFFFFF;"></object></p>
+</td>
+</tr>
+<tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#feat_arc_sta__archdes_getstrt" title="feat_arc_sta__archdes_getstrt">feat_arc_sta__archdes_getstrt</a></span></span></div>
+</div>
+</td>
+<td class="footer" colspan="2"><div class="needs_footer line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Feature Architecture Static View</span></span></span></div>
+</div>
+</td>
+<td class="footer_right" colspan="2"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">feat_arc_sta</span><span class="p">::</span> Feature Getting Started
+   <span class="nc">:id:</span> feat_arc_sta__archdes_getstrt
+   <span class="nc">:security:</span> YES
+   <span class="nc">:safety:</span> QM
    <span class="nc">:status:</span> valid
-   <span class="nc">:safety:</span> ASIL_B
-   <span class="nc">:security:</span> NO
-   <span class="nc">:uses:</span> comp_arc_int__archdes_component_interface_3
-   <span class="nc">:implements:</span> comp_arc_int__archdes_component_interface_1
-   <span class="nc">:fulfils:</span> comp_req__archdes_example_req
+   <span class="nc">:includes:</span> feat_arc_int__archdes_logical_interface_1, feat_arc_int__archdes_logical_interface_2
+   <span class="nc">:fulfils:</span> feat_req__archdes_example_req
 
 <span class="p">   ..</span> <span class="ow">needarch</span><span class="p">::</span>
       <span class="nc">:scale:</span> 50
       <span class="nc">:align:</span> center
 
-      allowmixing
-      {{ draw_component( need(), needs ) }}
+      {{ draw_feature(need(), needs) }}
 </pre></div>
 </div>
-<div class="need_container docutils container" id="SNCB-3b1cc672">
+</section>
+<section id="component-architecture">
+<h5>Component Architecture<a class="headerlink" href="#component-architecture" title="Link to this heading">#</a></h5>
+<div class="need_container docutils container" id="SNCB-3a8d7c8a">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_comp_arc_sta table" id="comp_arc_sta__component_getstrt">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -733,8 +766,8 @@ To achieve this the <em>need()</em> call needs to be replaced with the following
 </td>
 <td class="meta" colspan="3"></td>
 </tr>
-<tr class="content row-odd"><td class="content" colspan="6"><p class="plantuml" id="needarch-process/process_areas/architecture_design/architecture_getstrt-0">
-<object data="../../../_images/plantuml-1f00fc9fd196b6746d4e53b3096c303b06fff789.svg" type="image/svg+xml" style="width:436px;height:375px;background:#FFFFFF;"></object></p>
+<tr class="content row-odd"><td class="content" colspan="6"><p class="plantuml" id="needarch-process/process_areas/architecture_design/architecture_getstrt-1">
+<object data="../../../_images/plantuml-65d088cd130d7c2752c363e0c5d697ad93fc6022.svg" type="image/svg+xml" style="width:783px;height:210px;background:#FFFFFF;"></object></p>
 </td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
@@ -751,9 +784,43 @@ To achieve this the <em>need()</em> call needs to be replaced with the following
 </table>
 </div>
 </div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">comp_arc_sta</span><span class="p">::</span> Component 1
+   <span class="nc">:id:</span> comp_arc_sta__component_getstrt
+   <span class="nc">:status:</span> valid
+   <span class="nc">:safety:</span> ASIL_B
+   <span class="nc">:security:</span> NO
+   <span class="nc">:uses:</span> comp_arc_int__archdes_component_interface_3
+   <span class="nc">:implements:</span> comp_arc_int__archdes_component_interface_1
+   <span class="nc">:fulfils:</span> comp_req__archdes_example_req
+
+<span class="p">   ..</span> <span class="ow">needarch</span><span class="p">::</span>
+      <span class="nc">:scale:</span> 50
+      <span class="nc">:align:</span> center
+
+      {{ draw_component( need(), needs ) }}
+</pre></div>
+</div>
+</section>
+</section>
+<section id="debugging-plantuml-figures">
+<h4>Debugging PlantUML Figures<a class="headerlink" href="#debugging-plantuml-figures" title="Link to this heading">#</a></h4>
+<p>For debugging PlantUML diagrams which are generated via the <em>needarch</em> directive following options are available:</p>
+<p><strong>Storing the PlantUML File</strong></p>
+<p>It is possible to store the generate PlantUML file in the directory <code class="docutils literal notranslate"><span class="pre">&lt;workspace_root&gt;/_build/_plantuml_sources</span></code>
+Therefore the <em>needarch</em> directive needs to be extended with the attribute <code class="docutils literal notranslate"><span class="pre">:save:</span></code></p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">needarch</span><span class="p">::</span>
+   <span class="nc">:scale:</span> 50
+   <span class="nc">:align:</span> center
+   <span class="nc">:save:</span> comp1.puml
+
+   {{ draw_component( need(), needs ) }}
+</pre></div>
+</div>
+<p><strong>Printing the PlantUML Code</strong></p>
+<p>Besides storing the output it is also possible to display the generated PlantUML text below the rendered Figure. Therefore the <em>needarch</em> directive needs to be extended with the attribute <code class="docutils literal notranslate"><span class="pre">:debug:</span></code></p>
 </section>
 <section id="manual-addition-to-the-uml">
-<span id="manual-addition-uml"></span><h5>Manual Addition to the UML<a class="headerlink" href="#manual-addition-to-the-uml" title="Link to this heading">#</a></h5>
+<span id="manual-addition-uml"></span><h4>Manual Addition to the UML<a class="headerlink" href="#manual-addition-to-the-uml" title="Link to this heading">#</a></h4>
 <p>We use a similar rst as above, just this time we use <em>needuml</em> and add some extra manual UML at the end.
 To make <em>needuml</em> work we have to replace the <em>need()</em> call with a different function call.</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">comp_arc_sta</span><span class="p">::</span> Component Get Started Manually Edited
@@ -773,7 +840,7 @@ To make <em>needuml</em> work we have to replace the <em>need()</em> call with a
       CM -&gt; LI1: EXTRA_LINKAGE_MANUALLY_ADDED
 </pre></div>
 </div>
-<div class="need_container docutils container" id="SNCB-463624ba">
+<div class="need_container docutils container" id="SNCB-ed7c2f45">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_comp_arc_sta table" id="comp_arc_sta__component_manual_getstrt">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -806,7 +873,7 @@ To make <em>needuml</em> work we have to replace the <em>need()</em> call with a
 <td class="meta" colspan="3"></td>
 </tr>
 <tr class="content row-odd"><td class="content" colspan="6"><p class="plantuml" id="needuml-process/process_areas/architecture_design/architecture_getstrt-0">
-<object data="../../../_images/plantuml-43856c1be601c61ea657c3084720ef93a1957b94.svg" type="image/svg+xml" style="width:870px;height:375px;background:#FFFFFF;"></object></p>
+<object data="../../../_images/plantuml-c654c0d6bcb9c4a894044bbd2888826e434f447e.svg" type="image/svg+xml" style="width:815px;height:308px;background:#FFFFFF;"></object></p>
 </td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
@@ -823,7 +890,23 @@ To make <em>needuml</em> work we have to replace the <em>need()</em> call with a
 </table>
 </div>
 </div>
+<p>You can add any layout or additional configuration you want before you call the <em>draw_xyz</em>.</p>
 </section>
+<section id="using-needuml-directive">
+<h4>Using NeedUML directive<a class="headerlink" href="#using-needuml-directive" title="Link to this heading">#</a></h4>
+<p>The above syntax is for the <em>needarch</em> directive. It is also possible to use the <em>needuml</em> directive.
+To achieve this the <em>need()</em> call needs to be replaced with the following, as <em>needuml</em> does not support <em>need()</em></p>
+<blockquote>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span># need() =&gt; needs.__getitem__(&#39;ID OF THE REQUIREMENT YOU ARE IN&#39;)
+
+# For example, drawing the requirement:
+`COMP_ARC_STA__component_manual_1`
+
+would then look as such
+{{ draw_component( needs.__getitem__(&#39;COMP_ARC_STA__component_manual_1&#39;), needs ) }}
+</pre></div>
+</div>
+</div></blockquote>
 </section>
 <section id="limitations">
 <h4>Limitations<a class="headerlink" href="#limitations" title="Link to this heading">#</a></h4>
@@ -890,11 +973,15 @@ To make <em>needuml</em> work we have to replace the <em>need()</em> call with a
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#architecture-generation-for-sphinx-needs">Architecture Generation for Sphinx-Needs</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#available-drawing-classes">Available Drawing Classes</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#rendered-examples">Rendered Examples</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#manual-addition-to-the-uml">Manual Addition to the UML</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#available-drawing-classes">Available Drawing Classes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rendered-examples">Rendered Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-architecture">Feature Architecture</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#component-architecture">Component Architecture</a></li>
 </ul>
 </li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-plantuml-figures">Debugging PlantUML Figures</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#manual-addition-to-the-uml">Manual Addition to the UML</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-needuml-directive">Using NeedUML directive</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
 </ul>
 </li>

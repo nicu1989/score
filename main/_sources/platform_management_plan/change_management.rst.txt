@@ -17,6 +17,7 @@
    :status: draft
    :safety: ASIL_B
    :tags: platform_management
+   :realizes: wp__chm_plan
 
 Change Management / Change Management Plan
 ------------------------------------------
@@ -158,7 +159,8 @@ The figure below shows the workflow for the simplest case of a Change Request.
 
 An ISSUE with the label according to the Change Request type is created in status ``OPEN``.
 The title of the ISSUE reflects the potential change. The description of the ISSUE may give a brief
-description of the requested change or modification.
+description of the requested change or modification. Further add here the
+:ref:`Impact Analysis Template <chm_impact_analysis_templates>` and fill it out accordingly.
 
 The details are part of the Feature/Component Request work product. The Feature/Component Request
 is provided by a PR, which is linked to the ISSUE in status ``DRAFT``.

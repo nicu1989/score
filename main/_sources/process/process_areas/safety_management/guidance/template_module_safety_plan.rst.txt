@@ -208,7 +208,7 @@ This document implements <add "need" link>
           - <Link to WP>
           - <automated>
 
-        * - :need:`wp__sw_code_inspect`
+        * - :need:`wp__sw_implementation_inspection`
           - <Link to process>
           - <automated>
           - <Link to issue>
@@ -286,7 +286,7 @@ This document implements <add "need" link>
           - <Link to issue>
           - <Reasoning for tailoring, can improve deficits in process Id 6 and complexity Id 3>
 
-        * - :need:`wp__sw_code_inspect`
+        * - :need:`wp__sw_implementation_inspection`
           - <Link to issue>
           - <Reasoning for tailoring, can improve deficits in process Id 6 and complexity Id 2>
 

@@ -12,6 +12,8 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
+.. _contribute_contribution_request:
+
 Contribution Request
 ####################
 

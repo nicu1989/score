@@ -21,7 +21,7 @@ Checklists
    :id: gd_chklst__change__cr_review
    :status: valid
    :tags: change_management
-   :complies: std_req__aspice_40__SUP-10-BP1, std_req__aspice_40__SUP-10-BP3, std_req__aspice_40__SUP-10-BP5
+   :complies: std_req__aspice_40__SUP-10-BP1, std_req__aspice_40__SUP-10-BP3, std_req__aspice_40__SUP-10-BP5, std_req__aspice_40__iic-13-51
 
    | **1. Purpose**
    | The purpose of this checklist is to collect the topics to be checked during a Change Request from any contributor.
@@ -76,6 +76,7 @@ Checklists
       * - 10
         - Does the Change Request has a milestone as specified?
         -
+
       * - 11
         - Does the Change Request has verification measure as specified?
         -

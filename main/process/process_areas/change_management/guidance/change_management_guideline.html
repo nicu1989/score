@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Guidelines &#8212; Score 0.1 documentation</title>
+    <title>Guideline &#8212; Score 0.1 documentation</title>
   
   
   
@@ -31,7 +31,7 @@
 <link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/score.css?v=940e959b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/score_needs.css?v=e97392eb" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/score_design.css?v=7199c97b" />
@@ -452,11 +452,12 @@
 </ul>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">Process Areas</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../architecture_design/index.html">Architecture Design</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="../index.html">Change Management</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../change_management_getstrt.html">Getting Started</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../change_management_concept.html">Concept Description</a></li>
 <li class="toctree-l3 current active has-children"><a class="reference internal" href="index.html">Guidance</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l4 current active"><a class="current reference internal" href="#">Guidelines</a></li>
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">Guideline</a></li>
 <li class="toctree-l4"><a class="reference internal" href="change_management_checklist.html">Checklists</a></li>
 <li class="toctree-l4"><a class="reference internal" href="change_management_feature_template.html">Feature Template</a></li>
 <li class="toctree-l4"><a class="reference internal" href="change_management_component_template.html">Component Template</a></li>
@@ -470,9 +471,9 @@
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../../documentation_management/index.html">Documentation Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../safety_management/index.html">Safety Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../implementation/index.html">Implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../requirements_engineering/index.html">Requirements Engineering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../architecture_design/index.html">Architecture Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../safety_management/index.html">Safety Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../verification/index.html">Verification</a></li>
 </ul>
 </details></li>
@@ -540,7 +541,7 @@
     
     <li class="breadcrumb-item"><a href="index.html" class="nav-link">Guidance</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Guidelines</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Guideline</span></li>
   </ul>
 </nav>
 </div>
@@ -557,9 +558,9 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="guidelines">
-<h1>Guidelines<a class="headerlink" href="#guidelines" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-631132f3">
+  <section id="guideline">
+<h1>Guideline<a class="headerlink" href="#guideline" title="Link to this heading">#</a></h1>
+<div class="need_container docutils container" id="SNCB-b2cecc64">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_guidl table" id="gd_guidl__change__change_request">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -613,7 +614,7 @@
 <p><em>Need</em> templates displaying the correct syntax and attribute definition are provided for each
 Change Request type.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id1">
-<caption><span class="caption-number">Table 6 </span><span class="caption-text">Overview</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 14 </span><span class="caption-text">Overview</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 50.0%" />
 <col style="width: 50.0%" />
@@ -681,11 +682,25 @@ be found here: <a class="reference internal" href="../change_management_concept.
 </ul>
 </section>
 </section>
-<section id="workflow-for-change-requests">
-<span id="workflow-chm-requirements"></span><h2>Workflow for Change Requests<a class="headerlink" href="#workflow-for-change-requests" title="Link to this heading">#</a></h2>
-<p>This section describes in detail which steps need to be performed for a Change Request.</p>
+<section id="activities-for-change-requests">
+<span id="workflow-chm-requirements"></span><h2>Activities for Change Requests<a class="headerlink" href="#activities-for-change-requests" title="Link to this heading">#</a></h2>
+<p>This section describes in detail which steps need to be performed for a Change Request. They may
+be combined in on Change Request or split to multiple Change Requests, if necessary.</p>
+<p>Split may required, if</p>
+<div class="line-block">
+<div class="line">1. Implementation is to complex and has dependencies, thus separate the activities for analyzing and</div>
+<div class="line-block">
+<div class="line">approving and the multiple implementation and verification activities in different Change Requests,</div>
+<div class="line">and link them according their dependencies.</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">2. Affected work products are in different locations.</div>
+</div>
+<p>Refer to the <a class="reference internal" href="../../../../platform_management_plan/change_management.html#doc__platform_change_management_plan" title="doc__platform_change_management_plan"><em class="xref need">Change Management Plan (doc__platform_change_management_plan)</em></a> for examples
+how to create simple or more complex Change Requests.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id2">
-<caption><span class="caption-number">Table 7 </span><span class="caption-text">Workflow for Change Request</span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 15 </span><span class="caption-text">Activities for Change Request</span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 10.0%" />
 <col style="width: 60.0%" />
@@ -744,6 +759,8 @@ the following topics in the created Change Request:</p>
 <li><p>Identify impact on existing work products and on functional safety, security</p></li>
 <li><p>Define verification measures used to confirm the implementation</p></li>
 </ol>
+<p>Use therefore the : <a class="reference internal" href="change_management_impact_analysis_template.html#chm-impact-analysis-templates"><span class="std std-ref">Impact Analysis Template</span></a> and copy it
+into the created Change Request (Issue Tracking System).</p>
 <p>Set the status of the Change Request to “draft”, indicating that is not ready for review.
 Otherwise, change the status to “in review”, so that <a class="reference internal" href="../../../roles/index.html#rl__committer" title="rl__committer"><em class="xref need">Committer</em></a> is
 informed to start approval.</p>
@@ -761,7 +778,7 @@ for resolving the review comments.</p>
 <section id="implement-change-request">
 <span id="chm-implement-change-request"></span><h3>Implement Change Request<a class="headerlink" href="#implement-change-request" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="../../../roles/index.html#rl__contributor" title="rl__contributor"><em class="xref need">Contributor</em></a> implements the Change Request. This is indicated by the
-Change Request status “in implementation”. During implementation the responsible lead
+Change Request status “in review”. During implementation the responsible lead
 <a class="reference internal" href="../../../roles/index.html#rl__technical_lead" title="rl__technical_lead"><em class="xref need">Technical Lead</em></a> or <a class="reference internal" href="../../../roles/index.html#rl__module_lead" title="rl__module_lead"><em class="xref need">Module Project Lead</em></a> reports regularly
 the status to the involved <strong>S-CORE</strong> teams until is completed and verified.</p>
 <p>The traceability from the Change Request to the affected work products must be established
@@ -772,8 +789,8 @@ Also the verification measures must be executed.</p>
 <span id="chm-verify-change-request"></span><h3>Verify Change Request<a class="headerlink" href="#verify-change-request" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="../../../roles/index.html#rl__committer" title="rl__committer"><em class="xref need">Committer</em></a> must finally check, that implementation is complete
 and the defined verification measures are properly executed and successfully pass, before the
-Change Request can be confirmed.</p>
-<p>The Change Request is closed by setting the status to “confirmed”.</p>
+Change Request can be finally approved.</p>
+<p>The Change Request is closed by setting the status to “accepted”.</p>
 </section>
 </section>
 </section>
@@ -830,7 +847,7 @@ Change Request can be confirmed.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes">Attributes</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-for-change-requests">Workflow for Change Requests</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activities-for-change-requests">Activities for Change Requests</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-change-request">Create Change Request</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyze-change-request">Analyze Change Request</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approve-change-request">Approve Change Request</a></li>

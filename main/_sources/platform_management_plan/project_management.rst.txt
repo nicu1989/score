@@ -24,6 +24,8 @@ Project management plan
 Project organization
 ====================
 
+.. _pmp_pm_steering_committees:
+
 Steering committees
 -------------------
 Steering of the project is done by two committees: *project lead circle* and *technical lead circle*.
@@ -52,6 +54,8 @@ Steering of the project is done by two committees: *project lead circle* and *te
   * Escalation instance for software module project leads and committers.
 
   *Technical lead circle* proposes and elects a *Technical lead circle Assistant* and his deputy with bare majority during *Technical Lead Circle meeting*, who is responsible for scheduling and announcing meetings, preparing and announcing agenda, writing meeting minutes and protocols. *Technical lead circle* can reelect *Technical lead circle Assistant* at any time. The *Technical lead circle Assistant* and his deputy can resign anytime on their own will.
+
+.. _pmp_pm_technical_committees:
 
 Technical committees
 --------------------

@@ -31,7 +31,7 @@
 <link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/score.css?v=940e959b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/score_needs.css?v=e97392eb" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/score_design.css?v=7199c97b" />
@@ -452,9 +452,10 @@
 </ul>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">Process Areas</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../architecture_design/index.html">Architecture Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../change_management/index.html">Change Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../documentation_management/index.html">Documentation Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../safety_management/index.html">Safety Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../implementation/index.html">Implementation</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="../index.html">Requirements Engineering</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../requirements_getstrt.html">Getting Started</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../requirements_concept.html">Concept Description</a></li>
@@ -470,7 +471,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../requirements_workproducts.html">Workproducts Requirements Engineering</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2"><a class="reference internal" href="../../architecture_design/index.html">Architecture Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../safety_management/index.html">Safety Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../verification/index.html">Verification</a></li>
 </ul>
 </details></li>
@@ -557,7 +558,7 @@
                   
   <section id="guideline">
 <h1>Guideline<a class="headerlink" href="#guideline" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-730c0371">
+<div class="need_container docutils container" id="SNCB-f896d108">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_guidl table" id="gd_guidl__req__engineering">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -607,7 +608,7 @@
 <h3>Templates<a class="headerlink" href="#templates" title="Link to this heading">#</a></h3>
 <p><em>Need</em> templates displaying the correct syntax and attribute definition are provided for each requirement type. For VScode code snippets are included in the workspace settings which will provide in-place the definition of requirements including all mandatory attributes:</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id5">
-<caption><span class="caption-number">Table 21 </span><span class="caption-text">Overview</span><a class="headerlink" href="#id5" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 20 </span><span class="caption-text">Overview</span><a class="headerlink" href="#id5" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 37.4%" />
 <col style="width: 37.4%" />
@@ -681,7 +682,7 @@
 </div>
 <ul class="simple">
 <li><p>Title and description: For the formulation of requirements following template shall be used <a class="reference internal" href="requirements_templates.html#gd_temp__req__formulation" title="gd_temp__req__formulation"><em class="xref need">Requirement Formulation Tem...</em></a></p></li>
-<li><p>ID: The naming convention for the ID is defined here &lt;TBD&gt;.</p></li>
+<li><p>ID: The naming convention for the ID is defined <a class="reference internal" href="../../../../contribute/general/naming.html#naming-convention-needs"><span class="std std-ref">here</span></a>.</p></li>
 <li><p>Furthermore the requirements need to be versioned. Therefore a hash value of the requirement will to be calculated. The concept is described: <a class="reference internal" href="../requirements_concept.html#traceability-concept-for-requirements"><span class="std std-ref">Traceability Concept for Requirements</span></a></p></li>
 <li><p>For the remaining attributes only predefined values can be used. A more detailed description can be found here: <a class="reference internal" href="../requirements_concept.html#attributes-of-the-requirements"><span class="std std-ref">Attributes of the Requirements</span></a></p></li>
 </ul>
@@ -725,9 +726,9 @@
 </section>
 <section id="workflow-for-creating-a-requirement">
 <span id="workflow-requirements"></span><h2>Workflow for Creating a Requirement<a class="headerlink" href="#workflow-for-creating-a-requirement" title="Link to this heading">#</a></h2>
-<p>This section describes in detail which steps need to be performed to create a requirement based on <a class="reference internal" href="../requirements_getstrt.html#requirements-workflow-fig"><span class="std std-numref">Fig. 15</span></a></p>
+<p>This section describes in detail which steps need to be performed to create a requirement based on <a class="reference internal" href="../requirements_getstrt.html#requirements-workflow-fig"><span class="std std-numref">Fig. 19</span></a></p>
 <div class="pst-scrollable-table-container"><table class="table" id="id6">
-<caption><span class="caption-number">Table 22 </span><span class="caption-text">Workflow for creating a requirement</span><a class="headerlink" href="#id6" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 21 </span><span class="caption-text">Workflow for creating a requirement</span><a class="headerlink" href="#id6" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 10.0%" />
 <col style="width: 60.0%" />
@@ -793,7 +794,7 @@
 </section>
 <section id="review-parent-requirement">
 <span id="id2"></span><h3>Review parent requirement<a class="headerlink" href="#review-parent-requirement" title="Link to this heading">#</a></h3>
-<p>As soon as the parent requirements are in a mature state it can be reviewed according to &lt;TBD&gt; and merged into the main branch of the score repository. However this is not the formal inspection of the requirements, this will follow in an upcoming step.</p>
+<p>As soon as the parent requirements are in a mature state it can be <a class="reference internal" href="../../../general_concepts/score_review_concept.html#review-concept"><span class="std std-ref">reviewed</span></a> and merged into the main branch of the score repository. However this is not the formal inspection of the requirements, this will follow in an upcoming step.</p>
 <p>Following roles should be included in the review:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../safety_management/roles.html#rl__safety_manager" title="rl__safety_manager"><em class="xref need">Safety Manager</em></a></p></li>
@@ -813,7 +814,7 @@
 </section>
 <section id="review-child-requirement">
 <span id="id3"></span><h3>Review child requirement<a class="headerlink" href="#review-child-requirement" title="Link to this heading">#</a></h3>
-<p>As soon as also the child requirements are in a mature state they can be reviewed according to &lt;TBD&gt; and merged into the main branch of the respective repository. Again this is not a formal inspection as it will be performed in a later step.</p>
+<p>As soon as also the child requirements are in a mature state they can be <a class="reference internal" href="../../../general_concepts/score_review_concept.html#review-concept"><span class="std std-ref">reviewed</span></a> and merged into the main branch of the respective repository. Again this is not a formal inspection as it will be performed in a later step.</p>
 </section>
 <section id="generate-linkage-document">
 <span id="id4"></span><h3>Generate linkage document<a class="headerlink" href="#generate-linkage-document" title="Link to this heading">#</a></h3>
@@ -845,10 +846,10 @@ For externally provided AoUs of course the sentence template cannot be taken int
 <a class="reference internal image-reference" href="../../../../_images/aou_traceability.drawio.svg"><img alt="../../../../_images/aou_traceability.drawio.svg" src="../../../../_images/aou_traceability.drawio.svg" style="width: 100%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">AoU Traceability</span><a class="headerlink" href="#aou-traceability" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">AoU Traceability</span><a class="headerlink" href="#aou-traceability" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p><a class="reference internal" href="#aou-traceability"><span class="std std-numref">Fig. 17</span></a> is an extension of the workproduct traceability to show the handling of (external) AoU. Note that the component level displayed in green shows two components - on the right the one exporting AoU to be fulfilled by others, left the component which fulfills and exports AoU (but without the traceability shown on the right to reduce complexity).</p>
+<p><a class="reference internal" href="#aou-traceability"><span class="std std-numref">Fig. 21</span></a> is an extension of the workproduct traceability to show the handling of (external) AoU. Note that the component level displayed in green shows two components - on the right the one exporting AoU to be fulfilled by others, left the component which fulfills and exports AoU (but without the traceability shown on the right to reduce complexity).</p>
 </section>
 </section>
 </section>

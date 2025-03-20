@@ -28,22 +28,21 @@ Key concept
 ***********
 A Change Request is the **ONLY** way to contribute (compare :need:`gd_guidl__contr_request_guideline`)
 new features or to modify the scope of existing features in the **S-CORE** project.
-As features are built-up by Components a Change Request is also needed to add a new Components or
+As features are built-up by Components a Change Request is also needed to add new Components or
 to modify the scope of existing Components.
-As a Software Module isd defined as the top-level Component, all statements here for Components
+As a Software Module is defined as the top-level Component, all statements here for Components
 are also valid for Software Modules.
 
 Inputs
 ******
 
 #. Stakeholders for the Change Requests?
-#. Who needs which information?
 #. Which Change Requests types can we derive from that?
 #. Which attributes are required?
-#. How do the different Change Requests types correlate to each other?
+#. Which activities are required?
 
 Stakeholders for the Change Requests
-====================================
+************************************
 
 #. :need:`Contributor <rl__contributor>`
 
@@ -93,6 +92,7 @@ Component Modification
 This Change Request describes a scope modification of an existing component (requirement or work
 product). The Change Request modifies the already existing Component Request template: :ref:`chm_component_templates`.
 
+
 .. _chm_attributes:
 
 Attributes of Change Requests
@@ -128,10 +128,13 @@ Following attributes need to be filled manually for each Change Request:
      - Planned date (milestone) of deployment of the Change Request
 
 
+Activities for a Change Request
+*******************************
+
 .. _chm_analysis:
 
 Analysis of the Change Request
-******************************
+==============================
 
 The affected work products must be identified.
 The potential impact on functional safety and security must be addressed.
@@ -139,11 +142,10 @@ Schedule, risks, resources for the realization must be evaluated.
 Verification measures must be defined.
 Use therefore the : :ref:`Impact Analysis Template <chm_impact_analysis_templates>`.
 
-
 .. _chm_evaluation:
 
 Evaluation of the Change Request
-********************************
+================================
 
 Based on the analysis results decision about the acceptance, rejection or delay must be taken
 by authorized persons.
@@ -162,14 +164,14 @@ Further prioritization must be done, e.g. based on release planning.
 .. _chm_implementation:
 
 Implementation of the Change Request
-************************************
+====================================
 If the Change Request is accepted, it must be implemented.
 
 
 .. _chm_verification:
 
 Verification of the Change Request
-**********************************
+==================================
 
 The defined verification measures must be use to confirm the implementation.
 
@@ -177,7 +179,7 @@ The defined verification measures must be use to confirm the implementation.
 .. _chm_reporting:
 
 Reporting of the Change Request
-*******************************
+===============================
 
 The status of the Change Request must be communicated by the
 :need:`Technical Lead <rl__technical_lead>` or :need:`Module Lead <rl__module_lead>` until
@@ -187,7 +189,7 @@ the implementation is completed and confirmed.
 .. _chm_traceability:
 
 Traceability Concept for Change Requests
-****************************************
+========================================
 
 The standards require that a Change Request can be traced throughout the complete hierarchy levels
 including all affected work products.

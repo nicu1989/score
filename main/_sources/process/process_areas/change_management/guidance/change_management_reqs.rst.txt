@@ -120,8 +120,9 @@ Change Request Attributes
    :complies: std_req__aspice_40__SUP-10-BP6, std_req__iso26262__support_18
 
    Milestone until the Change Request must be implemented (used for prioritization)
-.. _chm_process_change requests_checks:
 
+
+.. _chm_process_change_requests_checks:
 
 Change Request Checks
 '''''''''''''''''''''
@@ -131,7 +132,7 @@ Change Request Checks
    :status: valid
    :tags: attribute, check
    :satisfies: wf__change__cr_an_change_request, wf__change__rv_ap_change_request
-   :complies:
+   :complies: std_req__aspice_40__iic-13-51
 
    It shall be checked if all mandatory attributes for each Change Request
    is provided by the user. For all requirements following attributes shall be mandatory:
@@ -143,6 +144,8 @@ Change Request Checks
       :colwidths: 30
 
 
+.. _chm_process_change_requests_impact_analysis_tool:
+
 Change Request Traceability Impact Analysis Tool
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -151,7 +154,7 @@ Change Request Traceability Impact Analysis Tool
    :status: valid
    :tags: check, tool
    :satisfies: wf__change__cr_an_change_request, wf__change__rv_ap_change_request
-   :complies:
+   :complies: std_req__aspice_40__iic-13-51
 
    It shall be reported, which work products and elements are affected by adding a new
    feature or component or by a modification of an existing feature or component.

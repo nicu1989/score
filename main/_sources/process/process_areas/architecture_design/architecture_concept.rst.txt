@@ -137,6 +137,8 @@ The first viewpoint is named as *feature architecture*. It displays the SW modul
 
       {{ draw_feature(need(), needs) }}
 
+In all views the Components which are marked as ASIL_B related are drawn in blue color.
+
 Dynamic View
 ------------
 
@@ -169,7 +171,7 @@ On the feature level only *logical interfaces* shall be displayed. This means th
       :scale: 50
       :align: center
 
-      {{ draw_logical_interface(need(), needs) }}
+      {{ draw_interface(need(), needs) }}
 
 SW Module View
 ==============
@@ -226,7 +228,7 @@ The component interface view shows the actual interfaces of the component. Also 
       :scale: 50
       :align: center
 
-      {{ draw_component_interface(need(), needs)}}
+      {{ draw_interface(need(), needs)}}
 
 Platform View
 =============

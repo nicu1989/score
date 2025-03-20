@@ -15,10 +15,19 @@
 Work Products Change Management
 ###############################
 
+.. workproduct:: Platform Change Management Plan
+   :id: wp__chm_plan
+   :status: valid
+   :tags: change_management
+   :complies: std_wp__iso26262__support_7
+
+   Change Management Plan (Part of the Platform Management Plan)
+
 .. workproduct:: Issue tracking system
    :id: wp__issue_track_system
    :status: valid
    :tags: change_management
+   :complies: std_wp__iso26262__support_8, std_wp__iso26262__support_9, std_wp__iso26262__support_10, std_req__aspice_40__iic-13-16
 
    | - Change request
    | - Change request plan
@@ -34,6 +43,7 @@ Work Products Change Management
    :id: wp__feat_request
    :status: valid
    :tags: change_management
+   :complies: std_wp__iso26262__support_8, std_wp__iso26262__support_9, std_req__aspice_40__iic-13-16
 
    | - Feature request for a new feature or a feature modification
    |
@@ -44,6 +54,7 @@ Work Products Change Management
    :id: wp__cmpt_request
    :status: valid
    :tags: change_management
+   :complies: std_wp__iso26262__support_8, std_wp__iso26262__support_9, std_req__aspice_40__iic-13-16
 
    | - Component request for a new component or a component modification
    |

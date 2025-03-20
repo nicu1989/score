@@ -31,7 +31,7 @@
 <link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/score.css?v=940e959b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/score_needs.css?v=e97392eb" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/score_design.css?v=7199c97b" />
@@ -452,10 +452,6 @@
 </ul>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">Process Areas</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../change_management/index.html">Change Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../documentation_management/index.html">Documentation Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../safety_management/index.html">Safety Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../requirements_engineering/index.html">Requirements Engineering</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="../index.html">Architecture Design</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../architecture_getstrt.html">Getting Started</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../architecture_concept.html">Concept Description</a></li>
@@ -473,6 +469,11 @@
 <li class="toctree-l3"><a class="reference internal" href="../_assets/architecture_modeling_example.html">Example model of architectural design</a></li>
 </ul>
 </details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../change_management/index.html">Change Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../documentation_management/index.html">Documentation Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../implementation/index.html">Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../requirements_engineering/index.html">Requirements Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../safety_management/index.html">Safety Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../verification/index.html">Verification</a></li>
 </ul>
 </details></li>
@@ -559,7 +560,7 @@
                   
   <section id="architecture-guideline">
 <span id="arch-design-guideline"></span><h1>Architecture Guideline<a class="headerlink" href="#architecture-guideline" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-80290222">
+<div class="need_container docutils container" id="SNCB-fe4f6cf5">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_guidl table" id="gd_guidl__arch__design">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -687,7 +688,7 @@
 <p>This chapter describes the general guideline for architectural design within the project. In general the workflow for creating an architectural design is shown in <a class="reference internal" href="../architecture_getstrt.html#architecture-workflow-fig"><span class="std std-ref">Architecture Design Workflow</span></a></p>
 <p>Those steps are:</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id5">
-<caption><span class="caption-number">Table 29 </span><span class="caption-text">Definition of the static architectural elements</span><a class="headerlink" href="#id5" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 9 </span><span class="caption-text">Definition of the static architectural elements</span><a class="headerlink" href="#id5" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 10.0%" />
 <col style="width: 60.0%" />
@@ -786,7 +787,7 @@ As a starting point a <a class="reference internal" href="feature_architecture_t
 <span id="id1"></span><h3>Model feature architecture<a class="headerlink" href="#model-feature-architecture" title="Link to this heading">#</a></h3>
 <p>Based on the concept description a model of the feature architecture should be designed. It shall consist of the logical interfaces which the user of the feature can access including also the modules which provide the interfaces. Therefore following elements shall be used:</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id6">
-<caption><span class="caption-number">Table 30 </span><span class="caption-text">Architectural Elements of the Feature Architecture</span><a class="headerlink" href="#id6" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 10 </span><span class="caption-text">Architectural Elements of the Feature Architecture</span><a class="headerlink" href="#id6" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 14.3%" />
 <col style="width: 42.9%" />
@@ -814,7 +815,7 @@ As a starting point a <a class="reference internal" href="feature_architecture_t
 </tbody>
 </table>
 </div>
-<p>The relations of the static elements are described in <a class="reference internal" href="../architecture_concept.html#metamodel-architectural-design"><span class="std std-numref">Fig. 21</span></a>.</p>
+<p>The relations of the static elements are described in <a class="reference internal" href="../architecture_concept.html#metamodel-architectural-design"><span class="std std-numref">Fig. 18</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For the modeling of the architecture a sphinx extension is available: <a class="reference internal" href="../architecture_getstrt.html#arch-gen-sphinx"><span class="std std-ref">Architecture Generation for Sphinx-Needs</span></a></p>
@@ -858,7 +859,7 @@ and merged into the main branch of the score repository.</p>
 <span id="id3"></span><h3>Model component architecture<a class="headerlink" href="#model-component-architecture" title="Link to this heading">#</a></h3>
 <p>According to the architecture design description the model for the component architecture shall be created. It shall consist of components, real interfaces and real interface operations. Depending on the size of the component it can also be split into multiple (sub) components.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id7">
-<caption><span class="caption-number">Table 31 </span><span class="caption-text">Architectural Elements of the Component Architecture</span><a class="headerlink" href="#id7" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 11 </span><span class="caption-text">Architectural Elements of the Component Architecture</span><a class="headerlink" href="#id7" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 14.3%" />
 <col style="width: 42.9%" />
@@ -886,11 +887,11 @@ and merged into the main branch of the score repository.</p>
 </tbody>
 </table>
 </div>
-<p>The relations of the static elements are described in <a class="reference internal" href="../architecture_concept.html#metamodel-architectural-design"><span class="std std-numref">Fig. 21</span></a></p>
+<p>The relations of the static elements are described in <a class="reference internal" href="../architecture_concept.html#metamodel-architectural-design"><span class="std std-numref">Fig. 18</span></a></p>
 </section>
 <section id="review-component-architecture">
 <span id="id4"></span><h3>Review component architecture<a class="headerlink" href="#review-component-architecture" title="Link to this heading">#</a></h3>
-<p>As soon as the design is in a mature state it can be reviewed according to &lt;TBD&gt; and merged into the main branch of the module repository.</p>
+<p>As soon as the design is in a mature state it can be <a class="reference internal" href="../../../general_concepts/score_review_concept.html#review-concept"><span class="std std-ref">reviewed</span></a> and merged into the main branch of the module repository.</p>
 <p>Following roles should be included in the review:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../safety_management/roles.html#rl__safety_manager" title="rl__safety_manager"><em class="xref need">Safety Manager</em></a></p></li>

@@ -31,7 +31,7 @@
 <link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/score.css?v=940e959b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/score_needs.css?v=e97392eb" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/score_design.css?v=7199c97b" />
@@ -452,9 +452,10 @@
 </ul>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">Process Areas</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../architecture_design/index.html">Architecture Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../change_management/index.html">Change Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../documentation_management/index.html">Documentation Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../safety_management/index.html">Safety Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../implementation/index.html">Implementation</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="../index.html">Requirements Engineering</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../requirements_getstrt.html">Getting Started</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../requirements_concept.html">Concept Description</a></li>
@@ -470,7 +471,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../requirements_workproducts.html">Workproducts Requirements Engineering</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2"><a class="reference internal" href="../../architecture_design/index.html">Architecture Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../safety_management/index.html">Safety Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../verification/index.html">Verification</a></li>
 </ul>
 </details></li>
@@ -557,7 +558,7 @@
                   
   <section id="templates">
 <span id="requirement-templates"></span><h1>Templates<a class="headerlink" href="#templates" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-472a64da">
+<div class="need_container docutils container" id="SNCB-95e5439e">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_temp table" id="gd_temp__req__stkh_req">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -610,7 +611,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-c5b0ccda">
+<div class="need_container docutils container" id="SNCB-c9865e4d">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_temp table" id="gd_temp__req__feat_req">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -664,7 +665,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-58a02436">
+<div class="need_container docutils container" id="SNCB-2e9d6768">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_temp table" id="gd_temp__req__comp_req">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -718,7 +719,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-aebae1e1">
+<div class="need_container docutils container" id="SNCB-bf0decca">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_temp table" id="gd_temp__req__aou_req">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -771,7 +772,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-a55ba086">
+<div class="need_container docutils container" id="SNCB-1ba192a2">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_temp table" id="gd_temp__req__process_req">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -802,6 +803,7 @@
 <tr class="content row-odd"><td class="content" colspan="6"><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">gd_req</span><span class="p">::</span> <span class="nt">&lt;Title&gt;</span>
    <span class="nc">:id:</span> gd_req__&lt;Tool&gt;__&lt;Title&gt;
    <span class="nc">:satisfies:</span> <span class="nt">&lt;link to guidance id&gt;</span>
+   <span class="nc">:complies:</span> <span class="nt">&lt;link to standard requirement&gt;</span>
    <span class="nc">:status:</span> <span class="nt">&lt;valid|invalid&gt;</span>
 </pre></div>
 </div>
@@ -821,7 +823,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-ea09bc13">
+<div class="need_container docutils container" id="SNCB-b6da6fa9">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_temp table" id="gd_temp__req__formulation">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -854,7 +856,7 @@
 <p>&lt;The SW Platform|Feature|Component&gt; shall &lt;main verb&gt; &lt;object&gt; &lt;parameter&gt; &lt;temporal/logical conjunction&gt;</p>
 <p>&lt;Note: (optional, not to be verified)&gt;</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id1">
-<caption><span class="caption-number">Table 24 </span><span class="caption-text">Sentence Table</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 23 </span><span class="caption-text">Sentence Table</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Addressee of the requirement (subject)</p></th>
 <th class="head"><p>shall</p></th>

@@ -20,7 +20,7 @@ Component Template
 .. gd_temp:: Component Request Template
    :id: gd_temp__change__component_request
    :status: valid
-   :complies: std_req__aspice_40__SUP-10-BP1, std_req__aspice_40__SUP-10-BP2, std_req__aspice_40__SUP-10-BP3, std_req__aspice_40__SUP-10-BP5, std_req__iso26262__support_21, std_req__iso26262__support_22, , std_req__iso26262__support_23
+   :complies: std_req__aspice_40__SUP-10-BP1, std_req__aspice_40__SUP-10-BP2, std_req__aspice_40__SUP-10-BP3, std_req__aspice_40__SUP-10-BP5, std_req__iso26262__support_21, std_req__iso26262__support_22, , std_req__iso26262__support_23, std_req__aspice_40__iic-18-57
 
 .. attention::
     Remove everything above when copying and filling the template.
@@ -98,7 +98,16 @@ Security Impact
 
    .. note::
       If there are security concerns in relation to the CR, those concerns should be explicitly written out to make sure reviewers of the CR are aware of them.
-      Link here to the filled out :need:`Impact Analysis Template <gd_temp__change__impact_analysis>` or copy the template in this chapter.
+
+Which security requirements are affected or has to be changed?
+Could the new/modified component enable new threat scenarios?
+Could the new/modified component enable new attack paths?
+Could the new/modified component impact functional safety?
+If applicable, which additional security measures must be implemented to mitigate the risk?
+
+    .. note::
+     Use Security Software Critically Analysis, Vulnerability Analysis.
+     [Methods will be defined later in Process area Security Analysis]
 
 
 Safety Impact
@@ -108,15 +117,22 @@ Safety Impact
 
    .. note::
       If there are safety concerns in relation to the CR, those concerns should be explicitly written out to make sure reviewers of the CR are aware of them.
-      Link here to the filled out :need:`Impact Analysis Template <gd_temp__change__impact_analysis>` or copy the template in this chapter.
+
+Which safety requirements are affected or has to be changed?
+Could the new/modified component be a potential common cause or cascading failure initiator?
+If applicable, which additional safety measures must be implemented to mitigate the risk?
+
+    .. note::
+     Use Dependency Failure Analysis and/or Safety Software Critically Analysis.
+     [Methods will be defined later in Process area Safety Analysis]
+
+For new feature/component contributions:
 
 [What is the expected ASIL level?]
 [What is the expected classification of the contribution?]
 
    .. note::
       Use the component classification method here to classify your component, if it shall to be used in a safety context: :need:`gd_temp__component_classification`.
-
-
 
 License Impact
 --------------

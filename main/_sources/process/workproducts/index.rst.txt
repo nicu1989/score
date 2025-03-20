@@ -76,22 +76,6 @@ General
    Documents should be precise, concise, clearly structured, understandable for intended users, verifiable, maintainable, and organized according to in-house procedures to facilitate information retrieval.
    Documentation guideline requirements must be defined for each WP. Each work product or document must include a title, author and approver, unique revision identification, change history, and status.
 
-.. workproduct:: Software Development Plan
-   :id: wp__sw_dev_plan
-   :status: draft
-   :tags: process
-
-   | Process description of SW development including
-   | - selection of design and programming language
-   | - design guideline
-   | - coding guideline (e.g. MISRA, can also include style guide or naming convention)
-   | - SW configuration guideline
-   | - Method selection (e.g. for Architecture Verification)
-   | - development tools
-   |
-   | Compare also `Gitub documentation <https://docs.github.com/en>`_
-   | Compare also `Eclipse Project Handbook <https://www.eclipse.org/projects/handbook/>`_
-
 
 Process
 ^^^^^^^
@@ -194,21 +178,6 @@ Component development
    Depends on architecture, FMEA and DFA tooling.
    May include several methods like inspection, modelling ... Which are selected in SW Development Plan.
 
-.. workproduct:: Implementation
-   :id: wp__sw_implementation
-   :status: draft
-   :tags: safety
-
-   Implementation includes source code and detailed design (e.g. in form of comments or linked graphical representations) and SW configuration (e.g. #ifdef)
-   The "how to" is described in the SW Development Plan guidelines
-
-.. workproduct:: Code Inspection
-   :id: wp__sw_code_inspect
-   :status: draft
-   :complies: std_wp__iso26262__software_12
-
-   github review with integrated inspection checklist (includes manual checking of coding guidelines)
-
 .. workproduct:: Module Build Configuration
    :id: wp__module_sw_build_config
    :status: draft
@@ -237,3 +206,13 @@ Supporting activities
 
 
 Note: All the work products are set to status "draft", as the linkage to standard requirements is missing currently on purpose, namely to those of ISO 26262.
+
+
+SCORE Workproduct Linkage
+-------------------------
+
+.. needpie:: SCORE workproducts contained in exactly one SCORE workflow
+   :labels: Not-Linked, Linked Workproduct, Linked Workproduct To Multiple Workflows
+   :legend:
+   :colors: red, green, blue
+   :filter-func: score_metamodel.checks.standards.my_pie_workproducts_contained_in_exactly_one_workflow
