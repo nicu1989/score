@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Git Guidelines &#8212; Score 0.1 documentation</title>
+    <title>Git Guidelines &#8212; S-CORE 0.1 documentation</title>
   
   
   
@@ -445,15 +445,15 @@
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../contribution_request/index.html">How to Contribute?</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">General</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="naming.html">Naming Conventions</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Git Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="folder.html">Folder Structure of Platform Repository</a></li>
 <li class="toctree-l2"><a class="reference internal" href="feature_flags.html">Feature Flags</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contribution_attribution.html">Actions to Ensure Proper Contribution Attribution in Eclipse SCORE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribution_attribution.html">Actions to Ensure Proper Contribution Attribution in Eclipse S-CORE</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../contribution_request/index.html">Contribution Request</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../documentation/index.html">Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../development/index.html">Development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ci/index.html">CI</a></li>
@@ -546,7 +546,39 @@ So this file must at least include the following lines:</p>
 <section id="commit-history">
 <h2>Commit History<a class="headerlink" href="#commit-history" title="Link to this heading">#</a></h2>
 <p>Before merging a PR all commits shall be squashed into few (desired only
-one) logical commits.</p>
+one) logical commits. This is done following the rules below.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">Squash</span> <span class="pre">&amp;</span> <span class="pre">Merge</span></code> in case:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>there are multiple commits on top of the initial commit</p>
+<ul class="simple">
+<li><p>Reasons for multiple commits are fixing of review findings or work in progress PRs.</p></li>
+</ul>
+<p><strong>AND</strong></p>
+</li>
+<li><p>all commits by the same author.</p></li>
+</ol>
+</div></blockquote>
+<p>Use <code class="docutils literal notranslate"><span class="pre">Rebase</span> <span class="pre">&amp;</span> <span class="pre">Merge</span></code> or <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">Commit</span></code> in case:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>the commits address different topics</p>
+<ul class="simple">
+<li><p>Sort by topics and combine each topic to a single commit.</p></li>
+<li><p>It is advised that a PR addresses a single/atomic topic.</p></li>
+<li><p>Preferred way are separated PRs for separate topics.</p></li>
+</ul>
+<p><strong>OR</strong></p>
+</li>
+<li><p>the commits have different authors</p>
+<ul class="simple">
+<li><p>It is preferred to squash the commits, in case all authors agree to squash.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Co-authored-by:</span> <span class="pre">x</span> <span class="pre">y</span> <span class="pre">&lt;x.y&#64;z.com&gt;</span></code> can be a good option to show appreciation to co-authors.</p></li>
+<li><p>Reasons to not squash a commit of multiple authors may be liability or IP concerns.</p></li>
+</ul>
+</li>
+</ol>
+</div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Keep in mind that upon merge the commit history of your branch will
@@ -555,7 +587,7 @@ be preserved in the main branch of the repo as well.</p>
 </section>
 <section id="commit-message-format">
 <h2>Commit Message Format<a class="headerlink" href="#commit-message-format" title="Link to this heading">#</a></h2>
-<p>In Score it is checked if git commit messages are written according
+<p>In S-CORE it is checked if git commit messages are written according
 to guidelines. However, it cannot enforce the meaningfulness of the
 message (and its parts).</p>
 <p>The tool <code class="docutils literal notranslate"><span class="pre">gitlint</span></code> is used to check the compliance with the rules described below. Please check our

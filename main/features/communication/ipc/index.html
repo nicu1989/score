@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Inter-process Communication &#8212; Score 0.1 documentation</title>
+    <title>Inter-process Communication &#8212; S-CORE 0.1 documentation</title>
   
   
   
@@ -72,7 +72,7 @@
         </script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Requirements" href="requirements/index.html" />
+    <link rel="next" title="Architecture" href="architecture/index.html" />
     <link rel="prev" title="Communication" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -448,19 +448,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../analysis-infra/index.html">Analysis Infrastructure</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Communication</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Inter-process Communication</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture/index.html">Architecture</a></li>
 <li class="toctree-l3"><a class="reference internal" href="requirements/index.html">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="roadmap.html">Roadmap</a></li>
 </ul>
 </details></li>
-
-
-
-
-
-
-
-
-
-
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../frameworks/index.html">Frameworks</a></li>
@@ -531,8 +523,8 @@
                 <article class="bd-article">
                   
   <section id="inter-process-communication">
-<h1>Inter-process Communication<a class="headerlink" href="#inter-process-communication" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-89d09b49">
+<span id="ipc-feature"></span><h1>Inter-process Communication<a class="headerlink" href="#inter-process-communication" title="Link to this heading">#</a></h1>
+<div class="need_container docutils container" id="SNCB-0a4502e7">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__ipc">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -578,14 +570,13 @@
 </div>
 <div class="toctree-wrapper compound">
 </div>
-</section>
 <section id="feature-flag">
-<h1>Feature flag<a class="headerlink" href="#feature-flag" title="Link to this heading">#</a></h1>
+<h2>Feature flag<a class="headerlink" href="#feature-flag" title="Link to this heading">#</a></h2>
 <p>To activate this feature, use the following feature flag:</p>
 <p><code class="docutils literal notranslate"><span class="pre">experimental_ipc</span></code></p>
 </section>
 <section id="abstract">
-<h1>Abstract<a class="headerlink" href="#abstract" title="Link to this heading">#</a></h1>
+<h2>Abstract<a class="headerlink" href="#abstract" title="Link to this heading">#</a></h2>
 <p>This contribution describes a framework to exchange information between processes.
 This framework includes:</p>
 <ul class="simple">
@@ -603,7 +594,7 @@ implementation choices and safety mechanisms that will continue to ensure freedo
 processes.</p>
 </section>
 <section id="motivation">
-<span id="id1"></span><h1>Motivation<a class="headerlink" href="#motivation" title="Link to this heading">#</a></h1>
+<span id="id1"></span><h2>Motivation<a class="headerlink" href="#motivation" title="Link to this heading">#</a></h2>
 <p>S-CORE is targeting high-performance automotive systems with safety impact.
 In general, these systems consist of multiple processes that are executed on an operating system.
 To fulfill the system needs, these processes need to exchange information in most of the cases.</p>
@@ -618,7 +609,7 @@ For example, it does not replace a standardized platform API that an application
 <p>In the following we will explain and argue each of these three different aspects. Further secondary aspects will follow
 in the section <a class="reference internal" href="#specification"><span class="std std-ref">Specification</span></a> where we also formalize all aspects.</p>
 <section id="high-cohesion-and-loose-coupling">
-<h2>High cohesion and loose coupling<a class="headerlink" href="#high-cohesion-and-loose-coupling" title="Link to this heading">#</a></h2>
+<h3>High cohesion and loose coupling<a class="headerlink" href="#high-cohesion-and-loose-coupling" title="Link to this heading">#</a></h3>
 <p>Complex systems require high cohesion and loose coupling to remain maintainable.
 The benefit of loose coupling is to limit the effect of changes throughout the system.
 Key to achieve this is stability of interfaces.</p>
@@ -629,7 +620,7 @@ It can only provide the necessary tools for developers to consider the stability
 implementation.</p>
 </section>
 <section id="mixed-criticality-safety-systems">
-<span id="mot-mixed-criticality"></span><h2>Mixed-Criticality safety systems<a class="headerlink" href="#mixed-criticality-safety-systems" title="Link to this heading">#</a></h2>
+<span id="mot-mixed-criticality"></span><h3>Mixed-Criticality safety systems<a class="headerlink" href="#mixed-criticality-safety-systems" title="Link to this heading">#</a></h3>
 <p>In complex safety-critical systems, applications often have different criticality.
 Communication happens not only on the same criticality level but also between different criticality levels.</p>
 <p>For example, a service with low-criticality may provide data to a highly critical application.
@@ -643,7 +634,7 @@ decisions and influences many other aspects. One of them being performance, whic
 communication framework.</p>
 </section>
 <section id="performance">
-<h2>Performance<a class="headerlink" href="#performance" title="Link to this heading">#</a></h2>
+<h3>Performance<a class="headerlink" href="#performance" title="Link to this heading">#</a></h3>
 <p>In the recent years high-performance automotive systems rely more and more on communication of huge amounts of data.
 This communication must be performant, to enable decomposition of the system.
 With ever increasing complexity of the tasks automotive systems must tackle, this trend will continue in the future.
@@ -664,10 +655,10 @@ with different criticality levels.</p>
 </section>
 </section>
 <section id="rationale">
-<h1>Rationale<a class="headerlink" href="#rationale" title="Link to this heading">#</a></h1>
+<h2>Rationale<a class="headerlink" href="#rationale" title="Link to this heading">#</a></h2>
 </section>
 <section id="specification">
-<span id="id2"></span><h1>Specification<a class="headerlink" href="#specification" title="Link to this heading">#</a></h1>
+<span id="id2"></span><h2>Specification<a class="headerlink" href="#specification" title="Link to this heading">#</a></h2>
 <p>To provide a clear picture of the base requirements to an IPC communication framework, we formalize the primary and
 secondary aspects in this section. For aspects that are mentioned for the first time, we also provide a rationale.
 For the previously presented primary aspects, please refer to the section <a class="reference internal" href="#motivation"><span class="std std-ref">Motivation</span></a> for the rationale.</p>
@@ -698,7 +689,7 @@ logic both in the framework as well as the user code.</p>
 <p>In general, we put no restrains in how service instances are grouped in the architecture
 (<a class="reference internal" href="requirements/index.html#feat_req__ipc__service_instance_granularity" title="feat_req__ipc__service_instance_granularity"><em class="xref need">Service instance_granularity (feat_req__ipc__service_instance_granularity)</em></a>).</p>
 <section id="id3">
-<h2>High cohesion and loose coupling<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<h3>High cohesion and loose coupling<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p>As discussed in the motivation, versioning of communication interfaces is key for a communication framework to promote
 high cohesion and loose coupling.</p>
 <p>Version compatibility can be separated into syntactic compatibility and semantic compatibility.
@@ -723,7 +714,7 @@ Further, service discovery is based on a naming scheme where each service instan
 (<a class="reference internal" href="requirements/index.html#feat_req__ipc__service_instance_names" title="feat_req__ipc__service_instance_names"><em class="xref need">Service Instance Names (feat_req__ipc__service_instance_names)</em></a>).</p>
 </section>
 <section id="spec-mixed-criticality">
-<span id="id4"></span><h2>Mixed-Criticality safety systems<a class="headerlink" href="#spec-mixed-criticality" title="Link to this heading">#</a></h2>
+<span id="id4"></span><h3>Mixed-Criticality safety systems<a class="headerlink" href="#spec-mixed-criticality" title="Link to this heading">#</a></h3>
 <p>As discussed in the motivation the communication framework shall support mixed-criticality safety systems
 <a class="reference internal" href="requirements/index.html#feat_req__ipc__safe_communication" title="feat_req__ipc__safe_communication"><em class="xref need">Safe communication over cri... (feat_req__ipc__safe_communication)</em></a>.</p>
 <p>In the light of mixed-criticality safety systems and based on the failure modes for communication in the ISO26262,
@@ -738,14 +729,14 @@ the communication framework gains four additional requirements:</p>
 consider such failure modes on a more generic level.</p>
 </section>
 <section id="id5">
-<h2>Performance<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<h3>Performance<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>Based on the discussion in the motivation, the specific use cases can be condensed to the overall requirement to support
 zero-copy IPC (<a class="reference internal" href="requirements/index.html#feat_req__ipc__zero_copy" title="feat_req__ipc__zero_copy"><em class="xref need">Zero-Copy IPC (feat_req__ipc__zero_copy)</em></a>).</p>
 <p>For now, there is no requirement to support zero-copy communication for other protocols.
 While this may be of interest in the future, it remains for now out of scope.</p>
 </section>
 <section id="user-friendly-api-for-information-exchange">
-<h2>User friendly API for information exchange<a class="headerlink" href="#user-friendly-api-for-information-exchange" title="Link to this heading">#</a></h2>
+<h3>User friendly API for information exchange<a class="headerlink" href="#user-friendly-api-for-information-exchange" title="Link to this heading">#</a></h3>
 <p>Programming languages have their own feature set and idioms.
 It is crucial for any library that it seamlessly integrates into both.
 This means, wherever possible and meaningful, infrastructure of the programming language and accompanying standard
@@ -764,7 +755,7 @@ layer within the communication framework is unavoidable.</p>
 <p><a class="reference internal" href="requirements/index.html#feat_req__ipc__multi_lang" title="feat_req__ipc__multi_lang"><em class="xref need">Support for multiple progra... (feat_req__ipc__multi_lang)</em></a></p>
 </section>
 <section id="full-testability-for-the-user-facing-api">
-<h2>Full testability for the user facing API<a class="headerlink" href="#full-testability-for-the-user-facing-api" title="Link to this heading">#</a></h2>
+<h3>Full testability for the user facing API<a class="headerlink" href="#full-testability-for-the-user-facing-api" title="Link to this heading">#</a></h3>
 <p>Our users will be required to proof certain coverage metrics, like line coverage or MC/DC coverage.
 For them to reach full coverage, they need to be easily able to mock or fake parts of the communication systems in their
 unit tests.
@@ -782,7 +773,7 @@ this can be achieved through multi-binding support.</p>
 <p><a class="reference internal" href="requirements/index.html#feat_req__ipc__testability_fake_binding" title="feat_req__ipc__testability_fake_binding"><em class="xref need">Fake binding (feat_req__ipc__testability_fake_binding)</em></a></p>
 </section>
 <section id="multi-binding-support">
-<span id="id6"></span><h2>Multi-binding support<a class="headerlink" href="#multi-binding-support" title="Link to this heading">#</a></h2>
+<span id="id6"></span><h3>Multi-binding support<a class="headerlink" href="#multi-binding-support" title="Link to this heading">#</a></h3>
 <p>In the beginning, S-CORE will only provide inter-process communication.
 But this will not suffice for later.
 A communication framework for high-performance automotive systems with safety impact will require support for
@@ -808,7 +799,7 @@ Bindings are specified in the deployment configuration.</p>
 </ul>
 </section>
 <section id="dynamic-deployment-at-runtime">
-<h2>Dynamic deployment at runtime<a class="headerlink" href="#dynamic-deployment-at-runtime" title="Link to this heading">#</a></h2>
+<h3>Dynamic deployment at runtime<a class="headerlink" href="#dynamic-deployment-at-runtime" title="Link to this heading">#</a></h3>
 <p>In the light of safety, security and startup requirements, <cite>Service discovery</cite> without some deployment information is
 not ideal.
 For this reason, most implementations prefer a limited <cite>Service discovery</cite> and supply partial deployment information
@@ -818,7 +809,7 @@ This information is enriched through a runtime <cite>Service discovery</cite>.</
 <p><a class="reference internal" href="requirements/index.html#feat_req__ipc__depl_config_runtime" title="feat_req__ipc__depl_config_runtime"><em class="xref need">Deployment configuration at... (feat_req__ipc__depl_config_runtime)</em></a></p>
 </section>
 <section id="tracing">
-<h2>Tracing<a class="headerlink" href="#tracing" title="Link to this heading">#</a></h2>
+<h3>Tracing<a class="headerlink" href="#tracing" title="Link to this heading">#</a></h3>
 <p>Based on <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__dev_experience__tracing_of_comm" title="stkh_req__dev_experience__tracing_of_comm"><em class="xref need">Tracing of communication (stkh_req__dev_experience__tracing_of_comm)</em></a> the communication framework must support tracing of communication events.
 In a framework with multiple bindings, this requires a zero-copy binding-agnostic tracing solution in the abstraction
 layer.</p>
@@ -826,11 +817,11 @@ layer.</p>
 </section>
 </section>
 <section id="backwards-compatibility">
-<h1>Backwards Compatibility<a class="headerlink" href="#backwards-compatibility" title="Link to this heading">#</a></h1>
+<h2>Backwards Compatibility<a class="headerlink" href="#backwards-compatibility" title="Link to this heading">#</a></h2>
 <p>As there is currently no previous solution for communication in S-CORE, no backwards compatibility is required.</p>
 </section>
 <section id="security-impact">
-<h1>Security Impact<a class="headerlink" href="#security-impact" title="Link to this heading">#</a></h1>
+<h2>Security Impact<a class="headerlink" href="#security-impact" title="Link to this heading">#</a></h2>
 <p>Security of communication is important for the security of the overall system.
 To efficiently handle security with the least amount of overhead, each binding must determine the best security approach
 for its circumstances.</p>
@@ -850,7 +841,7 @@ options.</p>
 <li><p>the consumer list the allowed producers (<a class="reference internal" href="requirements/index.html#feat_req__ipc__acl_for_consumer" title="feat_req__ipc__acl_for_consumer"><em class="xref need">Access Control List for con... (feat_req__ipc__acl_for_consumer)</em></a>)</p></li>
 </ul>
 <section id="ipc-security-goals">
-<h2>IPC Security Goals<a class="headerlink" href="#ipc-security-goals" title="Link to this heading">#</a></h2>
+<h3>IPC Security Goals<a class="headerlink" href="#ipc-security-goals" title="Link to this heading">#</a></h3>
 <p>The security approach of the IPC binding achieves the security goals:</p>
 <ul class="simple">
 <li><p>confidentiality (<a class="reference internal" href="requirements/index.html#feat_req__ipc__confidentiality" title="feat_req__ipc__confidentiality"><em class="xref need">IPC Confidentiality (feat_req__ipc__confidentiality)</em></a>)</p></li>
@@ -860,17 +851,18 @@ options.</p>
 </section>
 </section>
 <section id="safety-impact">
-<h1>Safety Impact<a class="headerlink" href="#safety-impact" title="Link to this heading">#</a></h1>
+<h2>Safety Impact<a class="headerlink" href="#safety-impact" title="Link to this heading">#</a></h2>
 <p>The safety impact was already exhaustively covered in <a class="reference internal" href="#mot-mixed-criticality"><span class="std std-ref">Mixed-Criticality safety systems</span></a> and <a class="reference internal" href="#spec-mixed-criticality"><span class="std std-ref">Mixed-Criticality safety systems</span></a>.</p>
 <p>Overall, the communication framework supports use cases up to ASIL-B (<a class="reference internal" href="requirements/index.html#feat_req__ipc__asil" title="feat_req__ipc__asil"><em class="xref need">IPC ASIL level (feat_req__ipc__asil)</em></a>).
 Future extension to ASIL-D use cases is feasible but not in scope for now.</p>
 </section>
 <section id="license-impact">
-<h1>License Impact<a class="headerlink" href="#license-impact" title="Link to this heading">#</a></h1>
+<h2>License Impact<a class="headerlink" href="#license-impact" title="Link to this heading">#</a></h2>
 <p>[How could the copyright impacted by the license of the new contribution?]</p>
 </section>
 <section id="how-to-teach-this">
-<h1>How to Teach This<a class="headerlink" href="#how-to-teach-this" title="Link to this heading">#</a></h1>
+<h2>How to Teach This<a class="headerlink" href="#how-to-teach-this" title="Link to this heading">#</a></h2>
+</section>
 </section>
 
 
@@ -893,11 +885,11 @@ Future extension to ASIL-D use cases is feasible but not in scope for now.</p>
       </div>
     </a>
     <a class="right-next"
-       href="requirements/index.html"
+       href="architecture/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Requirements</p>
+        <p class="prev-next-title">Architecture</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -920,37 +912,35 @@ Future extension to ASIL-D use cases is feasible but not in scope for now.</p>
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Inter-process Communication</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-flag">Feature flag</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#high-cohesion-and-loose-coupling">High cohesion and loose coupling</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mixed-criticality-safety-systems">Mixed-Criticality safety systems</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performance">Performance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-flag">Feature flag</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#high-cohesion-and-loose-coupling">High cohesion and loose coupling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mixed-criticality-safety-systems">Mixed-Criticality safety systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance">Performance</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rationale">Rationale</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#specification">Specification</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">High cohesion and loose coupling</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spec-mixed-criticality">Mixed-Criticality safety systems</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Performance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#user-friendly-api-for-information-exchange">User friendly API for information exchange</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#full-testability-for-the-user-facing-api">Full testability for the user facing API</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-binding-support">Multi-binding support</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-deployment-at-runtime">Dynamic deployment at runtime</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tracing">Tracing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rationale">Rationale</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specification">Specification</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">High cohesion and loose coupling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spec-mixed-criticality">Mixed-Criticality safety systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Performance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#user-friendly-api-for-information-exchange">User friendly API for information exchange</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#full-testability-for-the-user-facing-api">Full testability for the user facing API</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-binding-support">Multi-binding support</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-deployment-at-runtime">Dynamic deployment at runtime</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tracing">Tracing</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#backwards-compatibility">Backwards Compatibility</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#security-impact">Security Impact</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ipc-security-goals">IPC Security Goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backwards-compatibility">Backwards Compatibility</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#security-impact">Security Impact</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ipc-security-goals">IPC Security Goals</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#safety-impact">Safety Impact</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#license-impact">License Impact</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-teach-this">How to Teach This</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#safety-impact">Safety Impact</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license-impact">License Impact</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-teach-this">How to Teach This</a></li>
 </ul>
-
   </nav></div>
 
   <div class="sidebar-secondary-item">

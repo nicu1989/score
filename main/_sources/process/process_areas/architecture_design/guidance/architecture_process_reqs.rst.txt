@@ -23,7 +23,7 @@ Architectural Structuring
 .. gd_req:: Hierarchical structure of architectural elements
    :id: gd_req__arch__hierarchical_structure
    :status: valid
-   :complies: std_req__iso26262__support_7, std_req__iso26262__support_8
+   :complies: std_req__iso26262__support_6431, std_req__iso26262__support_6432
    :satisfies: wf__cr_mt_featarch
 
    Architectural elements shall be hierarchically structured on two levels:
@@ -36,7 +36,7 @@ Architectural Structuring
 .. gd_req:: Architecture Views
    :id: gd_req__arch__viewpoints
    :status: valid
-   :complies: std_req__iso26262__support_8, std_req__iso26262__software_12
+   :complies: std_req__iso26262__support_6432, std_req__iso26262__software_742
    :satisfies: wf__cr_mt_featarch
 
    The architecture shall be shown with following views on each architectural level:
@@ -45,10 +45,12 @@ Architectural Structuring
    * dynamic view
    * interface view
 
+   An additional view only shall be created on module level.
+
 .. gd_req:: Architecture Modeling
    :id: gd_req__arch__model
    :status: valid
-   :complies: std_req__iso26262__support_7, std_req__iso26262__support_8
+   :complies: std_req__iso26262__support_6431, std_req__iso26262__support_6432
    :satisfies: wf__cr_mt_featarch
 
    For architecture design a model based approach should be used.
@@ -56,12 +58,13 @@ Architectural Structuring
 .. gd_req:: Structuring of the architectural building blocks
    :id: gd_req__arch__build_blocks
    :status: valid
-   :complies: std_req__iso26262__support_7, std_req__iso26262__support_8
+   :complies: std_req__iso26262__support_6431, std_req__iso26262__support_6432
    :satisfies: wf__cr_mt_featarch
 
    For modeling the viewpoints following elements shall be used:
 
    * Feature
+   * Module
    * Component
    * Logical Interfaces
    * Interfaces
@@ -70,7 +73,7 @@ Architectural Structuring
 .. gd_req:: Correlations of the architectural building blocks
    :id: gd_req__arch__build_blocks_corr
    :status: valid
-   :complies: std_req__iso26262__support_7, std_req__iso26262__support_8
+   :complies: std_req__iso26262__support_6431, std_req__iso26262__support_6432
    :satisfies: wf__cr_mt_featarch
 
    For modeling the viewpoints following relations shall be used:
@@ -94,7 +97,7 @@ Attributes of Architectural Elements
    :id: gd_req__arch__attribute_uid
    :status: valid
    :tags: attribute,mandatory
-   :complies: std_req__iso26262__support_6, std_req__iso26262__support_8
+   :complies: std_req__iso26262__support_6425, std_req__iso26262__support_6432
 
    Each architectural element shall have a unique ID. It shall be in a format which is also human readable and consists of
 
@@ -118,7 +121,7 @@ Attributes of Architectural Elements
    :id: gd_req__arch__attr_safety
    :status: valid
    :tags: attribute, mandatory
-   :complies: std_req__iso26262__support_2, std_req__iso26262__support_6
+   :complies: std_req__iso26262__support_6421, std_req__iso26262__support_6425
 
    Each requirement shall have a automotive safety integrity level (ASIL) identifier:
 
@@ -130,7 +133,7 @@ Attributes of Architectural Elements
    :id: gd_req__arch__attr_status
    :status: valid
    :tags: attribute, mandatory
-   :complies: std_req__iso26262__support_6
+   :complies: std_req__iso26262__support_6425
 
    Each requirement shall have a status:
 
@@ -141,7 +144,7 @@ Attributes of Architectural Elements
    :id: gd_req__arch__attr_fulfils
    :status: valid
    :tags: attribute, mandatory
-   :complies: std_req__iso26262__support_6
+   :complies: std_req__iso26262__support_6425
 
    Each architectural element shall have a link to a requirement.
 
@@ -152,7 +155,7 @@ Traceability to Requirements
    :id: gd_req__arch__traceability
    :status: valid
    :tags: architecture_design
-   :complies: std_req__iso26262__support_8
+   :complies: std_req__iso26262__support_6432
    :satisfies: wf__cr_mt_featarch
 
    Requirements shall be fulfilled by the architecture at the corresponding level.

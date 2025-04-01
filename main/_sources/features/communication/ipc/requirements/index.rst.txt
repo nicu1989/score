@@ -301,7 +301,7 @@ User friendly API for information exchange
    :satisfies: stkh_req__dev_experience__prog_languages
    :status: valid
 
-   The communication framework shall provide a public API for each supported programming language of SCORE.
+   The communication framework shall provide a public API for each supported programming language of S-CORE.
 
 .. feat_req:: Support for programming language idioms
    :id: feat_req__ipc__lang_idioms
@@ -424,7 +424,7 @@ Security Impact
    :id: feat_req__ipc__acl_placement
    :reqtype: Functional
    :security: YES
-   :safety: ASIL_B
+   :safety: QM
    :satisfies: stkh_req__communication__inter_process
    :status: valid
 
@@ -434,7 +434,7 @@ Security Impact
    :id: feat_req__ipc__acl_per_service_instance
    :reqtype: Functional
    :security: YES
-   :safety: ASIL_B
+   :safety: QM
    :satisfies: stkh_req__communication__inter_process
    :status: valid
 
@@ -444,7 +444,7 @@ Security Impact
    :id: feat_req__ipc__acl_for_producer
    :reqtype: Functional
    :security: YES
-   :safety: ASIL_B
+   :safety: QM
    :satisfies: stkh_req__communication__inter_process
    :status: valid
 
@@ -456,7 +456,7 @@ Security Impact
    :id: feat_req__ipc__acl_for_consumer
    :reqtype: Functional
    :security: YES
-   :safety: ASIL_B
+   :safety: QM
    :satisfies: stkh_req__communication__inter_process
    :status: valid
 
@@ -468,7 +468,7 @@ Security Impact
    :id: feat_req__ipc__confidentiality
    :reqtype: Functional
    :security: YES
-   :safety: ASIL_B
+   :safety: QM
    :satisfies: stkh_req__communication__inter_process
    :status: valid
 
@@ -478,7 +478,7 @@ Security Impact
    :id: feat_req__ipc__integrity
    :reqtype: Functional
    :security: YES
-   :safety: ASIL_B
+   :safety: QM
    :satisfies: stkh_req__communication__inter_process
    :status: valid
 
@@ -488,7 +488,7 @@ Security Impact
    :id: feat_req__ipc__availability
    :reqtype: Functional
    :security: YES
-   :safety: ASIL_B
+   :safety: QM
    :satisfies: stkh_req__communication__inter_process
    :status: valid
 
