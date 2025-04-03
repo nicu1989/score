@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Folder Structure of Platform Repository &#8212; S-CORE 0.1 documentation</title>
+    <title>Folder Structure &#8212; S-CORE 0.1 documentation</title>
   
   
   
@@ -449,7 +449,7 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">General</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="naming.html">Naming Conventions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git.html">Git Guidelines</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Folder Structure of Platform Repository</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Folder Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="feature_flags.html">Feature Flags</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contribution_attribution.html">Actions to Ensure Proper Contribution Attribution in Eclipse S-CORE</a></li>
 </ul>
@@ -503,7 +503,7 @@
     
     <li class="breadcrumb-item"><a href="index.html" class="nav-link">General</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Folder Structure of Platform Repository</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Folder Structure</span></li>
   </ul>
 </nav>
 </div>
@@ -520,87 +520,93 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="folder-structure-of-platform-repository">
-<span id="platform-folder-structure"></span><h1>Folder Structure of Platform Repository<a class="headerlink" href="#folder-structure-of-platform-repository" title="Link to this heading">#</a></h1>
-<p>The following shows the folder structure of the platform repository (ordered alphabetically). The ordering of the documentation in the rendered documentation
-can be in a different order.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>docs/                                           -&gt; Global documentation of the platform.
-    concepts/                                   -&gt; Description of overall concepts.
-    glossary/                                   -&gt; Glossary of abbreviations used in the platform context.
-    manual/                                     -&gt; user and integration manual(s)
-    overview/                                   -&gt; Introduction and high-level description of the platform features.
-    platform_management_plan/                   -&gt; Overall Platform Management Plan  [wp__platform_mgmt], consisting of ...
-        project_management.rst                  -&gt; ... Project Management.
-        stakeholder_management.rst              -&gt; ... Stakeholder Management.
-        safety_management.rst                   -&gt; ... Safety Management incl. platform safety plan [wp__platform_safety_plan]
-        risk_management.rst                     -&gt; ... Risk Management.
-        quality_management.rst                  -&gt; ... Quality Management [wp__qms].
-        config_management.rst                   -&gt; ... Configuration Management.
-        tool_management.rst                     -&gt; ... Tool Management.
-        release_management.rst                  -&gt; ... Release Management.
-        problem_resolution.rst                  -&gt; ... Problem Management.
-        change_management.rst                   -&gt; ... Change Management.
-        requirements_management.rst             -&gt; ... Requirements Management.
-        software_development.rst                -&gt; ... Development [wp__sw_dev_plan].
-        software_verification.rst               -&gt; ... Verification [wp__verification_plan].
-        documentation_management.rst            -&gt; ... Documentation Management.
-        security_management.rst                 -&gt; ... Security Management.
-    release/                                    -&gt; [wp__platform_sw_release_note]
-    safety/                                     -&gt; safety documentation on platform level (SEooC): [wp__feature_dfa], [wp__platform_sw_safety_manual], [wp__platform_safety_case], [wp__cmr_reports], [wp__assessment_report]
-    security/                                   -&gt; security documentation on platform level
-    requirements/                               -&gt; requirements on platform level ...
-        stakeholder/                            -&gt; ... Stakeholder requirements [wp__stakeholder_req].
-        tool/                                   -&gt; ... Tool requirements [wp__tool_req]
-    tutorials/                                  -&gt; General tutorials.
+  <section id="folder-structure">
+<h1>Folder Structure<a class="headerlink" href="#folder-structure" title="Link to this heading">#</a></h1>
+<section id="platform-folder-structure">
+<span id="id1"></span><h2>Platform Folder Structure<a class="headerlink" href="#platform-folder-structure" title="Link to this heading">#</a></h2>
+<p>The following shows the folder structure of the platform repository (ordered alphabetically). The ordering of the documentation in the rendered documentation can be in a different order.</p>
+<pre class="literal-block">docs/                              -&gt; Global documentation of the platform
+    contribute/                    -&gt; Description on how to contribute
+    features/                      -&gt; All features of the platform
+        &lt;feature_name&gt;/            -&gt; Features including sub-folders and contribution request
+           docs/                   -&gt; Documentation of the feature
+               architecture/       -&gt; Feature architecture [<a class="reference internal" href="../../process/process_areas/architecture_design/architecture_workproducts.html#wp__feature_arch" title="wp__feature_arch"><em class="xref need">Feature Architecture (wp__feature_arch)</em></a>]
+               requirements/       -&gt; Feature requirements [<a class="reference internal" href="../../process/process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements__feat" title="wp__requirements__feat"><em class="xref need">Feature Requirements (wp__requirements__feat)</em></a>]
+               safety_analysis/    -&gt; Safety analysis on feature level [<a class="reference internal" href="../../process/workproducts/index.html#wp__feature_safety_analysis" title="wp__feature_safety_analysis"><em class="xref need">Feature Safety Analysis (wp__feature_safety_analysis)</em></a>]
+               safety_planning/    -&gt; Feature specific safety workproducts planning
+               verification/       -&gt; Feature verification report (reporting all feature verifications)
+                                         [<a class="reference internal" href="../../process/process_areas/verification/workproducts.html#wp__verification__platform_ver_report" title="wp__verification__platform_ver_report"><em class="xref need">Platform Verification Report (wp__verification__platform_ver_report)</em></a>]
+           tests/                  -&gt; Feature tests, consisting of
+              integration-tests/   -&gt; Integration tests [<a class="reference internal" href="../../process/process_areas/verification/workproducts.html#wp__verification__feat_int_test" title="wp__verification__feat_int_test"><em class="xref need">Feature Integration test (wp__verification__feat_int_test)</em></a>]
 
-examples/                                       -&gt; examples how a C++, Rust, Python module can be set up
+        toolchain/                 -&gt; Definition of toolchain
+    glossary/                      -&gt; Glossary of abbreviations used in the platform context
+    manuals/                       -&gt; user and integration manual(s)
+    overview/                      -&gt; Introduction and high-level description
+                                      of the platform features.
+    platform_management_plan/      -&gt; Overall Platform Management Plan [<a class="reference internal" href="../../process/workproducts/index.html#wp__platform_mgmt" title="wp__platform_mgmt"><em class="xref need">Platform Management Plan (wp__platform_mgmt)</em></a>]
+    score_releases/                -&gt; [<a class="reference internal" href="../../process/workproducts/index.html#wp__platform_sw_release_note" title="wp__platform_sw_release_note"><em class="xref need">Platform Release Notes (wp__platform_sw_release_note)</em></a>]
+    safety/                        -&gt; safety documentation on platform level (SEooC):
+                                         [<a class="reference internal" href="../../process/workproducts/index.html#wp__feature_dfa" title="wp__feature_dfa"><em class="xref need">Feature DFA (wp__feature_dfa)</em></a>], [<a class="reference internal" href="../../process/process_areas/safety_management/workproducts.html#wp__platform_safety_manual" title="wp__platform_safety_manual"><em class="xref need">Platform Safety Manual (wp__platform_safety_manual)</em></a>],
+                                         [<a class="reference internal" href="../../process/process_areas/safety_management/workproducts.html#wp__platform_safety_package" title="wp__platform_safety_package"><em class="xref need">Platform Safety Package (wp__platform_safety_package)</em></a>], [<a class="reference internal" href="../../process/process_areas/safety_management/workproducts.html#wp__fdr_reports" title="wp__fdr_reports"><em class="xref need">Formal Document Review Reports (wp__fdr_reports)</em></a>],
+                                         [<a class="reference internal" href="../../process/process_areas/safety_management/workproducts.html#wp__audit_report" title="wp__audit_report"><em class="xref need">Process Safety Audit Report (wp__audit_report)</em></a>]
+    security/                      -&gt; security documentation on platform level
+    requirements/                  -&gt; requirements on platform level
+        stakeholder/               -&gt; Stakeholder requirements [<a class="reference internal" href="../../process/process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements__stkh" title="wp__requirements__stkh"><em class="xref need">Stakeholder Requirements (wp__requirements__stkh)</em></a>]
 
-features/                                       -&gt; All features of the platform.
-    &lt;feature_name&gt;/                             -&gt; Folder containing all sub-folders corresponding to one feature and the contribution request [wp__cont_request]
-        docs/                                   -&gt; Documentation of the feature consisting of ...
-            architecture/                       -&gt; ... Feature architecture [wp__feature_architecture].
-            requirements/                       -&gt; ... Feature requirements [wp__requirements__feat].
-            safety_analysis/                    -&gt; ... Safety analysis on feature level [wp__feature_safety_analysis]
-            safety_planning/                    -&gt; ... the feature specific safety workproducts planning
-            verification/                       -&gt; ... Feature verification report (reporting all feature verifications) [wp__platform_sw_verification_report]
-        tests/                                  -&gt; Feature tests, consisting of ...
-            integration-tests/                  -&gt; ... integration tests [wp__feature_integration_test].
-    toolchain/                                  -&gt; Definition of toolchain
+modules/                           -&gt; Modules of the SW platform.
+platform_integration_tests/        -&gt; Integration tests on reference hardware verifying stakeholder requirements.
 
-modules/                                        -&gt; Modules of the SW platform.
-    &lt;module_name&gt;/                              -&gt; Folder containing all artifacts corresponding to one module.
-        docs/                                   -&gt; Documentation of the module consisting of ...
-            manual/                             -&gt; ... Module manual, e.g. integration manual, assumptions of use and safety manual [wp__sw_component_aou], [wp__module_sw_safety_manual].
-            release/                            -&gt; ... Module release note [wp__module_sw_release_note] plus safety assessment [wp__assessment_report]
-            safety_plan/                        -&gt; ... Module safety plan [wp__module_safety_plan], module safety case [wp__module_safety_case] and their conformance reviews [wp__cmr_reports]
-            safety_analysis/                    -&gt; ... Safety analysis on module level [wp__sw_component_dfa]
-            verification/                       -&gt; ... Module verification report (reporting all module&#39;s components verifications) [wp__module_sw_verification_report] plus safety analysis conformance reviews [wp__cmr_reports]
+process/                           -&gt; process definition including workflows, workproducts,
+                                         roles, guidance [<a class="reference internal" href="../../process/workproducts/index.html#wp__process_definition" title="wp__process_definition"><em class="xref need">Process Definition (wp__process_definition)</em></a>]
 
-        components/                             -&gt; Components of the module.
-            &lt;component_name&gt;/                   -&gt; Folder containing all artifacts corresponding to one component.
-                docs/                           -&gt; Documentation of the component consisting of ...
-                    architecture/               -&gt; ... Component architecture (only if sub-components exist) [wp__cr_mt_comparch].
-                    requirements/               -&gt; ... Component requirements [wp__sw_component_req] and HSI (if relevant) [wp__hsi].
-                    safety_analysis/            -&gt; ... Safety analysis on component level [wp__sw_component_safety_analyses]
-                    verification/               -&gt; ... Architecture review [wp__sw_arch_verification], code inspection [wp__sw_code_inspect]
-                src/                            -&gt; Source files of the component (incl. detailed design) [wp__sw_implementation].
-                include/                        -&gt; Include files of the component
-                tests/                          -&gt; Component tests, consisting of ...
-                    unit/                       -&gt; ... unit tests [wp__sw_unit_test] (for lowest level of components).
-                    integration/                -&gt; ... integration tests [wp__sw_component_integration_test].
-                    verification/               -&gt; ... verification tests [wp__sw_component_test].
-                &lt;sub_component_name&gt;/           -&gt; Sub-Component of the Component.
-                     copy the relevant folders below &lt;component-name&gt; if applicable (example: no code inspection needed for sub-components from the Open Source)
+registry/                          -&gt; infrastructure configuration
 
-platform_integration_tests/                     -&gt; Integration tests on reference hardware.
+README.md                          -&gt; Entrypoint of the repository</pre>
+</section>
+<section id="module-folder-structure">
+<span id="id2"></span><h2>Module Folder Structure<a class="headerlink" href="#module-folder-structure" title="Link to this heading">#</a></h2>
+<p>The modules and components shall follow the folder structure which was presented. However if there are good reasons the structure can be adapted.</p>
+<pre class="literal-block">&lt;module_name&gt;/                      -&gt; Folder containing all artifacts corresponding to one module.
+   docs/                            -&gt; Documentation of the module
+      manual/                       -&gt; Module manual, e.g. integration manual, assumptions of use,
+                                          safety manual [<a class="reference internal" href="../../process/process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements__comp_aou" title="wp__requirements__comp_aou"><em class="xref need">Component Assumptions of Use (wp__requirements__comp_aou)</em></a>],
+                                          [<a class="reference internal" href="../../process/process_areas/safety_management/workproducts.html#wp__module_safety_manual" title="wp__module_safety_manual"><em class="xref need">Module Safety Manual (wp__module_safety_manual)</em></a>].
+      release/                      -&gt; Module release note [<a class="reference internal" href="../../process/workproducts/index.html#wp__module_sw_release_note" title="wp__module_sw_release_note"><em class="xref need">Module Release Notes (wp__module_sw_release_note)</em></a>],
+                                          safety assessment [<a class="reference internal" href="../../process/process_areas/safety_management/workproducts.html#wp__audit_report" title="wp__audit_report"><em class="xref need">Process Safety Audit Report (wp__audit_report)</em></a>]
+      safety_plan/                  -&gt; Module safety plan [<a class="reference internal" href="../../process/process_areas/safety_management/workproducts.html#wp__module_safety_plan" title="wp__module_safety_plan"><em class="xref need">Module Safety Plan (wp__module_safety_plan)</em></a>],
+                                          module safety case [<a class="reference internal" href="../../process/process_areas/safety_management/workproducts.html#wp__module_safety_package" title="wp__module_safety_package"><em class="xref need">Module Safety Package (wp__module_safety_package)</em></a>],
+                                          conformance reviews [<a class="reference internal" href="../../process/process_areas/safety_management/workproducts.html#wp__fdr_reports" title="wp__fdr_reports"><em class="xref need">Formal Document Review Reports (wp__fdr_reports)</em></a>]
+      safety_analysis/              -&gt; Safety analysis on module level [<a class="reference internal" href="../../process/workproducts/index.html#wp__sw_component_dfa" title="wp__sw_component_dfa"><em class="xref need">Component DFA (wp__sw_component_dfa)</em></a>]
+      verification/                 -&gt; Module verification report
+                                          components verifications [<a class="reference internal" href="../../process/process_areas/verification/workproducts.html#wp__verification__module_ver_report" title="wp__verification__module_ver_report"><em class="xref need">Module Verification Report (wp__verification__module_ver_report)</em></a>],
+                                          safety analysis conformance reviews [<a class="reference internal" href="../../process/process_areas/safety_management/workproducts.html#wp__fdr_reports" title="wp__fdr_reports"><em class="xref need">Formal Document Review Reports (wp__fdr_reports)</em></a>]
 
-process/                                        -&gt; process definition including workflows, workproducts, roles, guidance [wp__process_definition]
+   &lt;component_name&gt;/                -&gt; Components of the module.
+                                          Folder containing all artifacts corresponding to one component.
 
-registry/                                       -&gt; infrastructure configuration
+      src/                          -&gt; Source files of the component consisting of
+                                          Include files
+                                          Source Files
+                                          Detailed Design [<a class="reference internal" href="../../process/process_areas/implementation/implementation_workproducts.html#wp__sw_implementation" title="wp__sw_implementation"><em class="xref need">Implementation (wp__sw_implementation)</em></a>]
+                                          Unit tests [<a class="reference internal" href="../../process/process_areas/verification/workproducts.html#wp__verification__sw_unit_test" title="wp__verification__sw_unit_test"><em class="xref need">Unit test (wp__verification__sw_unit_test)</em></a>]
+         &lt;lower_level_comp&gt;/        -&gt; lower level component following &lt;component_name&gt; folder structure
 
-README.md                                       -&gt; Entrypoint of the repository.
-</pre></div>
-</div>
+      docs/                         -&gt; Documentation of the component
+         architecture/              -&gt; Component architecture (only if lower level components exist)
+                                          [<a class="reference internal" href="../../process/process_areas/architecture_design/architecture_workproducts.html#wp__component_arch" title="wp__component_arch"><em class="xref need">Component Architecture (wp__component_arch)</em></a>].
+         requirements/              -&gt; Component requirements [<a class="reference internal" href="../../process/process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements__comp" title="wp__requirements__comp"><em class="xref need">Component Requirements (wp__requirements__comp)</em></a>],
+                                          HSI (if relevant) [<a class="reference internal" href="../../process/workproducts/index.html#wp__hsi" title="wp__hsi"><em class="xref need">Hardware-software interface... (wp__hsi)</em></a>]
+         safety_analysis/           -&gt; Safety analysis on component level
+                                          [<a class="reference internal" href="../../process/workproducts/index.html#wp__sw_component_safety_analysis" title="wp__sw_component_safety_analysis"><em class="xref need">Component Safety Analysis (wp__sw_component_safety_analysis)</em></a>]
+         verification/              -&gt; Architecture review [<a class="reference internal" href="../../process/workproducts/index.html#wp__sw_arch_verification" title="wp__sw_arch_verification"><em class="xref need">Architecture Verification (wp__sw_arch_verification)</em></a>],
+                                          code inspection [<a class="reference internal" href="../../process/process_areas/implementation/implementation_workproducts.html#wp__sw_implementation_inspection" title="wp__sw_implementation_inspection"><em class="xref need">Implementation Inspection (wp__sw_implementation_inspection)</em></a>]
+         &lt;lower_level_comp&gt;/        -&gt; Lower level component following &lt;component_name&gt; folder structure
+
+      tests/                        -&gt; Feature level tests, consisting of
+                                          integration tests [<a class="reference internal" href="../../process/process_areas/verification/workproducts.html#wp__verification__comp_int_test" title="wp__verification__comp_int_test"><em class="xref need">Component Integration test (wp__verification__comp_int_test)</em></a>]
+                                          verification tests [<a class="reference internal" href="../../process/process_areas/verification/workproducts.html#wp__verification__component_test" title="wp__verification__component_test"><em class="xref need">Component test (wp__verification__component_test)</em></a>]</pre>
+</section>
 </section>
 
 
@@ -641,6 +647,19 @@ README.md                                       -&gt; Entrypoint of the reposito
                 <dialog id="pst-secondary-sidebar-modal"></dialog>
                 <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#platform-folder-structure">Platform Folder Structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-folder-structure">Module Folder Structure</a></li>
+</ul>
+  </nav></div>
 
   <div class="sidebar-secondary-item">
 

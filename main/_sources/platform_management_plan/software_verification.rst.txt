@@ -105,20 +105,32 @@ The following types of integrations are applicable:
 Levels of integration and verification
 --------------------------------------
 
-There are the following different levels of integration (2, 3) and verification (1, 2, 3) defined:
+There are the following different levels of integration and verification defined:
 
-1. Software unit verification to verify software detailed design
-2. Software component verification to verify the integration of units to a component and also
-   the integration of smaller component(s) to a component based on
+1. Software unit (incl. detailed design) and component verification to verify the integration of
+   units to a component and also the integration of smaller component(s) to a complex component based on
 
+   #. detailed design and
    #. component architecture and
    #. component requirements
 
-3. Software feature verification to verify the integration of components to a feature based on
+2. Software feature verification to verify the integration of components to a feature based on
 
    #. feature architecture and
    #. feature requirements
 
+3. Platform testing (on reference hardware)
+
+   #. Stakeholder requirements
+
+
+  **Note:** These three levels translate to the levels of ISO 26262 part 6 clauses 9 to 11. The platform
+  testing will be executed by the integrator. S-Core project only executes tests on reference hardware.
+  These tests serve as an optional base for the integrator and will also be part of the
+  :need:`wp__verification__platform_ver_report`, but more on an informative character. The full scope
+  of clause 11 is tailored out accordingly for S-Core. Practically, this means S-CORE will implement
+  platform test of stakeholder requirements for demonstration, but these are not intended to completely
+  covering all stakeholder requirements.
 
 Verification Methods
 --------------------
@@ -141,55 +153,71 @@ method is to be used as meta data (*TestType* and *DerivationTechnique*).
      - Identifier
      - Applicable on level
      - Applicable for QM / ASIL B
-   * - Control Flow Analysis
-     - control-flow-analysis
-     - 1, 2, -
-     - QM & ASIL B
-   * - Data Flow Analysis
-     - data-flow-analysis
-     - 1, 2, -
-     - QM & ASIL B
-   * - Fault Injection
-     - fault-injection
-     - 1, -, -
-     - ASIL B
-   * - Inspection
-     - inspection
-     - 1, -, -
-     - ASIL B
-   * - Interface Test
-     - interface-test
-     - -, 2, 3
-     - QM & ASIL B
-   * - Requirements-based Test
-     - requirements-based
-     - -,  2, 3
-     - QM & ASIL B
-   * - Resource Usage Evaluation (only on reference environment)
-     - resource-usage
-     - -, -, 3
-     - QM & ASIL B
    * - Static Code Analysis
      - static-code-analysis
-     - 1, 2, 3
+     - 1, -, -
      - QM & ASIL B
    * - Structural Statement Coverage (Code coverage)
      - structural-statement-coverage
      - 1, -, -
-     - ASIL B
-   * - Structural Branch Coverage (Code coverage)
-     - structural-branch-coverage
+     - QM & ASIL B
+   * - Structural Condition Coverage (Code coverage)
+     - structural-condition-coverage
      - 1, -, -
-     - ASIL B
+     - QM & ASIL B
    * - Walkthrough
      - walkthrough
      - 1, 2, 3
      - QM
+   * - Inspection
+     - inspection
+     - 1, 2, 3
+     - ASIL B
+   * - Interface Test
+     - interface-test
+     - 1, 2, -
+     - QM & ASIL B
+   * - Requirements-based Test
+     - requirements-based
+     - 1,  2, -
+     - QM & ASIL B
+   * - Resource Usage Evaluation (only on reference environment)
+     - resource-usage
+     - -, 2, -
+     - QM & ASIL B
+
 
 For QM software some of the methods may be executed with less rigor compared to safety-critical elements.
-These are data-flow-analysis as well as control-flow-analysis
+These may be interface testing or resource usage evaluation, in case there is an argument for
+sufficient freedom from interference with safety critical software parts.
 
 Static code analysis is part of the :need:`wp__sw_implementation`.
+
+As an additional measure the resource usage evaluation ``resource-usage`` should also be considered
+for level 3 testing as this is the level executed also on reference hardware with the integrated
+platform. This can help to identify resource constraints on "system" level from a security and safety
+perspective.
+
+Additionally, while ``requirements-based`` testing is not mandatory to cover 100% of the stakeholder
+requirements, where demos or test cases suffice to verify stakeholder requirements the traceability
+should be established. The tailoring is also explained in the :need:`doc__platform_safety_plan`.
+
+The following test methods are optional for lower safety integrity levels, but may become required
+at higher levels:
+
+   #. Control Flow Analysis (``control-flow-analysis``):
+
+      Most beneficial for testing level 1 and 2.
+   #. Data Flow Analysis (``data-flow-analysis``):
+
+      Most beneficial for testing level 1 and 2.
+   #. Fault Injection (``fault-injection``):
+
+      Most beneficial for testing level 2.
+   #. Structural Function/Call Coverage (``struct-func-cov`` & ``struct-call-cov``)
+
+      Most beneficial for testing level 2.
+
 
 Test Derivation Methods
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -202,30 +230,24 @@ Test Derivation Methods
      - Identifier
      - Applicable on level
      - Applicable for QM / ASIL B
-   * - Analysis of Boundary Values
-     - boundary-values
-     - 1, 2, 3
-     - QM, ASIL B
-   * - Analysis of Equivalence Classes
-     - equivalence-classes
-     - 2, 3
-     - QM, ASIL B
    * - Analysis of Requirements
      - requirements-analysis
-     - 2, 3
+     - 1, 2, 3
      - QM, ASIL B
-   * - Error Guessing based on Knowledge or Experience
-     - error-guessing
-     - 2, 3
+   * - Analysis of Boundary Values
+     - boundary-values
+     - 1, 2, -
+     - ASIL B
+   * - Analysis of Equivalence Classes
+     - equivalence-classes
+     - 1, 2, -
+     - ASIL B
+   * - Fuzzy Testing (focus security)
+     - fuzz-testing
+     - 1, 2, -
      - QM, ASIL B
-   * - Random Testing
-     - monkey-testing
-     - 3
-     - QM, ASIL B
-   * - Exlporative Testing
-     - explorative-testing
-     - 2, 3
-     - QM, ASIL B
+
+The ``fuzz-testing`` should especially be taken into account to increase security of the software.
 
 For non-safety-critical(QM) software parts, you can generally reduce the rigor of the
 testing approaches, but cannot omit them completely. It may be possible to reduce the
@@ -234,6 +256,12 @@ Similar for the equivalence-classes the focus can be put on more likely classes 
 invalid classes, empty/null/zero values, system limits. Equivalence Classes should be
 supplemented by Boundary Value Analysis.
 
+The following test derivation methods are optional, but may become required at higher safety levels:
+
+   * Error Guessing derived from knowledge or experience of the contributor valid for all test levels
+     indicated by ``error-guessing`` as derivation technique.
+   * Explorative Testing (based on platform integration use cases) for feature and platform testing level
+     indicated by ``explorative-testing`` as derivation technique.
 
 Quality criteria
 ----------------
@@ -254,7 +282,7 @@ to be reached with every contribution.
      - 85%
      - 100%
    * - 2
-     - Structural Branch Coverage
+     - Structural Condition Coverage
      - 85%
      - 100%
    * - 3
@@ -366,6 +394,35 @@ document:
 #. The :need:`rl__committer` needs to verify that the contributor has fulfilled the expected objectives.
 
 In this way roles are followed as defined in :ref:`verification_roles`.
+
+Independence of verification
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+As there are no separated roles for a software developer and test developer with :need:`rl__contributor` and
+:need:`rl__committer` it is important to achieve independence. This is done by having different
+people responsible for the test implementation and the actual code which gets tested.
+
+The following test level fall in the responsibility of the :need:`rl__testing_community`:
+
+* :need:`wp__verification__comp_int_test`
+* :need:`wp__verification__feat_int_test`
+* :need:`wp__verification__platform_test`
+
+Still a :need:`rl__contributor` of one function in a component doesn't prevent them from writing tests
+for other functions they do not own.
+Independence is achieved by the establishment of :need:`rl__testing_community` performing reviews.
+
+The following test level fall in the responsibility of the :need:`rl__contributor`:
+
+* :need:`wp__verification__sw_unit_test`
+
+Unit tests can be the developed by the same :need:`rl__contributor` who also contributed the unit code.
+A level of independence is achieved as the review process demands to have a review by a :need:`rl__committer`
+different to the author of a Pull Request. This is also described in process requirement :need:`gd_req__verification_independence`.
+
+Note that, each :need:`rl__contributor` of the project acts in a publicly visible space where also
+others see the contribution and have the possibility to perform additional reviews independent from
+the :need:`rl__committer` and :need:`rl__testing_community`.
 
 Tools
 -----

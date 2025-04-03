@@ -527,7 +527,7 @@
                   
   <section id="writing-python-code">
 <h1>Writing Python Code<a class="headerlink" href="#writing-python-code" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-ce97e9db">
+<div class="need_container docutils container" id="SNCB-761dab5c">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__python_coding_guidelines">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -587,9 +587,9 @@ tool qualification it is necessary to have and actively use guidelines.</p>
 <p>We assume basic programming and software-engineering know-how and will not repeat basics here! Go
 ask Google or ChatGPT. Or one of these established Python best practice websites:</p>
 <ul class="simple">
-<li><p>[PEP 8](<a class="reference external" href="https://pep8.org/">https://pep8.org/</a>)</p></li>
-<li><p>[The Hitchhiker’s Guide to Python](<a class="reference external" href="https://docs.python-guide.org/">https://docs.python-guide.org/</a>)</p></li>
-<li><p>[Real Python](<a class="reference external" href="https://realpython.com/">https://realpython.com/</a>)</p></li>
+<li><p><a class="reference external" href="https://pep8.org/">PEP 8</a></p></li>
+<li><p><a class="reference external" href="https://docs.python-guide.org/">The Hitchhiker’s Guide to Python</a></p></li>
+<li><p><a class="reference external" href="https://realpython.com/">Real Python</a></p></li>
 </ul>
 <section id="comments">
 <h3>Comments<a class="headerlink" href="#comments" title="Link to this heading">#</a></h3>
@@ -626,6 +626,23 @@ tool.</p></li>
 <li><p>User-facing documentation is stored under <cite>docs/guidance</cite>.</p></li>
 </ul>
 </section>
+<section id="type-annotations">
+<h3>Type Annotations<a class="headerlink" href="#type-annotations" title="Link to this heading">#</a></h3>
+<p>Type annotations in Python improve code readability and enable static type checking.
+We use <a class="reference external" href="https://github.com/eclipse-score/score/blob/main/pyproject.toml">pyright</a>
+for type checks (currently only in IDEs).</p>
+<ul class="simple">
+<li><p>Annotate <strong>all function parameters</strong>.</p></li>
+<li><p>Ensure <strong>pyright can always infer the type</strong>, using annotations, <code class="docutils literal notranslate"><span class="pre">cast()</span></code>, or other means.</p></li>
+<li><p>Prefer <strong>modern type hints (PEP 585+)</strong>:
+- Use <code class="docutils literal notranslate"><span class="pre">list[int]</span></code> instead of <code class="docutils literal notranslate"><span class="pre">List[int]</span></code>
+- Use <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span></code> instead of <code class="docutils literal notranslate"><span class="pre">Optional[int]</span></code></p></li>
+<li><p>Use <strong>generic types</strong>, especially for APIs, not concrete containers:
+- Prefer <code class="docutils literal notranslate"><span class="pre">Sequence[str]</span></code> or <code class="docutils literal notranslate"><span class="pre">Iterable[str]</span></code> over <code class="docutils literal notranslate"><span class="pre">list[str]</span></code>
+- Prefer <code class="docutils literal notranslate"><span class="pre">Mapping[str,</span> <span class="pre">Any]</span></code> over <code class="docutils literal notranslate"><span class="pre">dict[str,</span> <span class="pre">Any]</span></code></p></li>
+</ul>
+<p>This guideline is intentionally short. For details, refer to the <a class="reference external" href="https://github.com/eclipse-score/score/blob/main/pyproject.toml">pyright config</a>.</p>
+</section>
 </section>
 <section id="tools-versions">
 <h2>Tools &amp; Versions<a class="headerlink" href="#tools-versions" title="Link to this heading">#</a></h2>
@@ -633,7 +650,6 @@ tool.</p></li>
 versions are managed by the infrastructure community and will be updated as frequently as possible.
 The configuration is managed by infrastructure and process communities.</p>
 <p><em>Compliance to all tools is mandatory, and will be enforced by pull request checks.</em></p>
-<p>Currently we do NOT aim at supporting older Python versions.</p>
 </section>
 </section>
 
@@ -688,6 +704,7 @@ The configuration is managed by infrastructure and process communities.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">Comments</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#type-annotations">Type Annotations</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-versions">Tools &amp; Versions</a></li>
