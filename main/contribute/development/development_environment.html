@@ -525,17 +525,52 @@
                   
   <section id="setting-up-the-development-environment">
 <span id="setting-up-dev-env"></span><h1>Setting Up the Development Environment<a class="headerlink" href="#setting-up-the-development-environment" title="Link to this heading">#</a></h1>
-<section id="general-setup">
-<h2>General Setup<a class="headerlink" href="#general-setup" title="Link to this heading">#</a></h2>
-<p>The basic steps for setup the development environment and building the source file are described in the <a class="reference external" href="https://github.com/eclipse-score/score/blob/main/README.md">readme.md</a> of the score repository.</p>
-<p>This includes:</p>
+<p><em>The development environment may vary depending on the repository you want to contribute to. This
+document describes the setup for the `score` repository. Others should be similar.</em></p>
+<section id="devcontainer-setup">
+<h2>Devcontainer Setup<a class="headerlink" href="#devcontainer-setup" title="Link to this heading">#</a></h2>
+<p>The recommended way to set up the development environment is by using the provided devcontainer.
+The devcontainer includes all necessary tools and dependencies pre-configured for development, as
+not everything can be installed via Bazel.</p>
+<p>To use the devcontainer:</p>
+<ol class="arabic simple">
+<li><p>Ensure you have Docker installed and running on your system.</p></li>
+<li><p>Open the project in a <a class="reference external" href="https://containers.dev/supporting">devcontainer capable editor of your choice</a>.</p></li>
+<li><p>e.g. for VSCode (see IDE section below for more details):</p>
 <ul class="simple">
-<li><p>on your linux operating system <a class="reference external" href="https://github.com/bazelbuild/bazelisk">Bazelisk</a> is available</p></li>
-<li><p>the score repository is cloned to your hard drive</p></li>
+<li><p>Install the “Remote - Containers” extension in VS Code if not already installed.</p></li>
+<li><p>Open the project in VS Code.</p></li>
+<li><p>When prompted, select “Reopen in Container” to build and start the devcontainer.
+Alternatively, you can open the Command Palette (Ctrl+Shift+P) and select “Remote-Containers:
+Reopen in Container”.</p></li>
 </ul>
-<p>Additional assistance for working with Bazel is provided by following tools:</p>
+</li>
+</ol>
+<p>This approach simplifies the setup process and ensures a consistent development environment.</p>
+<p>Note: buildifier and autocompletion are not yet provided via the devcontainer or via bazel, so you
+will need to set them up manually. See below.</p>
+</section>
+<section id="manual-setup">
+<h2>Manual Setup<a class="headerlink" href="#manual-setup" title="Link to this heading">#</a></h2>
+<p>If you prefer to set up the development environment manually, follow the steps below:</p>
+<section id="general-setup">
+<h3>General Setup<a class="headerlink" href="#general-setup" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>Install the required dependencies for your operating system. This includes:</p>
+<ul class="simple">
+<li><p>Bazelisk</p></li>
+<li><p>Python 3.x</p></li>
+<li><p>Graphviz/Dot (for generating diagrams)</p></li>
+</ul>
+<p>Check <a class="reference external" href="https://github.com/eclipse-score/score/blob/main/.devcontainer/Dockerfile">Dockerfile</a> for
+an accurate list and exemplary instructions.</p>
+</li>
+<li><p>Clone the score repository to your hard drive.</p></li>
+</ul>
+<p>Additional assistance for working with Bazel is provided by the following tools:</p>
+</section>
 <section id="buildifier">
-<span id="id1"></span><h3>Buildifier<a class="headerlink" href="#buildifier" title="Link to this heading">#</a></h3>
+<h3>Buildifier<a class="headerlink" href="#buildifier" title="Link to this heading">#</a></h3>
 <p>Buildifier is a tool which can format <em>.bzl</em> files. Additional info and installation instructions are provided
 <a class="reference external" href="https://github.com/bazelbuild/buildtools/blob/main/buildifier/README.md">on github</a></p>
 <p>In short:</p>
@@ -579,7 +614,7 @@ rm<span class="w"> </span>-rf<span class="w"> </span>bazel
 </section>
 <section id="graphviz-dot-installation">
 <h3>Graphviz/Dot Installation<a class="headerlink" href="#graphviz-dot-installation" title="Link to this heading">#</a></h3>
-<p>Graphviz/Dot is mandatory for local development (outside the <cite>devcointainer</cite>).
+<p>Graphviz/Dot is mandatory for local development (outside the <cite>devcontainer</cite>).
 To install it on a Linux system using apt, execute the following command:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>graphviz
 </pre></div>
@@ -658,7 +693,9 @@ To install it on a Linux system using apt, execute the following command:</p>
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-setup">General Setup</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#devcontainer-setup">Devcontainer Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manual-setup">Manual Setup</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-setup">General Setup</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#buildifier">Buildifier</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autocompletion-in-the-shell">Autocompletion in the Shell</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#graphviz-dot-installation">Graphviz/Dot Installation</a></li>

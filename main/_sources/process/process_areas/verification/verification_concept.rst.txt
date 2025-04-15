@@ -98,7 +98,7 @@ Verification Methods
 =====================
 
 A verification is based on different methods. An overview of the different methods that are
-applicable in the project are:
+applicable are:
 
  * Control Flow Analysis (control-flow-analysis)
  * Data Flow Analysis (data-flow-analysis)
@@ -109,7 +109,7 @@ applicable in the project are:
  * Resource Usage Evaluation (resource-usage)
  * Static Code Analysis (static-code-analysis)
  * Structural Statement coverage (structural-statement-coverage)
- * Structural Condition Coverage (structural-condition-coverage)
+ * Structural Branch Coverage (structural-branch-coverage)
  * Walkthrough (walkthrough)
 
 The derivation of test cases can also be based on certain methods.
@@ -118,8 +118,8 @@ The derivation of test cases can also be based on certain methods.
  * Analysis of equivalence classes (equivalence-classes)
  * Analysis of requirements (requirements-analysis)
  * Error guessing based on knowledge or experience (error-guessing)
- * Random Testing (monkey-testing)
- * Explorative testing (explorative-testing)
+ * Fuzzy testing (fuzz-testing)
+ * Exlporative testing (explorative-testing)
 
 Usually the defined methods are not applied on each verification level between unit and platform level.
 Also their execution may differ whether it is a QM or ASIL rated test case.

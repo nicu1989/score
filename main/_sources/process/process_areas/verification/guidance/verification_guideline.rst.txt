@@ -130,4 +130,7 @@ useful, this shall be planned and added to the project milestone plan.
 Verification types and methods
 ------------------------------
 
-Verification types and methods are described in the :need:`doc_concept__verification__process`.
+Verification types and methods are described in the :need:`gd_meth__verification__methods` and the
+derivation techniques in :need:`gd_meth__verification__derivation`. The detailed method guideline
+helps to get an understanding what the different methods and derivation techniques mean and how to
+create test cases using the same.

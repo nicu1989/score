@@ -533,6 +533,15 @@
 <li><p>some formatting rules</p></li>
 <li><p>configuration for recommended plugins</p></li>
 </ul>
+<section id="github-copilot">
+<h2>Github Copilot<a class="headerlink" href="#github-copilot" title="Link to this heading">#</a></h2>
+<p>In case you are using Github Copilot, you might need to keep up with the settings yourself,as they
+change rather frequently. At the time of writing, the following settings are recommended (e.g. via
+<em>ctrl+,</em>):</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;github.copilot.nextEditSuggestions.enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</pre></div>
+</div>
+</section>
 <section id="starlark">
 <h2>Starlark<a class="headerlink" href="#starlark" title="Link to this heading">#</a></h2>
 <p>For <em>Starlark</em> currently no solution is integrated in VScode.</p>
@@ -547,6 +556,20 @@
 <p>After selecting the virtual environment the full feature set of the official <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a>  Extension (MIT License) is provided included features e.g. autocomplete, syntax checking, …</p>
 <p>Also the configuration for displaying and executing <em>pytest</em> in the IDE is provided.</p>
 <p>As a linter the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff">ruff extension</a>  (MIT License) is set up.</p>
+<section id="recommended-settings">
+<h3>Recommended Settings<a class="headerlink" href="#recommended-settings" title="Link to this heading">#</a></h3>
+<p>The following settings are recommended to be added to your user configuration (e.g. via <em>ctrl+,</em>),
+however as they are not universal we do not enforce them e.g. via devcontainer:</p>
+<blockquote>
+<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;editor.formatOnSave&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="nt">&quot;python.analysis.inlayHints.callArgumentNames&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;partial&quot;</span><span class="p">,</span>
+<span class="nt">&quot;python.analysis.inlayHints.functionReturnTypes&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="nt">&quot;python.analysis.inlayHints.pytestParameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="nt">&quot;python.analysis.inlayHints.variableTypes&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
 <section id="debugging">
 <h3>Debugging<a class="headerlink" href="#debugging" title="Link to this heading">#</a></h3>
 <p>For <em>usual</em> debugging the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy">Python Debugger</a> (MIT License) can be used.</p>
@@ -664,9 +687,11 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-copilot">Github Copilot</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starlark">Starlark</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c">C++</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended-settings">Recommended Settings</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging">Debugging</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-the-docs-build">Debugging the docs build</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-python-code-started-via-bazel">Debugging python code started via bazel</a></li>

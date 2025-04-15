@@ -454,8 +454,11 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">Process Areas</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../architecture_design/index.html">Architecture Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../change_management/index.html">Change Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../configuration_management/index.html">Configuration Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../documentation_management/index.html">Documentation Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../implementation/index.html">Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../platform_management/index.html">Platform Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../problem_resolution/index.html">Problem Resolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../requirements_engineering/index.html">Requirements Engineering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../safety_management/index.html">Safety Management</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="../index.html">Verification</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
@@ -468,6 +471,7 @@
 <li class="toctree-l4"><a class="reference internal" href="verification_templates.html">Verification Templates</a></li>
 <li class="toctree-l4"><a class="reference internal" href="verification_plan_template.html">Verification Plan Template</a></li>
 <li class="toctree-l4"><a class="reference internal" href="verification_report_template.html">Verification Report Templates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="verification_methods.html">Verification methods and derivation techniques</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3"><a class="reference internal" href="../verification_roles.html">Roles</a></li>
@@ -560,7 +564,7 @@
                   
   <section id="verification-guideline">
 <h1>Verification Guideline<a class="headerlink" href="#verification-guideline" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-6600ac5e">
+<div class="need_container docutils container" id="SNCB-300d3967">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_guidl table" id="gd_guidl__verification_guide">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -677,7 +681,7 @@ test cases and reports the result in the same logging format as automated tests 
 <h2>Reporting of failing test cases<a class="headerlink" href="#reporting-of-failing-test-cases" title="Link to this heading">#</a></h2>
 <p>Any failing test case requires an ISSUE.
 The passing rate of safety-critical test cases need to be 100% in order to release the affected component.
-In case of a lower pass rate than 100% for QM level tests, the <a class="reference internal" href="../../../roles/index.html#rl__technical_lead" title="rl__technical_lead"><em class="xref need">Technical Lead (rl__technical_lead)</em></a> and
+In case of a lower pass rate than 100% for QM level tests, the <a class="reference internal" href="../../platform_management/platform_management_roles.html#rl__technical_lead" title="rl__technical_lead"><em class="xref need">Technical Lead (rl__technical_lead)</em></a> and
 <a class="reference internal" href="../../../roles/index.html#rl__project_lead" title="rl__project_lead"><em class="xref need">Project Lead (rl__project_lead)</em></a> can decide, if the platform is in a releasable state. The accepted minimal
 path rate is defined in the <a class="reference internal" href="../workproducts.html#wp__verification__plan" title="wp__verification__plan"><em class="xref need">Verification Plan (wp__verification__plan)</em></a>. Due to the high degree of automation, a
 it is recommended that a path rate lower 95% is not acceptable.</p>
@@ -698,7 +702,10 @@ useful, this shall be planned and added to the project milestone plan.</p>
 </section>
 <section id="verification-types-and-methods">
 <h2>Verification types and methods<a class="headerlink" href="#verification-types-and-methods" title="Link to this heading">#</a></h2>
-<p>Verification types and methods are described in the <a class="reference internal" href="../verification_concept.html#doc_concept__verification__process" title="doc_concept__verification__process"><em class="xref need">Verification Concept (doc_concept__verification__process)</em></a>.</p>
+<p>Verification types and methods are described in the <a class="reference internal" href="verification_methods.html#gd_meth__verification__methods" title="gd_meth__verification__methods"><em class="xref need">Verification Methods (gd_meth__verification__methods)</em></a> and the
+derivation techniques in <a class="reference internal" href="verification_methods.html#gd_meth__verification__derivation" title="gd_meth__verification__derivation"><em class="xref need">Verification Derivation Tec... (gd_meth__verification__derivation)</em></a>. The detailed method guideline
+helps to get an understanding what the different methods and derivation techniques mean and how to
+create test cases using the same.</p>
 </section>
 </section>
 
