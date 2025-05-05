@@ -1,6 +1,6 @@
 ..
    # *******************************************************************************
-   # Copyright (c) 2024 Contributors to the Eclipse Foundation
+   # Copyright (c) 2025 Contributors to the Eclipse Foundation
    #
    # See the NOTICE file(s) distributed with this work for additional
    # information regarding copyright ownership.
@@ -12,5 +12,19 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-Fixed execution order framework
-###############################
+.. _release_management:
+
+Release Management
+########################
+
+.. toctree::
+   :maxdepth: 1
+
+   release_concept
+   release_workflow
+   guidance/index
+   release_workproducts
+   release_roles
+
+.. needextend:: "process_areas/release_management" in docname
+   :+tags: release_mgt

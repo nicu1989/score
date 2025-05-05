@@ -41,8 +41,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/modern.css?v=803738c0" />
   
   <!-- So that users can add custom icons -->
@@ -72,7 +72,7 @@
         </script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Fixed execution order framework" href="fixed-execution-order/index.html" />
+    <link rel="next" title="Fixed execution order framework (FEO)" href="feo/index.html" />
     <link rel="prev" title="Roadmap" href="../communication/ipc/roadmap.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -448,7 +448,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../analysis-infra/index.html">Analysis Infrastructure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../communication/index.html">Communication</a></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Frameworks</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="fixed-execution-order/index.html">Fixed execution order framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feo/index.html">Fixed execution order framework (FEO)</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../infrastructure/index.html">Infrastructure</a></li>
@@ -518,7 +518,26 @@
 <h1>Frameworks<a class="headerlink" href="#frameworks" title="Link to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="fixed-execution-order/index.html">Fixed execution order framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feo/index.html">Fixed execution order framework (FEO)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="feo/index.html#feature-flag">Feature flag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feo/index.html#abstract">Abstract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feo/index.html#motivation">Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feo/index.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feo/index.html#activities">Activities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feo/index.html#application-activities">Application Activities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feo/index.html#service-activities">Service Activities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feo/index.html#communication">Communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feo/index.html#process-thread-mapping">Process/Thread Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feo/index.html#lifecycle">Lifecycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feo/index.html#scheduling">Scheduling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feo/index.html#executor-and-agents">Executor and Agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feo/index.html#external-state">External state</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feo/index.html#recording">Recording</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feo/index.html#reprocessing">Reprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feo/index.html#tracing">Tracing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feo/index.html#performance">Performance</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
@@ -543,11 +562,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="fixed-execution-order/index.html"
+       href="feo/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Fixed execution order framework</p>
+        <p class="prev-next-title">Fixed execution order framework (FEO)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
