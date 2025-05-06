@@ -80,9 +80,8 @@
     "python.testing.pytestEnabled": true,
     "bazel.lsp.command": "bazel",
     "bazel.lsp.args": [
-      "run",
-      "//tools/starpls:starpls",
-      "--"
+        "run",
+        "//:starpls_server"
     ],
     "cSpell.enabledFileTypes": {
         "rst": true
