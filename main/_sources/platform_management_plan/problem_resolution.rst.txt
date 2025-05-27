@@ -49,7 +49,7 @@ Problem Resolution Execution
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Contributions in general to the **S-CORE** project are described here
-(compare :need:`gd_guidl__contr_request_guideline`).
+(compare :need:`doc__contr_guideline`).
 
 A Problem Resolution is a specific contribution, and
 it is the **ONLY** way to report problems in the **S-CORE** project.
@@ -57,7 +57,7 @@ it is the **ONLY** way to report problems in the **S-CORE** project.
 Problem Resolution Infrastructure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-:need:`GitHub Issues (ISSUE) <gd_guidl__issue_guideline>` are used for managing problems and their
+:need:`GitHub Issues (ISSUE) <doc__issue_guideline>` are used for managing problems and their
 potential resolution. The tool is used to create, analyse, initiate and to monitor the
 problem reported within **S-CORE**.
 
@@ -120,7 +120,7 @@ ISSUE using the Problem Template :ref:`prm_templates`.
 
 :need:`[[title]] <gd_req__problem__attr_stakeholder>` is defined in the description part of the
 ISSUE using the Problem Template :ref:`prm_templates`. For S-CORE stakeholder use pre-defined labels
-for Communities or Cross Functional Teams (Feature Owner) (under discussion, compare
+for Communities or Feature Teams (Feature Owner) (under discussion, compare
 https://github.com/eclipse-score/score/issues/870)
 
 :need:`[[title]] <gd_req__problem__attr_classification>` is defined in the description part of the

@@ -12,6 +12,12 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
+.. document:: Development Environment
+   :id: doc__develop_environment
+   :status: valid
+   :safety: ASIL_B
+   :realizes: wp__sw_development_plan
+
 .. _setting_up_dev_env:
 
 Setting Up the Development Environment

@@ -30,11 +30,11 @@ Component Template
 
 .. note:: Document header
 
-.. document:: [Your Feature Name]
+.. document:: [Your Component Name]
    :id: doc__change__component_name
    :status: draft
    :safety: ASIL_B
-   :tags: change_management
+   :tags: template
 
 .. attention::
     The above directive must be updated according to your Component.

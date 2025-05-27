@@ -38,11 +38,11 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/modern.css?v=803738c0" />
   
   <!-- So that users can add custom icons -->
@@ -76,7 +76,7 @@
     <link rel="prev" title="Architecture" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
+  <meta name="docsearch:version" content="0.1" />
   </head>
   
   
@@ -454,6 +454,7 @@
 </ul>
 </details></li>
 <li class="toctree-l3"><a class="reference internal" href="../requirements/index.html">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../safety_planning/index.html">Safety Planning</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../roadmap.html">Roadmap</a></li>
 </ul>
 </details></li>
@@ -536,7 +537,7 @@
 <h1>Feature Architecture<a class="headerlink" href="#feature-architecture" title="Link to this heading">#</a></h1>
 <section id="static-architecture">
 <h2>Static Architecture<a class="headerlink" href="#static-architecture" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-2df923c5">
+<div class="need_container docutils container" id="SNCB-bc7eeedb">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_arc_sta table" id="feat_arc_sta__communication__ipc">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -556,11 +557,12 @@
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
+<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">ipc</span></span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">fulfils: <span class="fulfils"><span><a class="reference internal" href="../requirements/index.html#feat_req__ipc__data_loss" title="feat_arc_sta__communication__ipc">feat_req__ipc__data_loss</a>, <a class="reference internal" href="../requirements/index.html#feat_req__ipc__time_based_arch" title="feat_arc_sta__communication__ipc">feat_req__ipc__time_based_arch</a>, <a class="reference internal" href="../requirements/index.html#feat_req__ipc__data_driven_arch" title="feat_arc_sta__communication__ipc">feat_req__ipc__data_driven_arch</a>, <a class="reference internal" href="../requirements/index.html#feat_req__ipc__request_driven_arch" title="feat_arc_sta__communication__ipc">feat_req__ipc__request_driven_arch</a>, <a class="reference internal" href="../requirements/index.html#feat_req__ipc__event_type" title="feat_arc_sta__communication__ipc">feat_req__ipc__event_type</a>, <a class="reference internal" href="../requirements/index.html#feat_req__ipc__method" title="feat_arc_sta__communication__ipc">feat_req__ipc__method</a>, <a class="reference internal" href="../requirements/index.html#feat_req__ipc__signal" title="feat_arc_sta__communication__ipc">feat_req__ipc__signal</a>, <a class="reference internal" href="../requirements/index.html#feat_req__ipc__producer_consumer" title="feat_arc_sta__communication__ipc">feat_req__ipc__producer_consumer</a>, <a class="reference internal" href="../requirements/index.html#feat_req__ipc__service_instance" title="feat_arc_sta__communication__ipc">feat_req__ipc__service_instance</a>, <a class="reference internal" href="../requirements/index.html#feat_req__ipc__service_instance_names" title="feat_arc_sta__communication__ipc">feat_req__ipc__service_instance_names</a>, <a class="reference internal" href="../requirements/index.html#feat_req__ipc__versioning" title="feat_arc_sta__communication__ipc">feat_req__ipc__versioning</a>, <a class="reference internal" href="../requirements/index.html#feat_req__ipc__service_location_transparency" title="feat_arc_sta__communication__ipc">feat_req__ipc__service_location_transparency</a>, <a class="reference internal" href="../requirements/index.html#feat_req__ipc__stateless_communication" title="feat_arc_sta__communication__ipc">feat_req__ipc__stateless_communication</a>, <a class="reference internal" href="../requirements/index.html#feat_req__ipc__service_instance_granularity" title="feat_arc_sta__communication__ipc">feat_req__ipc__service_instance_granularity</a>, <a class="reference internal" href="../requirements/index.html#feat_req__ipc__service_discovery" title="feat_arc_sta__communication__ipc">feat_req__ipc__service_discovery</a>, <a class="reference internal" href="../requirements/index.html#feat_req__ipc__safe_communication" title="feat_arc_sta__communication__ipc">feat_req__ipc__safe_communication</a>, <a class="reference internal" href="../requirements/index.html#feat_req__ipc__data_corruption" title="feat_arc_sta__communication__ipc">feat_req__ipc__data_corruption</a>, <a class="reference internal" href="../requirements/index.html#feat_req__ipc__data_reordering" title="feat_arc_sta__communication__ipc">feat_req__ipc__data_reordering</a>, <a class="reference internal" href="../requirements/index.html#feat_req__ipc__data_repetition" title="feat_arc_sta__communication__ipc">feat_req__ipc__data_repetition</a>, <a class="reference internal" href="../requirements/index.html#feat_req__ipc__data_loss" title="feat_arc_sta__communication__ipc">feat_req__ipc__data_loss</a>, <a class="reference internal" href="../requirements/index.html#feat_req__ipc__asil" title="feat_arc_sta__communication__ipc">feat_req__ipc__asil</a></span></span></div>
-<div class="line">includes: <span class="includes"><span><a class="reference internal" href="#feat_arc_int__communication__ipc" title="feat_arc_sta__communication__ipc">feat_arc_int__communication__ipc</a></span></span></div>
+<div class="line">includes: <span class="includes"><span><a class="reference internal" href="#logic_arc_int__communication__ipc" title="feat_arc_sta__communication__ipc">logic_arc_int__communication__ipc</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -568,7 +570,7 @@
 </tr>
 <tr class="content row-odd"><td class="content" colspan="6"><figure class="align-center">
 <p class="plantuml">
-<object data="../../../../_images/plantuml-f4a28a12a499868442da51ef6335a71797c7fcb7.svg" type="image/svg+xml" style="width:2413px;height:775px;background:#FFFFFF;"></object></p>
+<object data="../../../../_images/plantuml-921ff8c0acd9712473db5f73f7379711fbef22aa.svg" type="image/svg+xml" style="width:2413px;height:775px;background:#FFFFFF;"></object></p>
 </figure>
 </td>
 </tr>
@@ -589,7 +591,7 @@
 </section>
 <section id="dynamic-architecture">
 <h2>Dynamic Architecture<a class="headerlink" href="#dynamic-architecture" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-535641aa">
+<div class="need_container docutils container" id="SNCB-56348bd6">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_arc_dyn table" id="feat_arc_dyn__communication__ipc">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -609,6 +611,7 @@
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
+<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">ipc</span></span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
 </span></span></div>
@@ -620,7 +623,7 @@
 </tr>
 <tr class="content row-odd"><td class="content" colspan="6"><figure class="align-center">
 <p class="plantuml">
-<object data="../../../../_images/plantuml-6cbb0f41e5a90aed6b88c2857f6187386a3f84d7.svg" type="image/svg+xml" style="width:1944px;height:2338px;background:#FFFFFF;"></object></p>
+<object data="../../../../_images/plantuml-7c1932be15b4f2375375a6c8810d34cd63f7ceb6.svg" type="image/svg+xml" style="width:1944px;height:2338px;background:#FFFFFF;"></object></p>
 </figure>
 </td>
 </tr>
@@ -641,8 +644,8 @@
 </section>
 <section id="interfaces">
 <h2>Interfaces<a class="headerlink" href="#interfaces" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-60ded51c">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_arc_int table" id="feat_arc_int__communication__ipc">
+<div class="need_container docutils container" id="SNCB-3131336a">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_logic_arc_int table" id="logic_arc_int__communication__ipc">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
 <div class="line"><span><span class="needs_title"><span class="needs_data">Logical Interface</span></span></span></div>
@@ -661,11 +664,12 @@
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
+<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">ipc</span></span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">fulfils: <span class="fulfils"><span><a class="reference internal" href="../requirements/index.html#feat_req__ipc__interfaces" title="feat_arc_int__communication__ipc">feat_req__ipc__interfaces</a></span></span></div>
-<div class="line">included by: <span class="includes"><span><a class="reference internal" href="#feat_arc_sta__communication__ipc" title="feat_arc_int__communication__ipc">feat_arc_sta__communication__ipc</a></span></span></div>
+<div class="line"><span><div class="line">fulfils: <span class="fulfils"><span><a class="reference internal" href="../requirements/index.html#feat_req__ipc__interfaces" title="logic_arc_int__communication__ipc">feat_req__ipc__interfaces</a></span></span></div>
+<div class="line">included by: <span class="includes"><span><a class="reference internal" href="#feat_arc_sta__communication__ipc" title="logic_arc_int__communication__ipc">feat_arc_sta__communication__ipc</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -674,11 +678,11 @@
 <tr class="content row-odd"><td class="content" colspan="6"></td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#feat_arc_int__communication__ipc" title="feat_arc_int__communication__ipc">feat_arc_int__communication__ipc</a></span></span></div>
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#logic_arc_int__communication__ipc" title="logic_arc_int__communication__ipc">logic_arc_int__communication__ipc</a></span></span></div>
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
-<div class="line"><span><span class="needs_type_name"><span class="needs_data">Feature Architecture Interfaces</span></span></span></div>
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Logical Architecture Interfaces</span></span></span></div>
 </div>
 </td>
 <td class="footer_right" colspan="2"></td>
@@ -792,7 +796,7 @@
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>

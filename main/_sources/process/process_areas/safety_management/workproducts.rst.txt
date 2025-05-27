@@ -41,7 +41,7 @@ Work products
 
    This is on following level:
 
-   * Module (contains activities planning based on a Contribution Request)
+   * Module (contains activities planning based on a Change Request)
 
 .. workproduct:: Platform Safety Package
    :id: wp__platform_safety_package

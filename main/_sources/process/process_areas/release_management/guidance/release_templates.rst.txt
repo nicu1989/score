@@ -18,7 +18,7 @@ Templates
 .. gd_temp:: Platform Release Note Template
    :id: gd_temp__rel__plat_rel_note
    :status: valid
-   :complies: std_req__iso26262__management_64134, std_req__iso26262__management_64135
+   :complies: std_req__iso26262__management_64134, std_req__iso26262__management_64135, std_req__aspice_40__SUP-8-BP7
 
    |  Platform Release Notes
    |  ======================
@@ -148,7 +148,7 @@ Release <add version number> for <platform/module_name>
 1. Link this issue to the correct milestone and assign to the technical lead
 2. Check respective Verification report on the release candidate's github tag
 3. Check bugfixes or justify failed tests
-4. Check the safety package completeness (supported by the safety manager)
+4. Check the safety package completeness (includes "valid" documents and work products status, supported by the safety manager)
 5. Create/update the release note (pull request to close this issue)
 6. Document safety manager's "recommendation to release" by asking his GitHub review approval of the release note
 7. Create the "release" in GitHub according to :need:`gd_guidl__rel_management`

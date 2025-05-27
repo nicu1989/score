@@ -38,11 +38,11 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/modern.css?v=803738c0" />
   
   <!-- So that users can add custom icons -->
@@ -76,7 +76,7 @@
     <link rel="prev" title="Guidances" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
+  <meta name="docsearch:version" content="0.1" />
   </head>
   
   
@@ -478,6 +478,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../release_management/index.html">Release Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../requirements_engineering/index.html">Requirements Engineering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../safety_management/index.html">Safety Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tool_management/index.html">Tool Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../verification/index.html">Verification</a></li>
 </ul>
 </details></li>
@@ -564,7 +565,7 @@
                   
   <section id="architecture-guideline">
 <span id="arch-design-guideline"></span><h1>Architecture Guideline<a class="headerlink" href="#architecture-guideline" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-b3982ba3">
+<div class="need_container docutils container" id="SNCB-1718e2ed">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_guidl table" id="gd_guidl__arch__design">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -693,7 +694,7 @@
 <p>This chapter describes the general guideline for architectural design within the project. In general the workflow for creating an architectural design is shown in <a class="reference internal" href="../architecture_getstrt.html#architecture-workflow-fig"><span class="std std-ref">Architecture Design Workflow</span></a></p>
 <p>Those steps are:</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id5">
-<caption><span class="caption-number">Table 10 </span><span class="caption-text">Definition of the static architectural elements</span><a class="headerlink" href="#id5" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 11 </span><span class="caption-text">Definition of the static architectural elements</span><a class="headerlink" href="#id5" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 10.0%" />
 <col style="width: 60.0%" />
@@ -792,7 +793,7 @@ As a starting point a <a class="reference internal" href="feature_architecture_t
 <span id="id1"></span><h3>Model feature architecture<a class="headerlink" href="#model-feature-architecture" title="Link to this heading">#</a></h3>
 <p>Based on the concept description a model of the feature architecture should be designed. It shall consist of the logical interfaces which the user of the feature can access including also the modules which provide the interfaces. Therefore following elements shall be used:</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id6">
-<caption><span class="caption-number">Table 11 </span><span class="caption-text">Architectural Elements of the Feature Architecture</span><a class="headerlink" href="#id6" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 12 </span><span class="caption-text">Architectural Elements of the Feature Architecture</span><a class="headerlink" href="#id6" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 14.3%" />
 <col style="width: 42.9%" />
@@ -810,12 +811,12 @@ As a starting point a <a class="reference internal" href="feature_architecture_t
 <td><p>feat_arc_sta_t, feat_arc_dyn_t</p></td>
 </tr>
 <tr class="row-odd"><td><p>Logical Interface</p></td>
-<td><p>feat_arc_int</p></td>
-<td><p>feat_arc_int_t</p></td>
+<td><p>logic_arc_int</p></td>
+<td><p>logic_arc_int_t</p></td>
 </tr>
 <tr class="row-even"><td><p>Logical Interface Operation</p></td>
-<td><p>feat_arc_int_op</p></td>
-<td><p>feat_arc_int_op_t</p></td>
+<td><p>logic_arc_int_op</p></td>
+<td><p>logic_arc_int_op_t</p></td>
 </tr>
 </tbody>
 </table>
@@ -864,7 +865,7 @@ and merged into the main branch of the score repository.</p>
 <span id="id3"></span><h3>Model component architecture<a class="headerlink" href="#model-component-architecture" title="Link to this heading">#</a></h3>
 <p>According to the architecture design description the model for the component architecture shall be created. It shall consist of components, real interfaces and real interface operations. Depending on the size of the component it can also be split into multiple (sub) components.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id7">
-<caption><span class="caption-number">Table 12 </span><span class="caption-text">Architectural Elements of the Component Architecture</span><a class="headerlink" href="#id7" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 13 </span><span class="caption-text">Architectural Elements of the Component Architecture</span><a class="headerlink" href="#id7" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 14.3%" />
 <col style="width: 42.9%" />
@@ -882,12 +883,12 @@ and merged into the main branch of the score repository.</p>
 <td><p>comp_arc_sta_t, comp_arc_dyn_t</p></td>
 </tr>
 <tr class="row-odd"><td><p>(Real) Interface</p></td>
-<td><p>comp_arc_int</p></td>
-<td><p>comp_arc_int_t</p></td>
+<td><p>real_arc_int</p></td>
+<td><p>real_arc_int_t</p></td>
 </tr>
 <tr class="row-even"><td><p>(Real) Interface Operation</p></td>
-<td><p>comp_arc_int_op</p></td>
-<td><p>comp_arc_int_op_t</p></td>
+<td><p>real_arc_int_op</p></td>
+<td><p>real_arc_int_op_t</p></td>
 </tr>
 </tbody>
 </table>
@@ -1055,7 +1056,7 @@ these should be described also in multiple dynamic views.</p></li>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>

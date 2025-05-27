@@ -18,7 +18,7 @@ Configuration Management Process Requirements
 .. gd_req:: Permanent Storage
    :id: gd_req__workproducts_storage
    :status: valid
-   :complies: std_req__iso26262__support_745
+   :complies: std_req__iso26262__support_745, std_req__aspice_40__SUP-8-BP8
 
    At least every platform release shall be stored permanently as a collection of text documents
    (docs and code) including the used OSS tooling outside of github servers.

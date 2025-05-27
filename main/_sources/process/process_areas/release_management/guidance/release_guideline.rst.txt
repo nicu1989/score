@@ -17,7 +17,8 @@ Guideline
 
 .. gd_guidl:: Release Management Guideline
    :id: gd_guidl__rel_management
-   :status: draft
+   :status: valid
+   :complies: std_req__iso26262__management_64131, std_req__iso26262__management_64132, std_req__iso26262__management_64133
 
 .. _workflow_release:
 
@@ -37,7 +38,7 @@ Software Module Release
 
 3. **Development and Testing**:
 
-   * According process, cross functional teams implement and test.
+   * According process, feature teams implement and test.
    * Check the :need:`wp__verification__module_ver_report` to ensure that all tests pass before proceeding to the release.
    * In case of failed test, evaluate and possibly justify their failure.
 
@@ -45,7 +46,7 @@ Software Module Release
 
    * Update the version number according to the versioning policy (defined in :need:`doc__platform_release_management_plan`).
    * Prepare release notes documenting the changes, improvements, and bug fixes.
-   * Ensure the relevant safety packages are available.
+   * Ensure the relevant safety packages are available and complete.
    * Tag the release in the GitHub repository.
 
 5. **Release Execution**:
@@ -78,9 +79,9 @@ Platform Release
 4. **Release Preparation**:
 
    * Check if modules are released.
-   * Update the platform version number according to the versioning policy.
+   * Update the platform version number according to the versioning policy (defined in :need:`doc__platform_release_management_plan`).
    * Prepare platform release notes summarizing the updates from all integrated software modules.
-   * Ensure the relevant safety packages are available.
+   * Ensure the relevant safety packages are available and complete.
    * Tag the platform release in the GitHub repository.
 
 5. **Release Execution**:

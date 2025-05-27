@@ -17,8 +17,7 @@ Concept Description
 
 .. doc_concept:: Concept Description
    :id: doc_concept__rel__process
-   :status: draft
-   :tags: release_management
+   :status: valid
 
 This section describes the general concept for the release management process.
 The release process can be separated into two parts. On the first level are the software module

@@ -83,7 +83,7 @@ based on the CODEOWNER(s) definition of the modified files. In case the fixing o
 between reviewer(s) and author, the safety manager or quality manager can be added to the review to moderate a solution.
 
 The initial step for requirements and architecture is the (informal) GitHub review on every Pull-Request
-(resp. Contribution Request, see :need:`gd_guidl__contr_request_guideline`)
+(resp. Change Request, see :need:`doc__contr_guideline`)
 which creates or modifies one of these work products (subject to inspection).
 After this review the work products are in status "valid", which means they can be used for further development and verification steps.
 In this review the checklist entries shall be considered which are tagged as "incremental".

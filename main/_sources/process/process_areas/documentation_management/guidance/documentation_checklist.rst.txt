@@ -18,7 +18,7 @@ Checklists
 .. gd_chklst:: Documentation Review Checklist
    :id: gd_chklst__documentation__review
    :status: valid
-   :complies:
+   :complies: std_req__iso26262__support_1045
 
    | **1. Purpose**
    | The purpose of this checklist is to collect the formal topics to be checked during a
@@ -36,37 +36,33 @@ Checklists
         - Topic
         - Status [FAIL|PASS]
       * - 1
-        - Does the Document has an unique id as specified?
+        - Does the Document have an unique id as specified?
         -
 
       * - 2
-        - Does the Document has a date?
+        - Does the Document have a date?
         -
 
       * - 3
-        - Does the Document has a author information?
+        - Does the Document have an author information?
         -
 
       * - 4
-        - Does the Document has a lifecycle, status as specified?
+        - Does the Document have a lifecycle, status as specified?
         -
 
       * - 5
-        - Does the Document has a reviewer?
+        - Does the Document have a reviewer?
         -
 
       * - 6
-        - Does the Document has a approver?
+        - Does the Document have an approver?
         -
 
       * - 7
-        - Does the Document has a versioning, baseline as specified?
+        - Does the Document have a versioning, baseline as specified?
         -
 
       * - 8
-        - Does the Document has a versioning, baseline as specified?
-        -
-
-      * - 9
-        - Does the Document has the correct storage location?
+        - Does the Document have the correct storage location?
         -

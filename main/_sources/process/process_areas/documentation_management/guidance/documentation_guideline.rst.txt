@@ -25,7 +25,7 @@ The planning for the documents is part of the Platform Management Plan.
 The formal elements for documentations in S-CORE are described here: :need:`doc__documentation_mgt_plan`.
 
 For manual review of the formal elements the
-:need:`Documentation Review Checlist <gd_chklst__documentation__review>` may used.
+:need:`Documentation Review Checklist <gd_chklst__documentation__review>` may used.
 
 The review of each document is done as defined for this type of work product in the respective
 process description.

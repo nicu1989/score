@@ -67,7 +67,7 @@ Safety Management Guideline
    |
    | The planning of safety activities is divided into the
    | * platform SEooC planning, dealing with all work products needed only once for the platform. This is included in :need:`wp__platform_safety_plan`
-   | * module SEooC planning, dealing with all work products needed for each module development (initiated by a contribution request), included in :need:`wp__module_safety_plan`. This module safety planning also includes the planning of OSS component qualification based on :need:`gd_guidl__component_classification`.
+   | * module SEooC planning, dealing with all work products needed for each module development (initiated by a change request), included in :need:`wp__module_safety_plan`. This module safety planning also includes the planning of OSS component qualification based on :need:`gd_guidl__component_classification`.
    | A template exists to guide this: :need:`gd_temp__module_safety_plan`.
    |
    | **Planning supporting processes:**
@@ -90,7 +90,7 @@ Safety Management Guideline
    | * component level: :need:`wp__sw_component_safety_analysis` and :need:`wp__sw_component_dfa`
    |
    | **Provision of the confidence in the use of software tools:**
-   | Tool Management planning is part of the :need:`wp__platform_mgmt`. The respective work product to be planned as an issue  of the generic safety plan is the :need:`wp__tool_verification`, which contains tool evaluation and if applicable qualification of the SW platform toolchain.
+   | Tool Management planning is part of the :need:`wp__platform_mgmt`. The respective work product to be planned as an issue  of the generic safety plan is the :need:`wp__tool_verification_report`, which contains tool evaluation and if applicable qualification of the SW platform toolchain.
    | Components developed in C++ and Rust will have different toolchains. Both will be qualified once for the SW platform.
    |
    | **(OSS) Component qualification planning:**

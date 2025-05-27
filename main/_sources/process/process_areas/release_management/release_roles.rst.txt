@@ -23,6 +23,4 @@ Contributing Roles:
    * :need:`Project Lead <rl__project_lead>`
 
 A detailed overview of the responsibility for the steps of the Release Management process
-is listed here:
-
-:ref:`workflow_release`
+is listed here: :need:`doc_concept__rel__process`

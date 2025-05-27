@@ -65,12 +65,12 @@ Risks and mitigation
 --------------------
 
 Potential risks that derived from the verification activities and their respective mitigation measures are handled by
-the :doc:`risk_management`.
+the :doc:`project_management`.
 
 Schedules
 ---------
 
-The integration of software elements is driven by contribution requests and their respective
+The integration of software elements is driven by change requests and their respective
 :ref:`general_concepts_lifecycle` model. The contribution of a feature itself implies that it gets fully
 verified.
 
@@ -96,11 +96,11 @@ automated software build at any time.
 
 The following types of integrations are applicable:
 
-#. **New software elements** get integrated according to the :need:`gd_guidl__contr_request_guideline`
+#. **New software elements** get integrated according to the :need:`doc__contr_guideline`
 #. **Fixes of defects** get integrated based on their prioritization described by the
    :doc:`problem_resolution`.
 #. **Changes** get integrated based on the :need:`wf__change__cr_an_change_request` and will follow
-   the :need:`gd_guidl__pull_request_guideline` as any other artifact.
+   the :need:`doc__pull_request_guideline` as any other artifact.
 
 Levels of integration and verification
 --------------------------------------

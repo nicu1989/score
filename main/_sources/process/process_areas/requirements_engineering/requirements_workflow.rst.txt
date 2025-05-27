@@ -28,7 +28,7 @@ Workflow Requirements Engineering
    :contains: gd_temp__req__stkh_req, gd_temp__req__formulation
    :has: doc_concept__req__process, doc_getstrt__req__process
 
-   Stakeholder requirements can be created during a contribution request. Any contributor can create a stakeholder requirement and propose it for approval.
+   Stakeholder requirements can be created during a change request. Any contributor can create a stakeholder requirement and propose it for approval.
 
 .. workflow:: Create/Maintain Feature requirements
    :id: wf__req__feat_req

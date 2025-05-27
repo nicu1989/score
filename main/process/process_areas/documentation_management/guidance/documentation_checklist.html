@@ -38,11 +38,11 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/modern.css?v=803738c0" />
   
   <!-- So that users can add custom icons -->
@@ -76,7 +76,7 @@
     <link rel="prev" title="Guideline" href="documentation_guideline.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
+  <meta name="docsearch:version" content="0.1" />
   </head>
   
   
@@ -458,7 +458,6 @@
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="../index.html">Documentation Management</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../documentation_getstrt.html">Getting Started</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../documentation_concept.html">Concept</a></li>
-
 <li class="toctree-l3 current active has-children"><a class="reference internal" href="index.html">Guidance</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="documentation_guideline.html">Guideline</a></li>
 <li class="toctree-l4 current active"><a class="current reference internal" href="#">Checklists</a></li>
@@ -476,6 +475,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../release_management/index.html">Release Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../requirements_engineering/index.html">Requirements Engineering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../safety_management/index.html">Safety Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tool_management/index.html">Tool Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../verification/index.html">Verification</a></li>
 </ul>
 </details></li>
@@ -562,7 +562,7 @@
                   
   <section id="checklists">
 <h1>Checklists<a class="headerlink" href="#checklists" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-cc45e387">
+<div class="need_container docutils container" id="SNCB-c63f04d7">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_chklst table" id="gd_chklst__documentation__review">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -585,6 +585,7 @@
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">doc_mgt</span></span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">contained by: <span class="contains"><span><a class="reference internal" href="../../platform_management/platform_management_workflow.html#wf__platform__cr_mt_platform_mgmt_plan" title="gd_chklst__documentation__review">wf__platform__cr_mt_platform_mgmt_plan</a>, <a class="reference internal" href="../../platform_management/platform_management_workflow.html#wf__platform__mr_im_platform_mgmt_plan" title="gd_chklst__documentation__review">wf__platform__mr_im_platform_mgmt_plan</a></span></span></div>
+<div class="line">complies: <span class="complies"><span><a class="reference internal" href="../../../standards/iso26262/iso26262.html#std_req__iso26262__support_1045" title="gd_chklst__documentation__review">std_req__iso26262__support_1045</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -600,7 +601,7 @@ the review.</div>
 <div class="line"><br /></div>
 </div>
 <div class="pst-scrollable-table-container"><table class="table" id="id1">
-<caption><span class="caption-number">Table 18 </span><span class="caption-text">Documentation Review Checklist</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 19 </span><span class="caption-text">Documentation Review Checklist</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 21.7%" />
 <col style="width: 65.2%" />
@@ -614,39 +615,35 @@ the review.</div>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>1</p></td>
-<td><p>Does the Document has an unique id as specified?</p></td>
+<td><p>Does the Document have an unique id as specified?</p></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>2</p></td>
-<td><p>Does the Document has a date?</p></td>
+<td><p>Does the Document have a date?</p></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>3</p></td>
-<td><p>Does the Document has a author information?</p></td>
+<td><p>Does the Document have an author information?</p></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>4</p></td>
-<td><p>Does the Document has a lifecycle, status as specified?</p></td>
+<td><p>Does the Document have a lifecycle, status as specified?</p></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>5</p></td>
-<td><p>Does the Document has a reviewer?</p></td>
+<td><p>Does the Document have a reviewer?</p></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>6</p></td>
-<td><p>Does the Document has a approver?</p></td>
+<td><p>Does the Document have an approver?</p></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>7</p></td>
-<td><p>Does the Document has a versioning, baseline as specified?</p></td>
+<td><p>Does the Document have a versioning, baseline as specified?</p></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>8</p></td>
-<td><p>Does the Document has a versioning, baseline as specified?</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>9</p></td>
-<td><p>Does the Document has the correct storage location?</p></td>
+<td><p>Does the Document have the correct storage location?</p></td>
 <td></td>
 </tr>
 </tbody>
@@ -758,7 +755,7 @@ the review.</div>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>

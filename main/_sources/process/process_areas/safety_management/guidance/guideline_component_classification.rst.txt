@@ -238,7 +238,7 @@ For this the template :need:`gd_temp__component_classification` shall be used.
 Step 5: Based on (CLAS_OUT) select the activities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As soon as the contribution request containing this is in status "Accepted", the module safety plan for the component development is created/adapted based on the following: (select according to above result)
+As soon as the change request containing this is in status "Accepted", the module safety plan for the component development is created/adapted based on the following: (select according to above result)
 
 **If CLAS_OUT=Q : Follow the processes for qualification of software components in a safety context**
 
@@ -246,7 +246,7 @@ This is namely (for ASIL B) to provide the following work products according to 
 
 * :need:`wp__requirements__comp` including their inspection
 * :need:`wp__requirements__comp_aou` derived from the OSS components user manual and interface description, includes specification of the component's configuration
-* :need:`wp__verification__component_test` to test requirement and AoU implementation
+* :need:`wp__verification__comp_int_test` to test requirement and AoU implementation
 
 Integration of the OSS component is performed via the modules's SW build config and checked by feature integration tests (component integration if the OSS element is considered as a sub-component).
 

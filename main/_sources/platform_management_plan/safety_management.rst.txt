@@ -68,7 +68,7 @@ Regarding the platform specifics:
 * all safety related SW in the project is developed according to ISO 26262 ASIL B
 
 The SW platform functionality consists of features, which are based on a set of requirements and are developed in parallel.
-These features are developed into SW components contained in "modules", which are another set of SEooCs (initiated by a contribution request).
+These features are developed into SW components contained in "modules", which are another set of SEooCs (initiated by a change request).
 A template exists to guide this: :need:`gd_temp__module_safety_plan`.
 
 Tailoring
@@ -78,7 +78,7 @@ Tailoring of safety activities:
 * The tailoring is divided into project wide and module specific rules.
 * Project wide tailoring is documented in this document - this is based on development of a platform SEooC.
 * Module SEooC specific tailoring is documented in the module development Safety Plans - this may be based on SEooC specifics or because component qualification according to ISO 26262 part 8 clause 12 (or ISO PAS 8926) is selected.
-* In case of a change request on an existing feature (i.e. a contribution request), the subsequent safety planning will be done based on an impact analysis.
+* In case of a change request on an existing feature (i.e. a change request), the subsequent safety planning will be done based on an impact analysis.
 
 The following  ISO 26262 defined safety work products are not relevant for the S-CORE SW platform development:
 
@@ -414,8 +414,8 @@ Functional Safety Management SW Platform Work Products
       - <automated>
 
     * - :need:`wp__platform_sw_release_note`
-      - :doc:`release_management`
-      - not started
+      - :need:`gd_temp__rel__plat_rel_note`
+      - :ndf:`copy('status', need_id='gd_temp__rel__plat_rel_note')`
       - <Link to issue>
       - <Link to WP>
       - <automated>
@@ -437,20 +437,20 @@ Functional Safety Management SW Platform Work Products
     * - :need:`wp__sw_development_plan`
       - :need:`wf__platform__cr_mt_platform_mgmt_plan`
       - :ndf:`copy('status', need_id='wf__platform__cr_mt_platform_mgmt_plan')`
-      - <Link to issue>
-      - :doc:`software_development`
-      - not started
+      - `#583 <https://github.com/eclipse-score/score/issues/583>`_
+      - :need:`doc__software_development_plan`
+      - :ndf:`copy('status', need_id='doc__software_development_plan')`
 
     * - :need:`wp__verification__plan`
       - :need:`wf__platform__cr_mt_platform_mgmt_plan`
       - :ndf:`copy('status', need_id='wf__platform__cr_mt_platform_mgmt_plan')`
-      - <Link to issue>
-      - :doc:`software_verification`
-      - not started
+      - `#611 <https://github.com/eclipse-score/score/issues/611>`_
+      - :need:`doc__verification_plan`
+      - :ndf:`copy('status', need_id='doc__verification_plan')`
 
-    * - :need:`wp__tool_verification`
-      - :doc:`tool_management`
-      - not started
+    * - :need:`wp__tool_verification_report`
+      - :need:`doc__platform_tool_management_plan`
+      - :ndf:`copy('status', need_id='doc__platform_tool_management_plan')`
       - <Link to issue>
       - <Link to WP>
       - <automated>
@@ -467,10 +467,17 @@ Functional Safety Management Feature Specific Work Products
 
 See feature tree documents (created by using :need:`gd_temp__feature_safety_wp`):
 
-<link to document for every feature>
+- Inter-process Communication: :doc:`/features/communication/ipc/safety_planning/index`
+- Common Libraries: <link>
+- Logging: <link>
+- Persistency: <link>
+- Fixed Execution Order (Framework): <link>
 
-Functional Safety Work Products Status Charts
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Note: list of features for v0.5 according to `S-CORE Roadmap <https://github.com/orgs/eclipse-score/projects/17>`_
+and :ref:`releases`
+
+Platform Management Plan - Documents Status Chart
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. needtable::
    :style: table

@@ -178,7 +178,7 @@ This document
 Step 5: Based on (CLAS_OUT) select the activities
 -------------------------------------------------
 
-| As soon as the contribution request containing this is in status "Accepted", the module safety plan for the component development is adapted based on the following: (select according to above result)
+| As soon as the change request containing this is in status "Accepted", the module safety plan for the component development is adapted based on the following: (select according to above result)
 | - Q: Follow the processes for qualification of software components in a safety context.
 | - QR: Follow the process for pre-existing software architectural elements
 | - NQ: Do no use this element in safety context

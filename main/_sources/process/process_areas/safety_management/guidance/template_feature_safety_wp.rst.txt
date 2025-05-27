@@ -32,29 +32,29 @@ Feature Safety Work Products Template
       - WP status
 
     * - :need:`wp__feat_request`
-      - :ref:`Feature Request Template <chm_feature_templates>`
-      - <automated>
+      - :need:`gd_temp__change__feature_request`
+      - :ndf:`copy('status', need_id='gd_temp__change__feature_request')`
       - <link to issue>
-      - <link to WP>
+      - <Link to WP>
       - <automated>
 
     * - :need:`wp__requirements__feat`
-      - <link to process>
-      - <automated>
+      - :need:`gd_temp__req__feat_req`
+      - :ndf:`copy('status', need_id='gd_temp__req__feat_req')`
       - <link to issue>
       - <Link to WP>
       - <automated>
 
     * - :need:`wp__requirements__feat_aou`
-      - <link to process>
-      - <automated>
+      - :need:`gd_temp__req__aou_req`
+      - :ndf:`copy('status', need_id='gd_temp__req__aou_req')`
       - <link to issue>
-      - <link to WP>
+      - <Link to WP>
       - <automated>
 
     * - :need:`wf__cr_mt_featarch`
-      - <link to process>
-      - <automated>
+      - :need:`gd_temp__arch__feature`
+      - :ndf:`copy('status', need_id='gd_temp__arch__feature')`
       - <link to issue>
       - <Link to WP>
       - <automated>
@@ -67,22 +67,22 @@ Feature Safety Work Products Template
       - <automated>
 
     * - :need:`wp__requirements__inspect`
-      - <link to process>
-      - <automated>
+      - :need:`gd_chklst__req__inspection`
+      - :ndf:`copy('status', need_id='gd_chklst__req__inspection')`
       - <link to issue>
-      - Checklist used in Pull Request Review
+      - <Link to WP>
       - <automated>
 
     * - :need:`wp__sw_arch_verification`
-      - <link to process>
-      - <automated>
+      - :need:`gd_chklst__arch__inspection_checklist`
+      - :ndf:`copy('status', need_id='gd_chklst__arch__inspection_checklist')`
       - <link to issue>
       - <Link to WP>
       - <automated>
 
     * - :need:`wp__verification__feat_int_test`
-      - <link to process>
-      - <automated>
+      - :need:`gd_guidl__verification_guide`
+      - :ndf:`copy('status', need_id='gd_guidl__verification_guide')`
       - <link to issue>
       - <Link to WP>
       - <automated>

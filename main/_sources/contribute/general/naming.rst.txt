@@ -12,6 +12,12 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
+.. document:: Naming Conventions
+   :id: doc__naming_conventions
+   :status: valid
+   :safety: ASIL_B
+   :realizes: wp__sw_development_plan
+
 Naming Conventions
 ==================
 

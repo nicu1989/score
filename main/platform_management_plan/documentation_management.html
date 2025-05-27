@@ -38,11 +38,11 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/modern.css?v=803738c0" />
   
   <!-- So that users can add custom icons -->
@@ -76,7 +76,7 @@
     <link rel="prev" title="Software verification" href="software_verification.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
+  <meta name="docsearch:version" content="0.1" />
   </head>
   
   
@@ -447,12 +447,10 @@
   <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Content</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="project_management.html">Project management plan</a></li>
-<li class="toctree-l1"><a class="reference internal" href="stakeholder_management.html">Stakeholder Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="safety_management.html">Safety management / Platform Safety Plan</a></li>
-<li class="toctree-l1"><a class="reference internal" href="risk_management.html">Risk management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quality_management.html">Quality management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="config_management.html">Config management / Configuration Management Plan</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tool_management.html">Tool Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tool_management.html">Tool Management/ Tool Management Plan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="release_management.html">Release management Plan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="problem_resolution.html">Problem Resolution / Problem Resolution Plan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="change_management.html">Change Management / Change Management Plan</a></li>
@@ -520,7 +518,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="need_container docutils container" id="SNCB-bc27a01d">
+  <div class="need_container docutils container" id="SNCB-661bba88">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__documentation_mgt_plan">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -633,15 +631,15 @@ Versioning of documents is done as for every work product with github means and 
 </tr>
 </thead>
 <tbody>
-<tr class="need row-even"><td class="needs_title"><p>[Your Feature Name]</p></td>
+<tr class="need row-even"><td class="needs_title"><p>[Your Component Name]</p></td>
 <td class="needs_id"><p><a class="reference internal" href="../process/process_areas/change_management/guidance/change_management_component_template.html#doc__change__component_name">doc__change__component_name</a></p></td>
 <td class="needs_status"><p>draft</p></td>
-<td class="needs_tags"><p>change_management</p></td>
+<td class="needs_tags"><p>template<em>; </em>change_management</p></td>
 </tr>
 <tr class="need row-odd"><td class="needs_title"><p>[Your Feature Name]</p></td>
 <td class="needs_id"><p><a class="reference internal" href="../process/process_areas/change_management/guidance/change_management_feature_template.html#doc__change__feature_name">doc__change__feature_name</a></p></td>
 <td class="needs_status"><p>draft</p></td>
-<td class="needs_tags"><p>change_management</p></td>
+<td class="needs_tags"><p>template<em>; </em>change_management</p></td>
 </tr>
 <tr class="need row-even"><td class="needs_title"><p>Change Management Plan</p></td>
 <td class="needs_id"><p><a class="reference internal" href="change_management.html#doc__platform_change_management_plan">doc__platform_change_management_plan</a></p></td>
@@ -666,32 +664,72 @@ Versioning of documents is done as for every work product with github means and 
 <tr class="need row-even"><td class="needs_title"><p>Communication through mw::com</p></td>
 <td class="needs_id"><p><a class="reference internal" href="../features/communication/ipc/architecture/component_architecture.html#doc__communication__proxy_skeleton">doc__communication__proxy_skeleton</a></p></td>
 <td class="needs_status"><p>valid</p></td>
-<td class="needs_tags"><p></p></td>
+<td class="needs_tags"><p>ipc</p></td>
 </tr>
 <tr class="need row-odd"><td class="needs_title"><p>Configuration Management Plan</p></td>
 <td class="needs_id"><p><a class="reference internal" href="config_management.html#doc__config_mgt_plan">doc__config_mgt_plan</a></p></td>
 <td class="needs_status"><p>draft</p></td>
 <td class="needs_tags"><p>platform_management</p></td>
 </tr>
-<tr class="need row-even"><td class="needs_title"><p>Documentation Management Plan</p></td>
+<tr class="need row-even"><td class="needs_title"><p>Contribution</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../contribute/index.html#doc__contribution_guideline">doc__contribution_guideline</a></p></td>
+<td class="needs_status"><p>valid</p></td>
+<td class="needs_tags"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_title"><p>Contribution Guideline</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../contribute/contribution_request/index.html#doc__contr_guideline">doc__contr_guideline</a></p></td>
+<td class="needs_status"><p>valid</p></td>
+<td class="needs_tags"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_title"><p>Development Environment</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../contribute/development/development_environment.html#doc__develop_environment">doc__develop_environment</a></p></td>
+<td class="needs_status"><p>valid</p></td>
+<td class="needs_tags"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_title"><p>Documentation Management Plan</p></td>
 <td class="needs_id"><p><a class="reference internal" href="#doc__documentation_mgt_plan">doc__documentation_mgt_plan</a></p></td>
 <td class="needs_status"><p>draft</p></td>
 <td class="needs_tags"><p>platform_management</p></td>
 </tr>
+<tr class="need row-even"><td class="needs_title"><p>Feature Request Guideline</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../contribute/contribution_request/feature_request.html#doc__feature_request_guideline">doc__feature_request_guideline</a></p></td>
+<td class="needs_status"><p>valid</p></td>
+<td class="needs_tags"><p></p></td>
+</tr>
 <tr class="need row-odd"><td class="needs_title"><p>Fixed execution order framework</p></td>
 <td class="needs_id"><p><a class="reference internal" href="../features/frameworks/feo/index.html#doc__feo">doc__feo</a></p></td>
 <td class="needs_status"><p>valid</p></td>
-<td class="needs_tags"><p>contribution_request<em>; </em>feature_request</p></td>
+<td class="needs_tags"><p>feature_request</p></td>
 </tr>
-<tr class="need row-even"><td class="needs_title"><p>Inter-process Communication</p></td>
+<tr class="need row-even"><td class="needs_title"><p>Git Guidelines</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../contribute/general/git.html#doc__git_coding_guidelines">doc__git_coding_guidelines</a></p></td>
+<td class="needs_status"><p>valid</p></td>
+<td class="needs_tags"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_title"><p>Inter-process Communication</p></td>
 <td class="needs_id"><p><a class="reference internal" href="../features/communication/ipc/index.html#doc__ipc">doc__ipc</a></p></td>
 <td class="needs_status"><p>valid</p></td>
 <td class="needs_tags"><p>contribution_request<em>; </em>feature_request</p></td>
+</tr>
+<tr class="need row-even"><td class="needs_title"><p>Issue Guideline</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../contribute/contribution_request/index.html#doc__issue_guideline">doc__issue_guideline</a></p></td>
+<td class="needs_status"><p>valid</p></td>
+<td class="needs_tags"><p></p></td>
 </tr>
 <tr class="need row-odd"><td class="needs_title"><p>MISRA C++:2023 Rule Mapping</p></td>
 <td class="needs_id"><p><a class="reference internal" href="../contribute/development/cpp/misra_2023_rule_mapping.html#doc__cpp__misra2023_rule_mapping">doc__cpp__misra2023_rule_mapping</a></p></td>
 <td class="needs_status"><p>draft</p></td>
 <td class="needs_tags"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_title"><p>Naming Conventions</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../contribute/general/naming.html#doc__naming_conventions">doc__naming_conventions</a></p></td>
+<td class="needs_status"><p>valid</p></td>
+<td class="needs_tags"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_title"><p>Persistency Key-Value-Storage</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../features/persistency/kvs/index.html#doc__persistency_kvs">doc__persistency_kvs</a></p></td>
+<td class="needs_status"><p>draft</p></td>
+<td class="needs_tags"><p>contribution_request<em>; </em>feature_request</p></td>
 </tr>
 <tr class="need row-even"><td class="needs_title"><p>Platform Management Plan</p></td>
 <td class="needs_id"><p><a class="reference internal" href="index.html#doc__platform_mgt_plan">doc__platform_mgt_plan</a></p></td>
@@ -713,25 +751,35 @@ Versioning of documents is done as for every work product with github means and 
 <td class="needs_status"><p>draft</p></td>
 <td class="needs_tags"><p>platform_management</p></td>
 </tr>
-<tr class="need row-even"><td class="needs_title"><p>Release Management Plan</p></td>
+<tr class="need row-even"><td class="needs_title"><p>Pull Request Guideline</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../contribute/contribution_request/index.html#doc__pull_request_guideline">doc__pull_request_guideline</a></p></td>
+<td class="needs_status"><p>valid</p></td>
+<td class="needs_tags"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_title"><p>Release Management Plan</p></td>
 <td class="needs_id"><p><a class="reference internal" href="release_management.html#doc__platform_release_management_plan">doc__platform_release_management_plan</a></p></td>
 <td class="needs_status"><p>draft</p></td>
 <td class="needs_tags"><p>platform_management</p></td>
 </tr>
-<tr class="need row-odd"><td class="needs_title"><p>Software Development Plan</p></td>
+<tr class="need row-even"><td class="needs_title"><p>Software Development Plan</p></td>
 <td class="needs_id"><p><a class="reference internal" href="software_development.html#doc__software_development_plan">doc__software_development_plan</a></p></td>
 <td class="needs_status"><p>draft</p></td>
 <td class="needs_tags"><p>platform_management</p></td>
 </tr>
-<tr class="need row-even"><td class="needs_title"><p>Software Verification Plan</p></td>
+<tr class="need row-odd"><td class="needs_title"><p>Software Verification Plan</p></td>
 <td class="needs_id"><p><a class="reference internal" href="software_verification.html#doc__verification_plan">doc__verification_plan</a></p></td>
 <td class="needs_status"><p>draft</p></td>
 <td class="needs_tags"><p>platform_management</p></td>
 </tr>
-<tr class="need row-odd"><td class="needs_title"><p>Static Code Analysis C++</p></td>
+<tr class="need row-even"><td class="needs_title"><p>Static Code Analysis C++</p></td>
 <td class="needs_id"><p><a class="reference internal" href="../contribute/development/cpp/code_analysis.html#doc__cpp__code_analysis">doc__cpp__code_analysis</a></p></td>
 <td class="needs_status"><p>valid</p></td>
 <td class="needs_tags"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_title"><p>Tool Management Plan</p></td>
+<td class="needs_id"><p><a class="reference internal" href="tool_management.html#doc__platform_tool_management_plan">doc__platform_tool_management_plan</a></p></td>
+<td class="needs_status"><p>valid</p></td>
+<td class="needs_tags"><p>platform_management</p></td>
 </tr>
 </tbody>
 </table>
@@ -842,7 +890,7 @@ Versioning of documents is done as for every work product with github means and 
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>

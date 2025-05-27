@@ -34,7 +34,7 @@ Feature Template
    :id: doc__change__feature_name
    :status: draft
    :safety: ASIL_B
-   :tags: change_management
+   :tags: template
 
 .. attention::
     The above directive must be updated according to your Feature.

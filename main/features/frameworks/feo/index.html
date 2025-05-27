@@ -38,11 +38,11 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/modern.css?v=803738c0" />
   
   <!-- So that users can add custom icons -->
@@ -76,7 +76,7 @@
     <link rel="prev" title="Frameworks" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
+  <meta name="docsearch:version" content="0.1" />
   </head>
   
   
@@ -522,7 +522,7 @@
                   
   <section id="fixed-execution-order-framework-feo">
 <h1>Fixed execution order framework (FEO)<a class="headerlink" href="#fixed-execution-order-framework-feo" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-4515ca05">
+<div class="need_container docutils container" id="SNCB-c072e59e">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__feo">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -542,7 +542,7 @@
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">contribution_request</span><span class="needs_spacer">, </span><span class="needs_data">feature_request</span></span></span></div>
+<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">feature_request</span></span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
 </span></span></div>
 <div class="line"><span></span></div>
@@ -566,8 +566,8 @@
 </table>
 </div>
 </div>
-<p><a class="reference external" href="https://eclipse-score.github.io/score/process/guidance/contribution_request/index.html">Contribution Request Guideline</a>
-and <a class="reference external" href="https://eclipse-score.github.io/score/process/guidance/contribution_request/templates/feature_request_template.html">Feature Request Template</a>.</p>
+<p><a class="reference internal" href="../../../process/process_areas/change_management/guidance/change_management_guideline.html#gd_guidl__change__change_request" title="gd_guidl__change__change_request"><em class="xref need">Change Request Guideline (gd_guidl__change__change_request)</em></a>
+and <a class="reference internal" href="../../../process/process_areas/change_management/guidance/change_management_feature_template.html#gd_temp__change__feature_request" title="gd_temp__change__feature_request"><em class="xref need">Feature Request Template (gd_temp__change__feature_request)</em></a>.</p>
 <div class="toctree-wrapper compound">
 </div>
 <section id="feature-flag">
@@ -724,8 +724,8 @@ time it reads the next element, this does not affect the queue pointers of other
 <li><p>Queue enable and queue length are “runtime static” configuration settings</p></li>
 </ul>
 </section>
-<section id="process-thread-mapping">
-<h2>Process/Thread Mapping<a class="headerlink" href="#process-thread-mapping" title="Link to this heading">#</a></h2>
+<section id="process-thread-activity-mapping">
+<h2>Process/Thread/Activity Mapping<a class="headerlink" href="#process-thread-activity-mapping" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>An application consists of one or more processes</p></li>
 <li><p>One of the processes is the primary process</p></li>
@@ -746,6 +746,39 @@ it’s clear that they belong together</p></li>
 <li><p>One reason for having multiple processes per application is to
 achieve Freedom From Interference for safety relevant applications</p></li>
 </ul>
+<section id="static-mapping-of-activities-to-threads">
+<h3>Static mapping of activities to threads<a class="headerlink" href="#static-mapping-of-activities-to-threads" title="Link to this heading">#</a></h3>
+<p>As pointed out above, FEO activities are required to be mapped to threads in a static way.
+The rationale behind this requirement is:</p>
+<ul class="simple">
+<li><p>Calling activity functions init(), step() and shutdown() from a single pre-defined thread
+allows implementations to make use of thread-local optimizations such as thread-local variables.</p></li>
+<li><p>Calling an activity’s step() function from different threads in different iterations of the
+task chain may cause execution time jitter e.g. from unpredictable cache misses or different
+properties of the processor cores the respective threads may be assigned to.</p></li>
+<li><p>Most importantly, a dynamic assignment of activities to threads may result in non-deterministic
+variations of the task-chain execution time.</p></li>
+</ul>
+<p>To understand how a dynamic thread assignment can cause execution time variations, consider
+the following example (sub-) task chain.</p>
+<p><img alt="example_task_chain" src="../../../_images/example_task_chain.png" /></p>
+<p>Here, activity 6 depends on, i.e. must be executed after activities 1 to 5. The length of the bars
+is intended to indicate the relative computation time needed by the respective activity on a
+single processor core. It is assumed that all of these activities will be executed in the same process.</p>
+<p>In a simple approach, each of the activities 1 to 5 could be assigned to its own thread and
+activity 6 could be executed subsequently in one of these threads as shown in the figure below.
+Each blue “lane” indicates one thread.</p>
+<p><img alt="example_task_chain_5_threads" src="../../../_images/example_task_chain_5_threads.png" /></p>
+<p>If each thread runs on a separate core and execution is not interrupted by other tasks, the length of
+the blue box is related to the total execution time of the task chain.</p>
+<p>Approximately the same total execution time can be achieved with only 3 threads (on three cores), if the
+tasks are assigned in an optimized way:</p>
+<p><img alt="example_task_chain_3_threads_optimized" src="../../../_images/example_task_chain_3_threads_optimized.png" /></p>
+<p>If, on the other hand,  activities are assigned to the same 3 threads in a dynamic way, the execution
+time may vary unpredictably, because of the possibly varying execution sequence of activities,
+as can be seen below.</p>
+<p><img alt="example_task_chain_3_threads_dynamic" src="../../../_images/example_task_chain_3_threads_dynamic.png" /></p>
+</section>
 </section>
 <section id="lifecycle">
 <h2>Lifecycle<a class="headerlink" href="#lifecycle" title="Link to this heading">#</a></h2>
@@ -989,7 +1022,10 @@ w.r.t impact of computation load and latency.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-activities">Application Activities</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#service-activities">Service Activities</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#communication">Communication</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#process-thread-mapping">Process/Thread Mapping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#process-thread-activity-mapping">Process/Thread/Activity Mapping</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#static-mapping-of-activities-to-threads">Static mapping of activities to threads</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lifecycle">Lifecycle</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scheduling">Scheduling</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#executor-and-agents">Executor and Agents</a></li>
@@ -1050,7 +1086,7 @@ w.r.t impact of computation load and latency.</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>

@@ -78,8 +78,6 @@ For the automated attributes additional tooling is created (see :doc:`guidance/d
 
 
 Guidance
---------
+^^^^^^^^
 
 The document management guideline can be found here :need:`gd_guidl__documentation`.
-
-Some process requirements to be automated are available here :ref:`documentation_process_requirements`.
