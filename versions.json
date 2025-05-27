@@ -4,14 +4,6 @@
     "url": "https://eclipse-score.github.io/score/main/"
   },
   {
-    "version": "arsibo_FR_logging",
-    "url": "https://eclipse-score.github.io/score/arsibo_FR_logging/"
-  },
-  {
-    "version": "disable_tests",
-    "url": "https://eclipse-score.github.io/score/disable_tests/"
-  },
-  {
     "version": "pr-1056",
     "url": "https://eclipse-score.github.io/score/pr-1056/"
   },
@@ -98,18 +90,6 @@
   {
     "version": "pr-902",
     "url": "https://eclipse-score.github.io/score/pr-902/"
-  },
-  {
-    "version": "ulhu_persistency_file_access",
-    "url": "https://eclipse-score.github.io/score/ulhu_persistency_file_access/"
-  },
-  {
-    "version": "ulhu_persistency_kvs",
-    "url": "https://eclipse-score.github.io/score/ulhu_persistency_kvs/"
-  },
-  {
-    "version": "update_directory_layout",
-    "url": "https://eclipse-score.github.io/score/update_directory_layout/"
   },
   {
     "version": "pr-1173",
