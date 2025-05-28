@@ -43,6 +43,11 @@ jobs:
           # Mark as stale after 30 days of inactivity and then for stale PRs close after 10 days
           days-before-pr-stale: 30 # Override days-before-stale for PRs only
           days-before-pr-close: 10 # Override days-before-close for PRs only
+
+          # Add message to the PR when it is stale
+          stale-pr-message: >
+            This PR is stale because it has been open for 30 days with no activity.
+            It will be closed in 10 days if no further activity occurs.
           close-pr-label: autoclose # Label the PR as autoclosed
 
           # Add comment to the PR when it is closed
