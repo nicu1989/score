@@ -25,6 +25,7 @@ jobs:
       pages: write
       contents: write
       pull-requests: write
+      issues: write # Allow label creation
     steps:
       - name: Close abandoned PRs
         uses: actions/stale@v9
@@ -48,7 +49,8 @@ jobs:
           stale-pr-message: >
             This PR is stale because it has been open for 30 days with no activity. It will be closed in 10 days if no further activity occurs. #magic___^_^___line
           # Label the PR as autoclosed
-          close-pr-label: autoclose
+          close-pr-label: autoclosed
+          operations-per-run: 90 # Increase the number of operations per run
 
           # Add comment to the PR when it is closed
           close-pr-message: "Auto-closing: no activity for 30 days. If this is still relevant, reopen or create a fresh PR."
