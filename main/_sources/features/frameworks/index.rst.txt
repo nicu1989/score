@@ -19,3 +19,4 @@ Frameworks
 .. toctree::
 
    feo/index.rst
+   feo/modules/index

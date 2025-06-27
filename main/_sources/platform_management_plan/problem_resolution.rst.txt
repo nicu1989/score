@@ -17,12 +17,12 @@
    :status: draft
    :safety: ASIL_B
    :tags: platform_management
-   :realizes: wp__prm_plan
+   :realizes: PROCESS_wp__prm_plan
 
 Problem Resolution / Problem Resolution Plan
 --------------------------------------------
 
-This document implements parts of the :need:`wp__platform_mgmt`.
+This document implements parts of the :need:`PROCESS_wp__platform_mgmt`.
 
 Purpose
 +++++++
@@ -63,8 +63,8 @@ problem reported within **S-CORE**.
 
 The next figure gives an overview, how problems are created in **S-CORE**. An ISSUE is
 used to create a problem report including required attributes as defined in the
-:ref:`Problem Process Requirements <prm_process_problem_attributes>`.
-Therefore the Problem Template :ref:`prm_templates` shall be used.
+:need:`Problem Process Requirements <PROCESS_gd_req__problem__attr_uid>`.
+Therefore the Problem Template :need:`PROCESS_gd_temp__problem__template` shall be used.
 
 .. figure:: _assets/score_problem_resolution_overview.drawio.svg
   :width: 100%
@@ -74,11 +74,11 @@ Therefore the Problem Template :ref:`prm_templates` shall be used.
 
 Problem Resolution Attributes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-:ref:`prm_process_problem_attributes` are implemented as follows:
+:need:`Problem Process Requirements <PROCESS_gd_req__problem__attr_uid>` are implemented as follows:
 
-:need:`[[title]] <gd_req__problem__attr_uid>` is identical to the ISSUE number.
+:need:`[[title]] <PROCESS_gd_req__problem__attr_uid>` is identical to the ISSUE number.
 
-:need:`[[title]] <gd_req__problem__attr_status>` is defined by the combination of the ISSUE state
+:need:`[[title]] <PROCESS_gd_req__problem__attr_status>` is defined by the combination of the ISSUE state
 and the state in the Projects dashboard view. The PR status is also used, if applicable.
 
 .. list-table:: Problem Status
@@ -110,21 +110,21 @@ and the state in the Projects dashboard view. The PR status is also used, if app
      - na
      - na
 
-:need:`[[title]] <gd_req__problem__attr_title>` is identical to the ISSUE title.
+:need:`[[title]] <PROCESS_gd_req__problem__attr_title>` is identical to the ISSUE title.
 
-:need:`[[title]] <gd_req__problem__attr_impact_description>` is defined in the description part of the
-ISSUE using the Problem Template :ref:`prm_templates`.
+:need:`[[title]] <PROCESS_gd_req__problem__attr_impact_description>` is defined in the description part of the
+ISSUE using the Problem Template :need:`PROCESS_gd_temp__problem__template`.
 
-:need:`[[title]] <gd_req__problem__attr_anaylsis_results>` is defined in the description part of the
-ISSUE using the Problem Template :ref:`prm_templates`.
+:need:`[[title]] <PROCESS_gd_req__problem__attr_anaylsis_results>` is defined in the description part of the
+ISSUE using the Problem Template :need:`PROCESS_gd_temp__problem__template`.
 
-:need:`[[title]] <gd_req__problem__attr_stakeholder>` is defined in the description part of the
-ISSUE using the Problem Template :ref:`prm_templates`. For S-CORE stakeholder use pre-defined labels
+:need:`[[title]] <PROCESS_gd_req__problem__attr_stakeholder>` is defined in the description part of the
+ISSUE using the Problem Template :need:`PROCESS_gd_temp__problem__template`. For S-CORE stakeholder use pre-defined labels
 for Communities or Feature Teams (Feature Owner) (under discussion, compare
 https://github.com/eclipse-score/score/issues/870)
 
-:need:`[[title]] <gd_req__problem__attr_classification>` is defined in the description part of the
-ISSUE using the Problem Template :ref:`prm_templates`. For S-CORE labels are defined as:
+:need:`[[title]] <PROCESS_gd_req__problem__attr_classification>` is defined in the description part of the
+ISSUE using the Problem Template :need:`PROCESS_gd_temp__problem__template`. For S-CORE labels are defined as:
 
 .. list-table:: Problem Classification
    :header-rows: 1
@@ -141,8 +141,8 @@ ISSUE using the Problem Template :ref:`prm_templates`. For S-CORE labels are def
    * - blocker
      - ``blocker``
 
-:need:`[[title]] <gd_req__problem__attr_category>` is defined in the description part of the
-ISSUE using the Problem Template :ref:`prm_templates`. For S-CORE labels are defined as:
+:need:`[[title]] <PROCESS_gd_req__problem__attr_category>` is defined in the description part of the
+ISSUE using the Problem Template :need:`PROCESS_gd_temp__problem__template`. For S-CORE labels are defined as:
 
 .. list-table:: Problem Categories
    :header-rows: 1
@@ -152,24 +152,24 @@ ISSUE using the Problem Template :ref:`prm_templates`. For S-CORE labels are def
      - Description
      - Infrastructure
    * - User
-     - Created by any user or :need:`Contributor <rl__contributor>` to report potential identified problems
+     - Created by any user or :need:`Contributor <PROCESS_rl__contributor>` to report potential identified problems
      - ISSUE with type BUG
    * - Bug
-     - Created by :need:`Contributor <rl__contributor>` to report problems found during verification
+     - Created by :need:`Contributor <PROCESS_rl__contributor>` to report problems found during verification
      - ISSUE with type BUG and with label ``<test level>``
 
 
-:need:`[[title]] <gd_req__problem__attr_safety_affected>`,
-:need:`[[title]] <gd_req__problem__attr_security_affected>`,
-:need:`[[title]] <gd_req__problem__attr_quality_affected>` are defined in the description part of the
-ISSUE using the Problem Template :ref:`prm_templates`. For S-CORE labels are defined to mark affected
+:need:`[[title]] <PROCESS_gd_req__problem__attr_safety_affected>`,
+:need:`[[title]] <PROCESS_gd_req__problem__attr_security_affected>`,
+:need:`[[title]] <PROCESS_gd_req__problem__attr_quality_affected>` are defined in the description part of the
+ISSUE using the Problem Template :need:`PROCESS_gd_temp__problem__template`. For S-CORE labels are defined to mark affected
 ISSUEs:
 ``safety``, ``security``, ``quality``
 
 Combinations of them are allowed.
 
 
-:need:`[[title]] <gd_req__problem__attr_milestone>` is defined by the Milestone of a ISSUE.
+:need:`[[title]] <PROCESS_gd_req__problem__attr_milestone>` is defined by the Milestone of a ISSUE.
 
 
 Problem Resolution Workflow
@@ -193,7 +193,7 @@ The figure below shows the workflow for the simplest case of a Problem Resolutio
 
 An ISSUE with the type ``Bug`` is created in status ``Open``.
 The title of the ISSUE reflects the potential problem. Further add here the
-:need:`Problem Template <gd_temp__problem__template>` and fill it out accordingly.
+:need:`Problem Template <PROCESS_gd_temp__problem__template>` and fill it out accordingly.
 
 Planning is done by setting the milestone of the ISSUE accordingly.
 
@@ -216,18 +216,18 @@ set the ISSUE status to ``Closed as not planned``.
 
 **To 2. Analyse the Problem Report:**
 
-The Problem Report is reviewed and analysed from the :need:`Committer <rl__committer>` and the
-review results are resolved by the :need:`Contributor <rl__contributor>`. The results
+The Problem Report is reviewed and analysed from the :need:`Committer <PROCESS_rl__committer>` and the
+review results are resolved by the :need:`Contributor <PROCESS_rl__contributor>`. The results
 are documented in the ISSUE. As long as the information is not sufficient, the related ISSUE is kept in
 status ``Open`` and Projects status ``Todo``, means ``in review``.
 
 If the information is sufficient and it is decided to initiate the problem resolution, the
 ISSUE status is kept ``Open`` and the Projects status is set to ``In Progress``.
 
-:ref:`prm_checklist` can help to verify whether the information is complete.
+:need:`PROCESS_gd_chklst__problem__cr_review` can help to verify whether the information is complete.
 
-In case affected parties need to be informed :need:`Technical Lead <rl__technical_lead>` or
-:need:`Module Lead <rl__module_lead>` will notfiy them.
+In case affected parties need to be informed :need:`Technical Lead <PROCESS_rl__technical_lead>` or
+:need:`Module Lead <PROCESS_rl__module_lead>` will notfiy them.
 
 Otherwise, if no Problem Resolution is planned, the problem is rejected.
 To reject the Problem Report: Problem status: ``rejected``
@@ -236,7 +236,7 @@ set the ISSUE status to ``Closed as not planned``.
 
 **To 3. Initiate and Monitor the Problem Resolution:**
 
-:need:`Contributor <rl__contributor>` starts all required activities to resolve the problem.
+:need:`Contributor <PROCESS_rl__contributor>` starts all required activities to resolve the problem.
 These may include starting Change Requests or in general plannig activites by creating ISSUEs and
 required PRs.
 
@@ -246,8 +246,8 @@ monitoring of the activities.
 All activities defined are tracked until closure, means that all linked ISSUEs or PRs are closed or
 merged, respectively.
 
-If all are closed or merged :need:`Contributor <rl__contributor>` sets Projects status to ``Done``
-to trigger the final review from the :need:`Committer <rl__committer>` to close the Problem
+If all are closed or merged :need:`Contributor <PROCESS_rl__contributor>` sets Projects status to ``Done``
+to trigger the final review from the :need:`Committer <PROCESS_rl__committer>` to close the Problem
 Resolution.
 
 The Problem Resolution may also rejected in this phase, then the ISSUE status is set to
@@ -255,13 +255,13 @@ The Problem Resolution may also rejected in this phase, then the ISSUE status is
 
 **To 4. Close the Problem Resolution:**
 
-:need:`Committer <rl__committer>` checks finally if the problem is completely resolved. In this
+:need:`Committer <PROCESS_rl__committer>` checks finally if the problem is completely resolved. In this
 case all linked ISSUEs or PRs are closed or merged, respectively.
 
 Especially the solution measure must be checked for their effectivness and the argumentation
 is convincing.
 
-:ref:`prm_checklist` can help to verify whether it can be closed.
+:need:`PROCESS_gd_chklst__problem__cr_review` can help to verify whether it can be closed.
 
 If this is the case the ISSUE status is set to ``Closed``, otherwise the Projects status is set
 back to ``In Progress``.
