@@ -1,3 +1,4 @@
+dummy
 # Score Platform
 
 ## Building
