@@ -470,6 +470,7 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">Persistency</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="../index.html">Key-Value-Storage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../requirements/index.html">Requirements</a></li>
+
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Feature Architecture : persistency/kvs</a></li>
 </ul>
 </details></li>
@@ -569,7 +570,7 @@ and widely supported way to store and manage key-value pairs.</p></li>
 </section>
 <section id="static-architecture">
 <h2>Static Architecture<a class="headerlink" href="#static-architecture" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-b02f6aae">
+<div class="need_container docutils container" id="SNCB-c507c008">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_arc_sta table" id="feat_arc_sta__persistency__static">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -589,10 +590,11 @@ and widely supported way to store and manage key-value pairs.</p></li>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
+<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">persistency</span></span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">fulfils: <span class="fulfils"><span><a class="reference internal" href="../requirements/index.html#feat_req__persistency__default_value_get" title="feat_arc_sta__persistency__static">feat_req__persistency__default_value_get</a>, <a class="reference internal" href="../requirements/index.html#feat_req__persistency__default_values" title="feat_arc_sta__persistency__static">feat_req__persistency__default_values</a>, <a class="reference internal" href="../requirements/index.html#feat_req__persistency__events" title="feat_arc_sta__persistency__static">feat_req__persistency__events</a>, <a class="reference internal" href="../requirements/index.html#feat_req__persistency__integrity_check" title="feat_arc_sta__persistency__static">feat_req__persistency__integrity_check</a>, <a class="reference internal" href="../requirements/index.html#feat_req__persistency__persist_data" title="feat_arc_sta__persistency__static">feat_req__persistency__persist_data</a>, <a class="reference internal" href="../requirements/index.html#feat_req__persistency__persistency" title="feat_arc_sta__persistency__static">feat_req__persistency__persistency</a>, <a class="reference internal" href="../requirements/index.html#feat_req__persistency__snapshots" title="feat_arc_sta__persistency__static">feat_req__persistency__snapshots</a>, <a class="reference internal" href="../requirements/index.html#feat_req__persistency__stable_api" title="feat_arc_sta__persistency__static">feat_req__persistency__stable_api</a>, <a class="reference internal" href="../requirements/index.html#feat_req__persistency__support_datatype_keys" title="feat_arc_sta__persistency__static">feat_req__persistency__support_datatype_keys</a>, <a class="reference internal" href="../requirements/index.html#feat_req__persistency__support_datatype_value" title="feat_arc_sta__persistency__static">feat_req__persistency__support_datatype_value</a></span></span></div>
+<div class="line"><span><div class="line">fulfils: <span class="fulfils"><span><a class="reference internal" href="../requirements/index.html#feat_req__persistency__default_value_get" title="feat_arc_sta__persistency__static">feat_req__persistency__default_value_get</a>, <a class="reference internal" href="../requirements/index.html#feat_req__persistency__default_values" title="feat_arc_sta__persistency__static">feat_req__persistency__default_values</a>, <a class="reference internal" href="../requirements/index.html#feat_req__persistency__events" title="feat_arc_sta__persistency__static">feat_req__persistency__events</a>, <a class="reference internal" href="../requirements/index.html#feat_req__persistency__integrity_check" title="feat_arc_sta__persistency__static">feat_req__persistency__integrity_check</a>, <a class="reference internal" href="../requirements/index.html#feat_req__persistency__persist_data" title="feat_arc_sta__persistency__static">feat_req__persistency__persist_data</a>, <a class="reference internal" href="../requirements/index.html#feat_req__persistency__persistency" title="feat_arc_sta__persistency__static">feat_req__persistency__persistency</a>, <a class="reference internal" href="../requirements/index.html#feat_req__persistency__snapshots" title="feat_arc_sta__persistency__static">feat_req__persistency__snapshots</a>, <a class="reference internal" href="../requirements/index.html#feat_req__persistency__support_datatype_keys" title="feat_arc_sta__persistency__static">feat_req__persistency__support_datatype_keys</a>, <a class="reference internal" href="../requirements/index.html#feat_req__persistency__support_datatype_value" title="feat_arc_sta__persistency__static">feat_req__persistency__support_datatype_value</a></span></span></div>
 <div class="line">includes: <span class="includes"><span><a class="reference internal" href="#logic_arc_int__persistency__interface" title="feat_arc_sta__persistency__static">logic_arc_int__persistency__interface</a></span></span></div>
 </span></div>
 </div>
@@ -620,7 +622,7 @@ and widely supported way to store and manage key-value pairs.</p></li>
 </section>
 <section id="dynamic-architecture">
 <h2>Dynamic Architecture<a class="headerlink" href="#dynamic-architecture" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-c366a57c">
+<div class="need_container docutils container" id="SNCB-d35e9fe6">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_arc_dyn table" id="feat_arc_dyn__persistency__check_key_default">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -640,6 +642,7 @@ and widely supported way to store and manage key-value pairs.</p></li>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
+<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">persistency</span></span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
 </span></span></div>
@@ -667,7 +670,7 @@ and widely supported way to store and manage key-value pairs.</p></li>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-8ce3f72f">
+<div class="need_container docutils container" id="SNCB-4c706c40">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_arc_dyn table" id="feat_arc_dyn__persistency__delete_key">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -687,6 +690,7 @@ and widely supported way to store and manage key-value pairs.</p></li>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
+<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">persistency</span></span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
 </span></span></div>
@@ -714,7 +718,7 @@ and widely supported way to store and manage key-value pairs.</p></li>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-84ca856f">
+<div class="need_container docutils container" id="SNCB-0f82eec0">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_arc_dyn table" id="feat_arc_dyn__persistency__flush">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -734,6 +738,7 @@ and widely supported way to store and manage key-value pairs.</p></li>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
+<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">persistency</span></span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
 </span></span></div>
@@ -761,7 +766,7 @@ and widely supported way to store and manage key-value pairs.</p></li>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-19e5e16c">
+<div class="need_container docutils container" id="SNCB-6c0985e8">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_arc_dyn table" id="feat_arc_dyn__persistency__read_key">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -781,6 +786,7 @@ and widely supported way to store and manage key-value pairs.</p></li>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
+<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">persistency</span></span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
 </span></span></div>
@@ -808,7 +814,7 @@ and widely supported way to store and manage key-value pairs.</p></li>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-05250d69">
+<div class="need_container docutils container" id="SNCB-24156d39">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_arc_dyn table" id="feat_arc_dyn__persistency__read_from_storage">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -828,6 +834,7 @@ and widely supported way to store and manage key-value pairs.</p></li>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
+<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">persistency</span></span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
 </span></span></div>
@@ -855,7 +862,7 @@ and widely supported way to store and manage key-value pairs.</p></li>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-9d84c823">
+<div class="need_container docutils container" id="SNCB-b0b6b974">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_arc_dyn table" id="feat_arc_dyn__persistency__write_key">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -875,6 +882,7 @@ and widely supported way to store and manage key-value pairs.</p></li>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
+<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">persistency</span></span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
 </span></span></div>
@@ -902,7 +910,7 @@ and widely supported way to store and manage key-value pairs.</p></li>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-2a388798">
+<div class="need_container docutils container" id="SNCB-e510b32f">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_arc_dyn table" id="feat_arc_dyn__persistency__snapshot_restore">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -922,6 +930,7 @@ and widely supported way to store and manage key-value pairs.</p></li>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
+<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">persistency</span></span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
 </span></span></div>
@@ -952,7 +961,7 @@ and widely supported way to store and manage key-value pairs.</p></li>
 </section>
 <section id="logical-interfaces">
 <h2>Logical Interfaces<a class="headerlink" href="#logical-interfaces" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-607d29d3">
+<div class="need_container docutils container" id="SNCB-38a77e13">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_logic_arc_int table" id="logic_arc_int__persistency__interface">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -972,10 +981,11 @@ and widely supported way to store and manage key-value pairs.</p></li>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
+<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">persistency</span></span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">fulfils: <span class="fulfils"><span><a class="reference internal" href="../requirements/index.html#feat_req__persistency__stable_api" title="logic_arc_int__persistency__interface">feat_req__persistency__stable_api</a></span></span></div>
+<div class="line"><span><div class="line">fulfils: <span class="fulfils"><span><a class="reference internal" href="../requirements/index.html#feat_req__persistency__async_api" title="logic_arc_int__persistency__interface">feat_req__persistency__async_api</a></span></span></div>
 <div class="line">included by: <span class="includes"><span><a class="reference internal" href="#feat_arc_sta__persistency__static" title="logic_arc_int__persistency__interface">feat_arc_sta__persistency__static</a></span></span></div>
 </span></div>
 </div>
