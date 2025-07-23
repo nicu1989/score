@@ -31,6 +31,7 @@ version = release
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
+    "sphinx_rust",
     "sphinx_design",
     "sphinx_needs",
     "sphinxcontrib.plantuml",
@@ -40,6 +41,11 @@ extensions = [
     "score_source_code_linker",
     "score_layout",
     "score_header_service",
+]
+
+# dummy crate for testing
+rust_crates = [
+    "../rust-crates/dummy_crate",
 ]
 
 exclude_patterns = [

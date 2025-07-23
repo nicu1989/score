@@ -73,7 +73,7 @@ Introduction
 Software artifacts
 ~~~~~~~~~~~~~~~~~~
 
-.. grid:: 1 1 3 3
+.. grid:: 1 1 4 4
    :class-container: score-grid
 
    .. grid-item-card::
@@ -100,6 +100,13 @@ Software artifacts
       ^^^
       Our release roadmap can be found under :ref:`releases`.
       Including an overview about integrated software modules and their repository location.
+
+   .. grid-item-card::
+
+      Rust Crates
+      ^^^
+      Check out our Rust Crates.
+      See the :doc:`Rust API <api/crates/dummy_crate/index>` for details.
 
 
 Project structure and processes
@@ -138,3 +145,4 @@ Project structure and processes
       Tools <score_tools/index.rst>
       PMP <platform_management_plan/index.rst>
       Eclipse <https://projects.eclipse.org/projects/automotive.score>
+      Rust API <api/crates/dummy_crate/index>
