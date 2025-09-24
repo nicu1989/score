@@ -56,9 +56,9 @@ jobs:
             --doc docs/score_tools/doc_as_code.rst \
             --dac-module-name score_docs_as_code
           then
-            echo "mismatch=True" >> "$GITHUB_OUTPUT"
-          else
             echo "mismatch=False" >> "$GITHUB_OUTPUT"
+          else
+            echo "mismatch=True" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Warn in PR if docs-as-code version mismatch
