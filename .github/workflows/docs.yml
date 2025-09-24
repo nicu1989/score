@@ -52,11 +52,16 @@ jobs:
       - name: Verify Doc-as-Code version
         id: doc_version
         run: |
-          echo "mismatch=$(python3 .github/scripts/check_doc_tool_version.py \
+          python3 .github/scripts/check_doc_tool_version.py \
             --doc docs/score_tools/doc_as_code.rst \
-            --dac-module-name score_docs_as_code)" >> "$GITHUB_OUTPUT"
+            --dac-module-name score_docs_as_code
+          if [[ $? -eq 1 ]]; then
+            echo "mismatch=True" >> "$GITHUB_OUTPUT"
+          else
+            echo "mismatch=False" >> "$GITHUB_OUTPUT"
+          fi
 
-      - name: Comment on PR with docs URL
+      - name: Warn in PR if docs-as-code version mismatch
         if: ${{ github.event_name == 'pull_request_target' && steps.doc_version.outputs.mismatch == 'True' && steps.fc.outputs.comment-id == '' }}
         uses: peter-evans/create-or-update-comment@v4
         with:
