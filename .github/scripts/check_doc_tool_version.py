@@ -69,7 +69,6 @@ def main():
                 "Please align the documentation with the Bazel dependency.",
             ]
         )
-
     if comment:
         print(comment)
 
