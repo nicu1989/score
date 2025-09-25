@@ -71,7 +71,6 @@ def main():
         )
     else:
         comment = "Doc-as-Code version matching. Everything is fine."
-
     print(comment)
 
     sys.exit(1 if mismatch else 0)
