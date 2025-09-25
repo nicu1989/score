@@ -57,7 +57,7 @@ def main():
     # Compare versions
     mismatch = not module_bazel_version or not doc_version or module_bazel_version != doc_version
 
-    comment = ""
+    comment = "Doc-as-Code version matching. Everything is fine."
     if mismatch:
         comment = "\n".join(
             [
@@ -70,9 +70,7 @@ def main():
             ]
         )
 
-    #print(f"Is there a version mismatch? : {mismatch}")
-    if comment:
-        print(comment)
+    print(comment)
 
     sys.exit(1 if mismatch else 0)
 
