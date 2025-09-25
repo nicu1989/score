@@ -1,6 +1,6 @@
 # Score Platform
 
-## Buildingtox
+## Buildingtoux
 
 ### Development environment
 The build currently supports Linux environments.
