@@ -57,7 +57,7 @@ def main():
     # Compare versions
     mismatch = not module_bazel_version or not doc_version or module_bazel_version != doc_version
 
-    comment = "Doc-as-Code version matching. Everything is fine."
+    comment = ""
     if mismatch:
         comment = "\n".join(
             [
@@ -69,7 +69,8 @@ def main():
                 "Please align the documentation with the Bazel dependency.",
             ]
         )
-
+    else:
+        comment = "Doc-as-Code version matching. Everything is fine."
     print(comment)
 
     sys.exit(1 if mismatch else 0)
