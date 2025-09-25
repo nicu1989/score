@@ -1,6 +1,6 @@
 # Score Platform
 
-## Buildingtds
+## Buildingt
 
 ### Development environment
 The build currently supports Linux environments.
