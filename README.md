@@ -2,7 +2,7 @@
 
 ## Buildingtou2
 
-### Development environment
+### Development environmen
 The build currently supports Linux environments.
 Follow [instructions](https://eclipse-score.github.io/score/main/contribute/development/index.html) to set up your development environment.
 
