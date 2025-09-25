@@ -69,9 +69,8 @@ def main():
                 "Please align the documentation with the Bazel dependency.",
             ]
         )
-    else:
-        comment = "Doc-as-Code version matching. Everything is fine."
-    print(comment)
+    if comment:
+        print(comment)
 
     sys.exit(1 if mismatch else 0)
 
