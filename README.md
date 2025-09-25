@@ -1,6 +1,6 @@
 # Score Platform
 
-## Buildingtoux
+## Buildingtou2x
 
 ### Development environment
 The build currently supports Linux environments.
