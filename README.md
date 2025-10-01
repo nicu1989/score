@@ -3,7 +3,7 @@
 ## Building
 
 ### Development environment
-The build currently xcsupports Linux environments.
+The build currently xcsupportxs Linux environments.
 Follow [instructions](https://eclipse-score.github.io/score/main/contribute/development/index.html) to set up your development environment.
 
 Some important commands to get you started:
