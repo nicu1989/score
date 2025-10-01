@@ -117,7 +117,7 @@ runs:
 
         size_mb=$(git ls-tree -r -l origin/gh-pages | awk '{sum+=$4} END{printf("%d\n", sum/1024/1024)}')
 
-        if [ "$size_mb" -gt 5 ]; then
+        if [ "$size_mb" -gt 950 ]; then
           warn_text=":warning: The gh-pages branch is approximately '${size_mb}'MB. Published docs might look incorrect."
         else
           warn_text=""
