@@ -1,10 +1,6 @@
 [
   {
     "version": "main",
-    "url": "https://eclipse-score.github.io/score/main/"
-  },
-  {
-    "version": "pr-39",
-    "url": "https://nicu1989.github.io/score/pr-39/"
+    "url": "https://nicu1989.github.io/score/main/"
   }
 ]
